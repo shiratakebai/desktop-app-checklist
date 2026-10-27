@@ -1,4 +1,4 @@
-# 现代桌面应用能力与 QoL 清单
+# 桌面应用能力与 QoL 清单
 
 [English](../README.md) | 简体中文
 
@@ -74,7 +74,7 @@ Agent 本身无法稳定地弥补这一缺口。这类功能很少被明确写�
 
 本清单主要面向借助 AI 编程 Agent 开发的项目。在待审查的项目中，向 Agent 发出以下指令：
 
-> 将 https://github.com/shiratakebai/modern-app-capability-checklist 的 v1.0 标签克隆到本项目之外的临时目录，然后按照其中的 zh-CN/AUDIT.md 审查本项目。
+> 将 https://github.com/shiratakebai/desktop-app-checklist 的 v1.0 标签克隆到本项目之外的临时目录，然后按照其中的 zh-CN/AUDIT.md 审查本项目。
 
 <!-- 发布新版本时同步更新此处的标签。 -->
 

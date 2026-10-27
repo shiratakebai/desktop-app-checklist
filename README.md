@@ -1,4 +1,4 @@
-# Modern Desktop App Capability & QoL Checklist
+# Desktop App Capability & QoL Checklist
 
 English | [简体中文](zh-CN/README.md)
 
@@ -74,7 +74,7 @@ Untagged items apply to nearly all desktop applications.
 
 The checklist is designed primarily for projects developed with AI coding agents. In the project to be audited, give the agent this instruction:
 
-> Clone tag v1.0 of https://github.com/shiratakebai/modern-app-capability-checklist into a temporary directory outside this project, then follow its AUDIT.md to audit this project.
+> Clone tag v1.0 of https://github.com/shiratakebai/desktop-app-checklist into a temporary directory outside this project, then follow its AUDIT.md to audit this project.
 
 <!-- When releasing a new version, update the tag here. -->
 

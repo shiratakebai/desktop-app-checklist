@@ -1,4 +1,4 @@
-# 现代桌面应用能力与 QoL 清单
+# 桌面应用能力与 QoL 清单
 
 [English](../checklist.md) | 简体中文
 

@@ -1,4 +1,4 @@
-# Modern Desktop App Capability & QoL Checklist
+# Desktop App Capability & QoL Checklist
 
 English | [简体中文](zh-CN/checklist.md)
 
