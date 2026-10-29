@@ -311,7 +311,7 @@ Related items: PRIVACY-09 Access boundaries of local services and IPC; AUTOMATE-
 
 Import an archive containing `../` paths and symbolic links; share and export a sample containing author, location, comments, and hidden content; redact a passage in the sample and export a copy for sharing.
 
-Checkpoints: The import stays inside the target directory; private metadata is identifiable and removed as chosen; required content and dependencies are not removed by mistake; redacted text cannot be copied, searched, or recovered by removing an overlay in the shared copy.
+Checkpoints: The import stays inside the target directory; private metadata is identifiable and removed as chosen; required content and dependencies are not removed by mistake; in the shared copy, redacted text cannot be copied, found by search, or recovered by removing the overlay.
 
 Related items: TRUST-05 Directory boundary on archive import; PRIVACY-11 Hidden information in exports and shares; DATA-08 Import, export, and data portability
 
@@ -373,8 +373,8 @@ Related items: INPUT-04 Customizable shortcuts; DATA-08 Import, export, and data
 
 ### S44 · Find settings, commands, and collapsed panels after switching the UI language
 
-Switch the UI to Chinese or another non-English language. Search for settings and commands such as font, proxy, and shortcuts by their English names, their UI-language names, and pinyin initials; search for an advanced setting that is hidden by default and for a setting that appears only in a dialog. Collapse the sidebars and panels by dragging, by shortcut, and by button, then bring them back without consulting the documentation, and move between regions with F6 using only the keyboard.
+Switch the UI to Chinese or another non-English language. Search for settings and commands such as font, proxy, and shortcuts by English name, by localized name, and by pinyin initials. Search for an advanced setting that is hidden by default and for a setting that appears only in a dialog. Collapse the sidebars and panels by dragging, by shortcut, and by button, then restore each one without consulting the documentation. Using only the keyboard, press F6 to move between regions.
 
-Checkpoints: Both the English name and the UI-language name find the item, and results show the English name; advanced settings and settings inside dialogs can be found or are clearly indicated; unavailable commands show the reason; every way of collapsing leaves a visible way back; F6 moves focus by region and treats collapsed regions consistently.
+Checkpoints: Both the English name and the localized name find the item, and results show the English name; advanced settings and settings inside dialogs can be found, or the results indicate where they are; unavailable commands show the reason; each way of collapsing leaves a visible control for restoring the panel; F6 moves focus one region at a time and handles collapsed regions consistently.
 
 Related items: LOCALE-05 Multilingual text handling; SETTINGS-02 Searchable settings; INPUT-05 Command palette; APPEARANCE-05 Adjustable, resettable panels; A11Y-01 Core workflows by keyboard

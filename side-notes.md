@@ -85,12 +85,12 @@ The following product behaviors correspond to checklist items and can help expla
 - **Slack**: settings deployed by an organization are either defaults, which users can still change, or enforced values, which are locked. See MANAGED-03 Visible policy control.
 - **Zoom**: system notifications are silenced while the desktop is shared, and whether the application's own toolbars and meeting notifications appear in the shared picture is a choice. See MEDIA-05 Confirming the screen capture scope.
 - **Zoom**: audio and video stop automatically when the computer locks or the screen saver starts during a meeting. See MEDIA-04 Actual capture state and stop control.
-- **IntelliJ IDEA**: with a language pack enabled, settings search and Find Action match both the localized names and the original English names. See LOCALE-05 Multilingual text handling and SETTINGS-02 Searchable settings.
-- **VS Code**: in a non-English UI the command palette shows each command's English name on a second line; every setting has a Copy Setting ID action; the title bar has persistent toggles for the primary side bar, panel, and secondary side bar. See LOCALE-05 Multilingual text handling, SETTINGS-02 Searchable settings, and APPEARANCE-05 Adjustable, resettable panels.
-- **GNOME Settings**: the Japanese translation keeps the English search keywords for each panel and adds kanji, kana, and romaji readings. See LOCALE-05 Multilingual text handling.
+- **IntelliJ IDEA**: with a language pack installed, settings search and Find Action match both localized names and original English names. See LOCALE-05 Multilingual text handling and SETTINGS-02 Searchable settings.
+- **VS Code**: in a non-English UI the command palette shows each command's English name on a second line; each setting has a Copy Setting ID action; the title bar has persistent toggles for the side bars and the panel. See LOCALE-05 Multilingual text handling, SETTINGS-02 Searchable settings, and APPEARANCE-05 Adjustable, resettable panels.
+- **GNOME Settings**: the Japanese translation keeps the English search keywords for each panel and adds kanji, kana, and romaji spellings. See LOCALE-05 Multilingual text handling.
 - **Firefox**: the settings search finds content in subdialogs behind buttons and shows the matching keyword next to the button. See SETTINGS-02 Searchable settings.
-- **GIMP**: action search lists unavailable actions after the available ones, with the reason they are unavailable; size fields accept arithmetic with units. See INPUT-05 Command palette and INPUT-18 Input constraints and inline correction.
-- **Blender**: translation of interface labels, tooltips, and the default names of new data can be turned on separately; tooltips can show the Python identifier. See LOCALE-01 UI language and SETTINGS-02 Searchable settings.
+- **GIMP**: action search lists unavailable actions after available ones, with the reason each is unavailable; size fields accept arithmetic with units. See INPUT-05 Command palette and INPUT-18 Input constraints and inline correction.
+- **Blender**: translation of interface labels, tooltips, and the default names of new data can be turned on separately; tooltips can show the Python identifier of a property or operator. See LOCALE-01 UI language and SETTINGS-02 Searchable settings.
 - **LibreOffice Calc**: English function names can be used instead of localized ones, which switches formula input, display, and the function wizard together. See LOCALE-01 UI language.
 
 ## Similar checklists
