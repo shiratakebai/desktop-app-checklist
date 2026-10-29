@@ -34,10 +34,13 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [Microsoft · Win32 UX Guide · Tooltips and Infotips](https://learn.microsoft.com/en-us/windows/win32/uxguide/ctrl-tooltips-and-infotips): truncated names can be viewed in full.
 - [GitHub · Rendering huge pull requests in the GitHub Copilot app](https://github.blog/engineering/user-experience/rendering-huge-pull-requests-in-the-github-copilot-app/): anchoring the reading position to content when heights change.
 - [Krita · Color Management Settings](https://docs.krita.org/en/reference_manual/preferences/color_management_settings.html): separating canvas color space, display configuration, and HDR output.
+- [Typora · Zoom](https://support.typora.io/Zoom/), [Slack · Adjust your zoom level in Slack](https://slack.com/help/articles/236067467-Adjust-your-zoom-level-in-Slack): interface zoom set within the application, with a hint panel showing the current factor and a reset.
 
 ## TYPO · Fonts and text
 
 - [Apple HIG · Typography](https://developer.apple.com/design/human-interface-guidelines/typography): system fonts, dynamic type sizes, and legibility.
+- [Notepad++ · Preferences](https://npp-user-manual.org/docs/preferences/): showing whitespace, line endings, and control characters on demand; the first line as the name of an untitled tab; locking the tab bar and disabling drag of selected text.
+- [VS Code · User and workspace settings](https://code.visualstudio.com/docs/configure/settings): `editor.renderWhitespace`; the `@modified` filter and per-setting reset; confirmation before closing only when triggered from the keyboard; session restore can be turned off; untitled editors labeled by content.
 
 ## A11Y · Accessibility
 
@@ -68,6 +71,11 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [GNOME HIG · Text fields](https://developer.gnome.org/hig/patterns/controls/text-fields.html), [KDE HIG · Getting input](https://develop.kde.org/hig/getting_input/), [Apple HIG · Entering data](https://developer.apple.com/design/human-interface-guidelines/entering-data): input constraints, inline correction, and direct entry of precise values.
 - [W3C · Understanding Accessible Authentication (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html): authentication accepts pasting and password managers.
 - [GNOME · Evolution spell checking](https://teams.pages.gitlab.gnome.org/Websites/help.gnome.org/evolution/mail-composer-spellcheck.html): choosing dictionaries by language.
+- [Slack · Set your Enter key preference](https://slack.com/help/articles/115005523006-Set-your-Enter-key-preference), [Manage your keyboard layout](https://slack.com/help/articles/115005429666-Manage-your-keyboard-layout), [Feishu · Desktop keyboard shortcuts](https://www.feishu.cn/hc/zh-CN/articles/894529368028) (Chinese): a setting for whether Enter sends or starts a new line, excluded from "reset all shortcuts"; a manual layout choice appears only when detection fails.
+- [Blender · Keymap preferences](https://docs.blender.org/manual/en/latest/editors/preferences/keymap.html), [Input preferences](https://docs.blender.org/manual/en/latest/editors/preferences/input.html): keymap presets matching other products and export of only the differences; emulated numpad and three-button mouse; switching the tablet API between Windows Ink and WinTab.
+- [Krita · General Settings](https://docs.krita.org/en/reference_manual/preferences/general_settings.html): choosing which clipboard representation to paste, with "ask each time" and a network-dependent option; font DPI conversion for files from older versions.
+- [JetBrains · Appearance](https://www.jetbrains.com/help/idea/settings-appearance.html): drag and drop only while Alt is held, to avoid moving files, tabs, and panels by accident.
+- [LibreOffice · Security Options and Warnings](https://help.libreoffice.org/latest/en-US/text/shared/optionen/securityoptionsdialog.html): Ctrl-click required to follow hyperlinks.
 
 ## WINDOW · Windows
 
@@ -77,6 +85,10 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [Microsoft · Kernel object namespaces](https://learn.microsoft.com/en-us/windows/win32/termserv/kernel-object-namespaces), [Apple · LSMultipleInstancesProhibited](https://developer.apple.com/documentation/bundleresources/information-property-list/lsmultipleinstancesprohibited): the scope of single-instance checks across user sessions.
 - [Microsoft · Navigation history and backwards navigation](https://learn.microsoft.com/en-us/windows/uwp/layout/navigation-history-and-backwards-navigation), [JetBrains · Recent files and locations](https://www.jetbrains.com/help/idea/recent-files-and-changes.html): Back and Forward along the visited path.
 - [Sublime Text · Changelog](https://www.sublimetext.com/download): external open requests run after loading finishes; old undo history is not restored after the file changed on disk; recovered unsaved files keep their encoding.
+- [mpv · Manual · --drag-and-drop](https://mpv.io/manual/stable/#options-drag-and-drop), [--focus-on](https://mpv.io/manual/stable/#options-focus-on): whether an externally opened file replaces or is appended to the playlist, and whether the window takes focus.
+- [Raycast · Settings](https://manual.raycast.com/settings), [Alfred · Appearance](https://www.alfredapp.com/help/appearance/), [Alfred · Snippets troubleshooting](https://www.alfredapp.com/help/troubleshooting/snippets/): which display the launcher appears on and whether it moves to the active Space; returning to the root search after a delay; a non-activating panel by default; reporting a Secure Input lock and slowing down key events for targets that drop pasted text.
+- [JetBrains · System settings](https://www.jetbrains.com/help/idea/system-settings.html), [Telegram Desktop · Settings strings](https://translations.telegram.org/en/tdesktop/settings/): confirmation before exiting; "Hold to Quit" and a warning before quitting with the shortcut; "Send with Enter" versus "Send with Ctrl+Enter".
+- [Audacity · The Audacity IPC server failed to initialize](https://support.audacityteam.org/au3/troubleshooting/error-codes/error-the-audacity-ipc-server-failed-to-initialize), [Jan · Troubleshooting](https://docs.jan.ai/desktop/troubleshooting): a visible error when the single-instance channel or the local service port cannot be set up, including a stale process from the previous run.
 
 ## APPEARANCE · Appearance
 
@@ -90,10 +102,16 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [VS Code · Settings Sync](https://code.visualstudio.com/docs/configure/settings-sync), [Profiles](https://code.visualstudio.com/docs/configure/profiles): machine-specific settings are not overwritten by sync, and shortcuts sync per platform.
 - [GNOME HIG · Switches](https://developer.gnome.org/hig/patterns/controls/switches.html): switches show whether a feature has actually taken effect.
 - [Microsoft · Win32 UX Guide · Confirmations](https://learn.microsoft.com/en-us/windows/win32/uxguide/mess-confirm): where "Don't show again" belongs, and not asking to save changes the user did not make.
+- [Everything · Options](https://www.voidtools.com/support/everything/options/): showing only modified settings and resetting one value; a per-computer, per-user database name for portable use; search and run history kept, cleared, or expired separately from being disabled; programs launched while running as administrator also run elevated.
+- [mpv · Manual · --reset-on-next-file](https://mpv.io/manual/stable/#options-reset-on-next-file), [Hidemaru · Settings by file type](https://help.maruo.co.jp/hidemaru/html/280_Support.html) (Japanese): adjustments made during playback carry over to the next file or are reset per option; a separate group of settings per file type.
+- [Blender · Defaults](https://docs.blender.org/manual/en/latest/getting_started/configuration/defaults.html), [Inkscape · FAQ](https://inkscape.org/learn/faq/): importing preferences and extensions from the previous version; user-added extensions, palettes, and templates live in the user directory and survive upgrades; a DPI change on opening old files offers conversion choices.
+- [LibreOffice · Load/Save General options](https://help.libreoffice.org/latest/en-US/text/shared/optionen/01010200.html): printer settings and the view position stored in a document are not applied by default when another user opens it.
+- [LM Studio · User or Developer](https://lmstudio.ai/docs/app/user-interface/modes), [Zoom · Changing settings in the Zoom Workplace desktop and mobile app](https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0060612): a User mode that shows only the chat interface and a Developer mode with full access; rarely used options grouped under "Advanced" on each settings page.
 
 ## LOCALE · Language and region
 
 - [Microsoft · Handling a new era in the Japanese calendar in .NET](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/): handling a change of Japanese era.
+- [IANA · Time Zone Database](https://www.iana.org/time-zones): time zone rules change several times a year as governments revise them; applications follow the system's data or update their bundled copy.
 
 ## DATA · Data protection, saving, and recovery
 
@@ -107,12 +125,20 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [Zotero · Data directory in cloud storage](https://www.zotero.org/support/kb/data_directory_in_cloud_storage_folder): risk of database corruption in synced folders.
 - [Zotero · Why can't Zotero find a linked file?](https://www.zotero.org/support/kb/missing_linked_file), [Typora · Images](https://support.typora.io/Images/): relinking external resources and updating references when moving resources in the app.
 - [Slack · Send and read messages](https://slack.com/help/articles/201457107-Send-and-read-messages), [Telegram · Drafts](https://telegram.org/blog/drafts): a central place for drafts and scheduled messages, and draft markers in the chat list.
+- [Zotero · General preferences](https://www.zotero.org/support/preferences/general), [Joplin · Attachments](https://joplinapp.org/help/apps/attachments/): choosing whether imported tags are attached; attachments no longer referenced by any note are removed after the note history retention period.
+- [JetBrains · Invalidate caches](https://www.jetbrains.com/help/idea/invalidate-caches.html), [Thunderbird · Rebuilding the Global Database](https://support.mozilla.org/en-US/kb/rebuilding-global-database): rebuilding derived indexes from the interface without touching source data.
+- [Bandizip · Preventing data loss with safe backups](https://cn.bandisoft.com/bandizip/help/backup/) (Chinese): testing the archive before the source files are deleted.
+- [CLaunch · Other options](https://pyonky.github.io/CLaunch-Help/ja/optOther.htm) (Japanese): a single-user mode for carrying a portable copy on a USB stick, and registering items with relative paths.
 
 ## FILE · Files and resources
 
 - [Apple · Accessing files from the macOS App Sandbox](https://developer.apple.com/documentation/security/accessing-files-from-the-macos-app-sandbox): persistent access and security-scoped bookmarks in the sandbox.
 - [Microsoft · Build a Cloud Sync Engine that Supports Placeholder Files](https://learn.microsoft.com/en-us/windows/win32/cfapi/build-a-cloud-file-sync-engine): online-only placeholder files.
 - [KDE HIG · Simple by default](https://develop.kde.org/hig/simple_by_default/): files opened without the Open dialog also enter recent files; irreversible deletion is postponed while an undo prompt is shown.
+- [OBS · Standard Recording Output Guide](https://obsproject.com/kb/standard-recording-output-guide): a file name template for recordings with variables for source and time.
+- [Syncthing · FAQ](https://docs.syncthing.net/users/faq.html), [Joplin · FAQ](https://joplinapp.org/help/faq/): a missing folder marker stops syncing instead of propagating deletions; notes lost after the WebDAV URL was changed to an empty target.
+- [JetBrains · Read-only files](https://www.jetbrains.com/help/idea/read-only-files.html): read-only state shown in the status bar with the reasons it cannot be cleared.
+- [mpv · Manual · --autocreate-playlist](https://mpv.io/manual/stable/#options-autocreate-playlist), [IrfanView · Browsing properties](https://www.irfanview.net/help/guida/hlp_propertiesx_others_1.htm): browsing neighboring files in the same directory, filtering by type, what happens at the end of the folder, and jumping to the next file after a deletion.
 
 ## TASK · Tasks, responsiveness, and resources
 
@@ -121,12 +147,18 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [Microsoft Edge · Performance features](https://support.microsoft.com/en-us/edge/learn-about-performance-features-in-microsoft-edge): exceptions to background throttling for playback and capture.
 - [OBS · Hybrid MP4 / MOV](https://obsproject.com/kb/hybrid-mp4): what main content and metadata survive an interrupted recording.
 - [VS Code · Release notes 1.102](https://code.visualstudio.com/updates/v1_102): a Dock badge when an unfocused window needs confirmation.
+- [Obsidian · Settings](https://obsidian.md/help/settings), [Help and support](https://obsidian.md/help/resources): a notice when startup takes longer than expected, a startup time breakdown that can be copied, and rebuilding the vault cache from settings.
+- [qBittorrent · Explanation of Options](https://github.com/qbittorrent/qBittorrent/wiki/Explanation-of-Options-in-qBittorrent): resume data saved at a set interval; running an external program on completion; bringing the add dialog to the front; preventing sleep while torrents are active; a network interface and IP binding for all connections.
+- [OBS · GPU Selection Guide](https://obsproject.com/kb/gpu-selection-guide), [Blender · System preferences](https://docs.blender.org/manual/en/latest/editors/preferences/system.html): which GPU the application uses on multi-GPU machines; an "Allow Online Access" switch; registering and unregistering file associations.
+- [Affinity Photo 2 · Preferences](https://affinity.help/photo2/English.lproj/pages/Workspace/preferences.html): a RAM usage limit and a disk usage warning; tablet input method; preferring metafile over raster when pasting; renderer choice; resetting the font cache.
 
 ## NETWORK · Network, offline, and sync
 
 - [RFC 8252 · OAuth 2.0 for Native Apps](https://www.rfc-editor.org/rfc/rfc8252.html): signing in through the system browser and returning to the app.
 - [Electron · Security](https://www.electronjs.org/docs/latest/tutorial/security): secure transport and certificate validation.
 - [Apple · App Review Guidelines](https://developer.apple.com/app-store/review/guidelines/): guideline 2.5.5 requires apps to work on IPv6-only networks.
+- [JetBrains · HTTP Proxy](https://www.jetbrains.com/help/idea/settings-http-proxy.html): testing the connection through the proxy, exceptions, and which connections the proxy settings affect.
+- [OBS · Stream Connection Troubleshooting](https://obsproject.com/kb/stream-connection-troubleshooting), [Syncthing · Configuration](https://docs.syncthing.net/users/config.html): binding to a network interface and IP family.
 
 ## SYSTEM · System integration
 
@@ -134,6 +166,10 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [Microsoft · Win32 UX Guide · Notifications](https://learn.microsoft.com/en-us/windows/win32/uxguide/mess-notif), [GNOME HIG · Notifications](https://developer.gnome.org/hig/patterns/feedback/notifications.html): withdrawing notifications, foreground behavior, and how often to raise them again.
 - [Slack · Troubleshoot Slack notifications](https://slack.com/help/articles/360001559367-Troubleshoot-Slack-notifications): badges remaining on conversations already read.
 - [Microsoft · WM_QUERYENDSESSION](https://learn.microsoft.com/en-us/windows/win32/shutdown/wm-queryendsession), [ShutdownBlockReasonCreate](https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-shutdownblockreasoncreate), [RegisterApplicationRestart](https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-registerapplicationrestart): saving before shutdown, stating why shutdown is blocked, and restarting after a system update.
+- [Raycast · Games](https://manual.raycast.com/games), [Troubleshooting](https://manual.raycast.com/troubleshooting): hotkeys paused while a game is in the foreground; shortcuts that stop firing after a system update, AltGr conflicts on non-US layouts, and snippets that do not expand in some applications.
+- [PowerToys · PowerToys Run](https://learn.microsoft.com/en-us/windows/powertoys/run), [Keyboard Manager](https://learn.microsoft.com/en-us/windows/powertoys/keyboard-manager), [Awake](https://learn.microsoft.com/en-us/windows/powertoys/awake), [mpv · Manual · --stop-screensaver](https://mpv.io/manual/stable/#options-stop-screensaver): ignoring shortcuts in full-screen mode and choosing the monitor; re-enabling after another hook interferes; keeping the system awake with a separate switch for the screen; the screensaver re-enabled when playback is not active.
+- [Listary · Hotkey](https://help.listary.com/options-hotkey), [Integration](https://help.listary.com/options-integration): disabling the hotkey in full-screen games and in listed applications; what pressing the hotkey again does.
+- [Clibor · Settings](https://chigusa-web.com/clibor/howto/settings/), [CLaunch · Disabling](https://pyonky.github.io/CLaunch-Help/ja/optDisable.htm), [Temporarily disabling CLaunch](https://pyonky.github.io/CLaunch-Help/ja/extSuspend.htm) (Japanese): disabling hotkeys while a remote desktop client is in use; per-application and full-screen disabling; a suspend mode shown on the tray icon; the double-tap interval; paste key and wait before pasting; deleting history on exit.
 
 ## INSTALL · Installation, updates, and uninstallation
 
@@ -146,6 +182,7 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [NIST NVD · CVE-2024-39698](https://nvd.nist.gov/vuln/detail/CVE-2024-39698): a bypass of electron-updater's signature check.
 - [NIST NVD · CVE-2026-95625](https://nvd.nist.gov/vuln/detail/CVE-2026-95625): before 2.12.0, the Tauri updater's version manifest was unsigned and could be used to force a downgrade.
 - [1Password · Windows release notes](https://releases.1password.com/windows/stable/): installing an update on quit no longer relaunches the app; silent updates no longer bring it to the foreground; secondary windows open on the active display.
+- [PowerToys · Run PowerToys in administrator mode](https://learn.microsoft.com/en-us/windows/powertoys/administrator), [Bandizip · Cannot open an archive on a mapped network drive](https://cn.bandisoft.com/bandizip/help/cannot-open-an-archive-in-a-network-mapped-drive/) (Chinese): a notice when an elevated process is detected, and mapped network drives invisible to an elevated process.
 
 ## PRIVACY · Permissions, accounts, and privacy
 
@@ -154,11 +191,18 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [KeePass · FAQ](https://keepass.info/help/kb/faq.html): clearing only what the application itself placed on the clipboard.
 - [1Password · Auto-lock](https://support.1password.com/auto-lock/): app lock and idle detection.
 - [RFC 6455 · WebSocket Origin Considerations](https://www.rfc-editor.org/rfc/rfc6455.html#section-10.2), [Microsoft · Named Pipe Security and Access Rights](https://learn.microsoft.com/en-us/windows/win32/ipc/named-pipe-security-and-access-rights): access boundaries for local services and inter-process communication.
+- [VS Code · FAQ](https://code.visualstudio.com/docs/supporting/faq), [Firefox · Shield studies](https://support.mozilla.org/en-US/kb/shield): experiments disabled separately from telemetry; viewing and leaving active studies.
+- [Audacity · Info for system administrators](https://support.audacityteam.org/au3/special-uses/info-for-system-administrators): turning off update checks and cloud modules individually.
+- [Hidemaru · Privacy settings](https://help.maruo.co.jp/hidemaru/html/070_Env_Privacy.html), [Sakura Editor · General settings](https://sakura-editor.github.io/help/HLP000081.html) (Japanese): clearing each class of history separately or automatically on exit; confirmation on "close all" and on exit.
 
 ## HELP · Help, feedback, and diagnostics
 
 - [Microsoft · Win32 UX Guide · Error Messages](https://learn.microsoft.com/en-us/windows/win32/uxguide/mess-error), [Fluent 2 · Tooltip](https://fluent2.microsoft.design/components/web/react/core/tooltip/usage): presenting errors, and explaining why a control is unavailable and when it becomes available.
 - [LibreOffice · Troubleshoot Mode](https://help.libreoffice.org/latest/en-US/text/shared/01/profile_safe_mode.html), [VS Code · Resolving extension issues with bisect](https://code.visualstudio.com/blogs/2021/02/16/extension-bisect): safe mode and bisecting extensions.
+- [OBS · Known Application Conflicts](https://obsproject.com/kb/known-conflicts): a maintained list of overlay, antivirus, and driver conflicts with their symptoms and handling.
+- [Krita · FAQ](https://docs.krita.org/en/KritaFAQ.html): save failures caused by Controlled Folder Access, freezes caused by dictionary and sandbox software, resetting the configuration with a backup, a log viewer for tablet problems, and causes of slow startup.
+- [Feishu · White screen, lag, freeze, or crash on Windows](https://www.feishu.cn/hc/zh-CN/articles/413916844794) (Chinese), [Firefox · Troubleshoot Firefox crashes](https://support.mozilla.org/en-US/kb/troubleshoot-firefox-crashes-closing-or-quitting): the Feishu article lists known conflicting software and how to handle it; Firefox's about:third-party lists loaded third-party modules with their vendors and can block them.
+- [Blender · Troubleshooting · Startup](https://docs.blender.org/manual/en/latest/troubleshooting/startup.html), [Crashes](https://docs.blender.org/manual/en/latest/troubleshooting/crash.html): console output and debug launch scripts when no window appears.
 
 ## FIND · Search and filtering
 
@@ -210,6 +254,7 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [Microsoft · System Media Transport Controls](https://learn.microsoft.com/en-us/windows/apps/develop/media-playback/integrate-with-systemmediatransportcontrols), [freedesktop · MPRIS](https://specifications.freedesktop.org/mpris/latest/), [Apple HIG · Playing audio](https://developer.apple.com/design/human-interface-guidelines/playing-audio): system media controls.
 - [Microsoft · User-Mode Audio Components](https://learn.microsoft.com/en-us/windows/win32/coreaudio/user-mode-audio-components): how shared and exclusive access affect other applications.
 - [Apple · Capturing screen content in macOS](https://developer.apple.com/documentation/screencapturekit/capturing-screen-content-in-macos): capture scope by window, application, or display.
+- [mpv · Manual · --cursor-autohide](https://mpv.io/manual/stable/#options-cursor-autohide), [IrfanView · Full screen properties](https://www.irfanview.net/help/guida/hlp_propertiesx_full_screen.htm): hiding the pointer after a period of inactivity, optionally only in full screen; temporary display options in full screen do not change the saved option.
 
 ## TRANSFER · Delivering transfer results
 

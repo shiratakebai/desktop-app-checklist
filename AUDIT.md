@@ -6,7 +6,7 @@ This guide is for an AI coding agent asked to audit a desktop application agains
 
 ## Done
 
-The audit is done when, within the scope agreed at checkpoint 1 (quick or full), every applicable checklist item has one of the statuses below with evidence; the report states which items were left out of the audit and how many, and lists the possible unknown needs found by the questions by user moment (or states that there are none); and the user has the report.
+The audit is done when every applicable checklist item within the scope agreed at checkpoint 1 (quick or full) has one of the statuses below with evidence, and the user has the report in the structure given under "Report" below.
 
 | Status | Meaning |
 | --- | --- |
@@ -27,13 +27,13 @@ The audit is done when, within the scope agreed at checkpoint 1 (quick or full),
 
 These are the only points where the work waits for the user.
 
-**1. Before auditing, confirm the scope.** Determine from the codebase the stack, target platforms, distribution methods, product type, feature tags, and which conditional domains apply (see [README.md](README.md#product-types) and the domain headings in checklist.md). Present this briefly and ask only what the code cannot answer. Usually that is which platforms the product commits to rather than merely builds for, whether CJK input or right-to-left scripts matter, and whether the user wants a quick audit (all Baseline items, plus the QoL items the agent judges most valuable for this product type) or a full one. Scope decides which items apply, so wait for the answers. Parenthetical notes in an item for platforms the product does not commit to do not count toward that item's status.
+**1. Before auditing, confirm the scope.** Determine from the codebase the stack, target platforms, distribution methods, product type, feature tags, and which conditional domains apply (see [README.md](README.md#product-types) and the domain headings in checklist.md). Present this briefly and ask only what the code cannot answer. Usually that is which platforms the product commits to rather than merely builds for, whether CJK input or right-to-left scripts matter, which similar products users mainly migrate from or use alongside, and whether the user wants a quick audit (all Baseline items, plus the QoL items the agent judges most valuable for this product type) or a full one. Scope decides which items apply, so wait for the answers. Parenthetical notes in an item for platforms the product does not commit to do not count toward that item's status.
 
 **2. Before changing anything, let the user choose.** After the report, ask which items to address. Unless the user prefers otherwise, suggest this order: Baseline items that can lose data (for example, the DATA domain; SETTINGS-04 Reliable persistence, tolerant of manual edits; FILE-05 Network drives, removable media, and cloud placeholders), then Baseline items that make the application unusable in a committed environment, then the remaining Baseline items, then QoL items by value relative to effort. Lost user data cannot be restored by a later fix, which is why it comes first. Address one item or a small related group at a time, say how each change can be verified, and update its status in the report.
 
 ## Questions by user moment
 
-After the domain-by-domain review, the agent asks itself one question for each of the nine moments below: what happens in the product when the user is at this moment, and which checklist item covers it. The agent answers these from the code and from runs; they are not questions for the user, who is asked only the scope questions at checkpoint 1. Record anything without an answer under "Possible unknown needs" in the report. Read domain by domain, one need can be split across several items that each look covered; asking by moment finds the gaps between items.
+After the domain-by-domain review, the agent asks itself one question for each of the ten moments below: what happens in the product when the user is at this moment, and which checklist item covers it. The agent answers these from the code and from runs; they are not questions for the user, who is asked only the scope questions at checkpoint 1. Record anything without an answer under "Possible unknown needs" in the report. Read domain by domain, one need can be split across several items that each look covered; asking by moment finds the gaps between items.
 
 | Moment | Question |
 | --- | --- |
@@ -46,6 +46,7 @@ After the domain-by-domain review, the agent asks itself one question for each o
 | System failure | What state remains after a crash, a lost connection, a full disk, or a shutdown? |
 | Repetitive work | Does the user repeat the same operation many times? |
 | After an update | After an upgrade, are settings, data, and familiar actions still there? |
+| Migrating in / running alongside | When the user comes from a similar product or uses both, is each setting, data type, and behavior they rely on there matched here, substituted, or deliberately left out? Answer against the settings pages of the products identified at checkpoint 1; when none was identified, record this under possible unknown needs. |
 
 The top of [scenarios.md](scenarios.md) groups scenarios by the same moments, which helps in choosing scenarios for verification.
 

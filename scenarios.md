@@ -21,6 +21,7 @@ Each scenario lists steps, checkpoints, and related items.
 | System failure | S06, S13, S17, S31, S37 |
 | Repetitive work | S19, S25 |
 | After an update | S14, S24 |
+| Migrating in / running alongside | S43 |
 
 S01, S03, S35, S36, and S39 test properties that hold at every moment (IME input, accessibility, local interface security, untrusted content, multilingual input) and are not listed in the table.
 
@@ -361,3 +362,11 @@ Delete several objects in a batch, restore one with undo, and recover the rest f
 Checkpoints: Deleted objects can be recovered with their location and properties unchanged; the import can be undone, and manual edits made before the import remain; undo affects only the object that has focus; the reset stated its scope before running, and settings in other categories were unaffected; the immediate action could be undone within the undo period, and the UI showed where to undo.
 
 Related items: INPUT-14 Undo over confirmation; DATA-04 Undo and redo targets; DATA-10 Protection for bulk deletion and migration; FILE-04 Feedback for move, rename, and delete; SETTINGS-07 Reset by category
+
+### S43 · Migrating from a similar product
+
+In the shortcut settings, choose the scheme preset that matches a comparable product. Export a batch of tagged or categorized objects from the similar product and import them. In a submit-style input, press the send key that was habitual in the previous product. After installing a new major version, import settings from the previous version.
+
+Checkpoints: The preset is available, and after applying it a key lookup returns the right action; the import offers a choice of how tags are merged, and the result states what was discarded; the send key can be switched and is not reverted by "reset all shortcuts"; the imported settings take effect, and obsolete ones are explained.
+
+Related items: INPUT-04 Customizable shortcuts; DATA-08 Import, export, and data portability; INPUT-22 Configurable send key in submit-style inputs; SETTINGS-08 Migration on upgrade
