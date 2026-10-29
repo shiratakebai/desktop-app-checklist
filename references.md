@@ -51,6 +51,9 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [Microsoft · Win32 UX Guide · Keyboard](https://learn.microsoft.com/en-us/windows/win32/uxguide/inter-keyboard): Tab order and initial focus.
 - [Microsoft · Accessibility Insights for Windows](https://accessibilityinsights.io/docs/windows/overview/): a tool for checking UI Automation semantics and Tab stops.
 - [Game Accessibility Guidelines](https://gameaccessibilityguidelines.com/full-list/), [Microsoft · Xbox Accessibility Guidelines](https://learn.microsoft.com/en-us/gaming/accessibility/guidelines): input alternatives, remembered settings, and motion control that carry over to ordinary applications.
+- [W3C · Understanding Content on Hover or Focus](https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus.html), [Understanding Pointer Cancellation](https://www.w3.org/WAI/WCAG22/Understanding/pointer-cancellation.html): dismissing hover content without moving the pointer; activating on release and canceling by moving off the target.
+- [Microsoft · Keyboard shortcuts in Windows](https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec), [VS Code · Accessibility](https://code.visualstudio.com/docs/configure/accessibility/accessibility): F6 cycles through the regions of a window.
+- [Microsoft · Create accessible PDFs](https://support.microsoft.com/en-us/accessibility/office-accessibility/create-accessible-pdfs), [LibreOffice · PDF/UA export](https://help.libreoffice.org/latest/en-US/text/shared/01/ref_pdf_export_universal_accessibility.html): exported documents keep tags, reading order, language, and alternative text.
 
 ## INPUT · Keyboard, mouse, IME, and clipboard
 
@@ -76,6 +79,10 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [Krita · General Settings](https://docs.krita.org/en/reference_manual/preferences/general_settings.html): choosing which clipboard representation to paste, with "ask each time" and a network-dependent option; font DPI conversion for files from older versions.
 - [JetBrains · Appearance](https://www.jetbrains.com/help/idea/settings-appearance.html): drag and drop only while Alt is held, to avoid moving files, tabs, and panels by accident.
 - [LibreOffice · Security Options and Warnings](https://help.libreoffice.org/latest/en-US/text/shared/optionen/securityoptionsdialog.html): Ctrl-click required to follow hyperlinks.
+- [Microsoft · Text Services Framework](https://learn.microsoft.com/en-us/windows/win32/tsf/what-is-text-services-framework), [Apple · Writing Tools](https://developer.apple.com/documentation/appkit/writing-tools): speech, handwriting, and system writing tools reach text areas through the platform text interfaces; custom text views need to adopt them.
+- [Windows Terminal · Interaction](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/interaction), [iTerm2 · Menu Items](https://iterm2.com/documentation-menu-items.html): warnings before pasting multiple lines or text ending in a line break.
+- [Blender · Fields](https://docs.blender.org/manual/en/latest/interface/controls/buttons/fields.html): mathematical expressions and units in number fields.
+- [Microsoft Teams · Check your spelling in multiple languages](https://support.microsoft.com/en-us/teams/chat/check-your-spelling-in-multiple-languages-in-microsoft-teams), [LibreOffice · Selecting the Document Language](https://help.libreoffice.org/latest/en-US/text/shared/guide/language_select.html): proofing languages set independently of the UI language, down to a paragraph or selection.
 
 ## WINDOW · Windows
 
@@ -95,6 +102,8 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [W3C APG · Window Splitter](https://www.w3.org/WAI/ARIA/apg/patterns/windowsplitter/): keyboard control of splitters and restoring position after collapsing.
 - [Microsoft · Win32 UX Guide · List Views](https://learn.microsoft.com/en-us/windows/win32/uxguide/ctrl-list-views), [Semi Design · Table](https://semi.design/design/zh-CN/show/table) (Chinese): choosing columns, resizing columns, and fixed headers and columns.
 - [VS Code · Modernizing the VS Code UI](https://code.visualstudio.com/blogs/2026/10/15/modern-ui): a layout density setting added after a redesign, with the classic interface kept for a transition period.
+- [Apple HIG · Split views](https://developer.apple.com/design/human-interface-guidelines/split-views), [Sidebars](https://developer.apple.com/design/human-interface-guidelines/sidebars), [WinUI · NavigationView](https://learn.microsoft.com/en-us/windows/apps/design/controls/navigationview), [Microsoft · Show or hide the ribbon](https://support.microsoft.com/en-us/office/show-or-hide-the-ribbon-in-office-d946b26e-0c8c-402d-a0f7-c6efa296b527): several visible ways to reveal hidden panes, a pane toggle button, and a way back to a hidden ribbon.
+- [Microsoft · Acrylic material](https://learn.microsoft.com/en-us/windows/apps/design/style/acrylic), [AppKit · accessibilityDisplayShouldReduceTransparency](https://developer.apple.com/documentation/appkit/nsworkspace/accessibilitydisplayshouldreducetransparency): solid backgrounds when the user turns off transparency.
 
 ## SETTINGS · Settings
 
@@ -107,11 +116,16 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [Blender · Defaults](https://docs.blender.org/manual/en/latest/getting_started/configuration/defaults.html), [Inkscape · FAQ](https://inkscape.org/learn/faq/): importing preferences and extensions from the previous version; user-added extensions, palettes, and templates live in the user directory and survive upgrades; a DPI change on opening old files offers conversion choices.
 - [LibreOffice · Load/Save General options](https://help.libreoffice.org/latest/en-US/text/shared/optionen/01010200.html): printer settings and the view position stored in a document are not applied by default when another user opens it.
 - [LM Studio · User or Developer](https://lmstudio.ai/docs/app/user-interface/modes), [Zoom · Changing settings in the Zoom Workplace desktop and mobile app](https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0060612): a User mode that shows only the chat interface and a Developer mode with full access; rarely used options grouped under "Advanced" on each settings page.
+- [VS Code · Settings](https://code.visualstudio.com/docs/configure/settings): search filters, advanced settings in search results, and copying a setting's ID.
+- [Microsoft · Launch the Windows Settings app](https://learn.microsoft.com/en-us/windows/apps/develop/launch/launch-settings-app): `ms-settings:` links open a specific system settings page.
 
 ## LOCALE · Language and region
 
 - [Microsoft · Handling a new era in the Japanese calendar in .NET](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/): handling a change of Japanese era.
 - [IANA · Time Zone Database](https://www.iana.org/time-zones): time zone rules change several times a year as governments revise them; applications follow the system's data or update their bundled copy.
+- [Unicode · UAX #15 Normalization Forms](https://www.unicode.org/reports/tr15/), [Syncthing · autoNormalize](https://docs.syncthing.net/advanced/folder-autonormalize.html): canonically equivalent sequences, and file names that differ in normalization across systems.
+- [Microsoft · StrCmpLogicalW](https://learn.microsoft.com/en-us/windows/win32/api/shlwapi/nf-shlwapi-strcmplogicalw), [Apple · localizedStandardCompare:](https://developer.apple.com/documentation/foundation/nsstring/localizedstandardcompare(_:)): sorting that treats digits as numbers, consistent with the file manager.
+- [JetBrains · Search Everywhere](https://www.jetbrains.com/help/idea/searching-everywhere.html), [VS Code 1.86 release notes](https://code.visualstudio.com/updates/v1_86): finding actions and settings in a localized UI, and showing original English names next to translations.
 
 ## DATA · Data protection, saving, and recovery
 
@@ -129,6 +143,8 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [JetBrains · Invalidate caches](https://www.jetbrains.com/help/idea/invalidate-caches.html), [Thunderbird · Rebuilding the Global Database](https://support.mozilla.org/en-US/kb/rebuilding-global-database): rebuilding derived indexes from the interface without touching source data.
 - [Bandizip · Preventing data loss with safe backups](https://cn.bandisoft.com/bandizip/help/backup/) (Chinese): testing the archive before the source files are deleted.
 - [CLaunch · Other options](https://pyonky.github.io/CLaunch-Help/ja/optOther.htm) (Japanese): a single-user mode for carrying a portable copy on a USB stick, and registering items with relative paths.
+- [Microsoft · Save a copy before editing](https://support.microsoft.com/en-us/office/collab-files/save-a-copy-before-editing-to-prevent-changing-the-original-file): switching to a copy before editing when AutoSave writes to the original.
+- [Microsoft · Data import and analysis options in Excel](https://support.microsoft.com/en-us/excel/data-import-and-analysis-options-in-excel), [LibreOffice · Text Import](https://help.libreoffice.org/latest/en-US/text/shared/00/00000208.html): controlling type conversion on import, including leading zeros, long numbers, dates, and the interpreting locale.
 
 ## FILE · Files and resources
 
@@ -194,6 +210,7 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [VS Code · FAQ](https://code.visualstudio.com/docs/supporting/faq), [Firefox · Shield studies](https://support.mozilla.org/en-US/kb/shield): experiments disabled separately from telemetry; viewing and leaving active studies.
 - [Audacity · Info for system administrators](https://support.audacityteam.org/au3/special-uses/info-for-system-administrators): turning off update checks and cloud modules individually.
 - [Hidemaru · Privacy settings](https://help.maruo.co.jp/hidemaru/html/070_Env_Privacy.html), [Sakura Editor · General settings](https://sakura-editor.github.io/help/HLP000081.html) (Japanese): clearing each class of history separately or automatically on exit; confirmation on "close all" and on exit.
+- [Adobe Acrobat · Redact and sanitize PDFs](https://helpx.adobe.com/acrobat/desktop/protect-documents/redact-pdfs/redacting-sanitizing.html), [PDF-XChange · Redacting and sanitizing](https://help.pdf-xchange.com/pdfxe11/redacting-pages-and-sanitizing-documents.html): redaction permanently removes content, distinct from marks not yet applied.
 
 ## HELP · Help, feedback, and diagnostics
 

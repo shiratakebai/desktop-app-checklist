@@ -51,6 +51,9 @@
 - [Microsoft · Win32 UX Guide · Keyboard](https://learn.microsoft.com/en-us/windows/win32/uxguide/inter-keyboard)：Tab 顺序与初始焦点。
 - [Microsoft · Accessibility Insights for Windows](https://accessibilityinsights.io/docs/windows/overview/)：UI Automation 语义与 Tab 停靠的检查工具。
 - [Game Accessibility Guidelines](https://gameaccessibilityguidelines.com/full-list/)、[Microsoft · Xbox Accessibility Guidelines](https://learn.microsoft.com/en-us/gaming/accessibility/guidelines)：输入替代、设置记忆和动效控制，可迁移到普通应用。
+- [W3C · Understanding Content on Hover or Focus](https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus.html)、[Understanding Pointer Cancellation](https://www.w3.org/WAI/WCAG22/Understanding/pointer-cancellation.html)：不移动指针即可关闭悬停内容；松开时触发，移出目标即取消。
+- [Microsoft · Windows 键盘快捷键](https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec)、[VS Code · Accessibility](https://code.visualstudio.com/docs/configure/accessibility/accessibility)：F6 在窗口的各区域之间循环。
+- [Microsoft · Create accessible PDFs](https://support.microsoft.com/en-us/accessibility/office-accessibility/create-accessible-pdfs)、[LibreOffice · PDF/UA export](https://help.libreoffice.org/latest/en-US/text/shared/01/ref_pdf_export_universal_accessibility.html)：导出的文档保留标签、阅读顺序、语言和替代文字。
 
 ## INPUT · 键盘、鼠标、输入法与剪贴板
 
@@ -76,6 +79,10 @@
 - [Krita · General Settings](https://docs.krita.org/en/reference_manual/preferences/general_settings.html)：粘贴时选用哪种剪贴板表示，含"每次询问"与需要联网的选项；旧版本文件的字号 DPI 换算。
 - [JetBrains · Appearance](https://www.jetbrains.com/help/idea/settings-appearance.html)：只在按住 Alt 时才允许拖放，避免误移动文件、标签和面板。
 - [LibreOffice · Security Options and Warnings](https://help.libreoffice.org/latest/en-US/text/shared/optionen/securityoptionsdialog.html)：需按住 Ctrl 单击才跟随超链接。
+- [Microsoft · Text Services Framework](https://learn.microsoft.com/en-us/windows/win32/tsf/what-is-text-services-framework)、[Apple · Writing Tools](https://developer.apple.com/documentation/appkit/writing-tools)：语音、手写和系统写作工具通过平台文本接口进入文本区；自定义文本视图需要接入。
+- [Windows Terminal · Interaction](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/interaction)、[iTerm2 · Menu Items](https://iterm2.com/documentation-menu-items.html)：粘贴多行或末尾带换行的内容前给出警告。
+- [Blender · Fields](https://docs.blender.org/manual/en/latest/interface/controls/buttons/fields.html)：数值框中的数学表达式与单位。
+- [Microsoft Teams · Check your spelling in multiple languages](https://support.microsoft.com/en-us/teams/chat/check-your-spelling-in-multiple-languages-in-microsoft-teams)、[LibreOffice · Selecting the Document Language](https://help.libreoffice.org/latest/en-US/text/shared/guide/language_select.html)：校对语言独立于界面语言设置，可细到段落和选中文字。
 
 ## WINDOW · 窗口
 
@@ -95,6 +102,8 @@
 - [W3C APG · Window Splitter](https://www.w3.org/WAI/ARIA/apg/patterns/windowsplitter/)：分隔条的键盘操作与折叠后的恢复。
 - [Microsoft · Win32 UX Guide · List Views](https://learn.microsoft.com/en-us/windows/win32/uxguide/ctrl-list-views)、[Semi Design · 表格](https://semi.design/design/zh-CN/show/table)：列选择、列宽调整、固定表头与固定列。
 - [VS Code · Modernizing the VS Code UI](https://code.visualstudio.com/blogs/2026/10/15/modern-ui)：改版后增加布局密度设置，并在过渡期保留经典界面。
+- [Apple HIG · Split views](https://developer.apple.com/design/human-interface-guidelines/split-views)、[Sidebars](https://developer.apple.com/design/human-interface-guidelines/sidebars)、[WinUI · NavigationView](https://learn.microsoft.com/en-us/windows/apps/design/controls/navigationview)、[Microsoft · 显示或隐藏功能区](https://support.microsoft.com/en-us/office/show-or-hide-the-ribbon-in-office-d946b26e-0c8c-402d-a0f7-c6efa296b527)：为隐藏的窗格提供多种可见的找回方式；窗格开关按钮；隐藏的功能区的找回入口。
+- [Microsoft · Acrylic material](https://learn.microsoft.com/en-us/windows/apps/design/style/acrylic)、[AppKit · accessibilityDisplayShouldReduceTransparency](https://developer.apple.com/documentation/appkit/nsworkspace/accessibilitydisplayshouldreducetransparency)：用户关闭透明效果后使用不透明背景。
 
 ## SETTINGS · 设置
 
@@ -107,11 +116,16 @@
 - [Blender · Defaults](https://docs.blender.org/manual/en/latest/getting_started/configuration/defaults.html)、[Inkscape · FAQ](https://inkscape.org/learn/faq/)：从上一版本导入偏好和扩展；用户自装的扩展、调色板和模板放在用户目录，升级后保留；打开旧文件时 DPI 变化提供转换选择。
 - [LibreOffice · Load/Save General options](https://help.libreoffice.org/latest/en-US/text/shared/optionen/01010200.html)：文档内保存的打印机设置和视图位置，由其他用户打开时默认不生效。
 - [LM Studio · User or Developer](https://lmstudio.ai/docs/app/user-interface/modes)、[Zoom · Changing settings in the Zoom Workplace desktop and mobile app](https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0060612)：只显示聊天界面的 User 模式与开放全部功能的 Developer 模式；各设置页把少用项收进"Advanced"分组。
+- [VS Code · Settings](https://code.visualstudio.com/docs/configure/settings)：搜索过滤器、高级设置在搜索结果中的显示、复制设置 ID。
+- [Microsoft · Launch the Windows Settings app](https://learn.microsoft.com/en-us/windows/apps/develop/launch/launch-settings-app)：`ms-settings:` 链接直接打开系统设置的某一页。
 
 ## LOCALE · 语言与地区
 
 - [Microsoft · Handling a new era in the Japanese calendar in .NET](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/)：日本改元时的纪年处理。
 - [IANA · Time Zone Database](https://www.iana.org/time-zones)：时区规则每年多次因政府修改而更新；应用跟随系统数据或更新自带副本。
+- [Unicode · UAX #15 Normalization Forms](https://www.unicode.org/reports/tr15/)、[Syncthing · autoNormalize](https://docs.syncthing.net/advanced/folder-autonormalize.html)：规范等价的编码序列；不同系统之间规范化形式不同的文件名。
+- [Microsoft · StrCmpLogicalW](https://learn.microsoft.com/en-us/windows/win32/api/shlwapi/nf-shlwapi-strcmplogicalw)、[Apple · localizedStandardCompare:](https://developer.apple.com/documentation/foundation/nsstring/localizedstandardcompare(_:))：把数字按数值比较的排序，与文件管理器一致。
+- [JetBrains · Search Everywhere](https://www.jetbrains.com/help/idea/searching-everywhere.html)、[VS Code 1.86 发布说明](https://code.visualstudio.com/updates/v1_86)：本地化界面中查找动作和设置；译名旁显示英文原名。
 
 ## DATA · 数据保护、保存与恢复
 
@@ -129,6 +143,8 @@
 - [JetBrains · Invalidate caches](https://www.jetbrains.com/help/idea/invalidate-caches.html)、[Thunderbird · Rebuilding the Global Database](https://support.mozilla.org/en-US/kb/rebuilding-global-database)：从界面重建派生索引，不改动原始数据。
 - [Bandizip · 如何通过安全备份来防止数据损坏](https://cn.bandisoft.com/bandizip/help/backup/)：删除源文件前先测试压缩文件。
 - [CLaunch · その他](https://pyonky.github.io/CLaunch-Help/ja/optOther.htm)：便携到 U 盘使用的单用户模式，以相对路径登记项目。
+- [Microsoft · Save a copy before editing](https://support.microsoft.com/en-us/office/collab-files/save-a-copy-before-editing-to-prevent-changing-the-original-file)：自动保存写回原件时，编辑前转到副本。
+- [Microsoft · Data import and analysis options in Excel](https://support.microsoft.com/en-us/excel/data-import-and-analysis-options-in-excel)、[LibreOffice · Text Import](https://help.libreoffice.org/latest/en-US/text/shared/00/00000208.html)：导入时控制类型转换，包括前导零、长数字、日期和解释所用的地区。
 
 ## FILE · 文件与资源
 
@@ -194,6 +210,7 @@
 - [VS Code · FAQ](https://code.visualstudio.com/docs/supporting/faq)、[Firefox · Shield studies](https://support.mozilla.org/en-US/kb/shield)：实验与遥测分开关闭；查看并退出当前生效的实验。
 - [Audacity · Info for system administrators](https://support.audacityteam.org/au3/special-uses/info-for-system-administrators)：逐项关闭更新检查与云端模块。
 - [秀丸エディタ · 動作環境－プライバシー](https://help.maruo.co.jp/hidemaru/html/070_Env_Privacy.html)、[サクラエディタ · 共通設定『全般』](https://sakura-editor.github.io/help/HLP000081.html)：各类历史分别清除或退出时自动清除；"全部关闭"与退出时的确认。
+- [Adobe Acrobat · Redact and sanitize PDFs](https://helpx.adobe.com/acrobat/desktop/protect-documents/redact-pdfs/redacting-sanitizing.html)、[PDF-XChange · Redacting and sanitizing](https://help.pdf-xchange.com/pdfxe11/redacting-pages-and-sanitizing-documents.html)：涂黑会永久移除内容，与尚未应用的标记区分。
 
 ## HELP · 帮助、反馈与诊断
 
