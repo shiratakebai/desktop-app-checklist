@@ -35,12 +35,14 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [GitHub · Rendering huge pull requests in the GitHub Copilot app](https://github.blog/engineering/user-experience/rendering-huge-pull-requests-in-the-github-copilot-app/): anchoring the reading position to content when heights change. Items: `DISPLAY-08`.
 - [Krita · Color Management Settings](https://docs.krita.org/en/reference_manual/preferences/color_management_settings.html): separating canvas color space, display configuration, and HDR output. Items: `DISPLAY-10`.
 - [Typora · Zoom](https://support.typora.io/Zoom/), [Slack · Adjust your zoom level in Slack](https://slack.com/help/articles/236067467-Adjust-your-zoom-level-in-Slack): interface zoom set within the application, with a hint panel showing the current factor and a reset. Items: `DISPLAY-05`.
+- [Microsoft · CalculatePopupWindowPosition](https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-calculatepopupwindowposition): positioning a pop-up so that it stays fully visible on the desktop. Items: `DISPLAY-04`.
 
 ## TYPO · Fonts and text
 
 - [Apple HIG · Typography](https://developer.apple.com/design/human-interface-guidelines/typography): system fonts, dynamic type sizes, and legibility. Items: `TYPO-01`, `DISPLAY-06`.
 - [Notepad++ · Preferences](https://npp-user-manual.org/docs/preferences/): showing whitespace, line endings, and control characters on demand; the first line as the name of an untitled tab; locking the tab bar and disabling drag of selected text. Items: `TYPO-07`, `WINDOW-07`, `INPUT-21`.
 - [VS Code · User and workspace settings](https://code.visualstudio.com/docs/configure/settings): `editor.renderWhitespace`; the `@modified` filter and per-setting reset; confirmation before closing only when triggered from the keyboard; session restore can be turned off; untitled editors labeled by content. Items: `TYPO-07`, `SETTINGS-02`, `INPUT-14`, `WINDOW-06`.
+- [Obsidian · Readable line length](https://help.obsidian.md/Editing+and+formatting/Readable+line+length), [Notion · Customize and style your content](https://www.notion.com/help/customize-and-style-your-content): limiting the line length, or a full-width switch. Items: `TYPO-04`.
 
 ## A11Y · Accessibility
 
@@ -54,6 +56,8 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [W3C · Understanding Content on Hover or Focus](https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus.html), [Understanding Pointer Cancellation](https://www.w3.org/WAI/WCAG22/Understanding/pointer-cancellation.html): dismissing hover content without moving the pointer; activating on release and canceling by moving off the target. Items: `A11Y-08`.
 - [Microsoft · Keyboard shortcuts in Windows](https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec), [VS Code · Accessibility](https://code.visualstudio.com/docs/configure/accessibility/accessibility): F6 cycles through the regions of a window. Items: `A11Y-01`.
 - [Microsoft · Create accessible PDFs](https://support.microsoft.com/en-us/accessibility/office-accessibility/create-accessible-pdfs), [LibreOffice · PDF/UA export](https://help.libreoffice.org/latest/en-US/text/shared/01/ref_pdf_export_universal_accessibility.html): exported documents keep tags, reading order, language, and alternative text. Items: `A11Y-03`.
+- [W3C · Understanding Focus Not Obscured (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html), [Understanding Sensory Characteristics](https://www.w3.org/WAI/WCAG22/Understanding/sensory-characteristics.html): focus not hidden by fixed content; instructions that do not rely only on shape, position, color, or sound. Items: `A11Y-02`, `A11Y-06`.
+- [Microsoft · Set up an authenticator app as a two-step verification method](https://support.microsoft.com/en-us/account-billing/set-up-an-authenticator-app-as-a-two-step-verification-method-2db39828-15e1-4614-b825-6e2b524e7c95): entering a code manually when a QR code cannot be scanned. Items: `A11Y-09`.
 
 ## INPUT · Keyboard, mouse, IME, and clipboard
 
@@ -62,13 +66,13 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [Apple HIG · Keyboards](https://developer.apple.com/design/human-interface-guidelines/keyboards), [The menu bar](https://developer.apple.com/design/human-interface-guidelines/the-menu-bar): standard macOS shortcuts and a complete menu bar. Items: `INPUT-01`, `INPUT-03`.
 - [W3C APG · Dialog (Modal)](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/), [Combobox](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/): closing order of nested overlays and Enter in suggestion lists. Items: `INPUT-02`.
 - [KDE · KActionCollection](https://api.kde.org/kactioncollection.html): central management of actions, default shortcuts, and configurability. Items: `INPUT-04`, `INPUT-03`.
-- [Microsoft · Shell Clipboard Formats](https://learn.microsoft.com/en-us/windows/win32/shell/clipboard), [Clipboard Formats](https://learn.microsoft.com/en-us/windows/win32/dataxchg/clipboard-formats), [Clipboard Operations](https://learn.microsoft.com/en-us/windows/win32/dataxchg/clipboard-operations): multi-format clipboard data, virtual files, and delayed rendering. Items: `INPUT-10`, `INPUT-09`.
+- [Microsoft · Shell Clipboard Formats](https://learn.microsoft.com/en-us/windows/win32/shell/clipboard), [Clipboard Formats](https://learn.microsoft.com/en-us/windows/win32/dataxchg/clipboard-formats), [Clipboard Operations](https://learn.microsoft.com/en-us/windows/win32/dataxchg/clipboard-operations): multi-format clipboard data, virtual files, and delayed rendering. Items: `INPUT-10`, `INPUT-09`, `PRIVACY-10`.
 - [Apple · Supporting Drag and Drop Through File Promises](https://developer.apple.com/documentation/appkit/supporting-drag-and-drop-through-file-promises): dragging content whose local file does not exist yet. Items: `INPUT-09`, `INPUT-13`.
 - [Apple HIG · Drag and drop](https://developer.apple.com/design/human-interface-guidelines/drag-and-drop): move and copy rules, scrolling during a drag, selection after a drop, and confirmation before drops that cannot be undone. Items: `INPUT-21`, `INPUT-09`.
 - [Microsoft · Win32 UX Guide · Mouse and Pointers](https://learn.microsoft.com/en-us/windows/win32/uxguide/inter-mouse): Esc cancels a drag, and clicks take effect on release. Items: `INPUT-21`, `A11Y-08`.
 - [PatternFly · Bulk selection](https://www.patternfly.org/patterns/bulk-selection/), [eBay Playbook · Selection](https://playbook.ebay.com/design-system/patterns/selection), [Adobe · React Aria · Selection](https://react-aria.adobe.com/selection): counts, scope, and clearing for selections across pages. Items: `INPUT-11`.
 - [W3C APG · Checkbox](https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/): representing a mixed state. Items: `INPUT-11`.
-- [Microsoft · PowerToys PowerRename](https://learn.microsoft.com/en-us/windows/powertoys/powerrename), [VS Code · Basic Editing](https://code.visualstudio.com/docs/editing/codebasics): previewing old and new values before batch renames and replacements. Items: `INPUT-11`.
+- [Microsoft · PowerToys PowerRename](https://learn.microsoft.com/en-us/windows/powertoys/powerrename), [VS Code · Basic Editing](https://code.visualstudio.com/docs/editing/codebasics): previewing old and new values before batch renames and replacements. Items: `INPUT-11`, `DATA-16`.
 - [VS Code · User interface](https://code.visualstudio.com/docs/editing/getting-started/userinterface): preview tabs and permanent tabs. Items: `INPUT-17`.
 - [Krita · Tablet Settings](https://docs.krita.org/en/reference_manual/preferences/tablet_settings.html): distinguishing pressure input from mouse events. Items: `INPUT-12`.
 - [GNOME HIG · Text fields](https://developer.gnome.org/hig/patterns/controls/text-fields.html), [KDE HIG · Getting input](https://develop.kde.org/hig/getting_input/), [Apple HIG · Entering data](https://developer.apple.com/design/human-interface-guidelines/entering-data): input constraints, inline correction, and direct entry of precise values. Items: `INPUT-18`, `A11Y-08`.
@@ -83,6 +87,13 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [Windows Terminal · Interaction](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/interaction), [iTerm2 · Menu Items](https://iterm2.com/documentation-menu-items.html): warnings before pasting multiple lines or text ending in a line break. Items: `INPUT-10`.
 - [Blender · Fields](https://docs.blender.org/manual/en/latest/interface/controls/buttons/fields.html): mathematical expressions and units in number fields. Items: `INPUT-18`.
 - [Microsoft Teams · Check your spelling in multiple languages](https://support.microsoft.com/en-us/teams/chat/check-your-spelling-in-multiple-languages-in-microsoft-teams), [LibreOffice · Selecting the Document Language](https://help.libreoffice.org/latest/en-US/text/shared/guide/language_select.html): proofing languages set independently of the UI language, down to a paragraph or selection. Items: `INPUT-20`.
+- [Microsoft · Win32 UX Guide · Dialog Boxes](https://learn.microsoft.com/en-us/windows/win32/uxguide/win-dialog-box): commit buttons named for the specific response rather than OK or Yes/No. Items: `INPUT-02`.
+- [WHATWG · HTML · Popover light dismiss](https://html.spec.whatwg.org/multipage/popover.html): a click outside closes a popover only when the press and the release land on the same target. Items: `INPUT-02`.
+- [Microsoft · Access keys](https://learn.microsoft.com/en-us/windows/apps/design/input/access-keys): access keys that are unique within their scope and localized with the UI. Items: `INPUT-03`.
+- [VS Code · Terminal Advanced](https://code.visualstudio.com/docs/terminal/advanced): which shortcuts the integrated terminal receives and which the editor handles. Items: `INPUT-04`.
+- [Microsoft · LVN_ENDLABELEDIT](https://learn.microsoft.com/en-us/windows/win32/controls/lvn-endlabeledit), [Apple · Rename files, folders, and disks on Mac](https://support.apple.com/guide/mac-help/rename-files-folders-and-disks-on-mac-mchlp1144/mac): starting and canceling an in-place rename. Items: `INPUT-07`.
+- [Microsoft · Win32 UX Guide · Text Boxes](https://learn.microsoft.com/en-us/windows/win32/uxguide/ctrl-text-boxes): reporting invalid input when the text box loses focus; moving to the next box automatically only for formatted data, after its last character. Items: `INPUT-18`.
+- [NIST · SP 800-63B-4](https://pages.nist.gov/800-63-4/sp800-63b.html), [Microsoft · Password box](https://learn.microsoft.com/en-us/windows/apps/design/controls/password-box): allowing paste in password fields and offering to display the password. Items: `INPUT-07`, `INPUT-19`.
 
 ## WINDOW · Windows
 
@@ -104,6 +115,7 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [VS Code · Modernizing the VS Code UI](https://code.visualstudio.com/blogs/2026/10/15/modern-ui): a layout density setting added after a redesign, with the classic interface kept for a transition period. Items: `APPEARANCE-04`, `HELP-08`.
 - [Apple HIG · Split views](https://developer.apple.com/design/human-interface-guidelines/split-views), [Sidebars](https://developer.apple.com/design/human-interface-guidelines/sidebars), [WinUI · NavigationView](https://learn.microsoft.com/en-us/windows/apps/design/controls/navigationview), [Microsoft · Show or hide the ribbon](https://support.microsoft.com/en-us/office/show-or-hide-the-ribbon-in-office-d946b26e-0c8c-402d-a0f7-c6efa296b527): several visible ways to reveal hidden panes, a pane toggle button, and a way back to a hidden ribbon. Items: `APPEARANCE-05`.
 - [Microsoft · Acrylic material](https://learn.microsoft.com/en-us/windows/apps/design/style/acrylic), [AppKit · accessibilityDisplayShouldReduceTransparency](https://developer.apple.com/documentation/appkit/nsworkspace/accessibilitydisplayshouldreducetransparency): solid backgrounds when the user turns off transparency. Items: `APPEARANCE-03`.
+- [VS Code · Custom layout](https://code.visualstudio.com/docs/configure/custom-layout), [JetBrains · Viewing modes](https://www.jetbrains.com/help/idea/ide-viewing-modes.html): Zen Mode and distraction-free mode hide everything except the editor. Items: `APPEARANCE-05`.
 
 ## SETTINGS · Settings
 
@@ -118,6 +130,7 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [LM Studio · User or Developer](https://lmstudio.ai/docs/app/user-interface/modes), [Zoom · Changing settings in the Zoom Workplace desktop and mobile app](https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0060612): a User mode that shows only the chat interface and a Developer mode with full access; rarely used options grouped under "Advanced" on each settings page. Items: `SETTINGS-01`.
 - [VS Code · Settings](https://code.visualstudio.com/docs/configure/settings): search filters, advanced settings in search results, and copying a setting's ID. Items: `SETTINGS-02`.
 - [Microsoft · Launch the Windows Settings app](https://learn.microsoft.com/en-us/windows/apps/develop/launch/launch-settings-app): `ms-settings:` links open a specific system settings page. Items: `HELP-03`, `SYSTEM-05`.
+- [LibreOffice · Options](https://help.libreoffice.org/latest/en-US/text/shared/optionen/01000000.html): Reset returns the current page to its state when the dialog was opened, which differs from restoring defaults. Items: `SETTINGS-07`.
 
 ## LOCALE · Language and region
 
@@ -126,6 +139,9 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [Unicode · UAX #15 Normalization Forms](https://www.unicode.org/reports/tr15/), [Syncthing · autoNormalize](https://docs.syncthing.net/advanced/folder-autonormalize.html): canonically equivalent sequences, and file names that differ in normalization across systems. Items: `LOCALE-05`, `FILE-03`.
 - [Microsoft · StrCmpLogicalW](https://learn.microsoft.com/en-us/windows/win32/api/shlwapi/nf-shlwapi-strcmplogicalw), [Apple · localizedStandardCompare:](https://developer.apple.com/documentation/foundation/nsstring/localizedstandardcompare(_:)): sorting that treats digits as numbers, consistent with the file manager. Items: `LOCALE-05`.
 - [JetBrains · Search Everywhere](https://www.jetbrains.com/help/idea/searching-everywhere.html), [VS Code 1.86 release notes](https://code.visualstudio.com/updates/v1_86): finding actions and settings in a localized UI, and showing original English names next to translations. Items: `LOCALE-05`, `INPUT-05`.
+- [Microsoft · LOCALE_IMEASURE](https://learn.microsoft.com/en-us/windows/win32/intl/locale-imeasure): the measurement system in the regional settings. Items: `LOCALE-03`.
+- [Blender · Interface preferences](https://docs.blender.org/manual/en/latest/editors/preferences/interface.html): translating interface labels, tooltips, and the names of new data separately; a language list grouped by translation completeness. Items: `LOCALE-01`, `LOCALE-02`.
+- [W3C Internationalization · Accept-Language used for locale setting](https://www.w3.org/International/questions/qa-site-conneg): not using country flags to identify languages. Items: `LOCALE-01`.
 
 ## DATA · Data protection, saving, and recovery
 
@@ -167,11 +183,12 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [qBittorrent · Explanation of Options](https://github.com/qbittorrent/qBittorrent/wiki/Explanation-of-Options-in-qBittorrent): resume data saved at a set interval; running an external program on completion; bringing the add dialog to the front; preventing sleep while torrents are active; a network interface and IP binding for all connections. Items: `TASK-04`, `TASK-16`, `SYSTEM-08`, `NETWORK-05`.
 - [OBS · GPU Selection Guide](https://obsproject.com/kb/gpu-selection-guide), [Blender · System preferences](https://docs.blender.org/manual/en/latest/editors/preferences/system.html): which GPU the application uses on multi-GPU machines; an "Allow Online Access" switch; registering and unregistering file associations. Items: `TASK-08`, `PRIVACY-04`, `SYSTEM-05`.
 - [Affinity Photo 2 · Preferences](https://affinity.help/photo2/English.lproj/pages/Workspace/preferences.html): a RAM usage limit and a disk usage warning; tablet input method; preferring metafile over raster when pasting; renderer choice; resetting the font cache. Items: `TASK-13`, `INPUT-12`, `INPUT-10`, `TASK-08`.
+- [Mozilla · Bug 42194](https://bugzilla.mozilla.org/show_bug.cgi?id=42194): a message sent twice when Send was clicked more than once. Items: `TASK-05`.
 
 ## NETWORK · Network, offline, and sync
 
 - [RFC 8252 · OAuth 2.0 for Native Apps](https://www.rfc-editor.org/rfc/rfc8252.html): signing in through the system browser and returning to the app. Items: `NETWORK-07`.
-- [Electron · Security](https://www.electronjs.org/docs/latest/tutorial/security): secure transport and certificate validation. Items: `NETWORK-08`.
+- [Electron · Security](https://www.electronjs.org/docs/latest/tutorial/security): secure transport and certificate validation. Items: `NETWORK-08`, `TRUST-07`.
 - [Apple · App Review Guidelines](https://developer.apple.com/app-store/review/guidelines/): guideline 2.5.5 requires apps to work on IPv6-only networks. Items: `NETWORK-09`.
 - [JetBrains · HTTP Proxy](https://www.jetbrains.com/help/idea/settings-http-proxy.html): testing the connection through the proxy, exceptions, and which connections the proxy settings affect. Items: `NETWORK-05`.
 - [OBS · Stream Connection Troubleshooting](https://obsproject.com/kb/stream-connection-troubleshooting), [Syncthing · Configuration](https://docs.syncthing.net/users/config.html): binding to a network interface and IP family. Items: `NETWORK-05`.
@@ -186,6 +203,9 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [PowerToys · PowerToys Run](https://learn.microsoft.com/en-us/windows/powertoys/run), [Keyboard Manager](https://learn.microsoft.com/en-us/windows/powertoys/keyboard-manager), [Awake](https://learn.microsoft.com/en-us/windows/powertoys/awake), [mpv · Manual · --stop-screensaver](https://mpv.io/manual/stable/#options-stop-screensaver): ignoring shortcuts in full-screen mode and choosing the monitor; re-enabling after another hook interferes; keeping the system awake with a separate switch for the screen; the screensaver re-enabled when playback is not active. Items: `SYSTEM-08`, `SYSTEM-15`, `SYSTEM-04`, `WINDOW-13`.
 - [Listary · Hotkey](https://help.listary.com/options-hotkey), [Integration](https://help.listary.com/options-integration): disabling the hotkey in full-screen games and in listed applications; what pressing the hotkey again does. Items: `SYSTEM-15`, `WINDOW-13`.
 - [Clibor · Settings](https://chigusa-web.com/clibor/howto/settings/), [CLaunch · Disabling](https://pyonky.github.io/CLaunch-Help/ja/optDisable.htm), [Temporarily disabling CLaunch](https://pyonky.github.io/CLaunch-Help/ja/extSuspend.htm) (Japanese): disabling hotkeys while a remote desktop client is in use; per-application and full-screen disabling; a suspend mode shown on the tray icon; the double-tap interval; paste key and wait before pasting; deleting history on exit. Items: `SYSTEM-15`, `SYSTEM-04`, `WINDOW-10`, `PRIVACY-07`.
+- [VS Code · User interface](https://code.visualstudio.com/docs/getstarted/userinterface), [JetBrains · Notifications](https://www.jetbrains.com/help/idea/notifications.html): a central place where dismissed notifications can be reviewed. Items: `SYSTEM-03`.
+- [Microsoft · Application User Model IDs](https://learn.microsoft.com/en-us/windows/win32/shell/appids), [Electron · Notifications](https://www.electronjs.org/docs/latest/tutorial/notifications): the identity that system notifications show on Windows. Items: `SYSTEM-03`.
+- [Apple · SMAppService](https://developer.apple.com/documentation/servicemanagement/smappservice): login items that require the user's approval. Items: `SYSTEM-01`.
 
 ## INSTALL · Installation, updates, and uninstallation
 
@@ -199,6 +219,7 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [NIST NVD · CVE-2026-95625](https://nvd.nist.gov/vuln/detail/CVE-2026-95625): before 2.12.0, the Tauri updater's version manifest was unsigned and could be used to force a downgrade. Items: `INSTALL-07`.
 - [1Password · Windows release notes](https://releases.1password.com/windows/stable/): installing an update on quit no longer relaunches the app; silent updates no longer bring it to the foreground; secondary windows open on the active display. Items: `INSTALL-03`, `WINDOW-08`, `WINDOW-12`.
 - [PowerToys · Run PowerToys in administrator mode](https://learn.microsoft.com/en-us/windows/powertoys/administrator), [Bandizip · Cannot open an archive on a mapped network drive](https://cn.bandisoft.com/bandizip/help/cannot-open-an-archive-in-a-network-mapped-drive/) (Chinese): a notice when an elevated process is detected, and mapped network drives invisible to an elevated process. Items: `INSTALL-01`.
+- [Microsoft · Win32 UX Guide · User Account Control](https://learn.microsoft.com/en-us/windows/win32/uxguide/winenv-uac): elevating only for tasks that need administrator rights, returning to least privilege afterwards, and the shield icon on entry points that elevate. Items: `INSTALL-01`.
 
 ## PRIVACY · Permissions, accounts, and privacy
 
@@ -211,6 +232,8 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [Audacity · Info for system administrators](https://support.audacityteam.org/au3/special-uses/info-for-system-administrators): turning off update checks and cloud modules individually. Items: `PRIVACY-04`, `INSTALL-03`.
 - [Hidemaru · Privacy settings](https://help.maruo.co.jp/hidemaru/html/070_Env_Privacy.html), [Sakura Editor · General settings](https://sakura-editor.github.io/help/HLP000081.html) (Japanese): clearing each class of history separately or automatically on exit; confirmation on "close all" and on exit. Items: `PRIVACY-07`, `INPUT-14`.
 - [Adobe Acrobat · Redact and sanitize PDFs](https://helpx.adobe.com/acrobat/desktop/protect-documents/redact-pdfs/redacting-sanitizing.html), [PDF-XChange · Redacting and sanitizing](https://help.pdf-xchange.com/pdfxe11/redacting-pages-and-sanitizing-documents.html): redaction permanently removes content, distinct from marks not yet applied. Items: `PRIVACY-11`.
+- [LM Studio · Authentication](https://lmstudio.ai/docs/developer/core/authentication): token authentication for a local API server. Items: `PRIVACY-09`.
+- [nspasteboard.org](http://nspasteboard.org/): pasteboard markers for concealed and transient content that clipboard managers do not record. Items: `PRIVACY-10`.
 
 ## HELP · Help, feedback, and diagnostics
 
@@ -226,6 +249,7 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [JetBrains · Search Everywhere](https://www.jetbrains.com/help/idea/searching-everywhere.html), [Obsidian · Search](https://obsidian.md/help/plugins/search): search scope, exclusions, and query explanation. Items: `FIND-01`, `FIND-03`.
 - [Obsidian · Release notes 1.8.2](https://obsidian.md/changelog/2025-01-22-desktop-v1.8.2/): revealing the active file in the file explorer. Items: `FIND-02`.
 - [Obsidian · Bookmarks](https://obsidian.md/help/plugins/bookmarks), [Sakura Editor · Bookmarks](https://sakura-editor.github.io/help/HLP000205.html) (Japanese): personal markers on objects and lines. Items: `FIND-05`.
+- [Microsoft · HDITEM](https://learn.microsoft.com/en-us/windows/win32/api/commctrl/ns-commctrl-hditema), [W3C APG · Sortable Table](https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/sortable-table/): indicating the sorted column and its direction. Items: `FIND-03`.
 
 ## TRUST · Untrusted content
 
@@ -233,6 +257,8 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [Mozilla · Remote Content in Messages](https://support.mozilla.org/en-US/kb/remote-content-in-messages), [Thunderbird's Scam Detection](https://support.mozilla.org/en-US/kb/thunderbirds-scam-detection): network requests from untrusted content and verifying link targets. Items: `TRUST-03`, `TRUST-04`.
 - [MITRE · CWE-22 Path Traversal](https://cwe.mitre.org/data/definitions/22.html): archive imports writing outside the target directory. Items: `TRUST-05`.
 - [Microsoft · IAttachmentExecute::Save](https://learn.microsoft.com/en-us/windows/win32/api/shobjidl_core/nf-shobjidl_core-iattachmentexecute-save): attaching origin marks when saving downloaded content. Items: `TRUST-06`.
+- [Unicode · UTS #39 Security Mechanisms](https://www.unicode.org/reports/tr39/), [Chromium · IDN in Google Chrome](https://chromium.googlesource.com/chromium/src/+/main/docs/idn.md): mixed-script and confusable domains, and when to display them in Punycode. Items: `TRUST-04`.
+- [Joplin · GHSA-hff8-hjwv-j9q7](https://github.com/laurent22/joplin/security/advisories/GHSA-hff8-hjwv-j9q7): a link generated by a diagram in a note led to command execution in the preview. Items: `TRUST-07`.
 
 ## EXTEND · Extensions and plugins
 

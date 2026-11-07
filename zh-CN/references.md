@@ -35,12 +35,14 @@
 - [GitHub · Rendering huge pull requests in the GitHub Copilot app](https://github.blog/engineering/user-experience/rendering-huge-pull-requests-in-the-github-copilot-app/)：内容高度变化时按对象锚定阅读位置。对应条目：`DISPLAY-08`。
 - [Krita · Color Management Settings](https://docs.krita.org/en/reference_manual/preferences/color_management_settings.html)：画布色彩空间、显示配置与 HDR 输出的区分。对应条目：`DISPLAY-10`。
 - [Typora · Zoom](https://support.typora.io/Zoom/)、[Slack · Adjust your zoom level in Slack](https://slack.com/help/articles/236067467-Adjust-your-zoom-level-in-Slack)：界面缩放在应用内设置，提示面板显示当前比例并可复位。对应条目：`DISPLAY-05`。
+- [Microsoft · CalculatePopupWindowPosition](https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-calculatepopupwindowposition)：计算弹出窗口的位置，使其在桌面上完整可见。对应条目：`DISPLAY-04`。
 
 ## TYPO · 字体与文本
 
 - [Apple HIG · Typography](https://developer.apple.com/design/human-interface-guidelines/typography)：系统字体、动态字号与可读性。对应条目：`TYPO-01`、`DISPLAY-06`。
 - [Notepad++ · Preferences](https://npp-user-manual.org/docs/preferences/)：按需显示空格、行尾和控制字符；以首行作为未命名标签的名称；锁定标签栏、关闭选中文本的拖动。对应条目：`TYPO-07`、`WINDOW-07`、`INPUT-21`。
 - [VS Code · User and workspace settings](https://code.visualstudio.com/docs/configure/settings)：`editor.renderWhitespace`；`@modified` 筛选与单项重置；只在键盘触发时确认关闭；可关闭会话恢复；未命名编辑器以内容作标签。对应条目：`TYPO-07`、`SETTINGS-02`、`INPUT-14`、`WINDOW-06`。
+- [Obsidian · Readable line length](https://help.obsidian.md/Editing+and+formatting/Readable+line+length)、[Notion · Customize and style your content](https://www.notion.com/help/customize-and-style-your-content)：限制行宽，或全宽开关。对应条目：`TYPO-04`。
 
 ## A11Y · 无障碍
 
@@ -54,6 +56,8 @@
 - [W3C · Understanding Content on Hover or Focus](https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus.html)、[Understanding Pointer Cancellation](https://www.w3.org/WAI/WCAG22/Understanding/pointer-cancellation.html)：不移动指针即可关闭悬停内容；松开时触发，移出目标即取消。对应条目：`A11Y-08`。
 - [Microsoft · Windows 键盘快捷键](https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec)、[VS Code · Accessibility](https://code.visualstudio.com/docs/configure/accessibility/accessibility)：F6 在窗口的各区域之间循环。对应条目：`A11Y-01`。
 - [Microsoft · Create accessible PDFs](https://support.microsoft.com/en-us/accessibility/office-accessibility/create-accessible-pdfs)、[LibreOffice · PDF/UA export](https://help.libreoffice.org/latest/en-US/text/shared/01/ref_pdf_export_universal_accessibility.html)：导出的文档保留标签、阅读顺序、语言和替代文字。对应条目：`A11Y-03`。
+- [W3C · Understanding Focus Not Obscured (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html)、[Understanding Sensory Characteristics](https://www.w3.org/WAI/WCAG22/Understanding/sensory-characteristics.html)：焦点不被固定内容遮住；说明不只依赖形状、位置、颜色或声音。对应条目：`A11Y-02`、`A11Y-06`。
+- [Microsoft · Set up an authenticator app as a two-step verification method](https://support.microsoft.com/en-us/account-billing/set-up-an-authenticator-app-as-a-two-step-verification-method-2db39828-15e1-4614-b825-6e2b524e7c95)：无法扫描二维码时手动输入代码。对应条目：`A11Y-09`。
 
 ## INPUT · 键盘、鼠标、输入法与剪贴板
 
@@ -62,13 +66,13 @@
 - [Apple HIG · Keyboards](https://developer.apple.com/design/human-interface-guidelines/keyboards)、[The menu bar](https://developer.apple.com/design/human-interface-guidelines/the-menu-bar)：macOS 标准快捷键与完整菜单栏。对应条目：`INPUT-01`、`INPUT-03`。
 - [W3C APG · Dialog (Modal)](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)、[Combobox](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/)：嵌套浮层的关闭顺序与候选列表中的 Enter。对应条目：`INPUT-02`。
 - [KDE · KActionCollection](https://api.kde.org/kactioncollection.html)：动作、默认快捷键与可配置性的统一管理。对应条目：`INPUT-04`、`INPUT-03`。
-- [Microsoft · Shell Clipboard Formats](https://learn.microsoft.com/en-us/windows/win32/shell/clipboard)、[Clipboard Formats](https://learn.microsoft.com/en-us/windows/win32/dataxchg/clipboard-formats)、[Clipboard Operations](https://learn.microsoft.com/en-us/windows/win32/dataxchg/clipboard-operations)：多格式剪贴板、虚拟文件与延迟渲染。对应条目：`INPUT-10`、`INPUT-09`。
+- [Microsoft · Shell Clipboard Formats](https://learn.microsoft.com/en-us/windows/win32/shell/clipboard)、[Clipboard Formats](https://learn.microsoft.com/en-us/windows/win32/dataxchg/clipboard-formats)、[Clipboard Operations](https://learn.microsoft.com/en-us/windows/win32/dataxchg/clipboard-operations)：多格式剪贴板、虚拟文件与延迟渲染。对应条目：`INPUT-10`、`INPUT-09`、`PRIVACY-10`。
 - [Apple · Supporting Drag and Drop Through File Promises](https://developer.apple.com/documentation/appkit/supporting-drag-and-drop-through-file-promises)：尚未生成本地文件时的拖放。对应条目：`INPUT-09`、`INPUT-13`。
 - [Apple HIG · Drag and drop](https://developer.apple.com/design/human-interface-guidelines/drag-and-drop)：移动与复制的规则、拖动中自动滚动、放下后的选择、不可撤销拖放前确认。对应条目：`INPUT-21`、`INPUT-09`。
 - [Microsoft · Win32 UX Guide · Mouse and Pointers](https://learn.microsoft.com/en-us/windows/win32/uxguide/inter-mouse)：Esc 取消拖动，点击在松开时生效。对应条目：`INPUT-21`、`A11Y-08`。
 - [PatternFly · Bulk selection](https://www.patternfly.org/patterns/bulk-selection/)、[eBay Playbook · Selection](https://playbook.ebay.com/design-system/patterns/selection)、[Adobe · React Aria · Selection](https://react-aria.adobe.com/selection)：跨页选择的计数、范围与清除。对应条目：`INPUT-11`。
 - [W3C APG · Checkbox](https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/)：混合状态的表示。对应条目：`INPUT-11`。
-- [Microsoft · PowerToys PowerRename](https://learn.microsoft.com/en-us/windows/powertoys/powerrename)、[VS Code · Basic Editing](https://code.visualstudio.com/docs/editing/codebasics)：批量重命名与替换前预览新旧差异。对应条目：`INPUT-11`。
+- [Microsoft · PowerToys PowerRename](https://learn.microsoft.com/en-us/windows/powertoys/powerrename)、[VS Code · Basic Editing](https://code.visualstudio.com/docs/editing/codebasics)：批量重命名与替换前预览新旧差异。对应条目：`INPUT-11`、`DATA-16`。
 - [VS Code · User interface](https://code.visualstudio.com/docs/editing/getting-started/userinterface)：预览标签与常驻标签。对应条目：`INPUT-17`。
 - [Krita · Tablet Settings](https://docs.krita.org/en/reference_manual/preferences/tablet_settings.html)：压感输入与鼠标事件的区分。对应条目：`INPUT-12`。
 - [GNOME HIG · Text fields](https://developer.gnome.org/hig/patterns/controls/text-fields.html)、[KDE HIG · Getting input](https://develop.kde.org/hig/getting_input/)、[Apple HIG · Entering data](https://developer.apple.com/design/human-interface-guidelines/entering-data)：输入约束、就地纠错，以及精确数值的直接输入。对应条目：`INPUT-18`、`A11Y-08`。
@@ -83,6 +87,13 @@
 - [Windows Terminal · Interaction](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/interaction)、[iTerm2 · Menu Items](https://iterm2.com/documentation-menu-items.html)：粘贴多行或末尾带换行的内容前给出警告。对应条目：`INPUT-10`。
 - [Blender · Fields](https://docs.blender.org/manual/en/latest/interface/controls/buttons/fields.html)：数值框中的数学表达式与单位。对应条目：`INPUT-18`。
 - [Microsoft Teams · Check your spelling in multiple languages](https://support.microsoft.com/en-us/teams/chat/check-your-spelling-in-multiple-languages-in-microsoft-teams)、[LibreOffice · Selecting the Document Language](https://help.libreoffice.org/latest/en-US/text/shared/guide/language_select.html)：校对语言独立于界面语言设置，可细到段落和选中文字。对应条目：`INPUT-20`。
+- [Microsoft · Win32 UX Guide · Dialog Boxes](https://learn.microsoft.com/en-us/windows/win32/uxguide/win-dialog-box)：提交按钮用具体的动作命名，而不是"确定"或"是/否"。对应条目：`INPUT-02`。
+- [WHATWG · HTML · Popover light dismiss](https://html.spec.whatwg.org/multipage/popover.html)：只有按下和松开落在同一目标上，外部点击才关闭弹出层。对应条目：`INPUT-02`。
+- [Microsoft · Access keys](https://learn.microsoft.com/en-us/windows/apps/design/input/access-keys)：访问键在同一范围内不重复，并随界面本地化。对应条目：`INPUT-03`。
+- [VS Code · Terminal Advanced](https://code.visualstudio.com/docs/terminal/advanced)：集成终端接收哪些快捷键、哪些由编辑器处理。对应条目：`INPUT-04`。
+- [Microsoft · LVN_ENDLABELEDIT](https://learn.microsoft.com/en-us/windows/win32/controls/lvn-endlabeledit)、[Apple · Rename files, folders, and disks on Mac](https://support.apple.com/guide/mac-help/rename-files-folders-and-disks-on-mac-mchlp1144/mac)：就地改名的进入与取消。对应条目：`INPUT-07`。
+- [Microsoft · Win32 UX Guide · Text Boxes](https://learn.microsoft.com/en-us/windows/win32/uxguide/ctrl-text-boxes)：输入无效时在文本框失去焦点后提示；只在格式化数据中、输入最后一个字符后自动跳到下一个文本框。对应条目：`INPUT-18`。
+- [NIST · SP 800-63B-4](https://pages.nist.gov/800-63-4/sp800-63b.html)、[Microsoft · Password box](https://learn.microsoft.com/en-us/windows/apps/design/controls/password-box)：密码框允许粘贴，并提供显示密码的选项。对应条目：`INPUT-07`、`INPUT-19`。
 
 ## WINDOW · 窗口
 
@@ -104,6 +115,7 @@
 - [VS Code · Modernizing the VS Code UI](https://code.visualstudio.com/blogs/2026/10/15/modern-ui)：改版后增加布局密度设置，并在过渡期保留经典界面。对应条目：`APPEARANCE-04`、`HELP-08`。
 - [Apple HIG · Split views](https://developer.apple.com/design/human-interface-guidelines/split-views)、[Sidebars](https://developer.apple.com/design/human-interface-guidelines/sidebars)、[WinUI · NavigationView](https://learn.microsoft.com/en-us/windows/apps/design/controls/navigationview)、[Microsoft · 显示或隐藏功能区](https://support.microsoft.com/en-us/office/show-or-hide-the-ribbon-in-office-d946b26e-0c8c-402d-a0f7-c6efa296b527)：为隐藏的窗格提供多种可见的找回方式；窗格开关按钮；隐藏的功能区的找回入口。对应条目：`APPEARANCE-05`。
 - [Microsoft · Acrylic material](https://learn.microsoft.com/en-us/windows/apps/design/style/acrylic)、[AppKit · accessibilityDisplayShouldReduceTransparency](https://developer.apple.com/documentation/appkit/nsworkspace/accessibilitydisplayshouldreducetransparency)：用户关闭透明效果后使用不透明背景。对应条目：`APPEARANCE-03`。
+- [VS Code · Custom layout](https://code.visualstudio.com/docs/configure/custom-layout)、[JetBrains · Viewing modes](https://www.jetbrains.com/help/idea/ide-viewing-modes.html)：Zen 模式和免打扰模式隐藏编辑区以外的全部界面。对应条目：`APPEARANCE-05`。
 
 ## SETTINGS · 设置
 
@@ -118,6 +130,7 @@
 - [LM Studio · User or Developer](https://lmstudio.ai/docs/app/user-interface/modes)、[Zoom · Changing settings in the Zoom Workplace desktop and mobile app](https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0060612)：只显示聊天界面的 User 模式与开放全部功能的 Developer 模式；各设置页把少用项收进"Advanced"分组。对应条目：`SETTINGS-01`。
 - [VS Code · Settings](https://code.visualstudio.com/docs/configure/settings)：搜索过滤器、高级设置在搜索结果中的显示、复制设置 ID。对应条目：`SETTINGS-02`。
 - [Microsoft · Launch the Windows Settings app](https://learn.microsoft.com/en-us/windows/apps/develop/launch/launch-settings-app)：`ms-settings:` 链接直接打开系统设置的某一页。对应条目：`HELP-03`、`SYSTEM-05`。
+- [LibreOffice · Options](https://help.libreoffice.org/latest/en-US/text/shared/optionen/01000000.html)："重置"把当前页恢复到打开对话框时的状态，与恢复默认值不同。对应条目：`SETTINGS-07`。
 
 ## LOCALE · 语言与地区
 
@@ -126,6 +139,9 @@
 - [Unicode · UAX #15 Normalization Forms](https://www.unicode.org/reports/tr15/)、[Syncthing · autoNormalize](https://docs.syncthing.net/advanced/folder-autonormalize.html)：规范等价的编码序列；不同系统之间规范化形式不同的文件名。对应条目：`LOCALE-05`、`FILE-03`。
 - [Microsoft · StrCmpLogicalW](https://learn.microsoft.com/en-us/windows/win32/api/shlwapi/nf-shlwapi-strcmplogicalw)、[Apple · localizedStandardCompare:](https://developer.apple.com/documentation/foundation/nsstring/localizedstandardcompare(_:))：把数字按数值比较的排序，与文件管理器一致。对应条目：`LOCALE-05`。
 - [JetBrains · Search Everywhere](https://www.jetbrains.com/help/idea/searching-everywhere.html)、[VS Code 1.86 发布说明](https://code.visualstudio.com/updates/v1_86)：本地化界面中查找动作和设置；译名旁显示英文原名。对应条目：`LOCALE-05`、`INPUT-05`。
+- [Microsoft · LOCALE_IMEASURE](https://learn.microsoft.com/en-us/windows/win32/intl/locale-imeasure)：区域设置中的度量制。对应条目：`LOCALE-03`。
+- [Blender · Interface preferences](https://docs.blender.org/manual/en/latest/editors/preferences/interface.html)：界面标签、提示和新建数据的名称分别翻译；语言列表按翻译完成度分组。对应条目：`LOCALE-01`、`LOCALE-02`。
+- [W3C Internationalization · Accept-Language used for locale setting](https://www.w3.org/International/questions/qa-site-conneg)：不用国旗代表语言。对应条目：`LOCALE-01`。
 
 ## DATA · 数据保护、保存与恢复
 
@@ -167,11 +183,12 @@
 - [qBittorrent · Explanation of Options](https://github.com/qbittorrent/qBittorrent/wiki/Explanation-of-Options-in-qBittorrent)：按设定间隔保存续传数据；完成后运行外部程序；添加对话框是否带到前台；任务进行时阻止睡眠；全部连接绑定到指定网卡和 IP。对应条目：`TASK-04`、`TASK-16`、`SYSTEM-08`、`NETWORK-05`。
 - [OBS · GPU Selection Guide](https://obsproject.com/kb/gpu-selection-guide)、[Blender · System preferences](https://docs.blender.org/manual/en/latest/editors/preferences/system.html)：多 GPU 时应用使用哪块 GPU；"Allow Online Access"总开关；注册与注销文件关联。对应条目：`TASK-08`、`PRIVACY-04`、`SYSTEM-05`。
 - [Affinity Photo 2 · Preferences](https://affinity.help/photo2/English.lproj/pages/Workspace/preferences.html)：内存占用上限与磁盘占用预警；手写笔输入方式；粘贴时优先矢量；渲染器选择；重置字体缓存。对应条目：`TASK-13`、`INPUT-12`、`INPUT-10`、`TASK-08`。
+- [Mozilla · Bug 42194](https://bugzilla.mozilla.org/show_bug.cgi?id=42194)：多次点击"发送"导致邮件发送两次。对应条目：`TASK-05`。
 
 ## NETWORK · 网络、离线与同步
 
 - [RFC 8252 · OAuth 2.0 for Native Apps](https://www.rfc-editor.org/rfc/rfc8252.html)：通过系统浏览器登录并返回应用。对应条目：`NETWORK-07`。
-- [Electron · Security](https://www.electronjs.org/docs/latest/tutorial/security)：安全传输与证书验证。对应条目：`NETWORK-08`。
+- [Electron · Security](https://www.electronjs.org/docs/latest/tutorial/security)：安全传输与证书验证。对应条目：`NETWORK-08`、`TRUST-07`。
 - [Apple · App Review Guidelines](https://developer.apple.com/app-store/review/guidelines/)：2.5.5 要求在 IPv6-only 网络中正常工作。对应条目：`NETWORK-09`。
 - [JetBrains · HTTP Proxy](https://www.jetbrains.com/help/idea/settings-http-proxy.html)：测试经代理的连接、不走代理的地址，以及代理设置影响哪些连接。对应条目：`NETWORK-05`。
 - [OBS · Stream Connection Troubleshooting](https://obsproject.com/kb/stream-connection-troubleshooting)、[Syncthing · Configuration](https://docs.syncthing.net/users/config.html)：绑定出口网卡与 IP 协议族。对应条目：`NETWORK-05`。
@@ -186,6 +203,9 @@
 - [PowerToys · PowerToys Run](https://learn.microsoft.com/en-us/windows/powertoys/run)、[Keyboard Manager](https://learn.microsoft.com/en-us/windows/powertoys/keyboard-manager)、[Awake](https://learn.microsoft.com/en-us/windows/powertoys/awake)、[mpv · 手册 · --stop-screensaver](https://mpv.io/manual/stable/#options-stop-screensaver)：全屏时忽略快捷键、选择显示器；被其他钩子干扰后重新启用；保持唤醒与保持屏幕点亮分开；不在播放时恢复屏保。对应条目：`SYSTEM-08`、`SYSTEM-15`、`SYSTEM-04`、`WINDOW-13`。
 - [Listary · Hotkey](https://help.listary.com/options-hotkey)、[Integration](https://help.listary.com/options-integration)：在全屏游戏和指定应用中禁用热键；再按一次热键的行为。对应条目：`SYSTEM-15`、`WINDOW-13`。
 - [Clibor · 設定画面](https://chigusa-web.com/clibor/howto/settings/)、[CLaunch · 無効化](https://pyonky.github.io/CLaunch-Help/ja/optDisable.htm)、[CLaunchの機能を一時的に無効化する](https://pyonky.github.io/CLaunch-Help/ja/extSuspend.htm)：操作远程桌面时禁用热键；按应用和全屏禁用；托盘图标可辨认的暂停模式；双击间隔；粘贴按键与粘贴前等待；退出时删除历史。对应条目：`SYSTEM-15`、`SYSTEM-04`、`WINDOW-10`、`PRIVACY-07`。
+- [VS Code · User interface](https://code.visualstudio.com/docs/getstarted/userinterface)、[JetBrains · Notifications](https://www.jetbrains.com/help/idea/notifications.html)：可回看已消失通知的集中入口。对应条目：`SYSTEM-03`。
+- [Microsoft · Application User Model IDs](https://learn.microsoft.com/en-us/windows/win32/shell/appids)、[Electron · Notifications](https://www.electronjs.org/docs/latest/tutorial/notifications)：Windows 系统通知显示的来源身份。对应条目：`SYSTEM-03`。
+- [Apple · SMAppService](https://developer.apple.com/documentation/servicemanagement/smappservice)：需要用户批准的登录项。对应条目：`SYSTEM-01`。
 
 ## INSTALL · 安装、更新与卸载
 
@@ -199,6 +219,7 @@
 - [NIST NVD · CVE-2026-95625](https://nvd.nist.gov/vuln/detail/CVE-2026-95625)：Tauri updater 2.12.0 之前的版本清单未签名，可被诱导降级。对应条目：`INSTALL-07`。
 - [1Password · Windows 发布说明](https://releases.1password.com/windows/stable/)：退出时安装更新不自行重启；静默更新后不跳到前台；副窗口在活动显示器打开。对应条目：`INSTALL-03`、`WINDOW-08`、`WINDOW-12`。
 - [PowerToys · Run PowerToys in administrator mode](https://learn.microsoft.com/en-us/windows/powertoys/administrator)、[Bandizip · 在网络映射驱动器上无法打开压缩文件](https://cn.bandisoft.com/bandizip/help/cannot-open-an-archive-in-a-network-mapped-drive/)：检测到提权进程时提示；提权进程看不到映射的网络驱动器。对应条目：`INSTALL-01`。
+- [Microsoft · Win32 UX Guide · User Account Control](https://learn.microsoft.com/en-us/windows/win32/uxguide/winenv-uac)：只在需要管理员权限的任务上提权，完成后回到最低权限；需要提权的入口标盾牌图标。对应条目：`INSTALL-01`。
 
 ## PRIVACY · 权限、账号与隐私
 
@@ -211,6 +232,8 @@
 - [Audacity · Info for system administrators](https://support.audacityteam.org/au3/special-uses/info-for-system-administrators)：逐项关闭更新检查与云端模块。对应条目：`PRIVACY-04`、`INSTALL-03`。
 - [秀丸エディタ · 動作環境－プライバシー](https://help.maruo.co.jp/hidemaru/html/070_Env_Privacy.html)、[サクラエディタ · 共通設定『全般』](https://sakura-editor.github.io/help/HLP000081.html)：各类历史分别清除或退出时自动清除；"全部关闭"与退出时的确认。对应条目：`PRIVACY-07`、`INPUT-14`。
 - [Adobe Acrobat · Redact and sanitize PDFs](https://helpx.adobe.com/acrobat/desktop/protect-documents/redact-pdfs/redacting-sanitizing.html)、[PDF-XChange · Redacting and sanitizing](https://help.pdf-xchange.com/pdfxe11/redacting-pages-and-sanitizing-documents.html)：涂黑会永久移除内容，与尚未应用的标记区分。对应条目：`PRIVACY-11`。
+- [LM Studio · Authentication](https://lmstudio.ai/docs/developer/core/authentication)：本地 API 服务的令牌验证。对应条目：`PRIVACY-09`。
+- [nspasteboard.org](http://nspasteboard.org/)：剪贴板管理器不记录的机密与临时内容标记。对应条目：`PRIVACY-10`。
 
 ## HELP · 帮助、反馈与诊断
 
@@ -226,6 +249,7 @@
 - [JetBrains · Search Everywhere](https://www.jetbrains.com/help/idea/searching-everywhere.html)、[Obsidian · Search](https://obsidian.md/help/plugins/search)：搜索范围、排除条件与查询说明。对应条目：`FIND-01`、`FIND-03`。
 - [Obsidian · 1.8.2 更新说明](https://obsidian.md/changelog/2025-01-22-desktop-v1.8.2/)：在文件列表中自动显示当前文件的位置。对应条目：`FIND-02`。
 - [Obsidian · Bookmarks](https://obsidian.md/help/plugins/bookmarks)、[サクラエディタ · ブックマーク](https://sakura-editor.github.io/help/HLP000205.html)：对象与行的个人标记。对应条目：`FIND-05`。
+- [Microsoft · HDITEM](https://learn.microsoft.com/en-us/windows/win32/api/commctrl/ns-commctrl-hditema)、[W3C APG · Sortable Table](https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/sortable-table/)：标出排序的列和方向。对应条目：`FIND-03`。
 
 ## TRUST · 外来内容
 
@@ -233,6 +257,8 @@
 - [Mozilla · Remote Content in Messages](https://support.mozilla.org/en-US/kb/remote-content-in-messages)、[Thunderbird's Scam Detection](https://support.mozilla.org/en-US/kb/thunderbirds-scam-detection)：外来内容的网络请求与链接目标核验。对应条目：`TRUST-03`、`TRUST-04`。
 - [MITRE · CWE-22 Path Traversal](https://cwe.mitre.org/data/definitions/22.html)：归档导入越界写入。对应条目：`TRUST-05`。
 - [Microsoft · IAttachmentExecute::Save](https://learn.microsoft.com/en-us/windows/win32/api/shobjidl_core/nf-shobjidl_core-iattachmentexecute-save)：保存下载内容时附加来源标记。对应条目：`TRUST-06`。
+- [Unicode · UTS #39 Security Mechanisms](https://www.unicode.org/reports/tr39/)、[Chromium · IDN in Google Chrome](https://chromium.googlesource.com/chromium/src/+/main/docs/idn.md)：混合字母与易混淆字符的域名，以及何时以 Punycode 显示。对应条目：`TRUST-04`。
+- [Joplin · GHSA-hff8-hjwv-j9q7](https://github.com/laurent22/joplin/security/advisories/GHSA-hff8-hjwv-j9q7)：笔记中的图表生成的链接，在预览中导致了命令执行。对应条目：`TRUST-07`。
 
 ## EXTEND · 扩展与插件
 
