@@ -125,6 +125,10 @@
 | [Vercel web-interface-guidelines](https://github.com/vercel-labs/web-interface-guidelines) | Web 界面 QoL | 附 Agent 说明文件，形式与本清单接近，只针对 Web |
 | [Front-End-Checklist](https://github.com/thedaviddias/Front-End-Checklist) | Web 前端发布前检查 | 附 MCP server，只针对 Web |
 | [mac-arsed-mac-app](https://github.com/bartreardon/skills/blob/main/mac-arsed-mac-app/SKILL.md) | macOS 原生惯例 | 写给 AI Agent 的技能文件，约 30 个要点，只针对 macOS |
+| [Setapp macOS UX checklist](https://docs.setapp.com/docs/ux-checklist) | 上架 Setapp 的 macOS 应用 | 62 项，分 critical、important、polish 三级，多数附好坏文案示例；也包括视觉、文案和新手引导；只针对 macOS |
+| [cross-platform-app-checklist](https://github.com/agentx-icu/cross-platform-app-checklist) | 同时发布到移动端和桌面的应用 | 写给 AI Agent 的技能文件，65 个稳定 ID，附验证步骤，来自 Flutter 应用的实际缺陷；重心是屏幕尺寸、权限和商店发布，桌面集成 4 项 |
+| [native-feel-skill](https://github.com/yetone/native-feel-skill) | 以系统 WebView 渲染的跨平台桌面应用（macOS、Windows） | 写给 AI Agent 的技能文件，附 75 项发布前自查，侧重原生观感与性能并给出数值目标；不含数据保护、安装与隐私 |
+| [WinApp CLI · WinUI Agent 插件](https://github.com/microsoft/winappCli/tree/main/plugins/winui/agent-plugin/skills) | WinUI 3 应用 | 微软官方的 Agent 技能，以控件选择、主题、打包和代码审查为主，应用行为方面的要求较少 |
 | [SmartHR UIデザイン使用性チェックリスト](https://smarthr.design/products/usability/usability-checklist/) | SaaS Web 设计评审 | 对应 JIS X 25010，22 项 |
 | [checklist.design](https://www.checklist.design/) | 页面、组件与流程 | 回答"这一页该有什么"，没有桌面类别 |
 | [支付宝体验设计走查表](https://developer.aliyun.com/article/82295) | 移动产品 | 按场景因素和异常分支组织，社区转载 |
