@@ -26,6 +26,7 @@ Agent 本身无法稳定地弥补这一缺口。这类功能很少被明确写�
 | [references.md](references.md) | 条目所依据的来源，按领域组织 |
 | [side-notes.md](side-notes.md) | 清单范围之外的相关主题、产品范例与同类清单 |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | 收录标准与写作规范 |
+| [skills/desktop-app-checklist/SKILL.md](../skills/desktop-app-checklist/SKILL.md) | 供支持 skill 的 Agent 使用的入口，指向上述文件（英文） |
 
 ## 概览：12 项核对
 
@@ -79,6 +80,12 @@ Agent 本身无法稳定地弥补这一缺口。这类功能很少被明确写�
 <!-- 发布新版本时同步更新此处的标签。 -->
 
 [AUDIT.md](AUDIT.md) 规定审查要达到的结果，具体方法由 Agent 自行决定。Agent 只在两处暂停并等待用户：审查前，确认它从代码库推断出的范围；报告完成后，由用户选择要处理的条目。报告采用固定结构，每项结论附证据。在用户做出选择之前，Agent 不修改项目。指令固定到发布标签，使审查指南停留在已审定的版本；更新的版本列在仓库的 Releases 页面。Agent 无法联网时，手动下载本仓库，并将 AUDIT.md 的本地路径提供给 Agent。
+
+本仓库也可以作为插件安装到 Claude Code。插件中的 skill 只负责指向这里的文件，Agent 在设计或开发桌面应用时就能用到它，不限于审查。插件跟随仓库的 main 分支，而不是发布标签。其他支持 skill 的 Agent 可以在完整的仓库副本中使用 `skills/` 目录。
+
+```
+/plugin install desktop-app-checklist --marketplace shiratakebai/desktop-app-checklist
+```
 
 ### 人工评审
 

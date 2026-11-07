@@ -26,6 +26,7 @@ Platform guidelines and design systems answer how to implement a known requireme
 | [references.md](references.md) | Sources behind the items, organized by domain |
 | [side-notes.md](side-notes.md) | Related topics outside the checklist's scope, product examples, and similar checklists |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | Inclusion criteria and writing guidelines |
+| [skills/desktop-app-checklist/SKILL.md](skills/desktop-app-checklist/SKILL.md) | Entry point for agents that support skills; points to the files above |
 
 ## Overview: 12 checks
 
@@ -79,6 +80,12 @@ The checklist is designed primarily for projects developed with AI coding agents
 <!-- When releasing a new version, update the tag here. -->
 
 [AUDIT.md](AUDIT.md) defines the outcome and leaves the method to the agent. The agent pauses at two points: before auditing, to confirm the scope it inferred from the codebase; and after the report, so the user can choose which items to address. The report has a fixed structure, and every finding cites evidence. The agent does not modify the project before the user has chosen. The instruction pins a release tag so that the audit guide stays at a reviewed version; newer releases are listed on the repository's Releases page. If the agent cannot access the network, download this repository manually and give the agent the local path to AUDIT.md.
+
+The repository can also be installed in Claude Code as a plugin. Its skill only points to the files here, and the agent can draw on it while designing or building a desktop application, not only during an audit. The plugin follows the repository's main branch rather than a release tag. Other agents that support skills can use the `skills/` directory from a complete copy of the repository.
+
+```
+/plugin install desktop-app-checklist --marketplace shiratakebai/desktop-app-checklist
+```
 
 ### In manual review
 

@@ -1,0 +1,16 @@
+{
+  "name": "desktop-app-checklist",
+  "owner": {
+    "name": "shiratakebai"
+  },
+  "metadata": {
+    "description": "Desktop App Capability & QoL Checklist as a Claude Code plugin."
+  },
+  "plugins": [
+    {
+      "name": "desktop-app-checklist",
+      "source": "./",
+      "description": "Reminders of capabilities and quality-of-life behaviors that desktop GUI applications typically need beyond their core features, with an audit guide for AI coding agents."
+    }
+  ]
+}
