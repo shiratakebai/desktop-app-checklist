@@ -4,14 +4,15 @@ English | [简体中文](zh-CN/CONTRIBUTING.md)
 
 ## Inclusion criteria
 
-A new item must meet all four:
+A new item meets these three:
 
 1. **Observable by users.** It describes what users get, not framework configuration keys.
-2. **Common across products.** Many kinds of products encounter it; needs specific to one product are not included.
+2. **Likely to be needed during development.** Developers of more than one kind of product could plausibly run into it. When it applies only to some products, the item states the condition in its first sentence, such as "Products that hold encrypted user data"; needs specific to a single product are not included.
 3. **Easy to overlook.** The checklist exists to remind.
-4. **Backed by a source.** Name at least one existing product that does it, or a real failure, complaint, or incident caused by its absence. The source goes in the pull request description, not in the checklist text; sources published by platform vendors, standards bodies, government agencies, or software companies are also added to [references.md](references.md).
 
-Material that meets the first three criteria but lacks a source, or applies only to a narrow kind of product, can go in [side-notes.md](side-notes.md) instead.
+**Sources.** A source shows readers and reviewers why an item matters: an existing product that does it, a platform guideline, or a real failure, complaint, or incident caused by its absence. Give one whenever possible. A need without precedent can still be included when the reasoning holds; good designs that few or no products have shipped yet are part of what the checklist records. Sources go in the pull request description, not in the checklist text; sources published by platform vendors, standards bodies, government agencies, or software companies are also added to [references.md](references.md).
+
+Material that applies only to a very narrow kind of product can go in [side-notes.md](side-notes.md) instead.
 
 Before proposing a new item, check whether one more sentence in an existing item would cover it. Most "what happens on failure" and "what is preserved after recovery" points belong in an existing item rather than a new one.
 

@@ -9,7 +9,7 @@
 - [Nielsen Norman Group · 10 Usability Heuristics](https://www.nngroup.com/articles/ten-usability-heuristics/)：状态可见、用户控制与恢复、识别优于回忆等检查角度。
 - [W3C · WCAG 2.2](https://www.w3.org/TR/WCAG22/)、[WCAG2ICT](https://www.w3.org/TR/wcag2ict/)：无障碍要求及其在非 Web 软件中的解释。
 - [ISO 9241-110:2020](https://www.iso.org/standard/75258.html)：人机交互的对话原则。
-- [Google · Site Reliability Engineering · Reliable Product Launches at Scale](https://sre.google/sre-book/reliable-product-launches/)：发布检查清单的增长控制，新增问题以真实事故为依据。CONTRIBUTING.md 的"有出处"标准据此设立。
+- [Google · Site Reliability Engineering · Reliable Product Launches at Scale](https://sre.google/sre-book/reliable-product-launches/)：发布检查清单的增长控制，新增问题以真实事故为依据。CONTRIBUTING.md 中关于出处的说明参考了这一做法。
 - [AWS Builders' Library · Making retries safe with idempotent APIs](https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/)：有副作用的操作在重试时不产生重复结果。对应条目：`TASK-05`、`NETWORK-02`。
 
 ## 平台指南与质量清单

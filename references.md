@@ -9,7 +9,7 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [Nielsen Norman Group · 10 Usability Heuristics](https://www.nngroup.com/articles/ten-usability-heuristics/): review angles such as visibility of status, user control and recovery, and recognition over recall.
 - [W3C · WCAG 2.2](https://www.w3.org/TR/WCAG22/), [WCAG2ICT](https://www.w3.org/TR/wcag2ict/): accessibility requirements and their interpretation for non-web software.
 - [ISO 9241-110:2020](https://www.iso.org/standard/75258.html): interaction principles for human-system dialogue.
-- [Google · Site Reliability Engineering · Reliable Product Launches at Scale](https://sre.google/sre-book/reliable-product-launches/): controlling the growth of a launch checklist by backing new questions with real incidents. The "Backed by a source" criterion in CONTRIBUTING.md is based on this.
+- [Google · Site Reliability Engineering · Reliable Product Launches at Scale](https://sre.google/sre-book/reliable-product-launches/): controlling the growth of a launch checklist by backing new questions with real incidents. The guidance on sources in CONTRIBUTING.md draws on this.
 - [AWS Builders' Library · Making retries safe with idempotent APIs](https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/): retries of operations with side effects do not produce duplicate results. Items: `TASK-05`, `NETWORK-02`.
 
 ## Platform guidelines and quality checklists
