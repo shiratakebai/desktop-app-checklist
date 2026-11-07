@@ -81,7 +81,7 @@ The checklist can be used during planning, architecture design, and requirement 
 
 To do this with an agent, give an instruction like the following during planning:
 
-> Clone tag v1.0 of https://github.com/shiratakebai/desktop-app-checklist into a temporary directory and read its README.md and checklist.md. Based on our requirements document at `<path>`, list the items that affect the architecture or need a decision now, and for each one state the questions we need to answer, with your suggested answer. Do not write code yet.
+> Clone tag v1.1 of https://github.com/shiratakebai/desktop-app-checklist into a temporary directory and read its README.md and checklist.md. Based on our requirements document at `<path>`, list the items that affect the architecture or need a decision now, and for each one state the questions we need to answer, with your suggested answer. Do not write code yet.
 
 <!-- When releasing a new version, update the tag here. -->
 
@@ -89,7 +89,7 @@ To do this with an agent, give an instruction like the following during planning
 
 The checklist is designed primarily for projects developed with AI coding agents. In the project to be audited, give the agent this instruction:
 
-> Clone tag v1.0 of https://github.com/shiratakebai/desktop-app-checklist into a temporary directory outside this project, then follow its AUDIT.md to audit this project.
+> Clone tag v1.1 of https://github.com/shiratakebai/desktop-app-checklist into a temporary directory outside this project, then follow its AUDIT.md to audit this project.
 
 <!-- When releasing a new version, update the tag here. -->
 

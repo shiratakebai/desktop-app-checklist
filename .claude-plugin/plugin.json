@@ -1,11 +1,18 @@
 {
   "name": "desktop-app-checklist",
   "description": "Reminders of capabilities and quality-of-life behaviors that desktop GUI applications typically need beyond their core features, with an audit guide for AI coding agents.",
+  "version": "1.1.0",
   "author": {
     "name": "shiratakebai"
   },
   "homepage": "https://github.com/shiratakebai/desktop-app-checklist",
   "repository": "https://github.com/shiratakebai/desktop-app-checklist",
   "license": "CC-BY-4.0",
-  "keywords": ["desktop", "checklist", "ux", "accessibility", "audit"]
+  "keywords": [
+    "desktop",
+    "checklist",
+    "ux",
+    "accessibility",
+    "audit"
+  ]
 }
