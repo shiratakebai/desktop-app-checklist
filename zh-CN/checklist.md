@@ -2,7 +2,7 @@
 
 [English](../checklist.md) | 简体中文
 
-本清单列出桌面图形应用在核心功能之外通常需要具备的能力与使用体验，供开发者在设计、实现和发布前核对。适用于 Windows、macOS 和 Linux，与技术栈无关。本清单不是合规标准，不提供评分或认证。
+本清单列出桌面图形应用在核心功能之外通常需要具备的能力与使用体验，供开发者在规划、设计、实现阶段参考，并在发布前核对。适用于 Windows、macOS 和 Linux，与技术栈无关。本清单不是合规标准，不提供评分或认证。
 
 使用方法、产品类型与 AI 编程 Agent 提示见 [README.md](README.md)；组合场景走查见 [scenarios.md](scenarios.md)；条目所依据的来源见 [references.md](references.md)。
 

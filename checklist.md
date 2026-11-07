@@ -2,7 +2,7 @@
 
 English | [简体中文](zh-CN/checklist.md)
 
-This checklist describes capabilities and quality-of-life behaviors that desktop GUI applications typically need beyond their core features. It is intended for review during design, implementation, and release. It applies to Windows, macOS, and Linux and is independent of any technology stack. It is not a compliance standard and does not provide scoring or certification.
+This checklist describes capabilities and quality-of-life behaviors that desktop GUI applications typically need beyond their core features. It can be used during planning, design, and implementation, and for review before release. It applies to Windows, macOS, and Linux and is independent of any technology stack. It is not a compliance standard and does not provide scoring or certification.
 
 For usage, product types, and a prompt for AI coding agents, see [README.md](README.md). For combined walkthrough scenarios, see [scenarios.md](scenarios.md). The sources behind the items are listed in [references.md](references.md).
 

@@ -2,7 +2,7 @@
 
 English | [简体中文](zh-CN/README.md)
 
-This checklist describes capabilities and quality-of-life behaviors that desktop GUI applications typically need beyond their core features. It is intended for review during design, implementation, and release.
+This checklist describes capabilities and quality-of-life behaviors that desktop GUI applications typically need beyond their core features. It can be used during planning, design, and implementation, and for review before release.
 
 It applies to desktop GUI applications on Windows, macOS, and Linux and is independent of any technology stack. It is not a compliance standard and does not provide scoring or certification.
 
@@ -71,7 +71,21 @@ Untagged items apply to nearly all desktop applications.
 
 ## How to use
 
-### With an AI coding agent (recommended)
+### Before development
+
+The checklist can be used during planning, architecture design, and requirement clarification, when changes cost the least. Decisions such as the window model, atomic writes, configuration directories, and offline boundaries often require extensive rework when changed late in development.
+
+1. Use the product types and tags above to determine which domains and conditional domains apply.
+2. Go through the applicable items as questions: whether the product needs the behavior, to what extent, and on which platforms it commits to it.
+3. Record the conclusions in the requirements or design document, including items deliberately left out and the reasons. In a later audit, this record defines the scope.
+
+To do this with an agent, give an instruction like the following during planning:
+
+> Clone tag v1.0 of https://github.com/shiratakebai/desktop-app-checklist into a temporary directory and read its README.md and checklist.md. Based on our requirements document at `<path>`, list the items that affect the architecture or need a decision now, and for each one state the questions we need to answer, with your suggested answer. Do not write code yet.
+
+<!-- When releasing a new version, update the tag here. -->
+
+### Auditing with an AI coding agent (recommended)
 
 The checklist is designed primarily for projects developed with AI coding agents. In the project to be audited, give the agent this instruction:
 
@@ -79,7 +93,7 @@ The checklist is designed primarily for projects developed with AI coding agents
 
 <!-- When releasing a new version, update the tag here. -->
 
-[AUDIT.md](AUDIT.md) defines the outcome and leaves the method to the agent. The agent pauses at two points: before auditing, to confirm the scope it inferred from the codebase; and after the report, so the user can choose which items to address. The report has a fixed structure, and every finding cites evidence. The agent does not modify the project before the user has chosen. The instruction pins a release tag so that the audit guide stays at a reviewed version; newer releases are listed on the repository's Releases page. If the agent cannot access the network, download this repository manually and give the agent the local path to AUDIT.md.
+[AUDIT.md](AUDIT.md) defines the outcome and leaves the method to the agent. The agent pauses at two points: before auditing, to confirm the scope it inferred from the codebase; and after the report, so the user can choose which items to address. The report has a fixed structure, and every finding cites evidence. The agent does not modify the project before the user has chosen. If going through the report is still a burden, the user can leave the choice to the agent, which then works through the items in the order AUDIT.md suggests and reports what it changed and how to verify each change. The instruction pins a release tag so that the audit guide stays at a reviewed version; newer releases are listed on the repository's Releases page. If the agent cannot access the network, download this repository manually and give the agent the local path to AUDIT.md.
 
 The repository can also be installed in Claude Code as a plugin. Its skill only points to the files here, and the agent can draw on it while designing or building a desktop application, not only during an audit. The plugin follows the repository's main branch rather than a release tag. Other agents that support skills can use the `skills/` directory from a complete copy of the repository.
 
