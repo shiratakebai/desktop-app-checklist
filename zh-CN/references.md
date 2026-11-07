@@ -94,6 +94,10 @@
 - [Microsoft · LVN_ENDLABELEDIT](https://learn.microsoft.com/en-us/windows/win32/controls/lvn-endlabeledit)、[Apple · Rename files, folders, and disks on Mac](https://support.apple.com/guide/mac-help/rename-files-folders-and-disks-on-mac-mchlp1144/mac)：就地改名的进入与取消。对应条目：`INPUT-07`。
 - [Microsoft · Win32 UX Guide · Text Boxes](https://learn.microsoft.com/en-us/windows/win32/uxguide/ctrl-text-boxes)：输入无效时在文本框失去焦点后提示；只在格式化数据中、输入最后一个字符后自动跳到下一个文本框。对应条目：`INPUT-18`。
 - [NIST · SP 800-63B-4](https://pages.nist.gov/800-63-4/sp800-63b.html)、[Microsoft · Password box](https://learn.microsoft.com/en-us/windows/apps/design/controls/password-box)：密码框允许粘贴，并提供显示密码的选项。对应条目：`INPUT-07`、`INPUT-19`。
+- [Alfred · Understanding Result Ordering](https://www.alfredapp.com/help/kb/understanding-result-ordering/)、[Raycast · Search Bar](https://manual.raycast.com/search-bar.md)、[Microsoft · PowerToys Run](https://learn.microsoft.com/en-us/windows/powertoys/run)：学习型结果排序、别名，以及重置或关闭学习。对应条目：`INPUT-05`。
+- [Microsoft · The End of Personalized Menus](https://learn.microsoft.com/en-us/archive/blogs/jensenh/the-end-of-personalized-menus)：Office 默认不再按使用频率调整菜单的原因。对应条目：`INPUT-05`。
+- [Microsoft · Win32 UX Guide · Balloons](https://learn.microsoft.com/en-us/windows/win32/uxguide/ctrl-balloons)：密码框的大写锁定提示，以及影响输入的状态提示。对应条目：`INPUT-19`、`INPUT-23`。
+- [VS Code · Release notes 1.96](https://code.visualstudio.com/updates/v1_96)、[Microsoft · Type over text in Word](https://support.microsoft.com/en-us/word/type-over-text-in-word-for-windows)：改写模式的标识与停用 Insert 键。对应条目：`INPUT-23`。
 
 ## WINDOW · 窗口
 
@@ -115,7 +119,7 @@
 - [VS Code · Modernizing the VS Code UI](https://code.visualstudio.com/blogs/2026/10/15/modern-ui)：改版后增加布局密度设置，并在过渡期保留经典界面。对应条目：`APPEARANCE-04`、`HELP-08`。
 - [Apple HIG · Split views](https://developer.apple.com/design/human-interface-guidelines/split-views)、[Sidebars](https://developer.apple.com/design/human-interface-guidelines/sidebars)、[WinUI · NavigationView](https://learn.microsoft.com/en-us/windows/apps/design/controls/navigationview)、[Microsoft · 显示或隐藏功能区](https://support.microsoft.com/en-us/office/show-or-hide-the-ribbon-in-office-d946b26e-0c8c-402d-a0f7-c6efa296b527)：为隐藏的窗格提供多种可见的找回方式；窗格开关按钮；隐藏的功能区的找回入口。对应条目：`APPEARANCE-05`。
 - [Microsoft · Acrylic material](https://learn.microsoft.com/en-us/windows/apps/design/style/acrylic)、[AppKit · accessibilityDisplayShouldReduceTransparency](https://developer.apple.com/documentation/appkit/nsworkspace/accessibilitydisplayshouldreducetransparency)：用户关闭透明效果后使用不透明背景。对应条目：`APPEARANCE-03`。
-- [VS Code · Custom layout](https://code.visualstudio.com/docs/configure/custom-layout)、[JetBrains · Viewing modes](https://www.jetbrains.com/help/idea/ide-viewing-modes.html)：Zen 模式和免打扰模式隐藏编辑区以外的全部界面。对应条目：`APPEARANCE-05`。
+- [VS Code · Custom layout](https://code.visualstudio.com/docs/configure/custom-layout)、[JetBrains · Viewing modes](https://www.jetbrains.com/help/idea/ide-viewing-modes.html)：Zen 模式和免打扰模式隐藏编辑区以外的全部界面。对应条目：`APPEARANCE-08`。
 
 ## SETTINGS · 设置
 
@@ -131,6 +135,7 @@
 - [VS Code · Settings](https://code.visualstudio.com/docs/configure/settings)：搜索过滤器、高级设置在搜索结果中的显示、复制设置 ID。对应条目：`SETTINGS-02`。
 - [Microsoft · Launch the Windows Settings app](https://learn.microsoft.com/en-us/windows/apps/develop/launch/launch-settings-app)：`ms-settings:` 链接直接打开系统设置的某一页。对应条目：`HELP-03`、`SYSTEM-05`。
 - [LibreOffice · Options](https://help.libreoffice.org/latest/en-US/text/shared/optionen/01000000.html)："重置"把当前页恢复到打开对话框时的状态，与恢复默认值不同。对应条目：`SETTINGS-07`。
+- [Microsoft · Excel compatibility versions](https://support.microsoft.com/en-gb/excel/compatibility-versions)：函数行为随工作簿兼容版本变化。对应条目：`SETTINGS-08`。
 
 ## LOCALE · 语言与地区
 
@@ -142,6 +147,7 @@
 - [Microsoft · LOCALE_IMEASURE](https://learn.microsoft.com/en-us/windows/win32/intl/locale-imeasure)：区域设置中的度量制。对应条目：`LOCALE-03`。
 - [Blender · Interface preferences](https://docs.blender.org/manual/en/latest/editors/preferences/interface.html)：界面标签、提示和新建数据的名称分别翻译；语言列表按翻译完成度分组。对应条目：`LOCALE-01`、`LOCALE-02`。
 - [W3C Internationalization · Accept-Language used for locale setting](https://www.w3.org/International/questions/qa-site-conneg)：不用国旗代表语言。对应条目：`LOCALE-01`。
+- [LibreOffice · Export Text File](https://help.libreoffice.org/latest/en-US/text/shared/00/00000207.html)、[CSV filter parameters](https://help.libreoffice.org/latest/en-US/text/shared/guide/csv_params.html)、[Microsoft · Change formula precision in Excel](https://support.microsoft.com/office/change-formula-recalculation-iteration-or-precision-in-excel-73fc7dac-91cf-4d36-86e8-67124f6bcce4)、[OriginLab · Copy data with maximum precision](https://docs.originlab.com/quick-help/copy-with-full-precision/)：复制和导出时使用显示值还是存储值。对应条目：`LOCALE-03`。
 
 ## DATA · 数据保护、保存与恢复
 
@@ -154,13 +160,18 @@
 - [GIMP · Export File](https://docs.gimp.org/3.0/en/gimp-export-dialog.html)、[LibreOffice Calc · Importing and Exporting CSV](https://help.libreoffice.org/latest/en-US/text/scalc/guide/csv_formula.html)、[1Password · Export your data](https://support.1password.com/export/)：完整工程与交换格式的区别，导出范围的说明。对应条目：`DATA-08`。
 - [Zotero · Data directory in cloud storage](https://www.zotero.org/support/kb/data_directory_in_cloud_storage_folder)：数据库放在同步盘中的损坏风险。对应条目：`DATA-09`。
 - [Zotero · Why can't Zotero find a linked file?](https://www.zotero.org/support/kb/missing_linked_file)、[Typora · Images](https://support.typora.io/Images/)：外部资源的重新定位，应用内移动资源时更新引用。对应条目：`DATA-11`。
-- [Slack · Send and read messages](https://slack.com/help/articles/201457107-Send-and-read-messages)、[Telegram · Drafts](https://telegram.org/blog/drafts)：草稿与定时消息的集中入口，会话列表中的草稿标记。对应条目：`DATA-14`、`TASK-06`。
-- [Zotero · General preferences](https://www.zotero.org/support/preferences/general)、[Joplin · Attachments](https://joplinapp.org/help/apps/attachments/)：导入时是否附加标签可选；不再被任何笔记引用的附件在笔记历史保留期过后清理。对应条目：`DATA-08`、`DATA-15`。
+- [Slack · Send and read messages](https://slack.com/help/articles/201457107-Send-and-read-messages)、[Telegram · Drafts](https://telegram.org/blog/drafts)：草稿与定时消息的集中入口，会话列表中的草稿标记。对应条目：`DATA-14`、`TASK-17`。
+- [Zotero · General preferences](https://www.zotero.org/support/preferences/general)、[Joplin · Attachments](https://joplinapp.org/help/apps/attachments/)：导入时是否附加标签可选；不再被任何笔记引用的附件在笔记历史保留期过后清理。对应条目：`DATA-18`、`DATA-15`。
 - [JetBrains · Invalidate caches](https://www.jetbrains.com/help/idea/invalidate-caches.html)、[Thunderbird · Rebuilding the Global Database](https://support.mozilla.org/en-US/kb/rebuilding-global-database)：从界面重建派生索引，不改动原始数据。对应条目：`DATA-15`、`HELP-07`。
 - [Bandizip · 如何通过安全备份来防止数据损坏](https://cn.bandisoft.com/bandizip/help/backup/)：删除源文件前先测试压缩文件。对应条目：`DATA-06`、`TASK-16`。
 - [CLaunch · その他](https://pyonky.github.io/CLaunch-Help/ja/optOther.htm)：便携到 U 盘使用的单用户模式，以相对路径登记项目。对应条目：`DATA-09`。
 - [Microsoft · Save a copy before editing](https://support.microsoft.com/en-us/office/collab-files/save-a-copy-before-editing-to-prevent-changing-the-original-file)：自动保存写回原件时，编辑前转到副本。对应条目：`DATA-02`。
-- [Microsoft · Data import and analysis options in Excel](https://support.microsoft.com/en-us/excel/data-import-and-analysis-options-in-excel)、[LibreOffice · Text Import](https://help.libreoffice.org/latest/en-US/text/shared/00/00000208.html)：导入时控制类型转换，包括前导零、长数字、日期和解释所用的地区。对应条目：`DATA-08`。
+- [Microsoft · Data import and analysis options in Excel](https://support.microsoft.com/en-us/excel/data-import-and-analysis-options-in-excel)、[LibreOffice · Text Import](https://help.libreoffice.org/latest/en-US/text/shared/00/00000208.html)：导入时控制类型转换，包括前导零、长数字、日期和解释所用的地区。对应条目：`DATA-18`。
+- [Mozilla · Update Infrastructure](https://firefox-source-docs.mozilla.org/update-infrastructure/index.html)、[Tauri · SQL plugin](https://v2.tauri.app/plugin/sql/)：分阶段迁移所用的过渡版本，以及可安全重跑的迁移。对应条目：`DATA-10`。
+- [LibreOffice · Security Advisories](https://www.libreoffice.org/security/)：CVE-2020-12801：恢复的加密文档再次保存时失去加密。对应条目：`DATA-02`。
+- [Microsoft · Skype is retiring](https://support.microsoft.com/en-us/skype/skype-is-retiring-in-may-2025-what-you-need-to-know)、[Export or delete Skype data](https://support.microsoft.com/en-us/skype/how-do-i-export-or-delete-my-skype-data)：服务退役时的迁移提示与导出范围。对应条目：`DATA-08`。
+- [KeePassXC · FAQ](https://keepassxc.org/docs/)、[User Guide](https://keepassxc.org/docs/KeePassXC_UserGuide)、[Cryptomator · Password and Recovery Key](https://docs.cryptomator.org/desktop/password-and-recovery-key/)、[Vault Recovery](https://docs.cryptomator.org/desktop/vault-recovery/)、[Security Target](https://docs.cryptomator.org/security/security-target/)：密钥文件与恢复密钥、改口令的保护范围、附件的临时副本与不加密的元数据。对应条目：`DATA-17`。
+- [Bitwarden · Export vault data](https://bitwarden.com/help/export-your-data/)、[1Password · Export your data](https://support.1password.com/export/)、[VeraCrypt · Data Leaks](https://veracrypt.io/en/Data%20Leaks.html)：只能导回原账号的加密导出、明文导出，以及加密卷之外的明文痕迹。对应条目：`DATA-17`。
 
 ## FILE · 文件与资源
 
@@ -184,6 +195,7 @@
 - [OBS · GPU Selection Guide](https://obsproject.com/kb/gpu-selection-guide)、[Blender · System preferences](https://docs.blender.org/manual/en/latest/editors/preferences/system.html)：多 GPU 时应用使用哪块 GPU；"Allow Online Access"总开关；注册与注销文件关联。对应条目：`TASK-08`、`PRIVACY-04`、`SYSTEM-05`。
 - [Affinity Photo 2 · Preferences](https://affinity.help/photo2/English.lproj/pages/Workspace/preferences.html)：内存占用上限与磁盘占用预警；手写笔输入方式；粘贴时优先矢量；渲染器选择；重置字体缓存。对应条目：`TASK-13`、`INPUT-12`、`INPUT-10`、`TASK-08`。
 - [Mozilla · Bug 42194](https://bugzilla.mozilla.org/show_bug.cgi?id=42194)：多次点击"发送"导致邮件发送两次。对应条目：`TASK-05`。
+- [2BrightSparks · Notify me of missed tasks](https://help.2brightsparks.com/support/solutions/articles/43000336003-notify-me-of-missed-tasks-schedules-)：补跑错过的计划及其副作用。对应条目：`TASK-17`。
 
 ## NETWORK · 网络、离线与同步
 
@@ -192,6 +204,10 @@
 - [Apple · App Review Guidelines](https://developer.apple.com/app-store/review/guidelines/)：2.5.5 要求在 IPv6-only 网络中正常工作。对应条目：`NETWORK-09`。
 - [JetBrains · HTTP Proxy](https://www.jetbrains.com/help/idea/settings-http-proxy.html)：测试经代理的连接、不走代理的地址，以及代理设置影响哪些连接。对应条目：`NETWORK-05`。
 - [OBS · Stream Connection Troubleshooting](https://obsproject.com/kb/stream-connection-troubleshooting)、[Syncthing · Configuration](https://docs.syncthing.net/users/config.html)：绑定出口网卡与 IP 协议族。对应条目：`NETWORK-05`。
+- [IETF · RFC 8252 OAuth 2.0 for Native Apps](https://datatracker.ietf.org/doc/html/rfc8252)、[Google · Blocking sign-in from embedded browser frameworks](https://developers.googleblog.com/2020/08/guidance-for-our-effort-to-block-less-secure-browser-and-apps.html)：通过外部浏览器而非内嵌视图登录。对应条目：`NETWORK-07`。
+- [WinSCP · Endurance preferences](https://winscp.net/eng/docs/ui_pref_resume)：重连间隔、时限与不限时重连。对应条目：`NETWORK-02`。
+- [Dropbox · Over storage limit](https://help.dropbox.com/storage-space/over-storage-limit)、[Microsoft · Storage quotas](https://support.microsoft.com/en-us/onedrive/microsoft-storage-quotas)、[Apple · iCloud Drive file status on Mac](https://support.apple.com/guide/mac-help/mchlc994344b/mac)、[Obsidian · Sync storage limits](https://obsidian.md/help/Obsidian%2BSync/Plans%2Band%2Bstorage%2Blimits)：达到存储配额或文件大小上限时的同步行为。对应条目：`NETWORK-04`。
+- [Microsoft · Refresh stock quotes automatically in Excel](https://techcommunity.microsoft.com/blog/microsoft365insiderblog/refresh-stock-quotes-automatically-in-excel/4213516)、[Apple · Locate a device in Find My on Mac](https://support.apple.com/guide/findmy-mac/fmmc6c7ef383/mac)：显示数据最后更新的时间。对应条目：`NETWORK-03`。
 
 ## SYSTEM · 系统集成
 
@@ -203,7 +219,7 @@
 - [PowerToys · PowerToys Run](https://learn.microsoft.com/en-us/windows/powertoys/run)、[Keyboard Manager](https://learn.microsoft.com/en-us/windows/powertoys/keyboard-manager)、[Awake](https://learn.microsoft.com/en-us/windows/powertoys/awake)、[mpv · 手册 · --stop-screensaver](https://mpv.io/manual/stable/#options-stop-screensaver)：全屏时忽略快捷键、选择显示器；被其他钩子干扰后重新启用；保持唤醒与保持屏幕点亮分开；不在播放时恢复屏保。对应条目：`SYSTEM-08`、`SYSTEM-15`、`SYSTEM-04`、`WINDOW-13`。
 - [Listary · Hotkey](https://help.listary.com/options-hotkey)、[Integration](https://help.listary.com/options-integration)：在全屏游戏和指定应用中禁用热键；再按一次热键的行为。对应条目：`SYSTEM-15`、`WINDOW-13`。
 - [Clibor · 設定画面](https://chigusa-web.com/clibor/howto/settings/)、[CLaunch · 無効化](https://pyonky.github.io/CLaunch-Help/ja/optDisable.htm)、[CLaunchの機能を一時的に無効化する](https://pyonky.github.io/CLaunch-Help/ja/extSuspend.htm)：操作远程桌面时禁用热键；按应用和全屏禁用；托盘图标可辨认的暂停模式；双击间隔；粘贴按键与粘贴前等待；退出时删除历史。对应条目：`SYSTEM-15`、`SYSTEM-04`、`WINDOW-10`、`PRIVACY-07`。
-- [VS Code · User interface](https://code.visualstudio.com/docs/getstarted/userinterface)、[JetBrains · Notifications](https://www.jetbrains.com/help/idea/notifications.html)：可回看已消失通知的集中入口。对应条目：`SYSTEM-03`。
+- [VS Code · User interface](https://code.visualstudio.com/docs/getstarted/userinterface)、[JetBrains · Notifications](https://www.jetbrains.com/help/idea/notifications.html)：可回看已消失通知的集中入口。对应条目：`SYSTEM-16`。
 - [Microsoft · Application User Model IDs](https://learn.microsoft.com/en-us/windows/win32/shell/appids)、[Electron · Notifications](https://www.electronjs.org/docs/latest/tutorial/notifications)：Windows 系统通知显示的来源身份。对应条目：`SYSTEM-03`。
 - [Apple · SMAppService](https://developer.apple.com/documentation/servicemanagement/smappservice)：需要用户批准的登录项。对应条目：`SYSTEM-01`。
 
@@ -218,8 +234,14 @@
 - [NIST NVD · CVE-2024-39698](https://nvd.nist.gov/vuln/detail/CVE-2024-39698)：electron-updater 的签名校验可被绕过。对应条目：`INSTALL-07`。
 - [NIST NVD · CVE-2026-95625](https://nvd.nist.gov/vuln/detail/CVE-2026-95625)：Tauri updater 2.12.0 之前的版本清单未签名，可被诱导降级。对应条目：`INSTALL-07`。
 - [1Password · Windows 发布说明](https://releases.1password.com/windows/stable/)：退出时安装更新不自行重启；静默更新后不跳到前台；副窗口在活动显示器打开。对应条目：`INSTALL-03`、`WINDOW-08`、`WINDOW-12`。
-- [PowerToys · Run PowerToys in administrator mode](https://learn.microsoft.com/en-us/windows/powertoys/administrator)、[Bandizip · 在网络映射驱动器上无法打开压缩文件](https://cn.bandisoft.com/bandizip/help/cannot-open-an-archive-in-a-network-mapped-drive/)：检测到提权进程时提示；提权进程看不到映射的网络驱动器。对应条目：`INSTALL-01`。
-- [Microsoft · Win32 UX Guide · User Account Control](https://learn.microsoft.com/en-us/windows/win32/uxguide/winenv-uac)：只在需要管理员权限的任务上提权，完成后回到最低权限；需要提权的入口标盾牌图标。对应条目：`INSTALL-01`。
+- [PowerToys · Run PowerToys in administrator mode](https://learn.microsoft.com/en-us/windows/powertoys/administrator)、[Bandizip · 在网络映射驱动器上无法打开压缩文件](https://cn.bandisoft.com/bandizip/help/cannot-open-an-archive-in-a-network-mapped-drive/)：检测到提权进程时提示；提权进程看不到映射的网络驱动器。对应条目：`INSTALL-13`。
+- [Microsoft · Win32 UX Guide · User Account Control](https://learn.microsoft.com/en-us/windows/win32/uxguide/winenv-uac)：只在需要管理员权限的任务上提权，完成后回到最低权限；需要提权的入口标盾牌图标。对应条目：`INSTALL-13`。
+- [Microsoft · Using an UpgradeCode](https://learn.microsoft.com/en-us/windows/win32/msi/using-an-upgradecode)：跨版本升级时识别同一产品族。对应条目：`INSTALL-02`。
+- [Apple · TN3127 Inside Code Signing: Requirements](https://developer.apple.com/documentation/technotes/tn3127-inside-code-signing-requirements)：代码身份与授权在版本之间的延续。对应条目：`INSTALL-02`。
+- [Electron · app](https://www.electronjs.org/docs/latest/api/app)：`userData` 与 `sessionData` 的默认位置。对应条目：`INSTALL-02`、`MANAGED-02`。
+- [VS Code · FAQ](https://code.visualstudio.com/docs/supporting/faq)：旧系统可用的最后版本。对应条目：`INSTALL-02`。
+- [Sparkle · Publishing an update](https://sparkle-project.org/documentation/publishing/)：按最低系统版本和硬件要求筛选更新。对应条目：`INSTALL-04`。
+- [UiPath · Auto-updating client components](https://docs.uipath.com/orchestrator/standalone/2022.10/user-guide/auto-updating-client-components)、[Microsoft · Install Office on a custom VHD image](https://learn.microsoft.com/en-us/azure/virtual-desktop/install-office-on-wvd-master-image)：多人共用的机器上等产品空闲时再更新，强制更新前先提示。对应条目：`INSTALL-03`。
 
 ## PRIVACY · 权限、账号与隐私
 
@@ -234,6 +256,9 @@
 - [Adobe Acrobat · Redact and sanitize PDFs](https://helpx.adobe.com/acrobat/desktop/protect-documents/redact-pdfs/redacting-sanitizing.html)、[PDF-XChange · Redacting and sanitizing](https://help.pdf-xchange.com/pdfxe11/redacting-pages-and-sanitizing-documents.html)：涂黑会永久移除内容，与尚未应用的标记区分。对应条目：`PRIVACY-11`。
 - [LM Studio · Authentication](https://lmstudio.ai/docs/developer/core/authentication)：本地 API 服务的令牌验证。对应条目：`PRIVACY-09`。
 - [nspasteboard.org](http://nspasteboard.org/)：剪贴板管理器不记录的机密与临时内容标记。对应条目：`PRIVACY-10`。
+- [Keyboard Maestro · Accessibility Permission Problem](https://wiki.keyboardmaestro.com/assistance/Accessibility_Permission_Problem)：显示已授权却不生效的权限。对应条目：`PRIVACY-02`。
+- [Microsoft · Share OneDrive files and folders](https://support.microsoft.com/en-us/office/share-onedrive-files-and-folders-9fcc2f7d-de0c-4cec-93b0-a82024800c07)、[Dropbox · Shared link permissions](https://help.dropbox.com/share/set-link-permissions)、[Notion · Public pages and web publishing](https://www.notion.com/help/public-pages-and-web-publishing)：分享的受众、期限，以及同一内容的多条访问途径。对应条目：`PRIVACY-14`。
+- [Signal · Read Receipts](https://support.signal.org/hc/en-us/articles/360007059812-Read-Receipts)、[Microsoft · Read receipts in Teams](https://support.microsoft.com/en-US/teams/chat/use-read-receipts-for-messages-in-microsoft-teams)、[Why Teams says I am away](https://support.microsoft.com/en-gb/office/why-does-teams-say-i-m-away-when-i-m-not-7b17174d-ca33-436b-b153-0da89a8335a0)、[Google · Docs activity dashboard](https://support.google.com/docs/answer/7378739)：关闭活动状态、对等影响、例外，以及自动离开的判断。对应条目：`PRIVACY-15`。
 
 ## HELP · 帮助、反馈与诊断
 
@@ -243,6 +268,9 @@
 - [Krita · FAQ](https://docs.krita.org/en/KritaFAQ.html)：受控文件夹访问导致的保存失败、取词与沙箱软件导致的冻结、带备份的配置重置、排查数位板的日志查看器、启动慢的原因。对应条目：`HELP-03`、`HELP-10`、`SETTINGS-07`、`HELP-05`。
 - [飞书 · 在 Windows 中使用飞书时出现白屏、卡顿、卡死、崩溃等问题怎么办](https://www.feishu.cn/hc/zh-CN/articles/413916844794)、[Firefox · Troubleshoot Firefox crashes](https://support.mozilla.org/en-US/kb/troubleshoot-firefox-crashes-closing-or-quitting)：飞书文章列出已知冲突软件及处理办法；Firefox 的 about:third-party 列出已载入的第三方模块及其厂商并可屏蔽。对应条目：`HELP-10`。
 - [Blender · Troubleshooting · Startup](https://docs.blender.org/manual/en/latest/troubleshooting/startup.html)、[Crashes](https://docs.blender.org/manual/en/latest/troubleshooting/crash.html)：窗口不出现时的控制台输出与调试启动脚本。对应条目：`HELP-05`。
+- [Apple HIG · Writing](https://developer.apple.com/design/human-interface-guidelines/writing)、[GNOME HIG · Writing style](https://developer.gnome.org/hig/guidelines/writing-style.html)、[Microsoft · Win32 UX Guide · Text](https://learn.microsoft.com/en-us/windows/win32/uxguide/text-ui)：界面与文档中的术语一致。对应条目：`HELP-04`。
+- [1Password · Create a diagnostics report](https://support.1password.com/diagnostics/)、[Mozilla · HTTP Logging](https://firefox-source-docs.mozilla.org/networking/http/logging.html)、[Zoom · Gathering client logs](https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0060047)：无法解锁时的诊断，以及详细日志的开始、停止与敏感性。对应条目：`HELP-05`。
+- [JetBrains · Reporting issues](https://www.jetbrains.com/help/pycharm/reporting-issues.html)、[YouTrack · Issue and comment visibility](https://www.jetbrains.com/help/youtrack/cloud/set-visibility-of-issue-or-comment.html)：发送前审阅诊断包，以及限制附件的可见范围。对应条目：`HELP-06`。
 
 ## FIND · 搜索与筛选
 
@@ -259,6 +287,8 @@
 - [Microsoft · IAttachmentExecute::Save](https://learn.microsoft.com/en-us/windows/win32/api/shobjidl_core/nf-shobjidl_core-iattachmentexecute-save)：保存下载内容时附加来源标记。对应条目：`TRUST-06`。
 - [Unicode · UTS #39 Security Mechanisms](https://www.unicode.org/reports/tr39/)、[Chromium · IDN in Google Chrome](https://chromium.googlesource.com/chromium/src/+/main/docs/idn.md)：混合字母与易混淆字符的域名，以及何时以 Punycode 显示。对应条目：`TRUST-04`。
 - [Joplin · GHSA-hff8-hjwv-j9q7](https://github.com/laurent22/joplin/security/advisories/GHSA-hff8-hjwv-j9q7)：笔记中的图表生成的链接，在预览中导致了命令执行。对应条目：`TRUST-07`。
+- [Chromium · Security Considerations for Browser UI](https://chromium.googlesource.com/chromium/src/+/HEAD/docs/security/security-considerations-for-browser-ui.md)：内容无法覆盖的可信界面，以及提示刚出现时忽略输入。对应条目：`TRUST-07`、`TRUST-08`。
+- [Element · GHSA-wrcp-5v3v-3j6v](https://github.com/element-hq/element-web/security/advisories/GHSA-wrcp-5v3v-3j6v)：内容安全策略挡住脚本后仍可注入的钓鱼 HTML。对应条目：`TRUST-08`。
 
 ## EXTEND · 扩展与插件
 
@@ -279,6 +309,7 @@
 
 - [VS Code · Enterprise](https://code.visualstudio.com/docs/enterprise/overview)：[更新管理](https://code.visualstudio.com/docs/enterprise/updates)与[扩展管理](https://code.visualstudio.com/docs/enterprise/extensions)。对应条目：`MANAGED-05`、`MANAGED-03`、`INSTALL-03`。
 - [Microsoft · Create an offline installation of Visual Studio](https://learn.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio)、[JetBrains · IntelliJ IDEA installation guide](https://www.jetbrains.com/help/idea/installation-guide.html)：离线布局、静默安装与安装范围。对应条目：`MANAGED-04`、`MANAGED-01`、`MANAGED-02`。
+- [Microsoft · Teams for VDI](https://learn.microsoft.com/en-us/microsoftteams/teams-client-vdi-requirements-deploy)、[Google · Chrome roaming user profiles](https://support.google.com/chrome/a/answer/7349337)、[Citrix · Profile Management include and exclude items](https://docs.citrix.com/en-us/profile-management/2511/configure/include-and-exclude-items)：哪些目录随配置文件漫游，哪些缓存可以排除。对应条目：`MANAGED-02`。
 
 ## FAIR · 尊重用户选择
 

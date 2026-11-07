@@ -26,7 +26,7 @@
 
 下列产品行为对应清单中的条目，可用来向团队说明条目的含义。
 
-- **Slack**：侧栏"草稿和已发送"集中列出草稿、定时消息和已发送消息。对应 DATA-14 离开后可发现未完成的工作；TASK-06 后台任务入口。
+- **Slack**：侧栏"草稿和已发送"集中列出草稿、定时消息和已发送消息。对应 DATA-14 离开后可发现未完成的工作；TASK-17 计划任务与错过的执行。
 - **Telegram Desktop**：草稿显示在会话列表中并跨设备同步。对应 DATA-14 离开后可发现未完成的工作。
 - **微信、QQ**：会话列表中未发送的内容显示为"[草稿]"；撤回的消息可重新编辑。对应 DATA-14 离开后可发现未完成的工作；TASK-03 停止等待、取消任务与撤回结果。
 - **Telegram Desktop**：只在活动窗口中把消息标为已读，锁屏期间不标已读。对应 SYSTEM-14 未读与待处理状态如实。
@@ -49,7 +49,7 @@
 - **mpv、IrfanView**：打开尺寸不同的下一个对象时，窗口是否随内容改变尺寸和位置可选；IrfanView 可让指针保持在"上一个 / 下一个"工具栏按钮上。对应 WINDOW-01 位置与尺寸恢复。
 - **Raycast、Alfred**：唤起时自动切换到指定的输入源，关闭后还原。对应 WINDOW-10 快速唤起与焦点归还。
 - **ShareX、Snipaste**：贴图可一次全部关闭或按组关闭，新贴图的默认位置可选边角或居中，可切换鼠标穿透并一键解除全部穿透。对应 WINDOW-09 窗口置顶。
-- **Obsidian、秀丸エディタ**：当前打开的文件、面板和布局可保存为命名的工作区并一键加载。对应 APPEARANCE-05 面板可调整、可复位。
+- **Obsidian、秀丸エディタ**：当前打开的文件、面板和布局可保存为命名的工作区并一键加载。对应 APPEARANCE-08 专注模式与命名布局。
 - **VS Code、Notepad++、JetBrains IDE**：菜单栏隐藏后，VS Code 与 Notepad++ 在 Windows / Linux 上按 Alt 或 F10 可临时显示；JetBrains IDE 可把主菜单收进汉堡按钮。对应 APPEARANCE-05 面板可调整、可复位。
 - **Telegram Desktop、Discord、Alfred**：主题应用前可预览；Telegram Desktop 应用后倒计时内未确认保留则自动回到原主题。对应 APPEARANCE-06 自定义配色的安全性。
 - **Alfred、Everything、Listary、Snipaste**：排障文档各自说明设置不保存的原因：Alfred 列出权限问题和 Dropbox 冲突文件；Everything 需启用"把设置和数据存放在 %APPDATA%"；Listary 提供从托盘"安全退出"以强制保存；Snipaste 说明程序目录下的 config.ini 不可写时配置会回到默认。对应 SETTINGS-04 持久化可靠、手动编辑容错。
@@ -104,6 +104,12 @@
 - **Process Lasso**：几十种规则对话框共用"表单、匹配语法说明、描述栏、规则列表"的布局，并写明是否接受通配符。对应 SETTINGS-01 入口可发现、按任务分组、默认可用。
 - **FastStone Image Viewer**：设置按页签分别重置，没有可调值的页签不显示重置按钮；文件关联交给系统的默认应用设置，并写明操作步骤。对应 SETTINGS-07 按类别重置；SYSTEM-05 文件关联与打开方式。
 - **CopyQ**：每个标签页的条目上限可以单独设置，特殊值"default"表示跟随全局；被系统标记为机密的剪贴板内容显示为隐藏。对应 SETTINGS-05 作用域明确；PRIVACY-07 敏感内容的显示与复制。
+- **Raycast**：别名的精确匹配排在使用频率之前；单个命令可"Reset Ranking"；收藏项固定显示在搜索框上方。对应 INPUT-05 命令面板。
+- **Microsoft Excel**：股票数据类型显示"Last refreshed"，新打开的工作簿显示"unknown"，不沿用旧时间。对应 NETWORK-03 离线边界。
+- **iCloud Drive（macOS）**：逐个文件标出"Out of Space""Ineligible""Waiting to Upload"。对应 NETWORK-04 待同步队列可见。
+- **Microsoft Teams（VDI）**：部署文档逐个目录写明排除后的影响，分为"无影响""需权衡""不建议排除"三类。对应 MANAGED-02 用户与计算机范围。
+- **Rectangle**：启动时检查实际授权，授权窗口中的系统设置路径随 macOS 版本切换，授权生效后窗口自动关闭。对应 PRIVACY-02 权限撤销后的处理。
+- **1Password**：无法解锁时仍可生成诊断报告，报告中注明缺少的部分。对应 HELP-05 诊断日志与诊断包。
 
 ## 同类清单
 

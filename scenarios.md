@@ -17,13 +17,13 @@ Each scenario lists steps, checkpoints, and related items.
 | Leaving | S09, S11, S20, S41 |
 | Returning | S04, S26, S34, S41 |
 | Mistake | S42 |
-| Environment change | S02, S07, S08, S12, S15, S16, S18, S22, S28, S29, S30, S33, S38 |
+| Environment change | S02, S07, S08, S12, S15, S16, S18, S22, S28, S29, S30, S33, S38, S45 |
 | System failure | S06, S13, S17, S31, S37 |
 | Repetitive work | S19, S25 |
-| After an update | S14, S24 |
+| After an update | S14, S24, S45 |
 | Migrating in / running alongside | S43 |
 
-S01, S03, S35, S36, S39, and S44 test properties that hold at every moment (IME input, accessibility, local interface security, untrusted content, multilingual input, finding things in another language) and are not listed in the table.
+S01, S03, S35, S36, S39, S44, and S46 test properties that hold at every moment (IME input, accessibility, local interface security, untrusted content, multilingual input, finding things in another language, what others can see) and are not listed in the table.
 
 ---
 
@@ -69,9 +69,9 @@ Related items: TASK-11 Stale results do not override current intent; PRIVACY-05 
 
 ### S06 · Save to an unwritable directory or full disk; test a forced kill separately
 
-Using a sample document, make the target directory read-only or fill the disk, then save. Restore the condition and retry. In a separate round, edit past the autosave point, kill the process, and relaunch.
+Using a sample document, make the target directory read-only or fill the disk, then save. Restore the condition and retry. In a separate round, edit past the autosave point, kill the process, and relaunch. Repeat the forced-termination test with an encrypted sample document; load it from the recovery screen, edit it, save it, close it, and reopen it with a fresh configuration.
 
-Checkpoints: The original file was not truncated to 0 bytes; in-memory content is still there and can be saved elsewhere; after the kill, the most recent autosave is recovered and the recovery UI shows its time. Record the two tests separately; killing a process does not simulate power loss.
+Checkpoints: The original file was not truncated to 0 bytes; in-memory content is still there and can be saved elsewhere; after the kill, the most recent autosave is recovered and the recovery UI shows its time. Record the two tests separately; killing a process does not simulate power loss; the file saved after recovery still requires the original password to open; a password prompt during recovery alone does not show that the protection was kept.
 
 Related items: DATA-06 Safe writes; DATA-02 Autosave and crash recovery; DATA-01 Visible save state; HELP-03 Actionable, copyable error messages
 
@@ -101,11 +101,11 @@ Related items: SYSTEM-04 Global shortcuts; SYSTEM-02 Tray or menu bar entry; SYS
 
 ### S10 · Cancelling, sleeping, switching networks, and interrupting a long task
 
-Start a download, conversion, or recording and cancel it partway. Start it again, close the lid for a few minutes, and wake the machine. Start it again and switch Wi-Fi or toggle a VPN. Finally, forcibly interrupt a recording or generation task and open the output in a downstream application.
+Start a download, conversion, or recording and cancel it partway. Start it again, close the lid for a few minutes, and wake the machine. Start it again and switch Wi-Fi or toggle a VPN. Finally, forcibly interrupt a recording or generation task and open the output in a downstream application. Schedule a task with no external side effects, keep the computer asleep through its scheduled time, and wake it after one missed run and again after several.
 
-Checkpoints: The fate of partial output after cancellation is clear; after wake and network changes, the task either continues or fails clearly without a cascade of errors; the sleep prevention request is released when the task ends; the usability of the interrupted output and its secondary information are described separately.
+Checkpoints: The fate of partial output after cancellation is clear; after wake and network changes, the task either continues or fails clearly without a cascade of errors; the sleep prevention request is released when the task ends; the usability of the interrupted output and its secondary information are described separately; missed runs are shown as missed, and catch-up or skipping follows the stated policy, including for several missed runs; the task list shows the last actual run time and the next scheduled time.
 
-Related items: TASK-03 Stop waiting, cancel the task, or revert the result; TASK-09 Sleep, wake, network, and device changes; TASK-12 Output after an interrupted long task; SYSTEM-08 Preventing sleep; TASK-05 Retry and idempotency
+Related items: TASK-03 Stop waiting, cancel the task, or revert the result; TASK-09 Sleep, wake, network, and device changes; TASK-12 Output after an interrupted long task; SYSTEM-08 Preventing sleep; TASK-05 Retry and idempotency; TASK-17 Scheduled tasks and missed runs
 
 ### S11 · Drag in from various sources; paste after closing the source; copy a secret, then plain text
 
@@ -125,19 +125,19 @@ Related items: DATA-11 Relocating external resources; DATA-09 Transparent, movab
 
 ### S13 · Back up during editing and restore to an empty directory; export a complex project
 
-While editing is in progress, export using the application's backup feature, copy the result to an empty directory or another computer, and restore it. Separately, export a project with multiple layers or sheets to an open format and open it in the target application.
+While editing is in progress, export using the application's backup feature, copy the result to an empty directory or another computer, and restore it. Separately, export a project with multiple layers or sheets to an open format and open it in the target application. Two more checks. First, sync and back up, delete or change the data on another device, restore the backup while offline, and reconnect sync. Second, restore an encrypted export or backup into a new, isolated account or a different service instance.
 
-Checkpoints: Restored data includes the latest changes and attachments, and databases in use were exported through a backup interface; the scope and losses were stated before export; users can tell the full project apart from the delivered output.
+Checkpoints: Restored data includes the latest changes and attachments, and databases in use were exported through a backup interface; the scope and losses were stated before export; users can tell the full project apart from the delivered output; after reconnecting, the restored content is not deleted again by the remote state, or the user can keep the restored copy and confirm what is replaced; an unsupported restore target states the reason (bound to an account, a changed key, a wrong password, or a damaged file).
 
-Related items: DATA-05 Version history and backup; DATA-08 Import, export, and data portability
+Related items: DATA-05 Version history and backup; DATA-08 Import, export, and data portability; DATA-07 External changes and conflicts; DATA-10 Protection for bulk deletion and migration; DATA-17 Recovery conditions and protection scope for encrypted data
 
 ### S14 · Upgrade with the final release package; downgrade and open a copy of the data
 
-Upgrade from the previous version using the installer that is actually distributed, then sign out and back in. Check launch at login, file associations, recent files, and sandbox grants. Then install the previous version and open a copy of the data. Separately, upgrade once with a copy of data that makes the migration fail.
+Upgrade from the previous version using the installer that is actually distributed, then sign out and back in. Check launch at login, file associations, recent files, and sandbox grants. Then install the previous version and open a copy of the data. Separately, upgrade once with a copy of data that makes the migration fail. Also upgrade directly across several versions from a supported older version, and terminate the process during migration and launch again. If the product has been renamed or its distribution identity has changed, upgrade from the last version before the change. Prepare a document whose results depend on calculation rules, note the results in the old version, then open and save it in the new version.
 
-Checkpoints: Registrations and grants work after the upgrade; a failed migration leaves the data as it was before the upgrade; when the older version opens newer data, it refuses clearly, opens read-only, or enters a recovery flow, and the data is not damaged; when a safe downgrade is not possible, the reason is given.
+Checkpoints: Registrations and grants work after the upgrade; a failed migration leaves the data as it was before the upgrade; when the older version opens newer data, it refuses clearly, opens read-only, or enters a recovery flow, and the data is not damaged; when a safe downgrade is not possible, the reason is given; the multi-version upgrade completes the migration or guides the user through an intermediate version; after an interrupted migration, the next launch completes it or returns to the pre-upgrade state; after a rename, the existing installation is recognized and settings, data, and credential access carry over; calculation results match the old version, or the difference was explained before conversion.
 
-Related items: INSTALL-05 Program rollback and data downgrade; SETTINGS-08 Migration on upgrade; SYSTEM-01 Launch at login; FILE-01 Platform file dialogs and persistent access; DATA-10 Protection for bulk deletion and migration
+Related items: INSTALL-05 Program rollback and data downgrade; SETTINGS-08 Migration on upgrade; SYSTEM-01 Launch at login; FILE-01 Platform file dialogs and persistent access; DATA-10 Protection for bulk deletion and migration; INSTALL-02 Versions and update responsibility
 
 ### S15 · Switch keyboard layouts; browse remotely loaded items with arrow keys
 
@@ -157,11 +157,11 @@ Related items: SETTINGS-06 Exportable, editable, syncable configuration; SETTING
 
 ### S17 · Temporarily disable extensions to troubleshoot, restore, then export a diagnostic bundle
 
-Install a plugin that fails or breaks the layout, confirm the problem in safe mode or with temporary isolation, then leave temporary mode and return to the original environment. Export a diagnostic bundle, extract it, and review it.
+Install a plugin that fails or breaks the layout, confirm the problem in safe mode or with temporary isolation, then leave temporary mode and return to the original environment. Export a diagnostic bundle, extract it, and review it. Before exporting the bundle, raise the log level temporarily or start a network capture, reproduce the problem, and stop. Then prepare a submission through the feedback entry point.
 
-Checkpoints: Temporary mode did not change the original configuration; plugin states are restored after troubleshooting; the bundle describes its contents and can be previewed before sending; test markers placed in file names, paths, and the personal dictionary do not appear in the bundle.
+Checkpoints: Temporary mode did not change the original configuration; plugin states are restored after troubleshooting; the bundle describes its contents and can be previewed before sending; test markers placed in file names, paths, and the personal dictionary do not appear in the bundle; the capture's state and stop control are visible while it runs, and the log settings return to their previous values afterward; before submitting, it is clear who can see the description and each attachment.
 
-Related items: HELP-07 Safe mode and self-recovery; HELP-05 Diagnostic logs and bundles; SETTINGS-07 Reset by category
+Related items: HELP-07 Safe mode and self-recovery; HELP-05 Diagnostic logs and bundles; SETTINGS-07 Reset by category; HELP-06 Feedback entry point
 
 ### S18 · Sign in, download, and update behind a proxy; cancel one authentication
 
@@ -177,11 +177,11 @@ Run a batch save twenty times in a row. Let reconnection fail ten times in a row
 
 Checkpoints: Success feedback is lightweight and local, with no twenty toasts; failure messages are grouped, and the important one is still findable with an actionable option after the toast disappears.
 
-Related items: SYSTEM-03 System notifications and attention; HELP-03 Actionable, copyable error messages; WINDOW-08 No focus stealing
+Related items: SYSTEM-03 System notifications and attention; HELP-03 Actionable, copyable error messages; WINDOW-08 No focus stealing; SYSTEM-16 In-app notices and notice history
 
 ### S20 · Resource usage when hidden and idle
 
-Minimize the window or hide it in the tray for thirty minutes. Separately, leave it visible but untouched for ten minutes.
+Minimize the window or hide it in the tray for thirty minutes. Separately, leave it visible but untouched for ten minutes. Also minimize the window while a continuous task such as playback, recording, or a transfer is running. Record visible idle, hidden idle, and continuous task states separately.
 
 Checkpoints: CPU usage is near zero, memory does not keep growing, and there is no pointless disk or network activity; unnecessary animation and polling have stopped or slowed down. The resource budget is set by the product; monitoring products are exempt for their necessary work.
 
@@ -237,11 +237,11 @@ Related items: FIND-01 Visible scope and exclusions; FIND-02 Recognizable matche
 
 ### S27 · First core task on a fresh system; decline a component download once
 
-On a supported system with no development tools or extra runtimes, install the final release package as a standard user. Use a feature that needs an external component for the first time, then decline the component download once.
+On a supported system with no development tools or extra runtimes, install the final release package as a standard user. Use a feature that needs an external component for the first time, then decline the component download once. Install into a directory whose path contains non-ASCII characters, then use one feature that depends on bundled resources (language resources, templates, fonts, or offline data) and one that depends on a helper executable.
 
-Checkpoints: No hidden dependency on PATH or the development environment; the missing component has a name, purpose, and download path; after declining, the user can quit or keep using other features.
+Checkpoints: No hidden dependency on PATH or the development environment; the missing component has a name, purpose, and download path; after declining, the user can quit or keep using other features; bundled resources and helper executables for the target architecture are found and run; for resources the product declares as on-demand, both declining the download and placing the resources offline in advance have been tested.
 
-Related items: INSTALL-09 Runtime dependencies on a fresh system; COMPONENT-02 Acquiring and removing on-demand resources; INSTALL-01 Installation scope and first launch; INSTALL-12 Signing, source verification, and system gatekeeping
+Related items: INSTALL-09 Runtime dependencies on a fresh system; COMPONENT-02 Acquiring and removing on-demand resources; INSTALL-01 Installation scope and first launch; INSTALL-12 Signing, source verification, and system gatekeeping; INSTALL-11 Processor architecture; COMPONENT-03 Identity and lifetime of helper processes; INSTALL-13 Run unelevated, elevate on demand
 
 ### S28 · Launch from a DMG or read-only share and save; then move the program
 
@@ -333,9 +333,9 @@ Related items: NETWORK-09 IPv6 networks; NETWORK-08 Transport encryption and ser
 
 ### S39 · Multilingual input and authentication forms
 
-Type composed emoji, combining marks, and Arabic file names; enter numbers in a decimal-comma region; enter several quantities and switch languages; paste a complete password and verification code from a credential manager; submit a form with one invalid field.
+Type composed emoji, combining marks, and Arabic file names; enter numbers in a decimal-comma region; enter several quantities and switch languages; paste a complete password and verification code from a credential manager; submit a form with one invalid field. With Caps Lock on, focus the sign-in, unlock, and change-password fields in turn, then turn Caps Lock off while the field still has focus.
 
-Checkpoints: Editing does not split characters; the real identity of file names is clear; number parsing matches display; plural grammar is correct; authentication needs no manual transcription; the error points to the field and valid input is kept.
+Checkpoints: Editing does not split characters; the real identity of file names is clear; number parsing matches display; plural grammar is correct; authentication needs no manual transcription; the error points to the field and valid input is kept; every password and PIN field shows the Caps Lock notice, and it disappears as soon as Caps Lock is turned off.
 
 Related items: INPUT-07 Standard text editing behavior; LOCALE-03 Dates, numbers, units, and currency; LOCALE-06 Right-to-left scripts; INPUT-18 Input constraints and inline correction; INPUT-19 Assisted authentication
 
@@ -369,7 +369,7 @@ In the shortcut settings, choose the scheme preset that matches a comparable pro
 
 Checkpoints: The preset is available, and after applying it a key lookup returns the right action; the import offers a choice of how tags are merged, and the result states what was discarded; the send key can be switched and is not reverted by "reset all shortcuts"; the imported settings take effect, and obsolete ones are explained.
 
-Related items: INPUT-04 Customizable shortcuts; DATA-08 Import, export, and data portability; INPUT-22 Configurable send key in submit-style inputs; SETTINGS-08 Migration on upgrade
+Related items: INPUT-04 Customizable shortcuts; DATA-08 Import, export, and data portability; INPUT-22 Configurable send key in submit-style inputs; SETTINGS-08 Migration on upgrade; DATA-18 Merging and type detection on import
 
 ### S44 · Find settings, commands, and collapsed panels after switching the UI language
 
@@ -378,3 +378,19 @@ Switch the UI to Chinese or another non-English language. Search for settings an
 Checkpoints: Both the English name and the localized name find the item, and results show the English name; advanced settings and settings inside dialogs can be found, or the results indicate where they are; a word from a description finds its setting, and when nothing matches it is clear whether the setting does not exist or is outside the current component; unavailable commands show the reason; each way of collapsing leaves a visible control for restoring the panel; F6 moves focus one region at a time and handles collapsed regions consistently.
 
 Related items: LOCALE-05 Multilingual text handling; SETTINGS-02 Searchable settings; INPUT-05 Command palette; APPEARANCE-05 Adjustable, resettable panels; A11Y-01 Core workflows by keyboard
+
+### S45 · A multi-user host with non-persistent profiles: sign in twice, with an update in between
+
+On a Windows multi-session host that uses roaming profiles or a profile container, install the final release package per machine. As a standard user, launch the application for the first time, change a few settings, turn on launch at login, sign out, and sign in again. While a second user is signed in and using the application, trigger an update.
+
+Checkpoints: The application starts for a standard user, and a failed start shows a visible reason; after signing in again, settings and the launch-at-login choice are still there and first-run onboarding does not reappear; the application's share of the profile matches the directories the documentation lists as discardable; the update does not close the instance the other user is working in, or that user is notified first and can save.
+
+Related items: MANAGED-02 User and machine scope; INSTALL-03 Update preferences; SYSTEM-01 Launch at login; HELP-01 First-run guidance; WINDOW-05 Routing on relaunch and external open
+
+### S46 · Revoke a share; look from the other side
+
+Prepare two test accounts. For one document, invite the other account directly, create an "anyone with the link" link, and publish it to the web; cancel only one of these and check the others from a private browser window; give the link an expiration date and let it expire. In a product that shows messages from other people, turn off read receipts, typing indicators, and view history one at a time and observe from the other account; rename one account's display name to another participant's name and send a message; put a login form styled like the application's own into a message or note.
+
+Checkpoints: The sharing UI lists every access path, and after one is cancelled the others are shown accurately; the link stops working after it expires; stopping a share states that downloaded copies are not affected; turned-off status no longer appears on the other side, and exceptions are stated in settings; notifications and conversation titles show the account identity; the imitation form stays inside the content area and cannot be submitted from within the application.
+
+Related items: PRIVACY-14 Sharing scope and revocation; PRIVACY-15 Activity status shown to others; TRUST-08 Application UI is distinguishable from external content; PRIVACY-11 Hidden information in exports and shares

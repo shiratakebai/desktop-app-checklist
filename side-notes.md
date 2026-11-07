@@ -26,7 +26,7 @@ The following topics relate to the checklist but are not items. Each entry gives
 
 The following product behaviors correspond to checklist items and can help explain an item to a team.
 
-- **Slack**: the "Drafts & sent" view in the sidebar lists drafts, scheduled messages, and sent messages in one place. See DATA-14 Unfinished work is discoverable after leaving and TASK-06 Entry point for background tasks.
+- **Slack**: the "Drafts & sent" view in the sidebar lists drafts, scheduled messages, and sent messages in one place. See DATA-14 Unfinished work is discoverable after leaving and TASK-17 Scheduled tasks and missed runs.
 - **Telegram Desktop**: drafts appear in the chat list and sync across devices. See DATA-14 Unfinished work is discoverable after leaving.
 - **WeChat, QQ**: unsent text shows as "[Draft]" in the conversation list, and a recalled message can be edited and sent again. See DATA-14 Unfinished work is discoverable after leaving and TASK-03 Stop waiting, cancel the task, or revert the result.
 - **Telegram Desktop**: messages are marked as read only in the active window, never while the session is locked. See SYSTEM-14 Accurate unread and pending state.
@@ -49,7 +49,7 @@ The following product behaviors correspond to checklist items and can help expla
 - **mpv, IrfanView**: whether the window resizes and moves with the next object of a different size is the user's choice; IrfanView can keep the pointer over the Next/Previous toolbar buttons. See WINDOW-01 Position and size restoration.
 - **Raycast, Alfred**: the input source switches to a chosen one when the launcher appears and switches back when it closes. See WINDOW-10 Quick summon and focus return.
 - **ShareX, Snipaste**: pinned images can be closed all at once or by group, new pins default to a corner, edge, or the center, and click-through can be toggled and released for all pins at once. See WINDOW-09 Always on top.
-- **Obsidian, Hidemaru**: the open files, panels, and layout can be saved as a named workspace and loaded in one step. See APPEARANCE-05 Adjustable, resettable panels.
+- **Obsidian, Hidemaru**: the open files, panels, and layout can be saved as a named workspace and loaded in one step. See APPEARANCE-08 Focus mode and named layouts.
 - **VS Code, Notepad++, JetBrains IDEs**: with the menu bar hidden, VS Code and Notepad++ show it temporarily on Alt or F10 on Windows and Linux; JetBrains IDEs can tuck the main menu under a hamburger button. See APPEARANCE-05 Adjustable, resettable panels.
 - **Telegram Desktop, Discord, Alfred**: a theme can be previewed before it is applied; Telegram Desktop reverts to the previous theme when the user does not confirm within a countdown. See APPEARANCE-06 Safe custom colors.
 - **Alfred, Everything, Listary, Snipaste**: each troubleshooting page explains why settings fail to persist: Alfred lists permission problems and Dropbox conflict files; Everything requires enabling "Store settings and data in %APPDATA%"; Listary offers a "Safe Exit" from the tray to force a save; Snipaste explains that the configuration reverts to defaults when config.ini in the program directory cannot be written. See SETTINGS-04 Reliable persistence, tolerant of manual edits.
@@ -104,6 +104,12 @@ The following product behaviors correspond to checklist items and can help expla
 - **Process Lasso**: dozens of rule dialogs share one layout of form, match-syntax notes, description, and rule list, and state whether wildcards are accepted. See SETTINGS-01 Discoverable, task-oriented, usable defaults.
 - **FastStone Image Viewer**: settings are reset per tab, and tabs without adjustable values show no reset button; file associations are handed to the system's default apps settings with written steps. See SETTINGS-07 Reset by category and SYSTEM-05 File associations and Open With.
 - **CopyQ**: each tab can have its own item limit, with the special value "default" following the global setting; clipboard content marked confidential by the system is shown as hidden. See SETTINGS-05 Clear scope and PRIVACY-07 Displaying and copying sensitive content.
+- **Raycast**: exact alias matches rank above usage frequency; a single command can be reset with "Reset Ranking"; favorites stay pinned above the search field. See INPUT-05 Command palette.
+- **Microsoft Excel**: the Stocks data type shows "Last refreshed", and a newly opened workbook shows "unknown" instead of carrying over an old time. See NETWORK-03 Offline boundaries.
+- **iCloud Drive (macOS)**: each file is marked "Out of Space", "Ineligible", or "Waiting to Upload". See NETWORK-04 Visible sync queue.
+- **Microsoft Teams (VDI)**: the deployment documentation lists, folder by folder, the effect of excluding it, in three groups: no impact, trade-off, and not recommended. See MANAGED-02 User and machine scope.
+- **Rectangle**: checks the actual permission at launch, shows the System Settings path for the running macOS version, and closes the permission window once access takes effect. See PRIVACY-02 Handling revoked permissions.
+- **1Password**: a diagnostic report can still be created when the app cannot be unlocked, and it notes which parts are missing. See HELP-05 Diagnostic logs and bundles.
 
 ## Similar checklists
 
