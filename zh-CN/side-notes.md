@@ -76,7 +76,7 @@
 - **Zoom、飞书**：快捷键列表中每一项可单独勾选为全局生效。对应 SYSTEM-04 全局快捷键。
 - **CLaunch、Alfred、Snipaste、PowerToys**：CLaunch 在托盘隐藏且全部功能禁用前警告将无法再显示，再次运行程序可强制显示；Alfred 与 Snipaste 的文档说明隐藏菜单栏图标或托盘图标后如何打开设置；PowerToys Keyboard Manager 的 FAQ 说明改错键后如何停止映射，并警告会失去对应的按键。对应 SYSTEM-11 系统能力不可用时的替代入口。
 - **OBS Studio、Audacity**：应用内集中列出所需的屏幕录制、摄像头、麦克风和辅助功能权限及用途，并给出各平台的授权步骤。对应 PRIVACY-02 权限撤销后的处理。
-- **Ditto、Alfred、Clibor**：Ditto 遵循 Windows 的剪贴板排除标记，带标记的内容不存入历史，并可按正则和进程名排除；Alfred 的剪贴板历史默认关闭，默认忽略钥匙串访问、1Password 等应用；Clibor 可在启动时停止监视、退出时删除历史并加密保存的数据。对应 PRIVACY-10 剪贴板读取的时机与用途。
+- **Ditto、Alfred、Clibor**：Ditto 遵循 Windows 的剪贴板排除标记，带标记的内容不存入历史，并可按正则和进程名排除；Alfred 的剪贴板历史默认关闭，默认忽略钥匙串访问、1Password 等应用；Clibor 可在启动时停止监视、退出时删除历史并加密保存的数据。对应 PRIVACY-10 剪贴板与按键的读取时机与用途。
 - **Telegram Desktop、Syncthing**：Telegram Desktop 的应用锁可用 Windows Hello 或系统密码解锁，首次仍需输入应用密码，并说明设了密码后无法最小化启动；Syncthing 的 FAQ 说明忘记界面密码时的重置办法。对应 PRIVACY-13 应用锁的保护范围。
 - **VS Code、Notepad++**：打开查找时用选中文本填充查询框，超过长度阈值的选区不填入，大段选区自动启用"在选区内查找"。对应 FIND-04 重复检索；FIND-01 范围与排除条件可见。
 - **Bandizip、7-Zip**：解压带来源标记的压缩包时，产出的文件同样带上标记。对应 TRUST-06 下载内容的来源标记交接。

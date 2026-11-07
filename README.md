@@ -20,7 +20,7 @@ Platform guidelines and design systems answer how to implement a known requireme
 
 | File | Contents |
 | --- | --- |
-| [checklist.md](checklist.md) | The main checklist: 26 domains, 242 items. Each item describes expected behavior; some include a typical defect |
+| [checklist.md](checklist.md) | The main checklist: 26 domains, 245 items. Each item describes expected behavior; some include a typical defect |
 | [AUDIT.md](AUDIT.md) | Guided audit procedure for AI coding agents |
 | [scenarios.md](scenarios.md) | 46 combined scenarios for verification in a real environment |
 | [references.md](references.md) | Sources behind the items, organized by domain |

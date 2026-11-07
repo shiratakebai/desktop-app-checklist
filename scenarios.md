@@ -37,19 +37,19 @@ Related items: INPUT-06 IME composition; INPUT-01 Platform shortcuts and keyboar
 
 ### S02 · Enlarge text, snap to half screen, unplug the dock
 
-Set system text size to 125% or higher, snap the window to half of the laptop screen, move the window to an external display, then unplug the dock.
+Set system text size to 125% or higher, snap the window to half of the laptop screen, move the window to an external display, then unplug the dock. With an unsent draft and an open menu, drag the window narrow enough to switch to a single-column layout, then widen it again.
 
-Checkpoints: The main window, dialogs, menus, and key buttons can still be found and operated; the window returns to a visible area; the snap layout flyout can be opened, and the window fits into the selected zone.
+Checkpoints: The main window, dialogs, menus, and key buttons can still be found and operated; the window returns to a visible area; the snap layout flyout can be opened, and the window fits into the selected zone; after crossing the layout breakpoint, the draft, selection, and focus are intact, and the menu has been repositioned or closed.
 
 Related items: DISPLAY-01 System scaling; DISPLAY-02 Runtime display changes; DISPLAY-03 Mixed DPI; DISPLAY-04 Window size adaptation; DISPLAY-06 Text enlargement and reflow; WINDOW-01 Position and size restoration; WINDOW-02 Window state and system window management; WINDOW-12 Placement and stacking of owned windows
 
 ### S03 · Complete the core workflow with only a keyboard and a screen reader
 
-Without a mouse, with NVDA, Narrator, VoiceOver, or Orca running, complete "launch → open or create → core action → save → close". Along the way, enter and leave an editing area once and close a dialog. Finally, turn on voice control (Voice Access on Windows, Voice Control on macOS) and click a button by saying its on-screen label.
+Without a mouse, with NVDA, Narrator, VoiceOver, or Orca running, complete "launch → open or create → core action → save → close". Along the way, enter and leave an editing area once and close a dialog. Finally, turn on voice control (Voice Access on Windows, Voice Control on macOS) and click a button by saying its on-screen label. Use a tool that reads the accessibility tree, such as a UI automation inspector or an AI agent that operates the desktop, to complete one main task from the accessibility tree alone.
 
-Checkpoints: Every object and state is understandable; there are no keyboard traps; after a dialog closes, focus returns to the control that opened it; voice control can click buttons by their on-screen labels.
+Checkpoints: Every object and state is understandable; there are no keyboard traps; after a dialog closes, focus returns to the control that opened it; voice control can click buttons by their on-screen labels; every control the task needs can be found and operated through the accessibility tree.
 
-Related items: A11Y-01 Core workflows by keyboard; A11Y-02 Visible focus, logical order, focus return; A11Y-03 Assistive technology semantics; A11Y-04 Announced state changes; INPUT-02 Dialog conventions
+Related items: A11Y-01 Core workflows by keyboard; A11Y-02 Visible focus, logical order, focus return; A11Y-03 Assistive technology semantics; A11Y-04 Announced state changes; INPUT-02 Dialog conventions; AUTOMATE-02 Precisely addressable objects and actions
 
 ### S04 · Filter a list, open details, go back, then trigger a background refresh
 
@@ -85,11 +85,11 @@ Related items: DATA-07 External changes and conflicts; FILE-05 Network drives, r
 
 ### S08 · Two clients edit the same content offline, then reconnect
 
-Take two devices or two accounts offline at the same time. Edit different parts and the same part of one document on each, then reconnect. Also change an attachment and a setting on each side.
+Take two devices or two accounts offline at the same time. Edit different parts and the same part of one document on each, then reconnect. Also change an attachment and a setting on each side. Use a third client to delete one of the objects, set one device's clock a day ahead, and connect that device only after the deletion. Have the server reject one change for insufficient permissions.
 
-Checkpoints: Conflicts are surfaced and both versions can be recovered; conflict handling for attachments and settings is checked separately from text; the pending sync queue is visible before reconnecting.
+Checkpoints: Conflicts are surfaced and both versions can be recovered; conflict handling for attachments and settings is checked separately from text; the pending sync queue is visible before reconnecting; the deleted object does not reappear because of the device that connected late; the order of changes does not depend on device clocks; the rejected change stays on the device with its reason and is not shown as synced.
 
-Related items: DATA-07 External changes and conflicts; NETWORK-04 Visible sync queue; DATA-05 Version history and backup
+Related items: DATA-07 External changes and conflicts; NETWORK-04 Visible sync queue; DATA-05 Version history and backup; NETWORK-10 Sync reflects what the server accepted
 
 ### S09 · Recovering a background tool with notifications off, a hotkey conflict, and no tray
 
@@ -133,11 +133,11 @@ Related items: DATA-05 Version history and backup; DATA-08 Import, export, and d
 
 ### S14 · Upgrade with the final release package; downgrade and open a copy of the data
 
-Upgrade from the previous version using the installer that is actually distributed, then sign out and back in. Check launch at login, file associations, recent files, and sandbox grants. Then install the previous version and open a copy of the data. Separately, upgrade once with a copy of data that makes the migration fail. Also upgrade directly across several versions from a supported older version, and terminate the process during migration and launch again. If the product has been renamed or its distribution identity has changed, upgrade from the last version before the change. Prepare a document whose results depend on calculation rules, note the results in the old version, then open and save it in the new version.
+Upgrade from the previous version using the installer that is actually distributed, then sign out and back in. Check launch at login, file associations, recent files, and sandbox grants. Then install the previous version and open a copy of the data. Separately, upgrade once with a copy of data that makes the migration fail. Also upgrade directly across several versions from a supported older version, and terminate the process during migration and launch again. If the product has been renamed or its distribution identity has changed, upgrade from the last version before the change. Prepare a document whose results depend on calculation rules, note the results in the old version, then open and save it in the new version. Update once from the previous public version through the in-app updater, then check the icon pinned to the taskbar or Dock. Place an older backup next to the data copy used with the older version.
 
-Checkpoints: Registrations and grants work after the upgrade; a failed migration leaves the data as it was before the upgrade; when the older version opens newer data, it refuses clearly, opens read-only, or enters a recovery flow, and the data is not damaged; when a safe downgrade is not possible, the reason is given; the multi-version upgrade completes the migration or guides the user through an intermediate version; after an interrupted migration, the next launch completes it or returns to the pre-upgrade state; after a rename, the existing installation is recognized and settings, data, and credential access carry over; calculation results match the old version, or the difference was explained before conversion.
+Checkpoints: Registrations and grants work after the upgrade; a failed migration leaves the data as it was before the upgrade; when the older version opens newer data, it refuses clearly, opens read-only, or enters a recovery flow, and the data is not damaged; when a safe downgrade is not possible, the reason is given; the multi-version upgrade completes the migration or guides the user through an intermediate version; after an interrupted migration, the next launch completes it or returns to the pre-upgrade state; after a rename, the existing installation is recognized and settings, data, and credential access carry over; calculation results match the old version, or the difference was explained before conversion; the in-app update completes download, verification, replacement, and restart; the pinned icon still works and the running window is grouped with it; the older version does not replace data written by the newer version with the older backup.
 
-Related items: INSTALL-05 Program rollback and data downgrade; SETTINGS-08 Migration on upgrade; SYSTEM-01 Launch at login; FILE-01 Platform file dialogs and persistent access; DATA-10 Protection for bulk deletion and migration; INSTALL-02 Versions and update responsibility
+Related items: INSTALL-05 Program rollback and data downgrade; SETTINGS-08 Migration on upgrade; SYSTEM-01 Launch at login; FILE-01 Platform file dialogs and persistent access; DATA-10 Protection for bulk deletion and migration; INSTALL-02 Versions and update responsibility; INSTALL-08 Update download and installation; SYSTEM-17 Launch entries and running windows are one item; DATA-13 Handling corrupted data files
 
 ### S15 · Switch keyboard layouts; browse remotely loaded items with arrow keys
 
@@ -157,9 +157,9 @@ Related items: SETTINGS-06 Exportable, editable, syncable configuration; SETTING
 
 ### S17 · Temporarily disable extensions to troubleshoot, restore, then export a diagnostic bundle
 
-Install a plugin that fails or breaks the layout, confirm the problem in safe mode or with temporary isolation, then leave temporary mode and return to the original environment. Export a diagnostic bundle, extract it, and review it. Before exporting the bundle, raise the log level temporarily or start a network capture, reproduce the problem, and stop. Then prepare a submission through the feedback entry point.
+Install a plugin that fails or breaks the layout, confirm the problem in safe mode or with temporary isolation, then leave temporary mode and return to the original environment. Export a diagnostic bundle, extract it, and review it. Before exporting the bundle, raise the log level temporarily or start a network capture, reproduce the problem, and stop. Then prepare a submission through the feedback entry point. Use the same test marker string during sign-in, sharing, and one failure recovery; after exporting the diagnostic bundle, search for it in the log directory and rotated logs as well.
 
-Checkpoints: Temporary mode did not change the original configuration; plugin states are restored after troubleshooting; the bundle describes its contents and can be previewed before sending; test markers placed in file names, paths, and the personal dictionary do not appear in the bundle; the capture's state and stop control are visible while it runs, and the log settings return to their previous values afterward; before submitting, it is clear who can see the description and each attachment.
+Checkpoints: Temporary mode did not change the original configuration; plugin states are restored after troubleshooting; the bundle describes its contents and can be previewed before sending; test markers placed in file names, paths, and the personal dictionary do not appear in the bundle; the capture's state and stop control are visible while it runs, and the log settings return to their previous values afterward; before submitting, it is clear who can see the description and each attachment; the test marker does not appear in the logs, rotated files, or the diagnostic bundle.
 
 Related items: HELP-07 Safe mode and self-recovery; HELP-05 Diagnostic logs and bundles; SETTINGS-07 Reset by category; HELP-06 Feedback entry point
 
@@ -269,9 +269,9 @@ Related items: COMPONENT-01 Coexistence with system copies; FILE-03 Paths, chara
 
 ### S31 · Kill the conversion helper; then quit normally and kill the main program
 
-While editing a document and running a conversion, kill the conversion helper; then test a normal quit and a forced kill of the main program, checking for leftover processes, lock files, and ports.
+While editing a document and running a conversion, kill the conversion helper; then test a normal quit and a forced kill of the main program, checking for leftover processes, lock files, and ports. Quit again, choose Cancel at the unsaved-changes prompt, keep editing, and save. Quit once more while saving fails. Finally, quit from the tray menu and a shortcut almost at once.
 
-Checkpoints: The local failure does not lose other edits; the failed object and recovery entry are clear; no child processes, capture, or ports remain after exit; the next launch is not blocked by a stale lock file.
+Checkpoints: The local failure does not lose other edits; the failed object and recovery entry are clear; no child processes, capture, or ports remain after exit; the next launch is not blocked by a stale lock file; changes made after cancelling the quit can be saved; when saving fails, quitting stops and the application remains usable; simultaneous quit requests run the quit sequence only once.
 
 Related items: TASK-14 Fault isolation of subsystems in use; COMPONENT-03 Identity and lifetime of helper processes; FILE-08 File locks and stale lock files; WINDOW-03 Clear close, minimize, and quit behavior; DATA-02 Autosave and crash recovery
 
@@ -323,13 +323,13 @@ Checkpoints: The corrupted file is not overwritten with defaults, a recovery or 
 
 Related items: DATA-13 Handling corrupted data files; SYSTEM-12 Shutdown, sign-out, and system restart; DATA-02 Autosave and crash recovery
 
-### S38 · IPv6-only network; certificate failure; clock change during a task
+### S38 · IPv6-only network; certificate failure; clock and time zone changes during a task
 
-On an IPv6-only test network, sign in, make core requests, and download; use a test certificate to force identity verification to fail; move the system clock forward and back while a task runs.
+On an IPv6-only test network, sign in, make core requests, and download; use a test certificate to force identity verification to fail; move the system clock forward and back while a task runs. Change the system time zone while the application is running.
 
-Checkpoints: No hidden IPv4 dependency; a failed verification does not turn into an insecure connection; errors are distinguishable; the clock jump causes no retry storm or absurd durations.
+Checkpoints: No hidden IPv4 dependency; a failed verification does not turn into an insecure connection; errors are distinguishable; the clock jump causes no retry storm or absurd durations; times in open views and scheduled reminders follow the new zone, and date-only values stay the same.
 
-Related items: NETWORK-09 IPv6 networks; NETWORK-08 Transport encryption and server identity; NETWORK-01 Connection state; TASK-09 Sleep, wake, network, and device changes
+Related items: NETWORK-09 IPv6 networks; NETWORK-08 Transport encryption and server identity; NETWORK-01 Connection state; TASK-09 Sleep, wake, network, and device changes; LOCALE-04 Time zones
 
 ### S39 · Multilingual input and authentication forms
 
@@ -357,11 +357,11 @@ Related items: DATA-14 Unfinished work is discoverable after leaving; SYSTEM-14 
 
 ### S42 · Recovering from a wrong deletion, overwrite, or click
 
-Delete several objects in a batch, restore one with undo, and recover the rest from the trash or the application's restore entry point. Import a file that overwrites existing content, then undo. Copy a file onto one with the same name, choose to replace it, and then undo the copy. Make a change in each of two windows, switch focus, and press Ctrl/Cmd + Z. Mess up a group of settings and reset that category. Perform a frequent action that takes effect immediately (move, archive, or send), then undo it.
+Delete several objects in a batch, restore one with undo, and recover the rest from the trash or the application's restore entry point. Import a file that overwrites existing content, then undo. Copy a file onto one with the same name, choose to replace it, and then undo the copy. Make a change in each of two windows, switch focus, and press Ctrl/Cmd + Z. Mess up a group of settings and reset that category. Perform a frequent action that takes effect immediately (move, archive, or send), then undo it. Select a few characters in an inspector or rename field, press Delete, then press Ctrl/Cmd+A. Look at the confirmation when deleting an object.
 
-Checkpoints: Deleted objects can be recovered with their location and properties unchanged; the import can be undone, and manual edits made before the import remain; the replaced file can be recovered, or the UI said before replacing that it could not be, and the undo confirmation named the step being undone; undo affects only the object that has focus; the reset stated its scope before running, and settings in other categories were unaffected; the immediate action could be undone within the undo period, and the UI showed where to undo.
+Checkpoints: Deleted objects can be recovered with their location and properties unchanged; the import can be undone, and manual edits made before the import remain; the replaced file can be recovered, or the UI said before replacing that it could not be, and the undo confirmation named the step being undone; undo affects only the object that has focus; the reset stated its scope before running, and settings in other categories were unaffected; the immediate action could be undone within the undo period, and the UI showed where to undo; edit commands act only on the text in the field, and objects selected in the list are unaffected; confirmations for irreversible actions name the object or state the count.
 
-Related items: INPUT-14 Undo over confirmation; DATA-04 Undo and redo targets; DATA-10 Protection for bulk deletion and migration; FILE-04 Feedback for move, rename, and delete; SETTINGS-07 Reset by category
+Related items: INPUT-14 Undo over confirmation; DATA-04 Undo and redo targets; DATA-10 Protection for bulk deletion and migration; FILE-04 Feedback for move, rename, and delete; SETTINGS-07 Reset by category; INPUT-24 Edit commands act on the focused area
 
 ### S43 · Migrating from a similar product
 

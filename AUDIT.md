@@ -98,3 +98,11 @@ Effort is small (under an hour), medium (within a day), or large (more than a da
 - Appendix A of checklist.md lists implementation pitfalls by stack. Check the ones for the detected stack.
 - The user usually cannot see tool output. In a long audit, give a one-line progress note every few domains.
 - For a re-audit, start from the previous report: re-check its partial, missing, and not verified items; items affected by code changes since then; items added or changed in the checklist since the version used last time; and items brought in by scope changes (new platforms, distribution methods, or applicable domains).
+- **Evidence that is easy to mistake for verification.** The following do not justify marking an item as implemented; mark it as unverified and give a verification method:
+  - It has run only on a development machine, not on a clean system.
+  - Only a debug build was tested, not the final release package.
+  - A setting shows as enabled, but it has not been confirmed to take effect in the system.
+  - A connection indicator looks normal, but the service has not been confirmed reachable.
+  - The only evidence is screenshots, a successful build, or unit tests, while the item involves the keyboard, drag and drop, assistive technology, system scaling, a terminated process, or a device change.
+- **Reviewing a single change.** When the user asks for a review of one change, such as a pull request, the scope is the domains and items the change can affect. The report states what was not examined, items not examined are not marked as not applicable, and the appendix lists only the items examined.
+- **Parallel review.** A full review can be divided by domain among parallel subagents, each reading only its domain and the parts of Appendix A for the technology stack in use.

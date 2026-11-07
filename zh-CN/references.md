@@ -98,6 +98,7 @@
 - [Microsoft · The End of Personalized Menus](https://learn.microsoft.com/en-us/archive/blogs/jensenh/the-end-of-personalized-menus)：Office 默认不再按使用频率调整菜单的原因。对应条目：`INPUT-05`。
 - [Microsoft · Win32 UX Guide · Balloons](https://learn.microsoft.com/en-us/windows/win32/uxguide/ctrl-balloons)：密码框的大写锁定提示，以及影响输入的状态提示。对应条目：`INPUT-19`、`INPUT-23`。
 - [VS Code · Release notes 1.96](https://code.visualstudio.com/updates/v1_96)、[Microsoft · Type over text in Word](https://support.microsoft.com/en-us/word/type-over-text-in-word-for-windows)：改写模式的标识与停用 Insert 键。对应条目：`INPUT-23`。
+- [Microsoft · Win32 UX Guide · Menus](https://learn.microsoft.com/en-us/windows/win32/uxguide/cmd-menus)：右键菜单不作为命令的唯一入口。对应条目：`INPUT-08`。
 
 ## WINDOW · 窗口
 
@@ -120,6 +121,7 @@
 - [Apple HIG · Split views](https://developer.apple.com/design/human-interface-guidelines/split-views)、[Sidebars](https://developer.apple.com/design/human-interface-guidelines/sidebars)、[WinUI · NavigationView](https://learn.microsoft.com/en-us/windows/apps/design/controls/navigationview)、[Microsoft · 显示或隐藏功能区](https://support.microsoft.com/en-us/office/show-or-hide-the-ribbon-in-office-d946b26e-0c8c-402d-a0f7-c6efa296b527)：为隐藏的窗格提供多种可见的找回方式；窗格开关按钮；隐藏的功能区的找回入口。对应条目：`APPEARANCE-05`。
 - [Microsoft · Acrylic material](https://learn.microsoft.com/en-us/windows/apps/design/style/acrylic)、[AppKit · accessibilityDisplayShouldReduceTransparency](https://developer.apple.com/documentation/appkit/nsworkspace/accessibilitydisplayshouldreducetransparency)：用户关闭透明效果后使用不透明背景。对应条目：`APPEARANCE-03`。
 - [VS Code · Custom layout](https://code.visualstudio.com/docs/configure/custom-layout)、[JetBrains · Viewing modes](https://www.jetbrains.com/help/idea/ide-viewing-modes.html)：Zen 模式和免打扰模式隐藏编辑区以外的全部界面。对应条目：`APPEARANCE-08`。
+- [Flutter · Platform idioms](https://docs.flutter.dev/ui/adaptive-responsive/idioms)：桌面滚动条与各平台的按钮顺序。对应条目：`APPEARANCE-03`。
 
 ## SETTINGS · 设置
 
@@ -222,6 +224,8 @@
 - [VS Code · User interface](https://code.visualstudio.com/docs/getstarted/userinterface)、[JetBrains · Notifications](https://www.jetbrains.com/help/idea/notifications.html)：可回看已消失通知的集中入口。对应条目：`SYSTEM-16`。
 - [Microsoft · Application User Model IDs](https://learn.microsoft.com/en-us/windows/win32/shell/appids)、[Electron · Notifications](https://www.electronjs.org/docs/latest/tutorial/notifications)：Windows 系统通知显示的来源身份。对应条目：`SYSTEM-03`。
 - [Apple · SMAppService](https://developer.apple.com/documentation/servicemanagement/smappservice)：需要用户批准的登录项。对应条目：`SYSTEM-01`。
+- [Microsoft · Application User Model IDs](https://learn.microsoft.com/en-us/windows/win32/shell/appids)：任务栏按 AppUserModelID 归组窗口和快捷方式，只有需要多个版本并存时才在 ID 中加入版本信息。对应条目：`SYSTEM-17`。
+- [freedesktop.org · Desktop Entry Specification](https://specifications.freedesktop.org/desktop-entry/latest/recognized-keys.html)：`StartupWMClass`、`GenericName` 与 `Keywords`。对应条目：`SYSTEM-17`、`SYSTEM-07`。
 
 ## INSTALL · 安装、更新与卸载
 

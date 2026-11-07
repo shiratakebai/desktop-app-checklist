@@ -20,7 +20,7 @@ Agent 本身无法稳定地弥补这一缺口。这类功能很少被明确写�
 
 | 文件 | 内容 |
 | --- | --- |
-| [checklist.md](checklist.md) | 主清单：26 个领域，242 个条目。每个条目描述期望行为，部分附典型缺陷 |
+| [checklist.md](checklist.md) | 主清单：26 个领域，245 个条目。每个条目描述期望行为，部分附典型缺陷 |
 | [AUDIT.md](AUDIT.md) | 供 AI 编程 Agent 使用的引导式审查流程 |
 | [scenarios.md](scenarios.md) | 46 个组合场景，用于在真实环境中验证 |
 | [references.md](references.md) | 条目所依据的来源，按领域组织 |

@@ -98,6 +98,7 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [Microsoft · The End of Personalized Menus](https://learn.microsoft.com/en-us/archive/blogs/jensenh/the-end-of-personalized-menus): why Office stopped reordering menus by usage by default. Items: `INPUT-05`.
 - [Microsoft · Win32 UX Guide · Balloons](https://learn.microsoft.com/en-us/windows/win32/uxguide/ctrl-balloons): a Caps Lock notice on password fields, and notices for states that affect input. Items: `INPUT-19`, `INPUT-23`.
 - [VS Code · Release notes 1.96](https://code.visualstudio.com/updates/v1_96), [Microsoft · Type over text in Word](https://support.microsoft.com/en-us/word/type-over-text-in-word-for-windows): an overtype indicator, and disabling the Insert key. Items: `INPUT-23`.
+- [Microsoft · Win32 UX Guide · Menus](https://learn.microsoft.com/en-us/windows/win32/uxguide/cmd-menus): context menus are not the only way to reach a command. Items: `INPUT-08`.
 
 ## WINDOW · Windows
 
@@ -120,6 +121,7 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [Apple HIG · Split views](https://developer.apple.com/design/human-interface-guidelines/split-views), [Sidebars](https://developer.apple.com/design/human-interface-guidelines/sidebars), [WinUI · NavigationView](https://learn.microsoft.com/en-us/windows/apps/design/controls/navigationview), [Microsoft · Show or hide the ribbon](https://support.microsoft.com/en-us/office/show-or-hide-the-ribbon-in-office-d946b26e-0c8c-402d-a0f7-c6efa296b527): several visible ways to reveal hidden panes, a pane toggle button, and a way back to a hidden ribbon. Items: `APPEARANCE-05`.
 - [Microsoft · Acrylic material](https://learn.microsoft.com/en-us/windows/apps/design/style/acrylic), [AppKit · accessibilityDisplayShouldReduceTransparency](https://developer.apple.com/documentation/appkit/nsworkspace/accessibilitydisplayshouldreducetransparency): solid backgrounds when the user turns off transparency. Items: `APPEARANCE-03`.
 - [VS Code · Custom layout](https://code.visualstudio.com/docs/configure/custom-layout), [JetBrains · Viewing modes](https://www.jetbrains.com/help/idea/ide-viewing-modes.html): Zen Mode and distraction-free mode hide everything except the editor. Items: `APPEARANCE-08`.
+- [Flutter · Platform idioms](https://docs.flutter.dev/ui/adaptive-responsive/idioms): desktop scroll bars and button order on each platform. Items: `APPEARANCE-03`.
 
 ## SETTINGS · Settings
 
@@ -222,6 +224,8 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [VS Code · User interface](https://code.visualstudio.com/docs/getstarted/userinterface), [JetBrains · Notifications](https://www.jetbrains.com/help/idea/notifications.html): a central place where dismissed notifications can be reviewed. Items: `SYSTEM-16`.
 - [Microsoft · Application User Model IDs](https://learn.microsoft.com/en-us/windows/win32/shell/appids), [Electron · Notifications](https://www.electronjs.org/docs/latest/tutorial/notifications): the identity that system notifications show on Windows. Items: `SYSTEM-03`.
 - [Apple · SMAppService](https://developer.apple.com/documentation/servicemanagement/smappservice): login items that require the user's approval. Items: `SYSTEM-01`.
+- [Microsoft · Application User Model IDs](https://learn.microsoft.com/en-us/windows/win32/shell/appids): the taskbar groups windows and shortcuts by AppUserModelID, with version information in the ID only when several versions must run side by side. Items: `SYSTEM-17`.
+- [freedesktop.org · Desktop Entry Specification](https://specifications.freedesktop.org/desktop-entry/latest/recognized-keys.html): `StartupWMClass`, `GenericName`, and `Keywords`. Items: `SYSTEM-17`, `SYSTEM-07`.
 
 ## INSTALL · Installation, updates, and uninstallation
 
