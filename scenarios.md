@@ -12,7 +12,7 @@ Each scenario lists steps, checkpoints, and related items.
 
 | Moment | Scenarios |
 | --- | --- |
-| First use | S21, S23, S27, S40 |
+| First use | S21, S23, S27, S40, S48 |
 | Interruption | S05, S10, S32 |
 | Leaving | S09, S11, S20, S41, S47 |
 | Returning | S04, S26, S34, S41 |
@@ -91,13 +91,13 @@ Checkpoints: Conflicts are surfaced and both versions can be recovered; conflict
 
 Related items: DATA-07 External changes and conflicts; NETWORK-04 Visible sync queue; DATA-05 Version history and backup; NETWORK-10 Sync reflects what the server accepted
 
-### S09 · Recovering a background tool with notifications off, a hotkey conflict, and no tray
+### S09 · Recovering a background tool with notifications off, a hotkey conflict, and the tray missing or collapsed
 
-Turn off the application's notifications at the system level. Have another program take the application's global hotkey. Launch the application on a desktop without a tray (GNOME without extensions).
+Turn off the application's notifications at the system level. Have another program take the application's global hotkey. Launch the application on a desktop without a tray (GNOME without extensions). On Windows 11, move the tray icon into the overflow area, close the window, and find the icon by following the notice. Pause a background task once, make it fail once, and let it recover. Restart Explorer in a test environment. Update the application once. With the final release package, turn on launch at login and look at the application's entries in the system's list of startup items.
 
-Checkpoints: The settings page does not show the hotkey as active; the application can still be reopened and quit through its icon, a menu, or the command line; the process can always be found and ended.
+Checkpoints: The settings page does not show the hotkey as active; the application can still be reopened and quit through its icon, a menu, or the command line; the process can always be found and ended; the notice on closing the window said where the icon is; the tray icon and tooltip showed paused, failed, and recovered in turn; the tray icon came back automatically after Explorer restarted; after the update the icon was still where the user had placed it; the startup entries can be traced to the application, and no old entries were added by the update.
 
-Related items: SYSTEM-04 Global shortcuts; SYSTEM-02 Tray or menu bar entry; SYSTEM-11 Alternatives when system features are unavailable; SYSTEM-03 System notifications and attention
+Related items: SYSTEM-04 Global shortcuts; SYSTEM-02 Tray or menu bar entry; SYSTEM-11 Alternatives when system features are unavailable; SYSTEM-03 System notifications and attention; SYSTEM-20 Tray icon placement, continuity, and status; SYSTEM-01 Launch at login; WINDOW-03 Clear close, minimize, and quit behavior
 
 ### S10 · Cancelling, sleeping, switching networks, and interrupting a long task
 
@@ -385,7 +385,7 @@ On a Windows multi-session host that uses roaming profiles or a profile containe
 
 Checkpoints: The application starts for a standard user, and a failed start shows a visible reason; after signing in again, settings and the launch-at-login choice are still there and first-run onboarding does not reappear; the application's share of the profile matches the directories the documentation lists as discardable; the update does not close the instance the other user is working in, or that user is notified first and can save.
 
-Related items: MANAGED-02 User and machine scope; INSTALL-03 Update preferences; SYSTEM-01 Launch at login; HELP-01 First-run guidance; WINDOW-05 Routing on relaunch and external open
+Related items: MANAGED-02 User and machine scope; INSTALL-03 Update preferences; SYSTEM-01 Launch at login; HELP-01 First run and guidance; WINDOW-05 Routing on relaunch and external open
 
 ### S46 · Revoke a share; look from the other side
 
@@ -402,3 +402,11 @@ Install the final release package. In the file manager, browse a sample folder i
 Checkpoints: Each type has a recognizable document icon and type name; thumbnails and previews reflect the content, the damaged file falls back to the document icon, the file manager stays responsive, and the online-only file is not downloaded; system search finds the sample; after sharing, the new object is shown; the context menu entry that was turned off is still off after the update; after uninstalling, the document icons, thumbnails, context menu entries, and the list entry are gone, and the sample files themselves remain.
 
 Related items: SYSTEM-05 File associations and Open With; SYSTEM-18 Own file formats are recognizable in the file manager and system search; SYSTEM-19 Context menu and New menu entries in the file manager; SYSTEM-09 Sharing, printing, and system services; INSTALL-06 Uninstallation scope; FAIR-02 Installation and updates respect prior choices
+
+### S48 · First run: skipping, interruption, launching with a target, tips, and help
+
+Start with a fresh user configuration, skip the guidance, then reopen it from help or settings. Change a few choices in the guidance, go back a step and forward again, close the window partway, and restart; after finishing the guidance, upgrade once. Separately, with a fresh configuration, cold-start by double-clicking a file. Turn off "Show welcome page on startup" and restart. Trigger a feature tip in a small window at 200% scaling, dismiss it, restart, and return to the same page. In a dialog, press F1 or click the help button; open help while offline; switch the interface to a language without a help translation and open help again.
+
+Checkpoints: Choices made in the guidance can be found and changed in settings; choices remain after going back, the guidance can be resumed after restarting, and cancelling stated which settings had taken effect; the guidance did not reappear after the upgrade; the double-clicked file opened after any required first-run setup and was not replaced by the welcome page; the welcome page no longer appears automatically and remains available manually; the feature tip did not cover controls and did not return after being dismissed; help opened at the relevant topic and the original dialog stayed open; help worked offline or stated that it needs a connection; help stated which language it used instead.
+
+Related items: HELP-01 First run and guidance; WINDOW-05 Routing on relaunch and external open; HELP-04 Help and documentation; SETTINGS-01 Discoverable, task-oriented, usable defaults

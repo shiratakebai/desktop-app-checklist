@@ -237,6 +237,14 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [Apple · macOS 15 Release Notes](https://developer.apple.com/documentation/macos-release-notes/macos-15-release-notes): support for Quick Look generator plug-ins is being removed in favor of preview and thumbnail extensions. Items: `SYSTEM-18`.
 - [Microsoft · Integrate a packaged desktop app with File Explorer](https://learn.microsoft.com/en-us/windows/apps/desktop/modernize/integrate-packaged-app-with-file-explorer): the Windows 11 first-level context menu requires `IExplorerCommand` and package identity. Items: `SYSTEM-19`.
 - [Microsoft · Receive data with the Windows Share sheet](https://learn.microsoft.com/en-us/windows/apps/develop/windows-integration/integrate-sharesheet-receive): a share target needs package identity. Items: `SYSTEM-09`.
+- [Microsoft · NOTIFYICONDATAW](https://learn.microsoft.com/en-us/windows/win32/api/shellapi/ns-shellapi-notifyicondataw): tray icon settings are tied to the GUID and the executable's path. Items: `SYSTEM-20`.
+- [Microsoft · Customize the taskbar in Windows](https://support.microsoft.com/en-gb/windows/experience/personalization/customize-the-taskbar-in-windows): on Windows 11, the user controls which icons appear on the taskbar and which stay in the overflow area. Items: `SYSTEM-20`.
+- [Microsoft · What do the OneDrive icons mean?](https://support.microsoft.com/en-us/onedrive/what-do-the-onedrive-icons-mean): tray icons for paused, signed out, sync failed, and needs attention. Items: `SYSTEM-20`.
+- [freedesktop.org · Status Notifier Item](https://specifications.freedesktop.org/status-notifier-item/latest-single/): status, tooltip, and host registration for tray items. Items: `SYSTEM-20`, `SYSTEM-11`.
+- [Microsoft · The Taskbar](https://learn.microsoft.com/en-us/windows/win32/shell/taskbar): re-adding tray icons after the taskbar is recreated. Items: `SYSTEM-11`.
+- [Microsoft · StartupTask](https://learn.microsoft.com/en-us/uwp/api/windows.applicationmodel.startuptask): startup tasks of packaged apps, their display names, and the state after the user disables them. Items: `SYSTEM-01`.
+- [Electron · Issue #9827](https://github.com/electron/electron/issues/9827): an app launched through `Update.exe` shows as "Update" among startup items. Items: `SYSTEM-01`.
+- [freedesktop.org · Desktop Application Autostart Specification](https://specifications.freedesktop.org/autostart/latest/): login items on Linux. Items: `SYSTEM-01`.
 
 ## INSTALL · Installation, updates, and uninstallation
 
@@ -286,6 +294,11 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [Apple HIG · Writing](https://developer.apple.com/design/human-interface-guidelines/writing), [GNOME HIG · Writing style](https://developer.gnome.org/hig/guidelines/writing-style.html), [Microsoft · Win32 UX Guide · Text](https://learn.microsoft.com/en-us/windows/win32/uxguide/text-ui): consistent terminology across the interface and documentation. Items: `HELP-04`.
 - [1Password · Create a diagnostics report](https://support.1password.com/diagnostics/), [Mozilla · HTTP Logging](https://firefox-source-docs.mozilla.org/networking/http/logging.html), [Zoom · Gathering client logs](https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0060047): diagnostics when the app cannot be unlocked, and starting, stopping, and protecting detailed logging. Items: `HELP-05`.
 - [JetBrains · Reporting issues](https://www.jetbrains.com/help/pycharm/reporting-issues.html), [YouTrack · Issue and comment visibility](https://www.jetbrains.com/help/youtrack/cloud/set-visibility-of-issue-or-comment.html): reviewing a bundle before sending it, and limiting who can see attachments. Items: `HELP-06`.
+- [Microsoft · Help (Windows UX Guide)](https://learn.microsoft.com/en-us/windows/win32/uxguide/winenv-help): help links point to specific topics, and the interface that opened help stays open. Items: `HELP-04`.
+- [LibreOffice · tdf#122355](https://bugs.documentfoundation.org/show_bug.cgi?id=122355): a dialog's Help button opened only the help home page. Items: `HELP-04`.
+- [Microsoft · Wizards (Windows UX Guide)](https://learn.microsoft.com/en-us/windows/win32/uxguide/win-wizards): going back keeps the user's selections. Items: `HELP-01`.
+- [Apple · Onboarding](https://developer.apple.com/design/human-interface-guidelines/onboarding): a skipped tutorial is not shown again automatically and stays available. Items: `HELP-01`.
+- [Microsoft · Teaching tip](https://learn.microsoft.com/en-us/windows/apps/develop/ui/controls/dialogs-and-flyouts/teaching-tip): feature tips can be dismissed and should not appear too often. Items: `HELP-01`.
 
 ## FIND · Search and filtering
 

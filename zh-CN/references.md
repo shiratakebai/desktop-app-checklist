@@ -237,6 +237,14 @@
 - [Apple · macOS 15 Release Notes](https://developer.apple.com/documentation/macos-release-notes/macos-15-release-notes)：Quick Look 生成器插件的支持正在移除，改用预览扩展和缩略图扩展。对应条目：`SYSTEM-18`。
 - [Microsoft · Integrate a packaged desktop app with File Explorer](https://learn.microsoft.com/en-us/windows/apps/desktop/modernize/integrate-packaged-app-with-file-explorer)：Windows 11 第一级右键菜单要求 `IExplorerCommand` 与包标识。对应条目：`SYSTEM-19`。
 - [Microsoft · Receive data with the Windows Share sheet](https://learn.microsoft.com/en-us/windows/apps/develop/windows-integration/integrate-sharesheet-receive)：作为分享目标需要包标识。对应条目：`SYSTEM-09`。
+- [Microsoft · NOTIFYICONDATAW](https://learn.microsoft.com/en-us/windows/win32/api/shellapi/ns-shellapi-notifyicondataw)：托盘图标的设置绑定 GUID 和可执行文件路径。对应条目：`SYSTEM-20`。
+- [Microsoft · Customize the taskbar in Windows](https://support.microsoft.com/en-gb/windows/experience/personalization/customize-the-taskbar-in-windows)：Windows 11 的溢出区由用户控制哪些图标显示在任务栏上。对应条目：`SYSTEM-20`。
+- [Microsoft · What do the OneDrive icons mean?](https://support.microsoft.com/en-us/onedrive/what-do-the-onedrive-icons-mean)：托盘图标分别表示暂停、未登录、同步失败和需要注意。对应条目：`SYSTEM-20`。
+- [freedesktop.org · Status Notifier Item](https://specifications.freedesktop.org/status-notifier-item/latest-single/)：托盘项的状态、提示文字与宿主注册。对应条目：`SYSTEM-20`、`SYSTEM-11`。
+- [Microsoft · The Taskbar](https://learn.microsoft.com/en-us/windows/win32/shell/taskbar)：任务栏重建后重新添加托盘图标。对应条目：`SYSTEM-11`。
+- [Microsoft · StartupTask](https://learn.microsoft.com/en-us/uwp/api/windows.applicationmodel.startuptask)：打包应用的启动任务、显示名与用户禁用后的状态。对应条目：`SYSTEM-01`。
+- [Electron · Issue #9827](https://github.com/electron/electron/issues/9827)：经 `Update.exe` 启动的应用在启动项中显示为"Update"。对应条目：`SYSTEM-01`。
+- [freedesktop.org · Desktop Application Autostart Specification](https://specifications.freedesktop.org/autostart/latest/)：Linux 的登录启动项。对应条目：`SYSTEM-01`。
 
 ## INSTALL · 安装、更新与卸载
 
@@ -286,6 +294,11 @@
 - [Apple HIG · Writing](https://developer.apple.com/design/human-interface-guidelines/writing)、[GNOME HIG · Writing style](https://developer.gnome.org/hig/guidelines/writing-style.html)、[Microsoft · Win32 UX Guide · Text](https://learn.microsoft.com/en-us/windows/win32/uxguide/text-ui)：界面与文档中的术语一致。对应条目：`HELP-04`。
 - [1Password · Create a diagnostics report](https://support.1password.com/diagnostics/)、[Mozilla · HTTP Logging](https://firefox-source-docs.mozilla.org/networking/http/logging.html)、[Zoom · Gathering client logs](https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0060047)：无法解锁时的诊断，以及详细日志的开始、停止与敏感性。对应条目：`HELP-05`。
 - [JetBrains · Reporting issues](https://www.jetbrains.com/help/pycharm/reporting-issues.html)、[YouTrack · Issue and comment visibility](https://www.jetbrains.com/help/youtrack/cloud/set-visibility-of-issue-or-comment.html)：发送前审阅诊断包，以及限制附件的可见范围。对应条目：`HELP-06`。
+- [Microsoft · Help (Windows UX Guide)](https://learn.microsoft.com/en-us/windows/win32/uxguide/winenv-help)：帮助链接指向具体主题，触发帮助的界面保持打开。对应条目：`HELP-04`。
+- [LibreOffice · tdf#122355](https://bugs.documentfoundation.org/show_bug.cgi?id=122355)：对话框的帮助按钮只打开帮助首页。对应条目：`HELP-04`。
+- [Microsoft · Wizards (Windows UX Guide)](https://learn.microsoft.com/en-us/windows/win32/uxguide/win-wizards)：返回上一步时保留用户的选择。对应条目：`HELP-01`。
+- [Apple · Onboarding](https://developer.apple.com/design/human-interface-guidelines/onboarding)：跳过的教程不再自动显示，保留查看入口。对应条目：`HELP-01`。
+- [Microsoft · Teaching tip](https://learn.microsoft.com/en-us/windows/apps/develop/ui/controls/dialogs-and-flyouts/teaching-tip)：功能提示可关闭，避免过于频繁。对应条目：`HELP-01`。
 
 ## FIND · 搜索与筛选
 
