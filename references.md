@@ -174,6 +174,8 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [Microsoft · Skype is retiring](https://support.microsoft.com/en-us/skype/skype-is-retiring-in-may-2025-what-you-need-to-know), [Export or delete Skype data](https://support.microsoft.com/en-us/skype/how-do-i-export-or-delete-my-skype-data): migration notices and export scope when a service is retired. Items: `DATA-08`.
 - [KeePassXC · FAQ](https://keepassxc.org/docs/), [User Guide](https://keepassxc.org/docs/KeePassXC_UserGuide), [Cryptomator · Password and Recovery Key](https://docs.cryptomator.org/desktop/password-and-recovery-key/), [Vault Recovery](https://docs.cryptomator.org/desktop/vault-recovery/), [Security Target](https://docs.cryptomator.org/security/security-target/): key files and recovery keys, what changing the password protects, temporary copies of attachments, and unencrypted metadata. Items: `DATA-17`.
 - [Bitwarden · Export vault data](https://bitwarden.com/help/export-your-data/), [1Password · Export your data](https://support.1password.com/export/), [VeraCrypt · Data Leaks](https://veracrypt.io/en/Data%20Leaks.html): exports tied to the original account, plain-text exports, and plain-text traces outside an encrypted volume. Items: `DATA-17`.
+- [Obsidian · Internal links](https://obsidian.md/help/links): internal links update automatically when a file is renamed, or a prompt can be used instead. Items: `DATA-11`.
+- [Git · git-push](https://git-scm.com/docs/git-push): `--force-with-lease` overwrites only while the remote still has the expected value. Items: `DATA-16`.
 
 ## FILE · Files and resources
 
@@ -210,6 +212,8 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [WinSCP · Endurance preferences](https://winscp.net/eng/docs/ui_pref_resume): reconnection interval, time limit, and unlimited reconnection. Items: `NETWORK-02`.
 - [Dropbox · Over storage limit](https://help.dropbox.com/storage-space/over-storage-limit), [Microsoft · Storage quotas](https://support.microsoft.com/en-us/onedrive/microsoft-storage-quotas), [Apple · iCloud Drive file status on Mac](https://support.apple.com/guide/mac-help/mchlc994344b/mac), [Obsidian · Sync storage limits](https://obsidian.md/help/Obsidian%2BSync/Plans%2Band%2Bstorage%2Blimits): what sync does when a storage quota or file size limit is reached. Items: `NETWORK-04`.
 - [Microsoft · Refresh stock quotes automatically in Excel](https://techcommunity.microsoft.com/blog/microsoft365insiderblog/refresh-stock-quotes-automatically-in-excel/4213516), [Apple · Locate a device in Find My on Mac](https://support.apple.com/guide/findmy-mac/fmmc6c7ef383/mac): showing when data was last refreshed. Items: `NETWORK-03`.
+- [Notion · Use pages offline](https://www.notion.com/help/use-pages-offline): offline downloads show progress, subpages are not downloaded with their parent, and only some database rows are downloaded. Items: `NETWORK-11`.
+- [Microsoft · Manage drive space with Storage Sense](https://support.microsoft.com/en-us/windows/experience/storage-filemanagement/manage-drive-space-with-storage-sense): cloud files set to always stay on the device are not reclaimed automatically. Items: `NETWORK-11`.
 
 ## SYSTEM · System integration
 
@@ -226,6 +230,13 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [Apple · SMAppService](https://developer.apple.com/documentation/servicemanagement/smappservice): login items that require the user's approval. Items: `SYSTEM-01`.
 - [Microsoft · Application User Model IDs](https://learn.microsoft.com/en-us/windows/win32/shell/appids): the taskbar groups windows and shortcuts by AppUserModelID, with version information in the ID only when several versions must run side by side. Items: `SYSTEM-17`.
 - [freedesktop.org · Desktop Entry Specification](https://specifications.freedesktop.org/desktop-entry/latest/recognized-keys.html): `StartupWMClass`, `GenericName`, and `Keywords`. Items: `SYSTEM-17`, `SYSTEM-07`.
+- [Microsoft · Programmatic Identifiers](https://learn.microsoft.com/en-us/windows/win32/shell/fa-progids): `DefaultIcon` and `FriendlyTypeName` under the ProgID set a file type's icon and name. Items: `SYSTEM-05`.
+- [Apple · UTTypeIcons](https://developer.apple.com/documentation/bundleresources/information-property-list/utexportedtypedeclarations/uttypeicons): since macOS 11 the system composes document icons from a background, a badge, and text. Items: `SYSTEM-05`.
+- [freedesktop.org · Shared MIME-info Database](https://specifications.freedesktop.org/shared-mime-info/latest/): registration, names, and icon naming of file types on Linux. Items: `SYSTEM-05`.
+- [Microsoft · Preview Handlers](https://learn.microsoft.com/en-us/windows/win32/shell/preview-handlers): preview handlers run out of process. Items: `SYSTEM-18`.
+- [Apple · macOS 15 Release Notes](https://developer.apple.com/documentation/macos-release-notes/macos-15-release-notes): support for Quick Look generator plug-ins is being removed in favor of preview and thumbnail extensions. Items: `SYSTEM-18`.
+- [Microsoft · Integrate a packaged desktop app with File Explorer](https://learn.microsoft.com/en-us/windows/apps/desktop/modernize/integrate-packaged-app-with-file-explorer): the Windows 11 first-level context menu requires `IExplorerCommand` and package identity. Items: `SYSTEM-19`.
+- [Microsoft · Receive data with the Windows Share sheet](https://learn.microsoft.com/en-us/windows/apps/develop/windows-integration/integrate-sharesheet-receive): a share target needs package identity. Items: `SYSTEM-09`.
 
 ## INSTALL · Installation, updates, and uninstallation
 
@@ -293,6 +304,10 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [Joplin · GHSA-hff8-hjwv-j9q7](https://github.com/laurent22/joplin/security/advisories/GHSA-hff8-hjwv-j9q7): a link generated by a diagram in a note led to command execution in the preview. Items: `TRUST-07`.
 - [Chromium · Security Considerations for Browser UI](https://chromium.googlesource.com/chromium/src/+/HEAD/docs/security/security-considerations-for-browser-ui.md): trusted UI that content cannot draw over, and ignoring input right after a prompt appears. Items: `TRUST-07`, `TRUST-08`.
 - [Element · GHSA-wrcp-5v3v-3j6v](https://github.com/element-hq/element-web/security/advisories/GHSA-wrcp-5v3v-3j6v): phishing HTML injected even though a content security policy blocks scripts. Items: `TRUST-08`.
+- [Adobe · Validate digital signatures](https://helpx.adobe.com/acrobat/desktop/e-sign-documents/manage-digital-signatures/validate-digital-sign.html): document integrity, signer certificate, and timestamp status are shown separately. Items: `TRUST-09`.
+- [LibreOffice · Security Advisories](https://www.libreoffice.org/security/): CVE-2024-7788, in which the signature status reported for a file rebuilt in repair mode did not hold for the recovered file. Items: `TRUST-09`.
+- [7-Zip · History](https://7-zip.org/history.txt): since 24.03, the GUI asks for permission before extracting RAR archives with dictionaries larger than 4 GB. Items: `TRUST-10`.
+- [WinRAR · What's new](https://www.win-rar.com/whatsnew.html): since 7.00, a dictionary larger than the configured limit triggers a prompt to cancel or continue, to prevent unexpected large memory allocation. Items: `TRUST-10`.
 
 ## EXTEND · Extensions and plugins
 

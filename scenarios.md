@@ -14,7 +14,7 @@ Each scenario lists steps, checkpoints, and related items.
 | --- | --- |
 | First use | S21, S23, S27, S40 |
 | Interruption | S05, S10, S32 |
-| Leaving | S09, S11, S20, S41 |
+| Leaving | S09, S11, S20, S41, S47 |
 | Returning | S04, S26, S34, S41 |
 | Mistake | S42 |
 | Environment change | S02, S07, S08, S12, S15, S16, S18, S22, S28, S29, S30, S33, S38, S45 |
@@ -75,13 +75,13 @@ Checkpoints: The original file was not truncated to 0 bytes; in-memory content i
 
 Related items: DATA-06 Safe writes; DATA-02 Autosave and crash recovery; DATA-01 Visible save state; HELP-03 Actionable, copyable error messages
 
-### S07 · External replace-saves and renames; opening a cloud placeholder offline
+### S07 · External replace-saves and renames; opening a cloud placeholder and content kept offline while offline
 
-Use another editor to save an open file several times in a row (most editors write a temporary file and rename it), then rename the file and rename it back. Separately, take an online-only OneDrive or iCloud file, disconnect from the network, open it in the application, then index the whole folder.
+Use another editor to save an open file several times in a row (most editors write a temporary file and rename it), then rename the file and rename it back. Separately, take an online-only OneDrive or iCloud file, disconnect from the network, open it in the application, then index the whole folder. Then mark a piece of content with subpages and attachments to be kept offline, run the application's cache cleanup, disconnect from the network, restart, and open it.
 
-Checkpoints: Every external save is detected, not just the first; after the rename, the application tracks the file or offers to relocate it; the placeholder is not reported as corrupt, there is no blocking without feedback, and no mass download is triggered.
+Checkpoints: Every external save is detected, not just the first; after the rename, the application tracks the file or offers to relocate it; the placeholder is not reported as corrupt, there is no blocking without feedback, and no mass download is triggered; content kept offline still opens after the cache cleanup and restart, and parts that could not be prepared were indicated before going offline.
 
-Related items: DATA-07 External changes and conflicts; FILE-05 Network drives, removable media, and cloud placeholders; FILE-04 Feedback for move, rename, and delete
+Related items: DATA-07 External changes and conflicts; FILE-05 Network drives, removable media, and cloud placeholders; FILE-04 Feedback for move, rename, and delete; NETWORK-11 Content kept offline
 
 ### S08 · Two clients edit the same content offline, then reconnect
 
@@ -307,13 +307,13 @@ Checkpoints: Sample data cannot be read and unauthorized actions cannot be trigg
 
 Related items: PRIVACY-09 Access boundaries of local services and IPC; AUTOMATE-04 Delegation that can be enabled, stopped, and reviewed; MANAGED-02 User and machine scope
 
-### S36 · Import an archive with escaping paths; export a sample with hidden information
+### S36 · Import archives with escaping paths or huge expansion; modify a signed document; export a sample with hidden information
 
-Import an archive containing `../` paths and symbolic links; share and export a sample containing author, location, comments, and hidden content; redact a passage in the sample and export a copy for sharing.
+Import an archive containing `../` paths and symbolic links; open a small sample that declares a huge decompression dictionary or image size; view the signature details of a test-signed document, modify it and save a copy, then run the application's repair on a damaged copy; share and export a sample containing author, location, comments, and hidden content; redact a passage in the sample and export a copy for sharing.
 
-Checkpoints: The import stays inside the target directory; private metadata is identifiable and removed as chosen; required content and dependencies are not removed by mistake; in the shared copy, redacted text cannot be copied, found by search, or recovered by removing the overlay.
+Checkpoints: The import stays inside the target directory; the oversized sample is announced before processing and can be cancelled, the application stays responsive, and other unsaved work remains; the signature status updates after the change, and the repaired copy is not shown as validly signed; private metadata is identifiable and removed as chosen; required content and dependencies are not removed by mistake; in the shared copy, redacted text cannot be copied, found by search, or recovered by removing the overlay.
 
-Related items: TRUST-05 Directory boundary on archive import; PRIVACY-11 Hidden information in exports and shares; DATA-08 Import, export, and data portability
+Related items: TRUST-05 Directory boundary on archive import; PRIVACY-11 Hidden information in exports and shares; DATA-08 Import, export, and data portability; TRUST-10 Resource limits for external files; TRUST-09 Document signature status
 
 ### S37 · Launch with a corrupted data file; shut down while editing and downloading
 
@@ -357,11 +357,11 @@ Related items: DATA-14 Unfinished work is discoverable after leaving; SYSTEM-14 
 
 ### S42 · Recovering from a wrong deletion, overwrite, or click
 
-Delete several objects in a batch, restore one with undo, and recover the rest from the trash or the application's restore entry point. Import a file that overwrites existing content, then undo. Copy a file onto one with the same name, choose to replace it, and then undo the copy. Make a change in each of two windows, switch focus, and press Ctrl/Cmd + Z. Mess up a group of settings and reset that category. Perform a frequent action that takes effect immediately (move, archive, or send), then undo it. Select a few characters in an inspector or rename field, press Delete, then press Ctrl/Cmd+A. Look at the confirmation when deleting an object.
+Delete several objects in a batch, restore one with undo, and recover the rest from the trash or the application's restore entry point. Import a file that overwrites existing content, then undo. Generate a preview for a batch rename or sync; before running it, modify one of the targets and add a file from another client, then run it. Copy a file onto one with the same name, choose to replace it, and then undo the copy. Make a change in each of two windows, switch focus, and press Ctrl/Cmd + Z. Mess up a group of settings and reset that category. Perform a frequent action that takes effect immediately (move, archive, or send), then undo it. Select a few characters in an inspector or rename field, press Delete, then press Ctrl/Cmd+A. Look at the confirmation when deleting an object.
 
-Checkpoints: Deleted objects can be recovered with their location and properties unchanged; the import can be undone, and manual edits made before the import remain; the replaced file can be recovered, or the UI said before replacing that it could not be, and the undo confirmation named the step being undone; undo affects only the object that has focus; the reset stated its scope before running, and settings in other categories were unaffected; the immediate action could be undone within the undo period, and the UI showed where to undo; edit commands act only on the text in the field, and objects selected in the list are unaffected; confirmations for irreversible actions name the object or state the count.
+Checkpoints: Deleted objects can be recovered with their location and properties unchanged; the import can be undone, and manual edits made before the import remain; targets modified after the preview are skipped or previewed again, and the added file is not overwritten or deleted without confirmation; the replaced file can be recovered, or the UI said before replacing that it could not be, and the undo confirmation named the step being undone; undo affects only the object that has focus; the reset stated its scope before running, and settings in other categories were unaffected; the immediate action could be undone within the undo period, and the UI showed where to undo; edit commands act only on the text in the field, and objects selected in the list are unaffected; confirmations for irreversible actions name the object or state the count.
 
-Related items: INPUT-14 Undo over confirmation; DATA-04 Undo and redo targets; DATA-10 Protection for bulk deletion and migration; FILE-04 Feedback for move, rename, and delete; SETTINGS-07 Reset by category; INPUT-24 Edit commands act on the focused area
+Related items: INPUT-14 Undo over confirmation; DATA-04 Undo and redo targets; DATA-10 Protection for bulk deletion and migration; FILE-04 Feedback for move, rename, and delete; SETTINGS-07 Reset by category; INPUT-24 Edit commands act on the focused area; DATA-16 Previewing and simulating bulk changes
 
 ### S43 · Migrating from a similar product
 
@@ -394,3 +394,11 @@ Prepare two test accounts. For one document, invite the other account directly, 
 Checkpoints: The sharing UI lists every access path, and after one is cancelled the others are shown accurately; the link stops working after it expires; stopping a share states that downloaded copies are not affected; turned-off status no longer appears on the other side, and exceptions are stated in settings; notifications and conversation titles show the account identity; the imitation form stays inside the content area and cannot be submitted from within the application.
 
 Related items: PRIVACY-14 Sharing scope and revocation; PRIVACY-15 Activity status shown to others; TRUST-08 Application UI is distinguishable from external content; PRIVACY-11 Hidden information in exports and shares
+
+### S47 · View the application's files in the file manager and system search; turn off integrations, then uninstall
+
+Install the final release package. In the file manager, browse a sample folder in small icon, large icon, and details views, in both light and dark themes. The folder holds a file in each of the product's own formats, a damaged file, and an online-only cloud file. Open the preview pane or Quick Look. Use system search to look for a word from the sample content. Share a passage of text or a file to the application. Turn off one context menu entry in the application's settings, then update once. Finally, uninstall from the system's list of installed apps.
+
+Checkpoints: Each type has a recognizable document icon and type name; thumbnails and previews reflect the content, the damaged file falls back to the document icon, the file manager stays responsive, and the online-only file is not downloaded; system search finds the sample; after sharing, the new object is shown; the context menu entry that was turned off is still off after the update; after uninstalling, the document icons, thumbnails, context menu entries, and the list entry are gone, and the sample files themselves remain.
+
+Related items: SYSTEM-05 File associations and Open With; SYSTEM-18 Own file formats are recognizable in the file manager and system search; SYSTEM-19 Context menu and New menu entries in the file manager; SYSTEM-09 Sharing, printing, and system services; INSTALL-06 Uninstallation scope; FAIR-02 Installation and updates respect prior choices

@@ -174,6 +174,8 @@
 - [Microsoft · Skype is retiring](https://support.microsoft.com/en-us/skype/skype-is-retiring-in-may-2025-what-you-need-to-know)、[Export or delete Skype data](https://support.microsoft.com/en-us/skype/how-do-i-export-or-delete-my-skype-data)：服务退役时的迁移提示与导出范围。对应条目：`DATA-08`。
 - [KeePassXC · FAQ](https://keepassxc.org/docs/)、[User Guide](https://keepassxc.org/docs/KeePassXC_UserGuide)、[Cryptomator · Password and Recovery Key](https://docs.cryptomator.org/desktop/password-and-recovery-key/)、[Vault Recovery](https://docs.cryptomator.org/desktop/vault-recovery/)、[Security Target](https://docs.cryptomator.org/security/security-target/)：密钥文件与恢复密钥、改口令的保护范围、附件的临时副本与不加密的元数据。对应条目：`DATA-17`。
 - [Bitwarden · Export vault data](https://bitwarden.com/help/export-your-data/)、[1Password · Export your data](https://support.1password.com/export/)、[VeraCrypt · Data Leaks](https://veracrypt.io/en/Data%20Leaks.html)：只能导回原账号的加密导出、明文导出，以及加密卷之外的明文痕迹。对应条目：`DATA-17`。
+- [Obsidian · Internal links](https://obsidian.md/help/links)：重命名文件时自动更新内部链接，也可改为提示。对应条目：`DATA-11`。
+- [Git · git-push](https://git-scm.com/docs/git-push)：`--force-with-lease` 只在远端仍是预期值时覆盖。对应条目：`DATA-16`。
 
 ## FILE · 文件与资源
 
@@ -210,6 +212,8 @@
 - [WinSCP · Endurance preferences](https://winscp.net/eng/docs/ui_pref_resume)：重连间隔、时限与不限时重连。对应条目：`NETWORK-02`。
 - [Dropbox · Over storage limit](https://help.dropbox.com/storage-space/over-storage-limit)、[Microsoft · Storage quotas](https://support.microsoft.com/en-us/onedrive/microsoft-storage-quotas)、[Apple · iCloud Drive file status on Mac](https://support.apple.com/guide/mac-help/mchlc994344b/mac)、[Obsidian · Sync storage limits](https://obsidian.md/help/Obsidian%2BSync/Plans%2Band%2Bstorage%2Blimits)：达到存储配额或文件大小上限时的同步行为。对应条目：`NETWORK-04`。
 - [Microsoft · Refresh stock quotes automatically in Excel](https://techcommunity.microsoft.com/blog/microsoft365insiderblog/refresh-stock-quotes-automatically-in-excel/4213516)、[Apple · Locate a device in Find My on Mac](https://support.apple.com/guide/findmy-mac/fmmc6c7ef383/mac)：显示数据最后更新的时间。对应条目：`NETWORK-03`。
+- [Notion · Use pages offline](https://www.notion.com/help/use-pages-offline)：离线下载显示进度，子页面不随父页面下载，数据库只下载部分行。对应条目：`NETWORK-11`。
+- [Microsoft · Manage drive space with Storage Sense](https://support.microsoft.com/en-us/windows/experience/storage-filemanagement/manage-drive-space-with-storage-sense)：设为始终保留在设备上的云文件不被自动回收。对应条目：`NETWORK-11`。
 
 ## SYSTEM · 系统集成
 
@@ -226,6 +230,13 @@
 - [Apple · SMAppService](https://developer.apple.com/documentation/servicemanagement/smappservice)：需要用户批准的登录项。对应条目：`SYSTEM-01`。
 - [Microsoft · Application User Model IDs](https://learn.microsoft.com/en-us/windows/win32/shell/appids)：任务栏按 AppUserModelID 归组窗口和快捷方式，只有需要多个版本并存时才在 ID 中加入版本信息。对应条目：`SYSTEM-17`。
 - [freedesktop.org · Desktop Entry Specification](https://specifications.freedesktop.org/desktop-entry/latest/recognized-keys.html)：`StartupWMClass`、`GenericName` 与 `Keywords`。对应条目：`SYSTEM-17`、`SYSTEM-07`。
+- [Microsoft · Programmatic Identifiers](https://learn.microsoft.com/en-us/windows/win32/shell/fa-progids)：ProgID 下的 `DefaultIcon` 与 `FriendlyTypeName` 决定文件类型的图标和名称。对应条目：`SYSTEM-05`。
+- [Apple · UTTypeIcons](https://developer.apple.com/documentation/bundleresources/information-property-list/utexportedtypedeclarations/uttypeicons)：macOS 11 起由系统按背景、徽标和文字合成文档图标。对应条目：`SYSTEM-05`。
+- [freedesktop.org · Shared MIME-info Database](https://specifications.freedesktop.org/shared-mime-info/latest/)：Linux 上文件类型的注册、名称和图标命名。对应条目：`SYSTEM-05`。
+- [Microsoft · Preview Handlers](https://learn.microsoft.com/en-us/windows/win32/shell/preview-handlers)：预览处理程序在隔离进程中运行。对应条目：`SYSTEM-18`。
+- [Apple · macOS 15 Release Notes](https://developer.apple.com/documentation/macos-release-notes/macos-15-release-notes)：Quick Look 生成器插件的支持正在移除，改用预览扩展和缩略图扩展。对应条目：`SYSTEM-18`。
+- [Microsoft · Integrate a packaged desktop app with File Explorer](https://learn.microsoft.com/en-us/windows/apps/desktop/modernize/integrate-packaged-app-with-file-explorer)：Windows 11 第一级右键菜单要求 `IExplorerCommand` 与包标识。对应条目：`SYSTEM-19`。
+- [Microsoft · Receive data with the Windows Share sheet](https://learn.microsoft.com/en-us/windows/apps/develop/windows-integration/integrate-sharesheet-receive)：作为分享目标需要包标识。对应条目：`SYSTEM-09`。
 
 ## INSTALL · 安装、更新与卸载
 
@@ -293,6 +304,10 @@
 - [Joplin · GHSA-hff8-hjwv-j9q7](https://github.com/laurent22/joplin/security/advisories/GHSA-hff8-hjwv-j9q7)：笔记中的图表生成的链接，在预览中导致了命令执行。对应条目：`TRUST-07`。
 - [Chromium · Security Considerations for Browser UI](https://chromium.googlesource.com/chromium/src/+/HEAD/docs/security/security-considerations-for-browser-ui.md)：内容无法覆盖的可信界面，以及提示刚出现时忽略输入。对应条目：`TRUST-07`、`TRUST-08`。
 - [Element · GHSA-wrcp-5v3v-3j6v](https://github.com/element-hq/element-web/security/advisories/GHSA-wrcp-5v3v-3j6v)：内容安全策略挡住脚本后仍可注入的钓鱼 HTML。对应条目：`TRUST-08`。
+- [Adobe · Validate digital signatures](https://helpx.adobe.com/acrobat/desktop/e-sign-documents/manage-digital-signatures/validate-digital-sign.html)：分别显示内容完整性、签署者证书和时间戳的验证状态。对应条目：`TRUST-09`。
+- [LibreOffice · Security Advisories](https://www.libreoffice.org/security/)：CVE-2024-7788：修复模式重建的文件所报告的签名状态对恢复后的文件并不成立。对应条目：`TRUST-09`。
+- [7-Zip · History](https://7-zip.org/history.txt)：24.03 起，RAR 字典大于 4 GB 时图形界面先征得用户同意。对应条目：`TRUST-10`。
+- [WinRAR · What's new](https://www.win-rar.com/whatsnew.html)：7.00 起，字典超过设置中的上限时提示取消或继续，以防意外的大量内存分配。对应条目：`TRUST-10`。
 
 ## EXTEND · 扩展与插件
 
