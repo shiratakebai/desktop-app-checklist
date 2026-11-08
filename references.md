@@ -58,6 +58,7 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [Microsoft · Create accessible PDFs](https://support.microsoft.com/en-us/accessibility/office-accessibility/create-accessible-pdfs), [LibreOffice · PDF/UA export](https://help.libreoffice.org/latest/en-US/text/shared/01/ref_pdf_export_universal_accessibility.html): exported documents keep tags, reading order, language, and alternative text. Items: `A11Y-03`.
 - [W3C · Understanding Focus Not Obscured (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html), [Understanding Sensory Characteristics](https://www.w3.org/WAI/WCAG22/Understanding/sensory-characteristics.html): focus not hidden by fixed content; instructions that do not rely only on shape, position, color, or sound. Items: `A11Y-02`, `A11Y-06`.
 - [Microsoft · Set up an authenticator app as a two-step verification method](https://support.microsoft.com/en-us/account-billing/set-up-an-authenticator-app-as-a-two-step-verification-method-2db39828-15e1-4614-b825-6e2b524e7c95): entering a code manually when a QR code cannot be scanned. Items: `A11Y-09`.
+- [Microsoft · Flashing user interface and the GetCaretBlinkTime function](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/dnacc/flashing-user-interface-and-the-getcaretblinktime-function): custom carets following the system blink setting. Items: `A11Y-07`, `A11Y-02`.
 
 ## INPUT · Keyboard, mouse, IME, and clipboard
 
@@ -99,6 +100,12 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [Microsoft · Win32 UX Guide · Balloons](https://learn.microsoft.com/en-us/windows/win32/uxguide/ctrl-balloons): a Caps Lock notice on password fields, and notices for states that affect input. Items: `INPUT-19`, `INPUT-23`.
 - [VS Code · Release notes 1.96](https://code.visualstudio.com/updates/v1_96), [Microsoft · Type over text in Word](https://support.microsoft.com/en-us/word/type-over-text-in-word-for-windows): an overtype indicator, and disabling the Insert key. Items: `INPUT-23`.
 - [Microsoft · Win32 UX Guide · Menus](https://learn.microsoft.com/en-us/windows/win32/uxguide/cmd-menus): context menus are not the only way to reach a command. Items: `INPUT-08`.
+- [Electron · Context Menu](https://www.electronjs.org/docs/latest/tutorial/context-menu): no context menu for web content by default. Items: `INPUT-25`.
+- [GTK · gtk-enable-primary-paste](https://docs.gtk.org/gtk4/property.Settings.gtk-enable-primary-paste.html): middle-click paste of the primary selection and its setting. Items: `INPUT-25`.
+- [Flutter · Issue #99074](https://github.com/flutter/flutter/issues/99074): desktop text fields without primary selection support. Items: `INPUT-25`.
+- [Flutter · Issue #145122](https://github.com/flutter/flutter/issues/145122): macOS system text replacement not applied in text fields. Items: `INPUT-25`.
+- [Apple · TN2150](https://developer.apple.com/library/archive/technotes/tn2150/_index.html): turning secure input on and off for custom password fields. Items: `INPUT-19`.
+- [Microsoft · Respond to the presence of the touch keyboard](https://learn.microsoft.com/en-us/windows/apps/develop/input/respond-to-the-presence-of-the-touch-keyboard): keeping the focused field visible when the touch keyboard appears. Items: `INPUT-12`.
 
 ## WINDOW · Windows
 
@@ -112,6 +119,11 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [Raycast · Settings](https://manual.raycast.com/settings), [Alfred · Appearance](https://www.alfredapp.com/help/appearance/), [Alfred · Snippets troubleshooting](https://www.alfredapp.com/help/troubleshooting/snippets/): which display the launcher appears on and whether it moves to the active Space; returning to the root search after a delay; a non-activating panel by default; reporting a Secure Input lock and slowing down key events for targets that drop pasted text. Items: `WINDOW-13`, `WINDOW-10`, `SYSTEM-04`.
 - [JetBrains · System settings](https://www.jetbrains.com/help/idea/system-settings.html), [Telegram Desktop · Settings strings](https://translations.telegram.org/en/tdesktop/settings/): confirmation before exiting; "Hold to Quit" and a warning before quitting with the shortcut; "Send with Enter" versus "Send with Ctrl+Enter". Items: `INPUT-14`, `INPUT-22`.
 - [Audacity · The Audacity IPC server failed to initialize](https://support.audacityteam.org/au3/troubleshooting/error-codes/error-the-audacity-ipc-server-failed-to-initialize), [Jan · Troubleshooting](https://docs.jan.ai/desktop/troubleshooting): a visible error when the single-instance channel or the local service port cannot be set up, including a stale process from the previous run. Items: `WINDOW-05`.
+- [Avalonia · Issue #14545](https://github.com/AvaloniaUI/Avalonia/issues/14545): Alt + Space not opening the system window menu. Items: `WINDOW-02`.
+- [Wayland · xdg-decoration](https://wayland.app/protocols/xdg-decoration-unstable-v1): compositors may decline to provide server-side decorations. Items: `WINDOW-02`.
+- [Zed · PR #39313](https://github.com/zed-industries/zed/pull/39313): falling back to client-side decorations when server-side decorations are unavailable. Items: `WINDOW-02`.
+- [Wayland · xdg-activation](https://wayland.app/protocols/xdg-activation-v1): requesting window activation with a token. Items: `WINDOW-08`.
+- [Tauri · plugins-workspace PR #3592](https://github.com/tauri-apps/plugins-workspace/pull/3592): letting the running instance come to the front before a second instance hands over a request. Items: `WINDOW-08`.
 
 ## APPEARANCE · Appearance
 
@@ -122,6 +134,7 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [Microsoft · Acrylic material](https://learn.microsoft.com/en-us/windows/apps/design/style/acrylic), [AppKit · accessibilityDisplayShouldReduceTransparency](https://developer.apple.com/documentation/appkit/nsworkspace/accessibilitydisplayshouldreducetransparency): solid backgrounds when the user turns off transparency. Items: `APPEARANCE-03`.
 - [VS Code · Custom layout](https://code.visualstudio.com/docs/configure/custom-layout), [JetBrains · Viewing modes](https://www.jetbrains.com/help/idea/ide-viewing-modes.html): Zen Mode and distraction-free mode hide everything except the editor. Items: `APPEARANCE-08`.
 - [Flutter · Platform idioms](https://docs.flutter.dev/ui/adaptive-responsive/idioms): desktop scroll bars and button order on each platform. Items: `APPEARANCE-03`.
+- [Apple · Optimizing your widget for accented rendering mode and Liquid Glass](https://developer.apple.com/documentation/widgetkit/optimizing-your-widget-for-accented-rendering-mode-and-liquid-glass): tinted presentation of widgets. Items: `APPEARANCE-01`.
 
 ## SETTINGS · Settings
 
@@ -245,6 +258,10 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [Microsoft · StartupTask](https://learn.microsoft.com/en-us/uwp/api/windows.applicationmodel.startuptask): startup tasks of packaged apps, their display names, and the state after the user disables them. Items: `SYSTEM-01`.
 - [Electron · Issue #9827](https://github.com/electron/electron/issues/9827): an app launched through `Update.exe` shows as "Update" among startup items. Items: `SYSTEM-01`.
 - [freedesktop.org · Desktop Application Autostart Specification](https://specifications.freedesktop.org/autostart/latest/): login items on Linux. Items: `SYSTEM-01`.
+- [Apple · Widgets](https://developer.apple.com/design/human-interface-guidelines/widgets): widget content, refresh, and placeholders. Items: `SYSTEM-21`.
+- [Microsoft · Widget states and UI](https://learn.microsoft.com/en-us/windows/apps/design/widgets/widgets-states-and-ui): cached, error, and signed-out widget states. Items: `SYSTEM-21`.
+- [exelban/stats · Issue #2807](https://github.com/exelban/stats/issues/2807): a desktop widget stuck on old values while the menu bar stays current. Items: `SYSTEM-21`.
+- [XDG Desktop Portal · GlobalShortcuts](https://flatpak.github.io/xdg-desktop-portal/docs/doc-org.freedesktop.portal.GlobalShortcuts.html): the desktop reporting the shortcuts actually bound. Items: `SYSTEM-04`.
 
 ## INSTALL · Installation, updates, and uninstallation
 
@@ -332,6 +349,8 @@ This file lists the sources behind the items in [checklist.md](checklist.md), ch
 - [LibreOffice · Starting the software with parameters](https://help.libreoffice.org/latest/en-US/text/shared/guide/start_parameters.html), [Apple · Run shortcuts from the command line](https://support.apple.com/guide/shortcuts-mac/run-shortcuts-from-the-command-line-apd455c82f02/mac): command-line entry points, exit codes, and headless execution. Items: `AUTOMATE-03`, `AUTOMATE-01`, `SYSTEM-10`.
 - [Microsoft · UI Automation Control Patterns](https://learn.microsoft.com/en-us/windows/win32/winauto/uiauto-controlpatternsoverview), [Use the AutomationId Property](https://learn.microsoft.com/en-us/dotnet/framework/ui-automation/use-the-automationid-property): object identity and actions in a drivable UI. Items: `AUTOMATE-02`, `A11Y-03`.
 - [Sketch · MCP server](https://www.sketch.com/docs/mcp-server/), [1Password · CLI app integration](https://developer.1password.com/docs/cli/app-integration/): delegation interfaces that the user turns on and can revoke. Items: `AUTOMATE-04`.
+- [GNOME · Search Provider](https://developer.gnome.org/documentation/tutorials/search-provider.html): object results in system search, without changing the application while querying. Items: `AUTOMATE-02`.
+- [Microsoft · Detect and filter callers for App Actions](https://learn.microsoft.com/en-us/windows/ai/app-actions/actions-filter-caller): limiting discovery is separate from authorizing execution. Items: `AUTOMATE-04`.
 
 ## LICENSE · Licensing, trials, and expiration
 

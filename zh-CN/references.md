@@ -58,6 +58,7 @@
 - [Microsoft · Create accessible PDFs](https://support.microsoft.com/en-us/accessibility/office-accessibility/create-accessible-pdfs)、[LibreOffice · PDF/UA export](https://help.libreoffice.org/latest/en-US/text/shared/01/ref_pdf_export_universal_accessibility.html)：导出的文档保留标签、阅读顺序、语言和替代文字。对应条目：`A11Y-03`。
 - [W3C · Understanding Focus Not Obscured (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html)、[Understanding Sensory Characteristics](https://www.w3.org/WAI/WCAG22/Understanding/sensory-characteristics.html)：焦点不被固定内容遮住；说明不只依赖形状、位置、颜色或声音。对应条目：`A11Y-02`、`A11Y-06`。
 - [Microsoft · Set up an authenticator app as a two-step verification method](https://support.microsoft.com/en-us/account-billing/set-up-an-authenticator-app-as-a-two-step-verification-method-2db39828-15e1-4614-b825-6e2b524e7c95)：无法扫描二维码时手动输入代码。对应条目：`A11Y-09`。
+- [Microsoft · Flashing user interface and the GetCaretBlinkTime function](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/dnacc/flashing-user-interface-and-the-getcaretblinktime-function)：自绘光标遵循系统的闪烁设置。对应条目：`A11Y-07`、`A11Y-02`。
 
 ## INPUT · 键盘、鼠标、输入法与剪贴板
 
@@ -99,6 +100,12 @@
 - [Microsoft · Win32 UX Guide · Balloons](https://learn.microsoft.com/en-us/windows/win32/uxguide/ctrl-balloons)：密码框的大写锁定提示，以及影响输入的状态提示。对应条目：`INPUT-19`、`INPUT-23`。
 - [VS Code · Release notes 1.96](https://code.visualstudio.com/updates/v1_96)、[Microsoft · Type over text in Word](https://support.microsoft.com/en-us/word/type-over-text-in-word-for-windows)：改写模式的标识与停用 Insert 键。对应条目：`INPUT-23`。
 - [Microsoft · Win32 UX Guide · Menus](https://learn.microsoft.com/en-us/windows/win32/uxguide/cmd-menus)：右键菜单不作为命令的唯一入口。对应条目：`INPUT-08`。
+- [Electron · Context Menu](https://www.electronjs.org/docs/latest/tutorial/context-menu)：网页内容默认没有右键菜单。对应条目：`INPUT-25`。
+- [GTK · gtk-enable-primary-paste](https://docs.gtk.org/gtk4/property.Settings.gtk-enable-primary-paste.html)：中键粘贴主选区及其开关。对应条目：`INPUT-25`。
+- [Flutter · Issue #99074](https://github.com/flutter/flutter/issues/99074)：桌面文本框不支持主选区。对应条目：`INPUT-25`。
+- [Flutter · Issue #145122](https://github.com/flutter/flutter/issues/145122)：macOS 系统文本替换在文本框中不生效。对应条目：`INPUT-25`。
+- [Apple · TN2150](https://developer.apple.com/library/archive/technotes/tn2150/_index.html)：自绘密码输入控件开启和解除安全输入。对应条目：`INPUT-19`。
+- [Microsoft · Respond to the presence of the touch keyboard](https://learn.microsoft.com/en-us/windows/apps/develop/input/respond-to-the-presence-of-the-touch-keyboard)：触摸键盘出现时保持焦点字段可见。对应条目：`INPUT-12`。
 
 ## WINDOW · 窗口
 
@@ -112,6 +119,11 @@
 - [Raycast · Settings](https://manual.raycast.com/settings)、[Alfred · Appearance](https://www.alfredapp.com/help/appearance/)、[Alfred · Snippets troubleshooting](https://www.alfredapp.com/help/troubleshooting/snippets/)：启动器出现在哪个显示器、是否移到当前 Space；一段时间后回到根搜索；默认不取焦点的面板；报告安全输入锁定，对丢字的目标放慢按键事件。对应条目：`WINDOW-13`、`WINDOW-10`、`SYSTEM-04`。
 - [JetBrains · System settings](https://www.jetbrains.com/help/idea/system-settings.html)、[Telegram Desktop · 设置字符串](https://translations.telegram.org/en/tdesktop/settings/)：退出前确认；"按住才退出"与快捷键退出前的警告；"Send with Enter"与"Send with Ctrl+Enter"。对应条目：`INPUT-14`、`INPUT-22`。
 - [Audacity · The Audacity IPC server failed to initialize](https://support.audacityteam.org/au3/troubleshooting/error-codes/error-the-audacity-ipc-server-failed-to-initialize)、[Jan · Troubleshooting](https://docs.jan.ai/desktop/troubleshooting)：单实例通道或本机服务端口建立失败时有可见的错误，包括上次残留的进程。对应条目：`WINDOW-05`。
+- [Avalonia · Issue #14545](https://github.com/AvaloniaUI/Avalonia/issues/14545)：Alt + 空格无法打开系统窗口菜单。对应条目：`WINDOW-02`。
+- [Wayland · xdg-decoration](https://wayland.app/protocols/xdg-decoration-unstable-v1)：合成器可以拒绝提供服务端装饰。对应条目：`WINDOW-02`。
+- [Zed · PR #39313](https://github.com/zed-industries/zed/pull/39313)：服务端装饰不可用时回退到客户端装饰。对应条目：`WINDOW-02`。
+- [Wayland · xdg-activation](https://wayland.app/protocols/xdg-activation-v1)：用令牌请求激活窗口。对应条目：`WINDOW-08`。
+- [Tauri · plugins-workspace PR #3592](https://github.com/tauri-apps/plugins-workspace/pull/3592)：第二个实例转交请求前允许已运行的实例来到前台。对应条目：`WINDOW-08`。
 
 ## APPEARANCE · 外观
 
@@ -122,6 +134,7 @@
 - [Microsoft · Acrylic material](https://learn.microsoft.com/en-us/windows/apps/design/style/acrylic)、[AppKit · accessibilityDisplayShouldReduceTransparency](https://developer.apple.com/documentation/appkit/nsworkspace/accessibilitydisplayshouldreducetransparency)：用户关闭透明效果后使用不透明背景。对应条目：`APPEARANCE-03`。
 - [VS Code · Custom layout](https://code.visualstudio.com/docs/configure/custom-layout)、[JetBrains · Viewing modes](https://www.jetbrains.com/help/idea/ide-viewing-modes.html)：Zen 模式和免打扰模式隐藏编辑区以外的全部界面。对应条目：`APPEARANCE-08`。
 - [Flutter · Platform idioms](https://docs.flutter.dev/ui/adaptive-responsive/idioms)：桌面滚动条与各平台的按钮顺序。对应条目：`APPEARANCE-03`。
+- [Apple · Optimizing your widget for accented rendering mode and Liquid Glass](https://developer.apple.com/documentation/widgetkit/optimizing-your-widget-for-accented-rendering-mode-and-liquid-glass)：小组件的染色呈现。对应条目：`APPEARANCE-01`。
 
 ## SETTINGS · 设置
 
@@ -245,6 +258,10 @@
 - [Microsoft · StartupTask](https://learn.microsoft.com/en-us/uwp/api/windows.applicationmodel.startuptask)：打包应用的启动任务、显示名与用户禁用后的状态。对应条目：`SYSTEM-01`。
 - [Electron · Issue #9827](https://github.com/electron/electron/issues/9827)：经 `Update.exe` 启动的应用在启动项中显示为"Update"。对应条目：`SYSTEM-01`。
 - [freedesktop.org · Desktop Application Autostart Specification](https://specifications.freedesktop.org/autostart/latest/)：Linux 的登录启动项。对应条目：`SYSTEM-01`。
+- [Apple · Widgets](https://developer.apple.com/design/human-interface-guidelines/widgets)：小组件的内容、刷新与占位。对应条目：`SYSTEM-21`。
+- [Microsoft · Widget states and UI](https://learn.microsoft.com/en-us/windows/apps/design/widgets/widgets-states-and-ui)：小组件的缓存、错误与未登录状态。对应条目：`SYSTEM-21`。
+- [exelban/stats · Issue #2807](https://github.com/exelban/stats/issues/2807)：桌面小组件停在旧值，菜单栏正常。对应条目：`SYSTEM-21`。
+- [XDG Desktop Portal · GlobalShortcuts](https://flatpak.github.io/xdg-desktop-portal/docs/doc-org.freedesktop.portal.GlobalShortcuts.html)：桌面返回实际绑定的快捷键。对应条目：`SYSTEM-04`。
 
 ## INSTALL · 安装、更新与卸载
 
@@ -332,6 +349,8 @@
 - [LibreOffice · Starting the software with parameters](https://help.libreoffice.org/latest/en-US/text/shared/guide/start_parameters.html)、[Apple · Run shortcuts from the command line](https://support.apple.com/guide/shortcuts-mac/run-shortcuts-from-the-command-line-apd455c82f02/mac)：命令行入口、退出码与无界面执行。对应条目：`AUTOMATE-03`、`AUTOMATE-01`、`SYSTEM-10`。
 - [Microsoft · UI Automation Control Patterns](https://learn.microsoft.com/en-us/windows/win32/winauto/uiauto-controlpatternsoverview)、[Use the AutomationId Property](https://learn.microsoft.com/en-us/dotnet/framework/ui-automation/use-the-automationid-property)：可驱动界面中的对象标识与操作。对应条目：`AUTOMATE-02`、`A11Y-03`。
 - [Sketch · MCP server](https://www.sketch.com/docs/mcp-server/)、[1Password · CLI app integration](https://developer.1password.com/docs/cli/app-integration/)：由用户开启、可撤销的委托接口。对应条目：`AUTOMATE-04`。
+- [GNOME · Search Provider](https://developer.gnome.org/documentation/tutorials/search-provider.html)：系统搜索中的对象结果，查询时不改变应用界面。对应条目：`AUTOMATE-02`。
+- [Microsoft · Detect and filter callers for App Actions](https://learn.microsoft.com/en-us/windows/ai/app-actions/actions-filter-caller)：限制发现与执行授权是两回事。对应条目：`AUTOMATE-04`。
 
 ## LICENSE · 许可、试用与到期
 

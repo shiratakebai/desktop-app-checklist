@@ -14,10 +14,10 @@ Each scenario lists steps, checkpoints, and related items.
 | --- | --- |
 | First use | S21, S23, S27, S40, S48 |
 | Interruption | S05, S10, S32 |
-| Leaving | S09, S11, S20, S41, S47 |
+| Leaving | S09, S11, S20, S41, S47, S50 |
 | Returning | S04, S26, S34, S41 |
 | Mistake | S42 |
-| Environment change | S02, S07, S08, S12, S15, S16, S18, S22, S28, S29, S30, S33, S38, S45 |
+| Environment change | S02, S07, S08, S12, S15, S16, S18, S22, S28, S29, S30, S33, S38, S45, S49 |
 | System failure | S06, S13, S17, S31, S37 |
 | Repetitive work | S19, S25 |
 | After an update | S14, S24, S45 |
@@ -410,3 +410,19 @@ Start with a fresh user configuration, skip the guidance, then reopen it from he
 Checkpoints: Choices made in the guidance can be found and changed in settings; choices remain after going back, the guidance can be resumed after restarting, and cancelling stated which settings had taken effect; the guidance did not reappear after the upgrade; the double-clicked file opened after any required first-run setup and was not replaced by the welcome page; the welcome page no longer appears automatically and remains available manually; the feature tip did not cover controls and did not return after being dismissed; help opened at the relevant topic and the original dialog stayed open; help worked offline or stated that it needs a connection; help stated which language it used instead.
 
 Related items: HELP-01 First run and guidance; WINDOW-05 Routing on relaunch and external open; HELP-04 Help and documentation; SETTINGS-01 Discoverable, task-oriented, usable defaults
+
+### S49 · Using text fields and windows the way another platform's users do
+
+With the final release package, work on the platform the team does not use day to day. Right-click in an input field, a search field, and the editing area. On macOS, press ⌃A, ⌃E, and ⌃K, type the abbreviation of a system text replacement, and press another application's global hotkey while a password field has focus. On Linux, select some text, middle-click to paste it into another application, then turn off middle-click paste on the desktop and try again. For windows, on Windows press Alt + Space and right-click the taskbar thumbnail; on macOS set title bar double-click to minimize and double-click the title bar; on Linux start the application in a GNOME Wayland session. While the application is in the background, click its icon again, then click one of its notifications. On Windows, tap an input field by touch. Set the system's cursor blink to off.
+
+Checkpoints: The context menu has the standard editing items and spelling suggestions, plus Look Up and Services on macOS; system text key bindings and text replacement work; while the password field had focus, the other application's hotkey was paused, and it worked again afterwards; middle-click pasted the text just selected without replacing the clipboard, and did nothing once turned off; the system window menu appeared and its commands worked; double-clicking the title bar minimized the window; under Wayland the window can be moved, resized, and closed; the window came to the front, or the taskbar or Dock signalled it; the touch keyboard appeared and the input position stayed visible; the text cursor stopped blinking.
+
+Related items: INPUT-25 Text areas follow platform text conventions; INPUT-19 Assisted authentication; INPUT-12 Touchpad, touchscreen, pen, and extra mouse buttons; WINDOW-02 Window state and system window management; WINDOW-08 No focus stealing; A11Y-07 Respecting reduced motion
+
+### S50 · Widgets, system search, and system actions: main window closed, signed out, uninstalled
+
+With a test account, add two widgets or system controls and find one of the application's objects in system search. Quit the main application normally, go offline, wait past the data's validity period, and run an action from a widget. Switch between light, dark, and the system's tinted display. Type a query in system search without choosing a result, then choose one. Invoke an action that requires sign-in through a system action. Sign out, wait for one background reindex, and search again. Turn on the app lock and look at the widgets. Finally, uninstall with the final release package.
+
+Checkpoints: The widget shows when its data was updated or that it has not been updated, and does not present old values as current; the offline action showed a failure and returned to the true state; content is legible in every display mode; typing a query alone did not open a window or change the view, and choosing a result opened that object; while signed out, the system action was unavailable or stated why, and its result was visible where it was invoked; after signing out, the previous account's content did not appear in widgets or search results and did not return after reindexing; with the app lock on, widgets did not show protected content; after uninstalling, the widget, control, and system action entry points were gone.
+
+Related items: SYSTEM-21 Widget and system control content and state; APPEARANCE-01 Themes and runtime switching; AUTOMATE-02 Precisely addressable objects and actions; AUTOMATE-04 Delegation that can be enabled, stopped, and reviewed; PRIVACY-05 Signing out and switching accounts or workspaces; PRIVACY-13 Scope of app lock protection; INSTALL-06 Uninstallation scope

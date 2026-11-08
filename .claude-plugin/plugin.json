@@ -1,7 +1,7 @@
 {
   "name": "desktop-app-checklist",
   "description": "Reminders of capabilities and quality-of-life behaviors that desktop GUI applications typically need beyond their core features, with an audit guide for AI coding agents.",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": {
     "name": "shiratakebai"
   },

@@ -20,9 +20,9 @@ Agent 本身无法稳定地弥补这一缺口。这类功能很少被明确写�
 
 | 文件 | 内容 |
 | --- | --- |
-| [checklist.md](checklist.md) | 主清单：26 个领域，251 个条目。每个条目描述期望行为，部分附典型缺陷 |
+| [checklist.md](checklist.md) | 主清单：26 个领域，253 个条目。每个条目描述期望行为，部分附典型缺陷 |
 | [AUDIT.md](AUDIT.md) | 供 AI 编程 Agent 使用的引导式审查流程 |
-| [scenarios.md](scenarios.md) | 48 个组合场景，用于在真实环境中验证 |
+| [scenarios.md](scenarios.md) | 50 个组合场景，用于在真实环境中验证 |
 | [references.md](references.md) | 条目所依据的来源，按领域组织 |
 | [side-notes.md](side-notes.md) | 清单范围之外的相关主题、产品范例与同类清单 |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | 收录标准与写作规范 |
@@ -81,7 +81,7 @@ Agent 本身无法稳定地弥补这一缺口。这类功能很少被明确写�
 
 交给 Agent 时，可以在规划阶段发出类似下面的指令：
 
-> 将 https://github.com/shiratakebai/desktop-app-checklist 的 v1.2 标签克隆到临时目录，阅读其中的 zh-CN/README.md 和 zh-CN/checklist.md。根据我们位于 `<路径>` 的需求文档，列出会影响架构或需要现在决定的条目，并为每条写出需要我们回答的问题和你建议的答案。先不要编写代码。
+> 将 https://github.com/shiratakebai/desktop-app-checklist 的 v1.21 标签克隆到临时目录，阅读其中的 zh-CN/README.md 和 zh-CN/checklist.md。根据我们位于 `<路径>` 的需求文档，列出会影响架构或需要现在决定的条目，并为每条写出需要我们回答的问题和你建议的答案。先不要编写代码。
 
 <!-- 发布新版本时同步更新此处的标签。 -->
 
@@ -89,7 +89,7 @@ Agent 本身无法稳定地弥补这一缺口。这类功能很少被明确写�
 
 本清单主要面向借助 AI 编程 Agent 开发的项目。在待审查的项目中，向 Agent 发出以下指令：
 
-> 将 https://github.com/shiratakebai/desktop-app-checklist 的 v1.2 标签克隆到本项目之外的临时目录，然后按照其中的 zh-CN/AUDIT.md 审查本项目。
+> 将 https://github.com/shiratakebai/desktop-app-checklist 的 v1.21 标签克隆到本项目之外的临时目录，然后按照其中的 zh-CN/AUDIT.md 审查本项目。
 
 <!-- 发布新版本时同步更新此处的标签。 -->
 

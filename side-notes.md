@@ -9,7 +9,7 @@ This file collects material related to [checklist.md](checklist.md) that is not 
 The following topics relate to the checklist but are not items. Each entry gives the reason.
 
 - **Platform visual specifications** (spacing, corner radius, color, icon size): these concern implementing known requirements correctly, and the checklist does not map conformance to platform HIGs.
-- **Windows access key assignment, macOS Services menus and floating panels, GNOME gesture reservations**: platform conventions to implement according to the respective guidelines. Custom-drawn interfaces often lack access keys; see INPUT-03 Discoverable shortcuts.
+- **Windows access key assignment, the organization of macOS Services menus and floating panels, GNOME gesture reservations**: platform conventions to implement according to the respective guidelines. Services items in text context menus are covered by INPUT-25. Custom-drawn interfaces often lack access keys; see INPUT-03 Discoverable shortcuts.
 - **In-app clipboard history**: the evidence comes mainly from code and text editors, and it has to be designed together with the clipboard protection in PRIVACY-07 Displaying and copying sensitive content.
 - **Viewing a list and details side by side**: a layout decision for each product to make according to its tasks.
 - **Holding a modifier to switch tools temporarily**: limited to canvas, drawing, and design products.
