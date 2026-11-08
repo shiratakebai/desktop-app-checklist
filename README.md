@@ -81,7 +81,7 @@ The checklist can be used during planning, architecture design, and requirement 
 
 To do this with an agent, give an instruction like the following during planning:
 
-> Clone tag v1.21 of https://github.com/shiratakebai/desktop-app-checklist into a temporary directory and read its README.md and checklist.md. Based on our requirements document at `<path>`, list the items that affect the architecture or need a decision now, and for each one state the questions we need to answer, with your suggested answer. Do not write code yet.
+> Clone tag v1.2.1 of https://github.com/shiratakebai/desktop-app-checklist into a temporary directory and read its README.md and checklist.md. Based on our requirements document at `<path>`, list the items that affect the architecture or need a decision now, and for each one state the questions we need to answer, with your suggested answer. Do not write code yet.
 
 <!-- When releasing a new version, update the tag here. -->
 
@@ -89,7 +89,7 @@ To do this with an agent, give an instruction like the following during planning
 
 The checklist is designed primarily for projects developed with AI coding agents. In the project to be audited, give the agent this instruction:
 
-> Clone tag v1.21 of https://github.com/shiratakebai/desktop-app-checklist into a temporary directory outside this project, then follow its AUDIT.md to audit this project.
+> Clone tag v1.2.1 of https://github.com/shiratakebai/desktop-app-checklist into a temporary directory outside this project, then follow its AUDIT.md to audit this project.
 
 <!-- When releasing a new version, update the tag here. -->
 
@@ -107,6 +107,16 @@ The repository can also be installed in Claude Code as a plugin. Its skill only 
 2. **Refinement**: Based on the product type, select the items that shape everyday use, Baseline or QoL, and review them together, for example IME, clipboard, startup flashing, scroll position restoration, and focus behavior.
 3. **Before release**: Run three to five scenarios on real devices and record which were tested and which were not.
 4. **In the project**: Copy the checklist into the project repository, delete items that do not apply with a reason, and work through the rest.
+
+### As a source of feature ideas
+
+The checklist can also serve as a source of ideas for new features. The items describe behaviors that users of mature desktop applications take for granted, and reading them against a specific product often suggests features it does not have yet, beyond what each item requires. An agent can do this on request:
+
+> Clone tag v1.2.1 of https://github.com/shiratakebai/desktop-app-checklist into a temporary directory and read its README.md and checklist.md. Based on our product description at `<path>`, pick out the keywords and behaviors in the checklist that relate to our product, and from each one propose features we could add. For each proposal, name the item that prompted it and the users it serves. Do not write code yet.
+
+<!-- When releasing a new version, update the tag here. -->
+
+The proposals are feature ideas, not requirements of the checklist.
 
 ## Out of scope
 
