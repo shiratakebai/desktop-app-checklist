@@ -9,7 +9,7 @@ The files in this repository are reminders. Each checklist item names a situatio
 
 - Before development, during planning, architecture design, or requirement clarification, go through the applicable items as questions and record the decisions, as described under "Before development" in [README.md](../../README.md).
 - To audit an existing application, follow [AUDIT.md](../../AUDIT.md).
-- While designing or building a feature, read the domains of [checklist.md](../../checklist.md) that the work touches. The product types and tags in [README.md](../../README.md) help narrow them, and Appendix A of checklist.md lists pitfalls by stack.
+- While designing or building a feature, read the domains of [checklist.md](../../checklist.md) that the work touches. The product types and tags in [README.md](../../README.md) help narrow them, and Appendix A of checklist.md lists pitfalls by item ID, with platform interfaces in the General section and stack-specific notes in the other sections.
 - To check behavior on a real machine, use [scenarios.md](../../scenarios.md).
 - To find the sources behind an item, search [references.md](../../references.md) for its ID.
 

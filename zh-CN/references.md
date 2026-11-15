@@ -2,7 +2,7 @@
 
 [English](../references.md) | 简体中文
 
-本文列出 [checklist.md](checklist.md) 中条目所依据的来源，核对日期为 2026 年 11 月。来源以平台方、标准组织、政府机构和软件公司发布的文档为主；规范性来源已覆盖的事实，不再列出社区讨论或个人报告。条目正文不引用来源，本文按领域组织，每项说明其支撑的行为，并在末尾列出对应的条目 ID，按 ID 搜索即可找到某一条目的来源。
+本文列出 [checklist.md](checklist.md) 中条目所依据的来源，核对日期为 2026 年 11 月。来源以平台方、标准组织、政府机构和软件公司发布的文档为主；规范性来源已覆盖的事实，不再列出社区讨论或个人报告。条目正文不引用来源，本文按领域组织，每项说明其支撑的行为，并在末尾列出对应的条目 ID，多数条目可按 ID 找到来源；依据通用规范或平台惯例的条目，见开头两节。
 
 ## 通用原则与标准
 
@@ -193,7 +193,7 @@
 - [Syncthing · Understanding Synchronization](https://docs.syncthing.net/users/syncing.html)：文件监听会遗漏事件，需要定期扫描；大小写冲突。对应条目：`DATA-07`、`FILE-03`。
 - [Obsidian · Back up your files](https://obsidian.md/help/backup)、[Troubleshoot Obsidian Sync](https://obsidian.md/help/sync/troubleshoot)：同步不是备份；不同文件类型的冲突处理。对应条目：`DATA-05`、`DATA-07`。
 - [GIMP · Export File](https://docs.gimp.org/3.0/en/gimp-export-dialog.html)、[LibreOffice Calc · Importing and Exporting CSV](https://help.libreoffice.org/latest/en-US/text/scalc/guide/csv_formula.html)、[1Password · Export your data](https://support.1password.com/export/)：完整工程与交换格式的区别，导出范围的说明。对应条目：`DATA-08`。
-- [Zotero · Data directory in cloud storage](https://www.zotero.org/support/kb/data_directory_in_cloud_storage_folder)：数据库放在同步盘中的损坏风险。对应条目：`DATA-09`。
+- [Zotero · Data directory in cloud storage](https://www.zotero.org/support/kb/data_directory_in_cloud_storage_folder)：数据库放在同步盘中的损坏风险。对应条目：`FILE-05`。
 - [Zotero · Why can't Zotero find a linked file?](https://www.zotero.org/support/kb/missing_linked_file)、[Typora · Images](https://support.typora.io/Images/)：外部资源的重新定位，应用内移动资源时更新引用。对应条目：`DATA-11`。
 - [Slack · Send and read messages](https://slack.com/help/articles/201457107-Send-and-read-messages)、[Telegram · Drafts](https://telegram.org/blog/drafts)：草稿与定时消息的集中入口，会话列表中的草稿标记。对应条目：`DATA-14`、`TASK-17`。
 - [Zotero · General preferences](https://www.zotero.org/support/preferences/general)、[Joplin · Attachments](https://joplinapp.org/help/apps/attachments/)：导入时是否附加标签可选；不再被任何笔记引用的附件在笔记历史保留期过后清理；回收站中的条目默认在 30 天后自动清除。对应条目：`DATA-18`、`DATA-15`、`FILE-04`。
@@ -208,7 +208,7 @@
 - [KeePassXC · FAQ](https://keepassxc.org/docs/)、[User Guide](https://keepassxc.org/docs/KeePassXC_UserGuide)、[Cryptomator · Password and Recovery Key](https://docs.cryptomator.org/desktop/password-and-recovery-key/)、[Vault Recovery](https://docs.cryptomator.org/desktop/vault-recovery/)、[Security Target](https://docs.cryptomator.org/security/security-target/)：密钥文件与恢复密钥、改口令的保护范围、附件的临时副本与不加密的元数据。对应条目：`DATA-17`。
 - [Bitwarden · Export vault data](https://bitwarden.com/help/export-your-data/)、[1Password · Export your data](https://support.1password.com/export/)、[VeraCrypt · Data Leaks](https://veracrypt.io/en/Data%20Leaks.html)：只能导回原账号的加密导出、明文导出，以及加密卷之外的明文痕迹。对应条目：`DATA-17`。
 - [Obsidian · Internal links](https://obsidian.md/help/links)：重命名文件时自动更新内部链接，也可改为提示。对应条目：`DATA-11`。
-- [Git · git-push](https://git-scm.com/docs/git-push)：`--force-with-lease` 只在远端仍是预期值时覆盖。对应条目：`DATA-16`。
+- [Git · git-push](https://git-scm.com/docs/git-push)：`--force-with-lease` 只在远端仍是预期值时覆盖。对应条目：`DATA-19`。
 - [Blender · Recovering lost work](https://docs.blender.org/manual/en/latest/troubleshooting/recover.html)：临时目录中的自动保存文件可能在重启或磁盘清理时被删除。对应条目：`DATA-02`。
 - [腾讯云 IM · ConvSetDraft](https://comm.qq.com/im/doc/unity/zh/api/ConvApi/ConvSetDraft.html)：草稿只存在本机，不跨设备同步。对应条目：`DATA-14`。
 - [Affinity Photo · Preferences](https://affinity.help/photo2/en-US.lproj/pages/Workspace/preferences.html)：默认不在保存时覆盖导入的 PSD 文件。对应条目：`DATA-18`。
@@ -220,7 +220,7 @@
 
 - [Apple · Accessing files from the macOS App Sandbox](https://developer.apple.com/documentation/security/accessing-files-from-the-macos-app-sandbox)：沙箱下的持久授权与安全作用域书签。对应条目：`FILE-01`。
 - [Microsoft · Build a Cloud Sync Engine that Supports Placeholder Files](https://learn.microsoft.com/en-us/windows/win32/cfapi/build-a-cloud-file-sync-engine)：仅联机的占位文件。对应条目：`FILE-05`。
-- [KDE HIG · Simple by default](https://develop.kde.org/hig/simple_by_default/)：不经打开对话框的文件同样进入最近文件；撤销提示期间推迟不可逆删除。对应条目：`FILE-02`、`INPUT-14`。
+- [KDE HIG · Simple by default](https://develop.kde.org/hig/simple_by_default/)：不经打开对话框的文件同样进入最近文件；撤销提示期间推迟不可逆删除。对应条目：`FILE-02`、`INPUT-14`、`DATA-04`。
 - [OBS · Standard Recording Output Guide](https://obsproject.com/kb/standard-recording-output-guide)：录制文件名模板，含来源与时间变量。对应条目：`FILE-03`。
 - [Syncthing · FAQ](https://docs.syncthing.net/users/faq.html)、[Joplin · FAQ](https://joplinapp.org/help/faq/)：目录标记缺失时停止同步而不传播删除；把 WebDAV 地址改到空目录后笔记丢失。对应条目：`FILE-05`。
 - [JetBrains · Read-only files](https://www.jetbrains.com/help/idea/read-only-files.html)：状态栏显示只读状态，并列出无法解除只读的原因。对应条目：`FILE-08`。
@@ -248,7 +248,7 @@
 - [RFC 8252 · OAuth 2.0 for Native Apps](https://www.rfc-editor.org/rfc/rfc8252.html)：通过系统浏览器登录并返回应用。对应条目：`NETWORK-07`。
 - [Electron · Security](https://www.electronjs.org/docs/latest/tutorial/security)：安全传输与证书验证。对应条目：`NETWORK-08`、`TRUST-07`。
 - [Apple · App Review Guidelines](https://developer.apple.com/app-store/review/guidelines/)：2.5.5 要求在 IPv6-only 网络中正常工作。对应条目：`NETWORK-09`。
-- [JetBrains · HTTP Proxy](https://www.jetbrains.com/help/idea/settings-http-proxy.html)：测试经代理的连接、不走代理的地址，以及代理设置影响哪些连接。对应条目：`NETWORK-05`。
+- [JetBrains · HTTP Proxy](https://www.jetbrains.com/help/idea/settings-http-proxy.html)：测试经代理的连接、不走代理的地址，以及代理设置影响哪些连接。对应条目：`NETWORK-05`、`NETWORK-01`。
 - [OBS · Stream Connection Troubleshooting](https://obsproject.com/kb/stream-connection-troubleshooting)、[Syncthing · Configuration](https://docs.syncthing.net/users/config.html)：绑定出口网卡与 IP 协议族；`disableFsync`、`ignoreDelete` 等选项旁的风险说明。对应条目：`NETWORK-05`、`SETTINGS-01`。
 - [IETF · RFC 8252 OAuth 2.0 for Native Apps](https://datatracker.ietf.org/doc/html/rfc8252)、[Google · Blocking sign-in from embedded browser frameworks](https://developers.googleblog.com/2020/08/guidance-for-our-effort-to-block-less-secure-browser-and-apps.html)：通过外部浏览器而非内嵌视图登录。对应条目：`NETWORK-07`。
 - [WinSCP · Endurance preferences](https://winscp.net/eng/docs/ui_pref_resume)：重连间隔、时限与不限时重连。对应条目：`NETWORK-02`。
@@ -431,12 +431,12 @@
 
 ## 附录 A 的技术栈文档
 
-- **Microsoft**：[Job Objects](https://learn.microsoft.com/en-us/windows/win32/procthread/job-objects)（`JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE`）、[LowLevelKeyboardProc](https://learn.microsoft.com/en-us/windows/win32/winmsg/lowlevelkeyboardproc)、[NCSI troubleshooting](https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/troubleshoot-ncsi-guidance)、[How packaged desktop apps run](https://learn.microsoft.com/en-us/windows/msix/desktop/desktop-to-uwp-behind-the-scenes)、[Flexible virtualization](https://learn.microsoft.com/en-us/windows/msix/desktop/flexible-virtualization)、[Keyboard shortcuts in Windows](https://support.microsoft.com/en-us/accessibility/windows/keyboard-shortcuts-in-windows)。
-- **Linux**：[prctl(2)](https://man7.org/linux/man-pages/man2/prctl.2.html)（`PR_SET_PDEATHSIG`）、[xdg-activation](https://github.com/wayland-mirror/wayland-protocols/blob/1.45/staging/xdg-activation/xdg-activation-v1.xml)。
-- **Electron**：[net](https://www.electronjs.org/docs/latest/api/net/)、[globalShortcut](https://www.electronjs.org/docs/latest/api/global-shortcut)、[BrowserWindow](https://www.electronjs.org/docs/latest/api/browser-window)、[app.getLoginItemSettings](https://github.com/electron/electron/blob/81db417caaa937d31c43d144970050c8f271ad5e/docs/api/app.md#appgetloginitemsettingsoptions-macos-windows)、[Application Menu](https://github.com/electron/electron/blob/81db417caaa937d31c43d144970050c8f271ad5e/docs/tutorial/application-menu.md#using-standard-os-menu-roles)。
-- **Tauri**：[Security](https://v2.tauri.app/security/)、[Capabilities](https://v2.tauri.app/security/capabilities/)。
-- **Qt**：[QSaveFile](https://doc.qt.io/qt-6/qsavefile.html)、[QFileSystemWatcher](https://doc.qt.io/qt-6/qfilesystemwatcher.html)。
-- **Apple**：[Updating helper executables from earlier versions of macOS](https://developer.apple.com/documentation/servicemanagement/updating-helper-executables-from-earlier-versions-of-macos)、[Configuring the hardened runtime](https://developer.apple.com/documentation/xcode/configuring-the-hardened-runtime)、[NSApplication.helpMenu](https://developer.apple.com/documentation/appkit/nsapplication/helpmenu)、[Mac keyboard shortcuts](https://support.apple.com/102650)。
-- **Node.js**：[Enterprise network configuration](https://nodejs.org/learn/http/enterprise-network-configuration#certificate-authority-configuration)、[CLI v22.23.0](https://nodejs.org/download/release/v22.23.0/docs/api/cli.html#--use-system-ca)。
-- **Python**：[ssl](https://docs.python.org/3.14/library/ssl.html#ssl.SSLContext.load_default_certs)、[truststore v0.10.4](https://github.com/sethmlarson/truststore/blob/v0.10.4/README.md)。
-- **Java**：[JSSE Reference Guide](https://docs.oracle.com/en/java/javase/25/security/java-secure-socket-extension-jsse-reference-guide.html)。
+- **Microsoft**：[Job Objects](https://learn.microsoft.com/en-us/windows/win32/procthread/job-objects)（`JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE`）、[LowLevelKeyboardProc](https://learn.microsoft.com/en-us/windows/win32/winmsg/lowlevelkeyboardproc)、[NCSI troubleshooting](https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/troubleshoot-ncsi-guidance)、[How packaged desktop apps run](https://learn.microsoft.com/en-us/windows/msix/desktop/desktop-to-uwp-behind-the-scenes)、[Flexible virtualization](https://learn.microsoft.com/en-us/windows/msix/desktop/flexible-virtualization)、[Keyboard shortcuts in Windows](https://support.microsoft.com/en-us/accessibility/windows/keyboard-shortcuts-in-windows)。对应条目：`COMPONENT-03`、`SYSTEM-04`、`NETWORK-01`、`DATA-09`、`SETTINGS-04`、`SYSTEM-02`、`A11Y-01`。
+- **Linux**：[prctl(2)](https://man7.org/linux/man-pages/man2/prctl.2.html)（`PR_SET_PDEATHSIG`）、[xdg-activation](https://github.com/wayland-mirror/wayland-protocols/blob/1.45/staging/xdg-activation/xdg-activation-v1.xml)。对应条目：`COMPONENT-03`、`WINDOW-08`、`WINDOW-10`。
+- **Electron**：[net](https://www.electronjs.org/docs/latest/api/net/)、[globalShortcut](https://www.electronjs.org/docs/latest/api/global-shortcut)、[BrowserWindow](https://www.electronjs.org/docs/latest/api/browser-window)、[app.getLoginItemSettings](https://github.com/electron/electron/blob/81db417caaa937d31c43d144970050c8f271ad5e/docs/api/app.md#appgetloginitemsettingsoptions-macos-windows)、[Application Menu](https://github.com/electron/electron/blob/81db417caaa937d31c43d144970050c8f271ad5e/docs/tutorial/application-menu.md#using-standard-os-menu-roles)。对应条目：`NETWORK-01`、`NETWORK-08`、`SYSTEM-04`、`DISPLAY-08`、`WINDOW-02`、`SYSTEM-01`、`INPUT-01`、`INPUT-24`。
+- **Tauri**：[Security](https://v2.tauri.app/security/)、[Capabilities](https://v2.tauri.app/security/capabilities/)。对应条目：`TRUST-07`。
+- **Qt**：[QSaveFile](https://doc.qt.io/qt-6/qsavefile.html)、[QFileSystemWatcher](https://doc.qt.io/qt-6/qfilesystemwatcher.html)。对应条目：`DATA-06`、`DATA-07`。
+- **Apple**：[Updating helper executables from earlier versions of macOS](https://developer.apple.com/documentation/servicemanagement/updating-helper-executables-from-earlier-versions-of-macos)、[Configuring the hardened runtime](https://developer.apple.com/documentation/xcode/configuring-the-hardened-runtime)、[NSApplication.helpMenu](https://developer.apple.com/documentation/appkit/nsapplication/helpmenu)、[Mac keyboard shortcuts](https://support.apple.com/102650)。对应条目：`SYSTEM-01`、`INSTALL-09`、`INPUT-01`、`SYSTEM-02`。
+- **Node.js**：[Enterprise network configuration](https://nodejs.org/learn/http/enterprise-network-configuration#certificate-authority-configuration)、[CLI v22.23.0](https://nodejs.org/download/release/v22.23.0/docs/api/cli.html#--use-system-ca)。对应条目：`NETWORK-08`。
+- **Python**：[ssl](https://docs.python.org/3.14/library/ssl.html#ssl.SSLContext.load_default_certs)、[truststore v0.10.4](https://github.com/sethmlarson/truststore/blob/v0.10.4/README.md)。对应条目：`NETWORK-08`。
+- **Java**：[JSSE Reference Guide](https://docs.oracle.com/en/java/javase/25/security/java-secure-socket-extension-jsse-reference-guide.html)。对应条目：`NETWORK-08`。

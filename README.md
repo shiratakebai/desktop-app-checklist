@@ -20,9 +20,9 @@ Platform guidelines and design systems answer how to implement a known requireme
 
 | File | Contents |
 | --- | --- |
-| [checklist.md](checklist.md) | The main checklist: 26 domains, 255 items. Each item describes expected behavior; some include a typical defect |
+| [checklist.md](checklist.md) | The main checklist: 26 domains, 256 items. Each item describes expected behavior; some include a typical defect |
 | [AUDIT.md](AUDIT.md) | Guided audit procedure for AI coding agents |
-| [scenarios.md](scenarios.md) | 50 combined scenarios for verification in a real environment |
+| [scenarios.md](scenarios.md) | 52 combined scenarios for verification in a real environment |
 | [references.md](references.md) | Sources behind the items, organized by domain |
 | [side-notes.md](side-notes.md) | Related topics outside the checklist's scope, product examples, and similar checklists |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | Inclusion criteria and writing guidelines |
@@ -30,7 +30,7 @@ Platform guidelines and design systems answer how to implement a known requireme
 
 ## Overview: 12 checks
 
-The following 12 checks summarize the main checklist; each corresponds to one or two domains. Check only the scenarios the product commits to supporting.
+The following 12 checks summarize the main checklist; each corresponds to several domains. Check only the scenarios the product commits to supporting.
 
 - [ ] **Display and layout**: Primary content and actions remain usable after changes to system scale, text size, theme, half-screen snapping, or multiple displays.
 - [ ] **Input and interaction**: Keyboard, focus, IME, mouse, touchpad, and common editing behaviors follow platform conventions.
@@ -51,9 +51,9 @@ A product can belong to more than one type. The table indicates which tags and s
 
 | Type | Examples | Tags to review first | Scenarios to review first |
 | --- | --- | --- | --- |
-| **Workbench** | Editors, IDEs, note-taking apps, design tools | `data` `text` `multi-window` | S01, S04, S06, S07, S13, S21, S24, S26, S37, S39, S41, S42 |
-| **On-demand utility** | Launchers, screenshot tools, dictionaries, clipboard managers | `on-demand` `background` | S09, S11, S19, S20, S25, S31, S33 |
-| **Viewer and batch tool** | Image viewers, media players, converters, download managers | Mostly untagged items; `network` as needed, plus the COMPONENT, MEDIA, and TRANSFER domains | S02, S10, S12, S21, S22, S30, S32, S34 |
+| **Workbench** | Editors, IDEs, note-taking apps, design tools | `data` `text` `multi-window` | S01, S04, S06, S07, S13, S21, S24, S26, S37, S39, S41, S42, S43, S44, S48, S49, S51, S52 |
+| **On-demand utility** | Launchers, screenshot tools, dictionaries, clipboard managers | `on-demand` `background` | S09, S11, S19, S20, S25, S31, S33, S48, S49, S50, S51 |
+| **Viewer and batch tool** | Image viewers, media players, converters, download managers | Mostly untagged items; `network` as needed, plus the COMPONENT, MEDIA, and TRANSFER domains and TRUST-06 | S02, S10, S12, S21, S22, S30, S32, S34, S47, S48, S49 |
 
 Tags:
 

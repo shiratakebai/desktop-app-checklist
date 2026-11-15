@@ -26,7 +26,7 @@ Before proposing a new item, check whether one more sentence in an existing item
 - **ID**: Numbered sequentially within the domain. Numbers of deleted items are not reused. English and Chinese versions share the same IDs. The ID is a stable key, not a name: inside checklist.md a cross-reference may use the bare ID, because the reader is in the document and can search for it; everywhere else that a reader may see without the checklist open (scenarios, README, AUDIT.md, audit reports) the ID is followed by the item title.
 - **Tags**: Only seven: `data` `text` `background` `on-demand` `network` `multi-window` `distribution` (in the Chinese version: `数据` `文本` `后台` `浮窗` `联网` `多窗` `分发`). No tag means the item applies to nearly all desktop applications.
 - **Domain applicability**: TRUST, EXTEND, AUTOMATE, LICENSE, MANAGED, FAIR, FIND, COMPONENT, MEDIA, and TRANSFER are relevant only to some products. Their applicability is stated under the domain heading instead of through additional tags.
-- **Baseline / QoL**: For scanning only; does not indicate priority. Baseline means its absence breaks features, loses data, or makes the application unusable in some environments. QoL means it improves efficiency and comfort.
+- **Baseline / QoL**: For scanning only; does not indicate priority. Baseline means its absence breaks features, loses data, compromises security or privacy, or makes the application unusable in some environments. QoL means it improves efficiency and comfort.
 - **Common failure**: Optional. Describes one concrete, reproducible defect.
 - **Line break**: The trailing `\` on the expected behavior line renders "Common failure" on its own line.
 

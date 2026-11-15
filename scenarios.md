@@ -20,10 +20,10 @@ Each scenario lists steps, checkpoints, and related items.
 | Environment change | S02, S07, S08, S12, S15, S16, S18, S22, S28, S29, S30, S33, S38, S45, S49 |
 | System failure | S06, S13, S17, S31, S37 |
 | Repetitive work | S19, S25 |
-| After an update | S14, S24, S45 |
+| After an update | S14, S24, S45, S52 |
 | Migrating in / running alongside | S43 |
 
-S01, S03, S35, S36, S39, S44, and S46 test properties that hold at every moment (IME input, accessibility, local interface security, untrusted content, multilingual input, finding things in another language, what others can see) and are not listed in the table.
+S01, S03, S35, S36, S39, S44, S46, and S51 test properties that hold at every moment (IME input, accessibility, local interface security, untrusted content, multilingual input, finding things in another language, what others can see, privacy and credentials) and are not listed in the table.
 
 ---
 
@@ -87,9 +87,9 @@ Related items: DATA-07 External changes and conflicts; FILE-05 Network drives, r
 
 Take two devices or two accounts offline at the same time. Edit different parts and the same part of one document on each, then reconnect. Also change an attachment and a setting on each side. Use a third client to delete one of the objects, set one device's clock a day ahead, and connect that device only after the deletion. Have the server reject one change for insufficient permissions.
 
-Checkpoints: Conflicts are surfaced and both versions can be recovered; conflict handling for attachments and settings is checked separately from text; the pending sync queue is visible before reconnecting; the deleted object does not reappear because of the device that connected late; the order of changes does not depend on device clocks; the rejected change stays on the device with its reason and is not shown as synced.
+Checkpoints: Conflicts are surfaced and both versions can be recovered; conflicts in attachments and settings are surfaced in the same way, with both versions recoverable; the pending sync queue is visible before reconnecting; the deleted object does not reappear because of the device that connected late; the order of changes does not depend on device clocks; the rejected change stays on the device with its reason and is not shown as synced.
 
-Related items: DATA-07 External changes and conflicts; NETWORK-04 Visible sync queue; DATA-05 Version history and backup; NETWORK-10 Sync reflects what the server accepted
+Related items: DATA-07 External changes and conflicts; NETWORK-04 Visible sync queue; DATA-05 Version history and backup; NETWORK-10 Sync state follows confirmed versions
 
 ### S09 · Recovering a background tool with notifications off, a hotkey conflict, and the tray missing or collapsed
 
@@ -129,21 +129,21 @@ While editing is in progress, export using the application's backup feature, cop
 
 Checkpoints: Restored data includes the latest changes and attachments, and databases in use were exported through a backup interface; the scope and losses were stated before export; users can tell the full project apart from the delivered output; after reconnecting, the restored content is not deleted again by the remote state, or the user can keep the restored copy and confirm what is replaced; an unsupported restore target states the reason (bound to an account, a changed key, a wrong password, or a damaged file).
 
-Related items: DATA-05 Version history and backup; DATA-08 Import, export, and data portability; DATA-07 External changes and conflicts; DATA-10 Protection for bulk deletion and migration; DATA-17 Recovery conditions and protection scope for encrypted data; NETWORK-10 Sync reflects what the server accepted
+Related items: DATA-05 Version history and backup; DATA-08 Import, export, and data portability; DATA-07 External changes and conflicts; DATA-10 Protection for bulk deletion and migration; DATA-17 Recovery conditions and protection scope for encrypted data; NETWORK-10 Sync state follows confirmed versions; DATA-06 Safe writes
 
-### S14 · Upgrade with the final release package; downgrade and open a copy of the data
+### S14 · Upgrade with the final release package; go back to the previous version; open a copy of the data in the older version
 
-Upgrade from the previous version using the installer that is actually distributed, then sign out and back in. Check launch at login, file associations, recent files, and sandbox grants. Then install the previous version and open a copy of the data. Separately, upgrade once with a copy of data that makes the migration fail. Also upgrade directly across several versions from a supported older version, and terminate the process during migration and launch again. If the product has been renamed or its distribution identity has changed, upgrade from the last version before the change. Prepare a document whose results depend on calculation rules, note the results in the old version, then open and save it in the new version. Update once from the previous public version through the in-app updater, then check the icon pinned to the taskbar or Dock. Place an older backup next to the data copy used with the older version.
+Upgrade from the previous version using the installer that is actually distributed, then sign out and back in. Check launch at login, file associations, recent files, and sandbox grants. Then place an older backup next to a copy of the data, install the previous version, and open the copy. If the product has been renamed or its distribution identity has changed, upgrade from the last version before the change. Prepare a document whose results depend on calculation rules, note the results in the old version, then open and save it in the new version. Update once from the previous public version through the in-app updater, then check the icon pinned to the taskbar or Dock. When the product manages its own updates, go back to the previous version using the method the application provides. In a test environment, have the update source offer an older signed update package under a higher version number.
 
-Checkpoints: Registrations and grants work after the upgrade; a failed migration leaves the data as it was before the upgrade; when the older version opens newer data, it refuses clearly, opens read-only, or enters a recovery flow, and the data is not damaged; when a safe downgrade is not possible, the reason is given; the multi-version upgrade completes the migration or guides the user through an intermediate version; after an interrupted migration, the next launch completes it or returns to the pre-upgrade state; after a rename, the existing installation is recognized and settings, data, and credential access carry over; calculation results match the old version, or the difference was explained before conversion; the in-app update completes download, verification, replacement, and restart; the pinned icon still works and the running window is grouped with it; the older version does not replace data written by the newer version with the older backup.
+Checkpoints: Registrations and grants work after the upgrade; when the upgrade changes the data format, this was stated beforehand and a pre-upgrade copy was kept; when the older version opens newer data, it refuses clearly, opens read-only, or enters a recovery flow, and the data is not damaged; when a safe downgrade is not possible, the reason is given; after a rename, the existing installation is recognized and settings, data, and credential access carry over; calculation results match the old version, or the difference was explained before conversion; the in-app update completes download, verification, replacement, and restart; the pinned icon still works and the running window is grouped with it; the older version does not replace data written by the newer version with the older backup; after going back to the previous version, the data is usable or can be restored from the pre-upgrade copy; the older update package is rejected even though the manifest gives a higher version number.
 
-Related items: INSTALL-05 Program rollback and data downgrade; SETTINGS-08 Migration on upgrade; SYSTEM-01 Launch at login; FILE-01 Platform file dialogs and persistent access; DATA-10 Protection for bulk deletion and migration; INSTALL-02 Versions and update responsibility; INSTALL-08 Update download and installation; SYSTEM-17 Launch entries and running windows are one item; DATA-13 Handling corrupted data files
+Related items: INSTALL-05 Program rollback and data downgrade; SETTINGS-08 Migration on upgrade; SYSTEM-01 Launch at login; FILE-01 Platform file dialogs and persistent access; INSTALL-02 Versions and update responsibility; INSTALL-08 Update download and installation; SYSTEM-17 Launch entries and running windows are one item; DATA-13 Handling corrupted data files; INSTALL-07 Update authenticity
 
 ### S15 · Switch keyboard layouts; browse remotely loaded items with arrow keys
 
-Switch to a non-US keyboard layout (German, French, or Japanese) and test punctuation shortcuts and normal character input. Then switch to a non-Latin layout (Russian or Greek) and test Ctrl + C and Ctrl + S. Move between items in a list or tabs using only arrow keys, where each item's content loads remotely.
+Switch to a non-US keyboard layout (German, French, or Japanese) and test punctuation shortcuts and normal character input, including characters such as @ and { typed with AltGr on Windows. Then switch to a non-Latin layout (Russian or Greek) and test Ctrl + C and Ctrl + S. Move between items in a list or tabs using only arrow keys, where each item's content loads remotely.
 
-Checkpoints: Shortcuts are displayed for the current layout and can be triggered; under the non-Latin layout, Ctrl + C and Ctrl + S still work; arrow key browsing did not trigger external actions or irreversible changes, and previews loading with the selection did not block further movement.
+Checkpoints: Shortcuts are displayed for the current layout and can be triggered; AltGr combinations type characters and do not trigger Ctrl + Alt shortcuts; under the non-Latin layout, Ctrl + C and Ctrl + S still work; arrow key browsing did not trigger external actions or irreversible changes, and previews loading with the selection did not block further movement.
 
 Related items: INPUT-01 Platform shortcuts and the menu bar; INPUT-26 Keyboard layouts and character input; INPUT-17 Separating browsing from activation; INPUT-04 Customizable shortcuts
 
@@ -169,7 +169,7 @@ In a supported proxy environment, sign in, call the core API, load images, downl
 
 Checkpoints: Every path goes through the proxy, and failures identify which service failed; after cancelling sign-in, the user returns to the original screen with input intact; after signing in, the user returns to the correct window and task; with the root certificate deployed to the system, sign-in, updates, and plugin installation connect without turning off certificate verification.
 
-Related items: NETWORK-05 Proxies and corporate networks; NETWORK-07 Sign-in return path; NETWORK-01 Connection state; NETWORK-08 Transport encryption and server identity
+Related items: NETWORK-05 Proxies and corporate networks; NETWORK-07 Sign-in return path; NETWORK-01 Connection state and proxies; NETWORK-08 Transport encryption and server identity
 
 ### S19 · Repeated successes and repeated failures
 
@@ -189,11 +189,11 @@ Related items: TASK-08 Idle resource budget; SYSTEM-02 Tray or menu bar entry
 
 ### S21 · Open an unfamiliar project: view read-only first, then grant trust
 
-Download a project or document containing build scripts or macros, open it directly, and read it. Then grant trust once. Then open another new file in the same folder.
+Download a project or document containing build scripts or macros, open it directly, and read it. Then grant trust once. Then open another new file in the same folder. Separately, download a Markdown or SVG file that contains scripts, event handlers, and links to application commands, open it from a different folder, and click its elements.
 
-Checkpoints: No script ran on open, and the UI explained which capabilities were suspended; the grant stated whether it covers this time, this file, or this folder; the new file in the same folder was not trusted along with it unless the grant stated that it covers the folder; hovering over external links in the document shows the real target.
+Checkpoints: No script ran on open, and the UI explained which capabilities were suspended; the grant stated whether it covers this time, this file, or this folder; the new file in the same folder was not trusted along with it unless the grant stated that it covers the folder; hovering over external links in the document shows the real target; in the Markdown or SVG file, scripts and event handlers did not run, and clicking its elements did not trigger application commands.
 
-Related items: TRUST-01 Restricted view first; TRUST-02 Clear scope of trust; TRUST-04 Verifiable link targets
+Related items: TRUST-01 Restricted view first; TRUST-02 Clear scope of trust; TRUST-04 Verifiable link targets; TRUST-07 External content is displayed passively
 
 ### S22 · License expired and the old device is gone
 
@@ -269,11 +269,11 @@ Related items: COMPONENT-01 Coexistence with system copies; FILE-03 Paths, chara
 
 ### S31 · Kill the conversion helper; then quit normally and kill the main program
 
-While editing a document and running a conversion, kill the conversion helper; then test a normal quit and a forced kill of the main program, checking for leftover processes, lock files, and ports. Quit again, choose Cancel at the unsaved-changes prompt, keep editing, and save. Quit once more while saving fails. Finally, quit from the tray menu and a shortcut almost at once.
+While editing a document and running a conversion, kill the conversion helper; then test a normal quit and a forced kill of the main program, checking for leftover processes, lock files, and ports. Quit again, choose Cancel at the unsaved-changes prompt, keep editing, and save. Quit once more while saving fails. Finally, quit from the tray menu and a shortcut almost at once. In products that change system-wide settings (proxy, power, Do Not Disturb), force-quit the main program while the setting is in effect, then launch it again. Separately, change the system proxy by hand while the setting is in effect, then quit normally.
 
-Checkpoints: The local failure does not lose other edits; the failed object and recovery entry are clear; no child processes, capture, or ports remain after exit; the next launch is not blocked by a stale lock file; changes made after cancelling the quit can be saved; when saving fails, quitting stops and the application remains usable; simultaneous quit requests run the quit sequence only once.
+Checkpoints: The local failure does not lose other edits; the failed object and recovery entry are clear; no child processes, capture, or ports remain after exit; the next launch is not blocked by a stale lock file; changes made after cancelling the quit can be saved; when saving fails, quitting stops and the application remains usable; simultaneous quit requests run the quit sequence only once; system settings are restored, or the next launch reports what was left behind and offers to restore it; the value changed by hand is kept.
 
-Related items: TASK-14 Fault isolation of subsystems in use; COMPONENT-03 Identity and lifetime of helper processes; FILE-08 File locks and stale lock files; WINDOW-03 Clear close, minimize, and quit behavior; DATA-02 Autosave and crash recovery
+Related items: TASK-14 Keeping work through subsystem failures and resource exhaustion; COMPONENT-03 Identity and lifetime of helper processes; FILE-08 File locks and stale lock files; WINDOW-03 Clear close, minimize, and quit behavior; DATA-02 Autosave and crash recovery; SYSTEM-13 Restoring changes to system-wide settings
 
 ### S32 · Two applications competing for media control
 
@@ -293,19 +293,19 @@ Related items: MEDIA-03 Confirming the capture source; MEDIA-04 Actual capture s
 
 ### S34 · Source changed before resume; problematic names, checksums, and disk space
 
-Quit halfway through a download, replace the file at the same server address with another version, then launch and resume. Separately: download the same file twice, use a suggested file name containing path fragments and a reserved name, download a file with a wrong checksum; fill the target disk and the temp disk in turn.
+Quit halfway through a download, replace the file at the same server address with another version, then launch and resume. Separately: download the same file twice, use a suggested file name containing path fragments and a reserved name, download a file with a wrong checksum; fill the target disk and the temp disk in turn. Then download a document and an archive with the application (in products that can extract archives, also extract it with the application), and open each with the system default program.
 
-Checkpoints: The two versions are not spliced together; resume information is kept; name handling stays inside the target directory and does not overwrite silently; partial files are not treated as final results; a wrong checksum is not shown as success; running out of space keeps the recovery context.
+Checkpoints: The two versions are not spliced together; resume information is kept; name handling stays inside the target directory and does not overwrite silently; partial files are not treated as final results; a wrong checksum is not shown as success; running out of space keeps the recovery context; downloaded and extracted files carry the origin mark and go through the system's trust checks when opened with another program.
 
-Related items: TASK-04 Pause and resume; TRANSFER-01 Integrity verification; TRANSFER-02 Boundary between partial files and final results; FILE-03 Paths, characters, and name collisions; DATA-06 Safe writes
+Related items: TASK-04 Pause and resume; TRANSFER-01 Integrity verification; TRANSFER-02 Boundary between partial files and final results; FILE-03 Paths, characters, and name collisions; DATA-06 Safe writes; TRUST-06 Handing over origin marks on downloaded content
 
 ### S35 · Reach the local interface from unexpected callers
 
-In an authorized test environment, try to reach the application's local service and IPC entry points from another device on the LAN, from an ordinary web page, and from another system user.
+In an authorized test environment, try to reach the application's local service and IPC entry points from another device on the LAN, from an ordinary web page, and from another system user. Then, from a web page and the command line, launch the application through protocol links with unusual arguments (extra command-line options, file paths, overly long strings).
 
-Checkpoints: Sample data cannot be read and unauthorized actions cannot be triggered; listening on loopback alone is not treated as the whole authorization mechanism; legitimate callers still work.
+Checkpoints: Sample data cannot be read and unauthorized actions cannot be triggered; listening on loopback alone is not treated as the whole authorization mechanism; legitimate callers still work; unusual arguments are rejected or ignored and are not treated as commands, launch options, or file operations.
 
-Related items: PRIVACY-09 Access boundaries of local services and IPC; AUTOMATE-04 Delegation that can be enabled, stopped, and reviewed; MANAGED-02 User and machine scope
+Related items: PRIVACY-09 Access boundaries of local services and IPC; AUTOMATE-04 Delegation that can be enabled, stopped, and reviewed; MANAGED-02 User and machine scope; SYSTEM-06 Protocols and deep links
 
 ### S36 · Import archives with escaping paths or huge expansion; modify a signed document; export a sample with hidden information
 
@@ -329,7 +329,7 @@ On an IPv6-only test network, sign in, make core requests, and download; use a t
 
 Checkpoints: No hidden IPv4 dependency; a failed verification does not turn into an insecure connection; errors are distinguishable; the clock jump causes no retry storm or absurd durations; times in open views and scheduled reminders follow the new zone, and date-only values stay the same.
 
-Related items: NETWORK-09 IPv6 networks; NETWORK-08 Transport encryption and server identity; NETWORK-01 Connection state; TASK-09 Sleep, wake, network, and device changes; LOCALE-04 Time zones and time display
+Related items: NETWORK-09 IPv6 networks; NETWORK-08 Transport encryption and server identity; NETWORK-01 Connection state and proxies; TASK-09 Sleep, wake, network, and device changes; LOCALE-04 Time zones and time display
 
 ### S39 · Multilingual input and authentication forms
 
@@ -361,7 +361,7 @@ Delete several objects in a batch, restore one with undo, and recover the rest f
 
 Checkpoints: Deleted objects can be recovered with their location and properties unchanged; the import can be undone, and manual edits made before the import remain; targets modified after the preview are skipped or previewed again, and the added file is not overwritten or deleted without confirmation; the replaced file can be recovered, or the UI said before replacing that it could not be, and the undo confirmation named the step being undone; undo affects only the object that has focus; the reset stated its scope before running, and settings in other categories were unaffected; the immediate action could be undone within the undo period, and the UI showed where to undo; edit commands act only on the text in the field, and objects selected in the list are unaffected; confirmations for irreversible actions name the object or state the count.
 
-Related items: INPUT-14 Undo over confirmation; DATA-04 Undo and redo targets; DATA-10 Protection for bulk deletion and migration; FILE-04 Move, rename, delete, and overwrite; SETTINGS-07 Reset by category; INPUT-24 Edit commands act on the focused area; DATA-16 Previewing and simulating bulk changes
+Related items: INPUT-14 Undo over confirmation; DATA-04 Undo and redo targets; DATA-10 Protection for bulk deletion and migration; FILE-04 Move, rename, delete, and overwrite; SETTINGS-07 Reset by category; INPUT-24 Edit commands act on the focused area; DATA-16 Previewing and simulating bulk changes; DATA-19 Deletion and overwrite safeguards for automatic and bulk changes
 
 ### S43 · Migrating from a similar product
 
@@ -377,7 +377,7 @@ Switch the UI to Chinese or another non-English language. Search for settings an
 
 Checkpoints: Both the English name and the localized name find the item, and results show the English name; advanced settings and settings inside dialogs can be found, or the results indicate where they are; a word from a description finds its setting, and when nothing matches it is clear whether the setting does not exist or is outside the current component; unavailable commands show the reason; each way of collapsing leaves a visible control for restoring the panel; F6 moves focus one region at a time and handles collapsed regions consistently.
 
-Related items: LOCALE-05 Multilingual text handling; SETTINGS-02 Searchable settings; INPUT-05 Command palette; APPEARANCE-05 Adjustable, resettable panels; A11Y-01 Core workflows by keyboard
+Related items: LOCALE-05 Multilingual text handling; SETTINGS-02 Searchable settings; INPUT-05 Command palette; APPEARANCE-05 Adjustable, resettable panels; A11Y-01 Core workflows by keyboard; LOCALE-02 Complete translations
 
 ### S45 · A multi-user host with non-persistent profiles: sign in twice, with an update in between
 
@@ -426,3 +426,19 @@ With a test account, add two widgets or system controls and find one of the appl
 Checkpoints: The widget shows when its data was updated or that it has not been updated, and does not present old values as current; the offline action showed a failure and returned to the true state; content is legible in every display mode; typing a query alone did not open a window or change the view, and choosing a result opened that object; while signed out, the system action was unavailable or stated why, and its result was visible where it was invoked; after signing out, the previous account's content did not appear in widgets or search results and did not return after reindexing; with the app lock on, widgets did not show protected content; after uninstalling, the widget, control, and system action entry points were gone.
 
 Related items: SYSTEM-21 Widget and system control content and state; APPEARANCE-01 Themes and runtime switching; AUTOMATE-02 Precisely addressable objects and actions; AUTOMATE-04 Delegation that can be enabled, stopped, and reviewed; PRIVACY-05 Signing out and switching accounts or workspaces; PRIVACY-13 Scope of app lock protection; INSTALL-06 Uninstallation scope
+
+### S51 · Deny and revoke permissions; make the keychain unavailable; check where credentials, clipboard content, and telemetry go
+
+Deny a system permission on first use and keep using the other features. Revoke a granted permission in system settings, return to the application and use the corresponding feature, then grant it again. Lock the system keychain, or delete the application's entries from it, then launch the application. Enter a connection address that contains a password in the application and use it once, then check the UI, the copied address, logs, diagnostic packages, and recent files. In products that read the clipboard continuously, copy a password from a password manager. Turn off telemetry, and in products that work mainly locally, also turn off the master switch for network access. Then use the application for ten minutes while recording the connections it makes.
+
+Checkpoints: After a denial, the other features work, and the permission request explained its purpose; after a revocation, the application shows a notice and a way to grant the permission again, and once it is granted again the feature works without a restart, or the application says that the platform requires one; when the keychain is unavailable, the application offers to use the credentials for this session only or to sign in again, and does not write them to an ordinary configuration file; the UI, the copied address, logs, diagnostic packages, and recent files contain no password; the password copied from the password manager does not appear in clipboard history; with the switches off, no telemetry or undisclosed connections are made.
+
+Related items: PRIVACY-01 Task-based permission requests; PRIVACY-02 Handling revoked permissions; PRIVACY-03 Credential storage; PRIVACY-04 Transparent, optional telemetry; PRIVACY-10 When and why the clipboard and keystrokes are read
+
+### S52 · Failed and interrupted data migration
+
+Upgrade once with a copy of data that makes the migration fail. Also upgrade directly across several versions from a supported older version, and terminate the process during migration and launch again.
+
+Checkpoints: A failed migration leaves the data as it was before the upgrade; the multi-version upgrade completes the migration or guides the user through an intermediate version; after an interrupted migration, the next launch completes it or returns to the pre-upgrade state.
+
+Related items: DATA-10 Protection for bulk deletion and migration
