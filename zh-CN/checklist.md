@@ -179,7 +179,7 @@ AI 编程 Agent 按 [AUDIT.md](AUDIT.md) 审查时，由 Agent 自行判断适�
 ## WINDOW · 窗口
 
 - [ ] **WINDOW-01 位置与尺寸恢复** · 基线 — 记住窗口尺寸、状态和位置，并按平台允许的方式恢复；显示器移除或缩放变化后，窗口回到可见区域。在 Wayland 等由窗口管理器决定位置的平台上，应用不设置绝对坐标，由系统保证窗口可访问。首次启动的默认窗口尺寸适应当前显示器。查看器随内容尺寸自动调整窗口的行为可以关闭。用户手动调整过的窗口尺寸不被下一个对象改写，自动调整也不使窗口超出可见区域。反复启动后，窗口的位置和尺寸不逐次偏移。
-- [ ] **WINDOW-02 窗口状态恢复与系统窗口管理** · 基线 — 最大化和全屏状态按平台规则恢复；退出全屏后位置合理；支持贴靠布局、虚拟桌面、macOS 全屏空间、台前调度和 Linux 平铺窗口管理器。自绘标题栏保留拖动和边缘调整大小，双击遵循用户的系统设置，并保留 Windows 11 悬停最大化按钮时显示的贴靠布局菜单。Alt + 空格、右键标题栏和任务栏缩略图可打开系统窗口菜单（Windows）。系统不提供窗口装饰时（Wayland），应用自己提供移动、调整大小和关闭窗口的入口。使用自绘标题栏的窗口最大化后，标题栏按钮延伸到屏幕边缘，指针移到屏幕右上角即可命中关闭按钮。以最大化状态退出后再次启动，取消最大化时回到此前的常规尺寸和位置。\
+- [ ] **WINDOW-02 窗口状态恢复与系统窗口管理** · 基线 — 最大化和全屏状态按平台规则恢复；退出全屏后位置合理；支持贴靠布局、虚拟桌面、macOS 全屏空间、台前调度和 Linux 平铺窗口管理器。自绘标题栏保留拖动和边缘调整大小，双击遵循用户的系统设置，并保留 Windows 11 悬停最大化按钮时显示的贴靠布局菜单。Alt + 空格、右键标题栏和任务栏缩略图可打开系统窗口菜单（Windows）。系统不提供窗口装饰时（Wayland），应用自己提供移动、调整大小和关闭窗口的入口。使用自绘标题栏的窗口最大化后，标题栏按钮延伸到屏幕边缘，关闭按钮位于右上角时，指针移到屏幕角落即可命中。以最大化状态退出后再次启动，取消最大化时回到此前的常规尺寸和位置。\
   常见问题：改为自绘标题栏后，Windows 11 的贴靠布局菜单不再出现。
 - [ ] **WINDOW-03 关闭、最小化与退出行为明确** `后台` · 基线 — 关闭当前窗口、关闭最后一个窗口、后台任务和退出应用各自的结果可预期，并符合平台惯例：macOS 上关闭窗口后应用通常继续运行，Windows 和 Linux 上通常随之退出；macOS 应用也可以选择在最后一个窗口关闭后退出。关闭窗口后继续运行的产品，在首次关闭时给出提示，并提供"关闭窗口即退出"选项。退出被用户取消或因保存失败而中止时，应用回到完整可用的状态，存储和同步不在中途被关闭。从菜单、托盘、Dock 和快捷键几乎同时发出的退出请求只执行一次退出流程。退出的误触确认见 INPUT-14。明确退出后，应用启动的辅助进程和采集任务随之结束（见 COMPONENT-03）。\
   常见问题：用户以为应用已关闭，实际仍在后台运行；再次启动时因实例已存在而没有窗口出现。
@@ -190,7 +190,7 @@ AI 编程 Agent 按 [AUDIT.md](AUDIT.md) 审查时，由 Agent 自行判断适�
 - [ ] **WINDOW-07 窗口标题包含上下文** · QoL — 标题包含文档名或当前对象，未保存时有标记（macOS 为关闭按钮中的圆点，其他平台通常为 `*` 或 `●`）；多个窗口在 Windows 的 Alt-Tab 和 macOS 的"窗口"菜单与调度中心中可区分。未命名的对象以内容的开头作为标题，几个未命名对象可相互区分。同名文件的窗口标题附加所在文件夹等区分信息。
 - [ ] **WINDOW-08 不抢占焦点** · QoL — 后台任务完成、更新就绪或重连失败时，不将窗口切换到前台，尤其不在用户于其他应用中输入时弹出窗口并接收回车；其他应用全屏或演示时不弹窗；改用系统通知或任务栏 / Dock 状态提示。用户从外部追加对象到列表时，是否切换到前台可选。用户再次点击应用图标、点击托盘图标、按下全局热键、点击通知或从系统搜索打开本应用的对象时，窗口按平台允许的方式来到前台并接收键盘输入。系统不允许切换时，在任务栏或 Dock 上提示。用户正在本应用中输入时，后台事件弹出的对话框不设默认按钮，或在短暂延迟后才接受按键。
 - [ ] **WINDOW-09 窗口置顶** `浮窗` · QoL — 对照阅读、悬浮工具和小窗模式下可一键置顶，置顶状态有可见标识，可取消。
-- [ ] **WINDOW-10 快速唤起与焦点归还** `浮窗` · QoL — 按下热键后窗口立即出现并接收键盘输入；按 Esc 关闭；关闭后焦点回到用户之前使用的应用；反复唤起和关闭不累积进程或内存。把选中内容送回之前的应用时，目标不接受模拟按键（远程桌面、虚拟机、部分自定义控件）或取不到插入点时，内容仍在剪贴板中可手动粘贴；热键的修饰键不残留到目标应用。为插入或读取文字而临时写入剪贴板的功能（文本展开、取词、把结果送回原应用），插入成功后恢复用户原有的剪贴板内容，包括图片和文件等全部格式。临时写入的内容带有平台的临时标记，剪贴板历史工具不予记录。出现位置与再次唤起见 WINDOW-13。热键失效时的替代入口见 SYSTEM-11。\
+- [ ] **WINDOW-10 快速唤起与焦点归还** `浮窗` · QoL — 按下热键后窗口立即出现并接收键盘输入；按 Esc 关闭；关闭后焦点回到用户之前使用的应用；反复唤起和关闭不累积进程或内存。把选中内容送回之前的应用时，目标不接受模拟按键（远程桌面、虚拟机、部分自定义控件）或取不到插入点时，内容仍在剪贴板中可手动粘贴；热键的修饰键不残留到目标应用。为插入或读取文字而临时写入剪贴板的功能（文本展开、取词、把结果送回原应用），插入成功后恢复用户原有的剪贴板内容，包括图片和文件等全部格式。期间剪贴板已被替换时保留新内容。临时写入的内容带有平台的临时标记，剪贴板历史工具不予记录。出现位置与再次唤起见 WINDOW-13。热键失效时的替代入口见 SYSTEM-11。\
   常见问题：翻译浮窗关闭后焦点停留在桌面，用户需再次点击原编辑器才能继续输入。
 - [ ] **WINDOW-11 关闭最后一个标签** `多窗` · QoL — 连续按 Ctrl/Cmd + W 关闭到最后一个标签时，回到空工作区或欢迎页（可配置），再次按下不会退出整个应用。
 - [ ] **WINDOW-12 从属窗口的位置与层级** · 基线 — 对话框、设置和详情等从属窗口出现在所属窗口所在的显示器上，位于所属窗口之上；切回或还原所属窗口时一并显示；所属窗口关闭时一并关闭，或按明确规则保留。警告和确认对话框每次出现在所属窗口的标准位置，不沿用上次被拖开的位置。\
@@ -368,7 +368,7 @@ AI 编程 Agent 按 [AUDIT.md](AUDIT.md) 审查时，由 Agent 自行判断适�
 - [ ] **INSTALL-04 更新失败后可用** · 基线 — 检查、下载、安装和失败状态可见；更新失败后旧版本照常可用。安装或更新前检查目标版本对系统版本、处理器架构和运行环境的要求，不满足时不替换当前版本，并说明原因。启动时检测到程序文件缺失、损坏，或与已更新的组件版本不匹配时，说明安装不完整，并提供修复或重新安装的途径，修复后保留设置和用户数据。
 - [ ] **INSTALL-05 程序回滚与数据回退** · 基线 — 新版本写入过的数据用旧版本打开时，明确拒绝、只读打开或进入恢复流程，数据不受损坏；无法安全降级时说明原因，并提供保留副本的方式。自行管理更新的产品，用户可以在更新后回到上一版本，例如保留上一版本供直接切换，或提供历史版本的下载途径。回到上一版本不绕过强制性的安全更新。数据格式升级或保存时用到旧版本不支持的特性，会使旧版本（包括其他设备上的旧版本）无法读取这份数据时，事先说明这一后果，并自动保留原来的副本。升级时数据迁移失败的回滚见 DATA-10。
 - [ ] **INSTALL-06 卸载范围** · 基线 — 移除启动项、文件关联及文档图标、缩略图与预览组件、搜索索引组件、服务、全局快捷键、右键菜单项，以及小组件、系统控件、搜索提供程序和系统动作的注册，以及随附的辅助服务、加入 PATH 的路径和命令行入口、下载的资源和私有字体；用户可选择保留或删除用户数据，并了解具体范围；用户创建的文件、共享组件和同一计算机上的其他版本不受影响；重新安装后数据不丢失。系统"已安装的应用"列表中的名称、发布者、版本、图标和占用空间与实际一致，更新后随之更新；从该列表卸载能完成，卸载后条目消失。
-- [ ] **INSTALL-07 更新包真实性** · 基线 — 应用自行更新时，用内置公钥验证更新包签名，签名不符则拒绝安装；版本清单同样签名，版本号与更新包摘要绑定；防回退检查依据签名过的版本信息，服务器或中间人因此无法诱导用户安装有漏洞的旧版本。实现要点见附录 A。\
+- [ ] **INSTALL-07 更新包真实性** · 基线 — 应用自行更新时，用内置公钥验证更新包签名，签名不符则拒绝安装。版本号与更新包通过签名绑定，防回退检查依据签名过的版本信息，服务器或中间人因此无法诱导用户安装有漏洞的旧版本。实现要点见附录 A。\
   常见问题：只依赖 HTTPS 保护更新，被篡改的清单将用户降级到已知漏洞版本。
 - [ ] **INSTALL-08 更新的下载与安装** · 基线 — 下载前检查磁盘空间，中断后可续传，安装前校验哈希；能替换正在运行的程序文件，或在退出后、下次启动时完成替换；安装位置不可由当前用户写入时有提权或替代路径，不静默失败；通过应用商店或包管理器安装的副本是否自行更新，按渠道规则决定（见 INSTALL-02）。更新完成后清理旧版本的程序文件和下载的安装包，安装目录的占用不随更新次数增长。包管理器或后台更新替换了程序文件而应用仍在运行时，提示重新启动，在重启前不加载新版本的组件。\
   常见问题：更新器试图覆盖正在运行的程序文件，报"文件被占用"后留下半套新文件。
@@ -589,10 +589,10 @@ AI 编程 Agent 按 [AUDIT.md](AUDIT.md) 审查时，由 Agent 自行判断适�
 - DATA-06、SETTINGS-04：写入同目录下的临时文件，对其执行 fsync，再原子替换目标文件。POSIX 使用 `rename`，随后对所在目录执行 fsync；macOS 上需要 `fcntl(F_FULLFSYNC)` 才能确保数据写入存储介质。Windows 先对临时文件调用 `FlushFileBuffers`，再用带 `MOVEFILE_REPLACE_EXISTING` 和 `MOVEFILE_WRITE_THROUGH` 的 `MoveFileEx` 替换；`ReplaceFile` 会保留原文件的属性，但其 `REPLACEFILE_WRITE_THROUGH` 标志在文档中标为不受支持。
 - DATA-06（元数据）：替换前将原文件的权限、所有者和扩展属性复制到临时文件；原文件是符号链接时写入其目标。原文件有多个硬链接时，原子替换会使其他链接仍指向旧内容：要么原子替换并告知用户链接将断开，要么先完成备份再就地更新。Windows 上替换因共享冲突失败时短暂重试，安全软件、索引器和同步客户端会短时占用文件。
 - DATA-05：SQLite 数据库使用 Online Backup API 或 `VACUUM INTO` 生成一致的副本；WAL 模式下只复制主数据库文件会遗漏尚未检查点的数据。
-- INSTALL-07：更新包和版本清单都签名，公钥随应用分发，私钥离线保管并准备轮换方案；拒绝版本号低于当前版本的更新，除非用户明确选择回退。
+- INSTALL-07：版本信息与更新包通过可验证的签名绑定，可以签名版本清单，也可以把版本信息与更新包一起签名；公钥随应用分发，私钥离线保管并准备轮换方案；拒绝版本号低于当前版本的更新，除非用户明确选择回退。
 - SYSTEM-12：Windows 在 `WM_QUERYENDSESSION` / `WM_ENDSESSION` 中快速保存；只在保存进行中调用 `ShutdownBlockReasonCreate` 并给出原因；用 `RegisterApplicationRestart` 在系统更新重启后恢复。安装程序经 Restart Manager 关闭应用时，同样发送这两条消息并带 `ENDSESSION_CLOSEAPP`，关闭窗口时只隐藏到托盘的应用此时也保存并退出。macOS 在 `applicationShouldTerminate` 中保存，并支持登录时重新打开窗口。
-- COMPONENT-03：Windows 用带 `JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE` 的作业对象管理子进程；Linux 用 `prctl(PR_SET_PDEATHSIG)` 配合进程组；macOS 没有等价机制，由子进程监视父进程退出。子进程不继承不必要的句柄，否则作业对象无法结束它们。
-- NETWORK-07：使用带 PKCE 的授权码流程；回调中的 `state` 与当前请求一致，重定向地址与登记的地址完全匹配；已使用或已过期的回调一律拒绝。
+- COMPONENT-03：Windows 用带 `JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE` 的作业对象管理子进程；Linux 用 `prctl(PR_SET_PDEATHSIG)` 配合进程组；macOS 没有等价机制，由子进程监视父进程退出。子进程不得继承作业对象自身的句柄，因为作业对象的句柄全部关闭后 `JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE` 才会触发。`PR_SET_PDEATHSIG` 在创建子进程的线程退出时就会触发，不等整个父进程退出，因此由长期存在的线程创建子进程。
+- NETWORK-07：使用带 PKCE 的授权码流程；回调中的 `state` 与当前请求一致，重定向地址与登记的地址完全匹配，只有回环地址的端口可在发起请求时选定，回调须到达所选端口；已使用或已过期的回调一律拒绝。
 - PRIVACY-09：HTTP 和 WebSocket 服务只绑定回环地址，使用随机端口和访问令牌，并校验 Origin 和 Host；WebSocket 升级请求通常绕过 HTTP 中间件的 Origin 检查，需单独校验；允许的 Origin 不从 Host 头推导，否则可被 DNS 重绑定绕过。命名管道和 Unix 套接字的访问权限仅限当前用户，并在连接时校验对端进程的身份。
 - TRUST-05：解包前规范化每个条目的目标路径，拒绝落在目标目录之外的条目和符号链接；签名校验在解包之前完成。
 - WINDOW-05、MANAGED-02：Windows 单实例 mutex 使用 `Local\` 前缀按会话隔离，`Global\` 会阻止其他用户启动；macOS 的 `LSMultipleInstancesProhibited` 同样影响快速用户切换。
@@ -607,7 +607,7 @@ AI 编程 Agent 按 [AUDIT.md](AUDIT.md) 审查时，由 Agent 自行判断适�
 - DATA-17：许多加密方案的口令只用来包裹数据密钥，改口令不会重新加密数据和数据密钥，旧备份配合旧口令或旧密钥材料仍能解开。临时副本的覆盖删除在 SSD、文件系统快照、同步副本和备份中不保证不可恢复，说明保护范围时不要写成安全擦除。
 - LOCALE-07：表格类产品复制到剪贴板时，可以同时提供显示文本和完整精度的数值格式（例如 HTML 或应用私有格式），由目标应用选择。
 - SETTINGS-04：设置的存放位置：Windows 为 `%APPDATA%` 或注册表，macOS 为 `~/Library/Application Support` 或 plist，Linux 为 `$XDG_CONFIG_HOME`。
-- SYSTEM-03：Windows 按 AppUserModelID 判断系统通知的来源。未注册 AppUserModelID 的进程（例如开发版、便携版）发出的通知会显示为来自其他程序。需注册该 ID，并提供带有此 ID 的开始菜单快捷方式。
+- SYSTEM-03：Windows 按 AppUserModelID 判断系统通知的来源。未注册 AppUserModelID 的进程（例如开发版、便携版）发出的通知会显示为来自其他程序。打包应用从包标识获得该 ID；非打包应用通过 Windows App SDK 的 `AppNotificationManager.Register()` 注册（见下文），使用传统通知接口时自行设置该 ID，并提供带有此 ID 的开始菜单快捷方式。
 - PRIVACY-10：Windows 用 `ExcludeClipboardContentFromMonitorProcessing`、`CanIncludeInClipboardHistory`、`CanUploadToCloudClipboard` 三种格式标记剪贴板监视程序应跳过的内容，macOS 用 `org.nspasteboard.ConcealedType`。向剪贴板写入敏感内容的应用设置这些格式，记录剪贴板的应用读取并遵循它们。
 - TRUST-04：按 Unicode UTS #39 的混合字母与易混淆字符规则判断是否以 Punycode 显示域名，或沿用浏览器的 IDN 显示策略。
 - INPUT-24、INPUT-07：macOS 上 ⌘C、⌘V、⌘A、⌘Z 经主菜单"编辑"菜单中的项分发给响应链。只有菜单栏图标、不显示主菜单的应用，需要安装含编辑项的主菜单，或在面板中把这些组合键转给主菜单。
@@ -620,7 +620,7 @@ AI 编程 Agent 按 [AUDIT.md](AUDIT.md) 审查时，由 Agent 自行判断适�
 - TASK-09：超时、重试退避和持续时间用单调时钟计算，并明确是否计入睡眠：Windows `QueryUnbiasedInterruptTime` 不计入睡眠；Linux `CLOCK_BOOTTIME` 计入、`CLOCK_MONOTONIC` 不计入；Apple `mach_continuous_time` 计入、`mach_absolute_time` 不计入。需要跨重启的期限保存为绝对时间，启动时重新计算剩余时间，已到期的只处理一次。
 - HELP-05：错误钩子在应用启动前初始化，否则漏掉启动阶段的崩溃。每个发行版本存档调试符号（PDB、dSYM、分离的调试文件），按 PDB 的签名（GUID）与 age、Mach-O 的 UUID、ELF 的 build ID 与最终发行包中的二进制核对；同一份源码重新构建得到的符号不一定匹配。
 - COMPONENT-01：macOS 和 Linux 上从图形界面启动的进程不读取 shell 配置文件，PATH 只有系统默认值。可在启动时以交互登录 shell 运行一次取得用户环境（例如 `$SHELL -ilc env`），设置超时并缓存结果，同时允许用户指定工具路径。
-- WINDOW-10：临时写入剪贴板的内容，在 macOS 上加 `org.nspasteboard.TransientType`；在 Windows 上加 `ExcludeClipboardContentFromMonitorProcessing` 格式，或把 `CanIncludeInClipboardHistory` 设为 0。保存和恢复原内容时遍历全部格式，延迟渲染的格式先取出数据。
+- WINDOW-10：临时写入剪贴板的内容，在 macOS 上加 `org.nspasteboard.TransientType`；在 Windows 上加 `ExcludeClipboardContentFromMonitorProcessing` 格式，或把 `CanIncludeInClipboardHistory` 设为 0。保存和恢复原内容时遍历全部格式，延迟渲染的格式先取出数据。恢复前确认剪贴板仍是这次临时写入的内容，例如 Windows 上比对 `GetClipboardSequenceNumber`，macOS 上比对 `changeCount`。
 - PRIVACY-10：macOS 每次按键时检查 `IsSecureEventInputEnabled()`；Windows 可经 UI Automation 读取焦点控件的 `IsPassword` 属性。结果为真时不显示、不记录该按键。
 - PRIVACY-02：macOS 的辅助功能、屏幕录制等授权按代码签名和安装路径记录。临时签名（ad hoc）每次构建都变，授权随之失效，而系统设置中的开关仍显示已开启；开发构建同样用固定证书签名，并安装到固定路径。开关显示已开启而接口仍失败时，从列表移除应用后重新添加。
 - PRIVACY-01、SYSTEM-03：通知授权请求在无人操作时弹出，可能被系统记为拒绝，此后请求一直失败。只在用户触发相关功能时请求，并在设置中显示授权状态和打开系统通知设置的入口。
@@ -629,12 +629,12 @@ AI 编程 Agent 按 [AUDIT.md](AUDIT.md) 审查时，由 Agent 自行判断适�
 - SYSTEM-08：macOS 新建电源断言前释放旧断言，泄漏的断言会让电脑在开关显示关闭后仍不睡眠。阻止显示器睡眠的断言不阻止合盖睡眠，防睡眠工具在界面上说明这一点。
 - SYSTEM-13：修改前读取原值时，区分"未设置"与"设为默认值"。原本未设置的项，恢复时删除该项，不写入一个显式值。
 - LOCALE-01：macOS 本地化应用名需要 `LSHasLocalizedDisplayName`、`CFBundleLocalizations` 和各语言的 `InfoPlist.strings`，并让应用包的文件名与 `CFBundleName` 一致。
-- INSTALL-07：Sparkle 比较 `CFBundleVersion`，构建号须单调递增。DMG 先公证装订，再用 `sign_update` 签名，顺序相反时签名失效。EdDSA 私钥丢失后已安装的副本无法再自动更新，私钥离线备份。
+- INSTALL-07：Sparkle 比较 `CFBundleVersion`，构建号须单调递增。DMG 先公证装订，再用 `sign_update` 签名，顺序相反时签名失效。EdDSA 私钥离线备份。同时使用 Developer ID 签名和 EdDSA 的普通应用更新，丢失 EdDSA 私钥后可借 Sparkle 的密钥轮换换用新密钥，每次更新只能更换两者之一。安装包形式的更新和没有 Developer ID 签名的应用没有这条途径。
 - INSTALL-10：从 DMG 或下载目录直接运行时，macOS 对应用做路径随机化（App Translocation），更新器无法替换程序，登录项也会指向临时路径。
 - INPUT-09、INPUT-10：macOS 14 起，应用读取其他开发者应用的数据容器中的文件时，系统向用户请求许可，授权持续到应用退出。经剪贴板或拖放接收其他应用的内容时，优先使用数据表示或文件承诺（file promise），不直接按路径读取对方容器中的文件。
 - INPUT-09、INPUT-13：工具包在 Flatpak 沙箱应用之间拖放文件时使用 FileTransfer 门户（`application/vnd.portal.filetransfer`），会话默认（`autostop`）在第一次 `RetrieveFiles()` 后关闭。macOS `NSItemProvider.loadFileRepresentation` 写出的临时文件在回调返回时删除，需要在回调内复制。
 - FILE-03：Windows 长路径依赖系统设置和应用清单中的 `longPathAware`；核对编译后可执行文件内嵌的清单，不只看源 XML。自带扩展路径支持的运行时不需要此清单。
-- SYSTEM-05：Windows 上文件类型的图标由 ProgID 下 `DefaultIcon` 的默认值指定，类型名称写在 `FriendlyTypeName`（间接字符串 `@文件,-资源号`），同时为兼容设置 ProgID 的默认值。macOS 11 起在 `UTExportedTypeDeclarations` 中声明自有类型，`UTTypeDescription` 为可本地化的类型名称，`UTTypeIcons` 指定背景、中心徽标和底部文字，由系统合成文档图标，徽标省略时使用应用图标。Linux 上随包安装 shared-mime-info 的 XML 并运行 `update-mime-database`，`<comment>` 为类型名称；图标以 MIME 类型把"/"换成"-"后的名称安装到图标主题，随包 XML 中的 `<icon>` 不生效。
+- SYSTEM-05：Windows 上文件类型的图标由 ProgID 下 `DefaultIcon` 的默认值指定，类型名称写在 `FriendlyTypeName`（间接字符串 `@文件,-资源号`），同时为兼容设置 ProgID 的默认值。macOS 11 起在 `UTExportedTypeDeclarations` 中声明自有类型，`UTTypeDescription` 为可本地化的类型名称，`UTTypeIcons` 指定背景、中心徽标和底部文字，由系统合成文档图标，徽标省略时使用应用图标。Linux 上随包安装 shared-mime-info 的 XML 并运行 `update-mime-database`，`<comment>` 为类型名称；图标以 MIME 类型把"/"换成"-"后的名称安装到图标主题，规范只在用户的覆盖数据库中使用 `<icon>`，随包定义不靠它指定图标。
 - SYSTEM-18：Windows 上缩略图、预览窗格和详细信息分别由缩略图处理程序（`IThumbnailProvider`）、预览处理程序（`IPreviewHandler`）和属性处理程序（`IPropertyStore`）提供，全文索引用 `IFilter` 或属性处理程序。这些处理程序默认在隔离进程中运行（预览处理程序由 `prevhost.exe` 承载），优先实现 `IInitializeWithStream`，不设置 `DisableProcessIsolation`。macOS 10.15 起用 Quick Look 的缩略图扩展（`QLThumbnailProvider`）和预览扩展，macOS 15 正在移除对 `.qlgenerator` 插件的支持；Spotlight 索引仍用 `.mdimporter` 插件。Linux 上 GNOME 读取 `thumbnailers/` 目录中的 `.thumbnailer` 文件，KDE 使用 `KIO::ThumbnailCreator` 插件，KF 6.6 起也读取 `.thumbnailer` 文件。生成失败按 Thumbnail Managing Standard 记录在 `fail/` 目录下，不反复重试。
 - SYSTEM-19：Windows 11 的第一级右键菜单只显示具有包标识的应用（MSIX 打包，或非打包应用使用带外部位置的包）通过 `IExplorerCommand` 提供的命令，旧式外壳扩展出现在"显示更多选项"中。"新建"菜单项来自扩展名键下的 `ShellNew`（`NullFile`、`FileName`、`Data` 或 `Command`），菜单中的名称取自 ProgID 的类型名称。
 - SYSTEM-09：Windows 上作为分享目标需要包标识，在清单中声明 `windows.shareTarget`，非打包应用可使用带外部位置的包；PWA 在 Web 应用清单中声明 `share_target`。macOS 通过共享扩展接收。
@@ -650,7 +650,7 @@ AI 编程 Agent 按 [AUDIT.md](AUDIT.md) 审查时，由 Agent 自行判断适�
 - HELP-04：macOS 上帮助文档使用 Help Book 格式时，系统在帮助菜单顶部自动加入搜索框。
 - HELP-06：复制的诊断信息按 HELP-05 的脱敏范围处理；Firefox about:support 复制原始数据时，把路径类字段的值替换为占位文字。
 - INPUT-25：Electron 不提供默认右键菜单。应用在 `context-menu` 事件中按参数自己构建菜单：`editFlags` 决定哪些编辑项可用，`dictionarySuggestions` 和 `misspelledWord` 提供拼写建议。macOS 的写作工具和服务需要关联到目标框架；第三方的 electron-context-menu 中 `showServices` 默认关闭。Flutter 和 Compose Multiplatform 只实现了部分 macOS 系统文本键位；Flutter 桌面版的文本框没有把选区写入 Linux 主选区。
-- INPUT-19：`NSSecureTextField` 会自动启用安全输入。自绘的密码框在获得焦点时调用 `EnableSecureEventInput`，失去焦点或应用转入后台时调用 `DisableSecureEventInput`，两者成对出现；未解除时，其他应用的全局热键全部失效。Chromium 为网页中的密码框专门实现了这一机制。
+- INPUT-19：`NSSecureTextField` 会自动启用安全输入。自绘的密码框在获得焦点时调用 `EnableSecureEventInput`，失去焦点或应用转入后台时调用 `DisableSecureEventInput`，两者成对出现；未解除时，通过事件监听读取按键的其他应用收不到键盘输入，用 `RegisterEventHotKey` 注册的热键仍然有效。Chromium 为网页中的密码框专门实现了这一机制。
 - WINDOW-02：Windows 上系统窗口菜单经 `WM_SYSCOMMAND` 的 `SC_KEYMENU` 触发，自绘标题栏的框架需转发这些消息，并在任务栏缩略图上保留菜单。macOS 上标题栏双击的动作取自用户偏好 `AppleActionOnDoubleClick`。Wayland 上合成器可以拒绝 xdg-decoration 的服务端装饰请求，此时由应用回退为客户端装饰；GTK 的 `gtk-decoration-layout` 决定显示哪些按钮。
 - WINDOW-08：Wayland 上由发起方（启动器、通知守护进程或第一个实例）取得 xdg-activation 令牌并转交给被激活的应用；单实例转发请求时，令牌一并传给已运行的实例。Windows 上第二个实例在转交请求前调用 `AllowSetForegroundWindow`，不用模拟按键来抢占焦点。
 - A11Y-07、A11Y-02：Windows 上 `GetCaretBlinkTime` 返回闪烁间隔，返回 `INFINITE` 表示不闪烁；光标粗细通过 `SystemParametersInfo` 的 `SPI_GETCARETWIDTH` 读取。
@@ -700,7 +700,7 @@ AI 编程 Agent 按 [AUDIT.md](AUDIT.md) 审查时，由 Agent 自行判断适�
 **Electron / Chromium**
 
 - INPUT-06：`keydown` 处理中检查 `isComposing`（或 keyCode 229），组合期间不响应 Enter 等提交键。只拦截提交键；对 keyCode 229 一律直接返回会同时拦截 Ctrl 组合键和 Esc。
-- APPEARANCE-07：非正文区域设置 `user-select: none`，正文和需要复制的信息除外；生产环境中按业务需要处理 Ctrl/Cmd + R、F5、Ctrl/Cmd + P 的默认行为；外部链接通过 `shell.openExternal` 打开；移除默认的"检查元素"菜单。
+- APPEARANCE-07：非正文区域设置 `user-select: none`，正文和需要复制的信息除外；生产环境中按业务需要处理 Ctrl/Cmd + R、F5、Ctrl/Cmd + P 的默认行为；外部链接先解析并检查协议，允许的网页链接再通过 `shell.openExternal` 打开，其他协议按 TRUST-04 处理；移除默认的"检查元素"菜单。
 - DISPLAY-08：创建窗口时按当前主题设置 `backgroundColor`，并使用 `show: false` 配合 `ready-to-show` 事件显示窗口。
 - SYSTEM-02：Linux 托盘依赖 StatusNotifierItem，GNOME 默认不显示，需要 AppIndicator 扩展；提供无托盘时的替代入口。
 - SYSTEM-04：检查 `globalShortcut.register` 的返回值；快捷键已被占用时注册失败，且不抛出异常。
@@ -714,7 +714,7 @@ AI 编程 Agent 按 [AUDIT.md](AUDIT.md) 审查时，由 Agent 自行判断适�
 - TRUST-07：保持开启 `contextIsolation` 和 `sandbox`，关闭 `nodeIntegration`，为渲染外来内容的视图设置内容安全策略（CSP）。Joplin 的 CVE-2024-49362 中，相反的设置加上没有沙箱的预览 iframe，使笔记中的一个链接变成了命令执行。
 - A11Y-03、INPUT-20：界面语言变化时更新 `<html lang>`，多语言内容按段落标注 `lang`。屏幕阅读器的发音、拼写检查、断字和中日韩字形的选择都依赖它。
 - INPUT-24：macOS 上在应用菜单中定义带 `role` 的编辑菜单（`role: 'editMenu'`，或逐项使用 `copy`、`paste` 等角色），否则文本框中的 ⌘C、⌘V 无效。不显示菜单栏的窗口同样需要这个菜单。
-- A11Y-03、AUTOMATE-02：Electron 默认不启用 Chromium 的无障碍支持，检测到辅助技术时才启用，语音控制、UI 自动化测试和读取无障碍树的 Agent 可能读不到界面。可在 `ready` 之后调用 `app.setAccessibilitySupportEnabled(true)`，或在设置中提供开关。
+- A11Y-03、AUTOMATE-02：Electron 默认不启用 Chromium 的无障碍支持，检测到辅助技术时才启用，语音控制、UI 自动化测试和读取无障碍树的 Agent 可能读不到界面。在设置中提供开关，开启时在 `ready` 之后调用 `app.setAccessibilitySupportEnabled(true)`。渲染无障碍树会明显拖慢应用，因此不默认开启。
 - A11Y-07：减少动效时，流程不依赖 `transitionend`、`animationend` 推进。
 - SYSTEM-01：Windows 上查询登录项时，传入与 `setLoginItemSettings` 相同的 `path` 和 `args`。`openAtLogin` 只核对注册的命令。系统是否允许启动，看 `executableWillLaunchAtLogin` 或匹配项的 `launchItems[].enabled`。其中 `executableWillLaunchAtLogin` 忽略 `args`，同一可执行文件的其他启动项也会使它为真。
 - INPUT-02：拖动区域不向网页派发指针事件，点击自绘标题栏不会自动关闭已打开的菜单，需要另行处理。
@@ -727,7 +727,7 @@ AI 编程 Agent 按 [AUDIT.md](AUDIT.md) 审查时，由 Agent 自行判断适�
 - 托盘属于核心功能（`tray-icon` 特性），全局快捷键、单实例、开机启动和更新器由插件提供；各平台行为差异较大，SYSTEM 整节需逐条验证。
 - SYSTEM-01：Flatpak 包的自启动项通过 Background 门户注册，自启动条目的执行命令为 `flatpak run <应用 ID>`，而非沙箱内的可执行文件路径。
 - 三个平台的 WebView 内核不同，CSS 和字体渲染存在差异，APPEARANCE-03 和 TYPO-01 需在三个平台分别检查。
-- INSTALL-07：updater 插件强制签名验证，公钥在 `plugins.updater.pubkey`；私钥丢失后已发布的版本无法再自动更新。updater 2.12.0 之前只签二进制不签清单，可被诱导降级（CVE-2026-95625）；升级并启用版本签名。
+- INSTALL-07：updater 插件强制签名验证，公钥在 `plugins.updater.pubkey`；私钥丢失后已发布的版本无法再自动更新。updater 2.12.0 之前，端点清单中的版本号未经认证，可被诱导降级（CVE-2026-95625）。2.12.0 起签名可在 trusted comment 中携带版本：升级后开启 `requireSignedVersion`，并发布带版本的签名。
 - TRUST-07：通过 capabilities 限制前端可调用的命令，外来内容在无法调用这些命令的视图中渲染。
 
 **Qt**

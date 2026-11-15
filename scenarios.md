@@ -47,7 +47,7 @@ Related items: DISPLAY-01 System scaling; DISPLAY-02 Runtime display changes; DI
 
 Without a mouse, with NVDA, Narrator, VoiceOver, or Orca running, complete "launch → open or create → core action → save → close". Along the way, enter and leave an editing area once and close a dialog. Finally, turn on voice control (Voice Access on Windows, Voice Control on macOS) and click a button by saying its on-screen label. Use a tool that reads the accessibility tree, such as a UI automation inspector or an AI agent that operates the desktop, to complete one main task from the accessibility tree alone.
 
-Checkpoints: Every object and state is understandable; there are no keyboard traps; after a dialog closes, focus returns to the control that opened it; voice control can click buttons by their on-screen labels; every control the task needs can be found and operated through the accessibility tree.
+Checkpoints: Every object and state is understandable; there are no keyboard traps; after a dialog closes, focus returns to the control that opened it; the screen reader announced that the save finished; voice control can click buttons by their on-screen labels; every control the task needs can be found and operated through the accessibility tree.
 
 Related items: A11Y-01 Core workflows by keyboard; A11Y-02 Visible focus, logical order, focus return; A11Y-03 Assistive technology semantics; A11Y-04 Announced state changes; INPUT-02 Dialog conventions; AUTOMATE-02 Precisely addressable objects and actions
 
@@ -95,7 +95,7 @@ Related items: DATA-07 External changes and conflicts; NETWORK-04 Visible sync q
 
 Turn off the application's notifications at the system level. Have another program take the application's global hotkey. Launch the application on a desktop without a tray (GNOME without extensions). On Windows 11, move the tray icon into the overflow area, close the window, and find the icon by following the notice. Pause a background task once, make it fail once, and let it recover. Restart Explorer in a test environment. Update the application once. With the final release package, turn on launch at login and look at the application's entries in the system's list of startup items.
 
-Checkpoints: The settings page does not show the hotkey as active; the application can still be reopened and quit through its icon, a menu, or the command line; the process can always be found and ended; the notice on closing the window said where the icon is; the tray icon and tooltip showed paused, failed, and recovered in turn; the tray icon came back automatically after Explorer restarted; after the update the icon was still where the user had placed it; the startup entries can be traced to the application, and no old entries were added by the update.
+Checkpoints: The settings page does not show the hotkey as active, and the notification setting states that notifications are turned off in the system; the application can still be reopened and quit through its icon, a menu, or the command line; the process can always be found and ended; the notice on closing the window said where the icon is; the tray icon and tooltip showed paused, failed, and recovered in turn; the tray icon came back automatically after Explorer restarted; after the update the icon was still where the user had placed it; the startup entries can be traced to the application, and no old entries were added by the update.
 
 Related items: SYSTEM-04 Global shortcuts; SYSTEM-02 Tray or menu bar entry; SYSTEM-11 Alternatives when system features are unavailable; SYSTEM-03 System notifications and attention; SYSTEM-20 Tray icon placement, continuity, and status; SYSTEM-01 Launch at login; WINDOW-03 Clear close, minimize, and quit behavior
 
@@ -161,7 +161,7 @@ Install a plugin that fails or breaks the layout, confirm the problem in safe mo
 
 Checkpoints: Temporary mode did not change the original configuration; plugin states are restored after troubleshooting; the bundle describes its contents and can be previewed before sending; test markers placed in file names, paths, and the personal dictionary do not appear in the bundle; the capture's state and stop control are visible while it runs, and the log settings return to their previous values afterward; before submitting, it is clear who can see the description and each attachment; the test marker does not appear in the logs, rotated files, or the diagnostic bundle.
 
-Related items: HELP-07 Safe mode and self-recovery; HELP-05 Diagnostic logs and bundles; SETTINGS-07 Reset by category; HELP-06 Feedback entry point
+Related items: HELP-07 Safe mode and self-recovery; HELP-05 Diagnostic logs and bundles; HELP-06 Feedback entry point
 
 ### S18 · Sign in, download, and update behind a proxy; cancel one authentication
 
@@ -173,9 +173,9 @@ Related items: NETWORK-05 Proxies and corporate networks; NETWORK-07 Sign-in ret
 
 ### S19 · Repeated successes and repeated failures
 
-Run a batch save twenty times in a row. Let reconnection fail ten times in a row. Repeat an action that produces the same error.
+Run a batch save twenty times in a row. Let reconnection fail ten times in a row. Repeat an action that produces the same error. Keep typing in another application while these run.
 
-Checkpoints: Success feedback is lightweight and local, with no twenty toasts; failure messages are grouped, and the important one is still findable with an actionable option after the toast disappears.
+Checkpoints: Success feedback is lightweight and local, with no twenty toasts; failure messages are grouped, and the important one is still findable with an actionable option after the toast disappears; none of the messages took focus from the other application.
 
 Related items: SYSTEM-03 System notifications and attention; HELP-03 Actionable, copyable error messages; WINDOW-08 No focus stealing; SYSTEM-16 In-app notices and notice history
 
@@ -265,7 +265,7 @@ Place an incompatible FFmpeg, Python, or download engine of the same name on PAT
 
 Checkpoints: The application uses the intended component; no wrong copy is called, no command is split, no characters are mangled; component versions are identifiable.
 
-Related items: COMPONENT-01 Coexistence with system copies; FILE-03 Paths, characters, and name collisions; INPUT-07 Standard text editing behavior
+Related items: COMPONENT-01 Coexistence with system copies; FILE-03 Paths, characters, and name collisions
 
 ### S31 · Kill the conversion helper; then quit normally and kill the main program
 
@@ -279,7 +279,7 @@ Related items: TASK-14 Fault isolation of subsystems in use; COMPONENT-03 Identi
 
 Play music first, then play an attachment in the application under test; use the headset media keys and the system media controls; adjust per-application volume; stop the attachment and press the media key once more.
 
-Checkpoints: Now-playing information and the controlled target are correct; no unprompted exclusive access or changes to other applications' audio; system volume applies; media keys are not captured after playback ends.
+Checkpoints: Now-playing information and the controlled target are correct; no unprompted exclusive access or changes to other applications' audio; system volume applies; the per-application volume list shows the application's own name, not a helper process's; media keys are not captured after playback ends.
 
 Related items: MEDIA-01 System media controls and now-playing information; MEDIA-02 Volume, mixing, and exclusive access; COMPONENT-03 Identity and lifetime of helper processes
 
@@ -337,7 +337,7 @@ Type composed emoji, combining marks, and Arabic file names; enter numbers in a 
 
 Checkpoints: Editing does not split characters; the real identity of file names is clear; number parsing matches display; plural grammar is correct; authentication needs no manual transcription; the error points to the field and valid input is kept; every password and PIN field shows the Caps Lock notice, and it disappears as soon as Caps Lock is turned off.
 
-Related items: INPUT-07 Standard text editing behavior; LOCALE-03 Dates, numbers, units, and currency; LOCALE-07 Numeric input, copying, and precision; LOCALE-06 Right-to-left scripts; INPUT-18 Input constraints and inline correction; INPUT-19 Assisted authentication
+Related items: INPUT-07 Standard text editing behavior; LOCALE-02 Complete translations; LOCALE-03 Dates, numbers, units, and currency; LOCALE-07 Numeric input, copying, and precision; LOCALE-06 Right-to-left scripts; INPUT-18 Input constraints and inline correction; INPUT-19 Assisted authentication
 
 ### S40 · Purchases, license materials, and policy access
 
@@ -413,9 +413,9 @@ Related items: HELP-01 First run and guidance; WINDOW-05 Routing on relaunch and
 
 ### S49 · Using text fields and windows the way another platform's users do
 
-With the final release package, work on the platform the team does not use day to day. Right-click in an input field, a search field, and the editing area. On macOS, press ⌃A, ⌃E, and ⌃K, type the abbreviation of a system text replacement, press and hold a letter key and pick a character from the accent menu, and press another application's global hotkey while a password field has focus. On Linux, select some text, middle-click to paste it into another application, then turn off middle-click paste on the desktop and try again. For windows, on Windows press Alt + Space and right-click the taskbar thumbnail; on macOS set title bar double-click to minimize and double-click the title bar; on Linux start the application in a GNOME Wayland session. While the application is in the background, click its icon again, then click one of its notifications. On Windows, tap an input field by touch. Set the system's cursor blink to off.
+With the final release package, work on the platform the team does not use day to day. Right-click in an input field, a search field, and the editing area. On macOS, press ⌃A, ⌃E, and ⌃K, type the abbreviation of a system text replacement, press and hold a letter key and pick a character from the accent menu, and, with a keystroke-monitoring tool that uses an event tap running, type into a password field and then into an ordinary field. On Linux, select some text, middle-click to paste it into another application, then turn off middle-click paste on the desktop and try again. For windows, on Windows press Alt + Space and right-click the taskbar thumbnail; on macOS set title bar double-click to minimize and double-click the title bar; on Linux start the application in a GNOME Wayland session. While the application is in the background, click its icon again, then click one of its notifications. On Windows, tap an input field by touch. Set the system's cursor blink to off.
 
-Checkpoints: The context menu has the standard editing items and spelling suggestions, plus Look Up and Services on macOS; system text key bindings and text replacement work; pressing and holding a letter key showed the accent menu, and the chosen character was inserted at the insertion point; while the password field had focus, the other application's hotkey was paused, and it worked again afterwards; middle-click pasted the text just selected without replacing the clipboard, and did nothing once turned off; the system window menu appeared and its commands worked; double-clicking the title bar minimized the window; under Wayland the window can be moved, resized, and closed; the window came to the front, or the taskbar or Dock signalled it; the touch keyboard appeared and the input position stayed visible; the text cursor stopped blinking.
+Checkpoints: The context menu has the standard editing items and spelling suggestions, plus Look Up and Services on macOS; system text key bindings and text replacement work; pressing and holding a letter key showed the accent menu, and the chosen character was inserted at the insertion point; the monitoring tool recorded nothing typed into the password field and recorded the ordinary field again; middle-click pasted the text just selected without replacing the clipboard, and did nothing once turned off; the system window menu appeared and its commands worked; double-clicking the title bar minimized the window; under Wayland the window can be moved, resized, and closed; the window came to the front, or the taskbar or Dock signalled it; the touch keyboard appeared and the input position stayed visible; the text cursor stopped blinking.
 
 Related items: INPUT-25 Text areas follow platform text conventions; INPUT-26 Keyboard layouts and character input; INPUT-19 Assisted authentication; INPUT-12 Touchpad, touchscreen, pen, and extra mouse buttons; WINDOW-02 Window state and system window management; WINDOW-08 No focus stealing; A11Y-07 Respecting reduced motion
 

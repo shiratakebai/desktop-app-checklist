@@ -2,7 +2,7 @@
 
 English | [简体中文](zh-CN/references.md)
 
-This file lists the sources behind the items in [checklist.md](checklist.md), checked in October 2026. Sources are mainly documents published by platform vendors, standards bodies, government agencies, and software companies; where a normative source already covers a fact, community discussions and individual reports are not listed. The checklist text itself does not cite sources. This file is organized by domain. Each entry states the behavior it supports and ends with the IDs of the related items, so the sources for an item can be found by searching for its ID.
+This file lists the sources behind the items in [checklist.md](checklist.md), checked in November 2026. Sources are mainly documents published by platform vendors, standards bodies, government agencies, and software companies; where a normative source already covers a fact, community discussions and individual reports are not listed. The checklist text itself does not cite sources. This file is organized by domain. Each entry states the behavior it supports and ends with the IDs of the related items, so the sources for an item can be found by searching for its ID.
 
 ## General principles and standards
 
