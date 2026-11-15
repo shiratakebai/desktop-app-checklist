@@ -42,7 +42,7 @@
 ## TYPO · 字体与文本
 
 - [Apple HIG · Typography](https://developer.apple.com/design/human-interface-guidelines/typography)：系统字体、动态字号与可读性。对应条目：`TYPO-01`、`DISPLAY-06`。
-- [Notepad++ · Preferences](https://npp-user-manual.org/docs/preferences/)：按需显示空格、行尾和控制字符；以首行作为未命名标签的名称；锁定标签栏、关闭选中文本的拖动。对应条目：`TYPO-07`、`WINDOW-07`、`INPUT-21`、`DATA-05`。
+- [Notepad++ · Preferences](https://npp-user-manual.org/docs/preferences/)：按需显示空格、行尾和控制字符；以首行作为未命名标签的名称；锁定标签栏、关闭选中文本的拖动。对应条目：`TYPO-07`、`WINDOW-07`、`INPUT-21`。
 - [VS Code · User and workspace settings](https://code.visualstudio.com/docs/configure/settings)：`editor.renderWhitespace`；`@modified` 筛选与单项重置；只在键盘触发时确认关闭；可关闭会话恢复；未命名编辑器以内容作标签。对应条目：`TYPO-07`、`SETTINGS-02`、`INPUT-14`、`WINDOW-06`。
 - [Obsidian · Readable line length](https://help.obsidian.md/Editing+and+formatting/Readable+line+length)、[Notion · Customize and style your content](https://www.notion.com/help/customize-and-style-your-content)：限制行宽，或全宽开关。对应条目：`TYPO-04`。
 - [VS Code · editorOptions.ts](https://github.com/microsoft/vscode/blob/03c265b1adee71ac88f833e065f7bb956b60550a/src/vs/editor/common/config/editorOptions.ts#L2089)：`editor.fontWeight` 接受 1 至 1000 的数值字重，经 `editor.fontVariations` 对应到可变字体的字重。对应条目：`TYPO-02`。
@@ -53,7 +53,7 @@
 - [W3C · Understanding Label in Name](https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html)：无障碍名称与可见文字一致。对应条目：`A11Y-03`。
 - [W3C · WCAG 2.2 · Three Flashes or Below Threshold](https://www.w3.org/TR/WCAG22/#three-flashes-or-below-threshold)、[Understanding Pause, Stop, Hide](https://w3c.github.io/wcag/understanding/pause-stop-hide.html)：闪烁与持续动态内容的控制。对应条目：`A11Y-10`、`A11Y-07`。
 - [Apple HIG · Accessibility](https://developer.apple.com/design/human-interface-guidelines/accessibility)、[GNOME HIG · Accessibility](https://developer.gnome.org/hig/guidelines/accessibility.html)：平台的无障碍要求。
-- [Microsoft · Win32 UX Guide · Keyboard](https://learn.microsoft.com/en-us/windows/win32/uxguide/inter-keyboard)：Tab 顺序与初始焦点。对应条目：`A11Y-02`、`A11Y-01`、`WINDOW-08`。
+- [Microsoft · Win32 UX Guide · Keyboard](https://learn.microsoft.com/en-us/windows/win32/uxguide/inter-keyboard)：Tab 顺序与初始焦点；非用户发起的窗口不设默认按钮。对应条目：`A11Y-02`、`A11Y-01`、`WINDOW-08`。
 - [Microsoft · Accessibility Insights for Windows](https://accessibilityinsights.io/docs/windows/overview/)：UI Automation 语义与 Tab 停靠的检查工具。对应条目：`A11Y-03`、`A11Y-02`。
 - [Game Accessibility Guidelines](https://gameaccessibilityguidelines.com/full-list/)、[Microsoft · Xbox Accessibility Guidelines](https://learn.microsoft.com/en-us/gaming/accessibility/guidelines)：输入替代、设置记忆和动效控制，可迁移到普通应用。对应条目：`A11Y-08`、`A11Y-07`、`INPUT-04`、`A11Y-01`。
 - [W3C · Understanding Content on Hover or Focus](https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus.html)、[Understanding Pointer Cancellation](https://www.w3.org/WAI/WCAG22/Understanding/pointer-cancellation.html)：不移动指针即可关闭悬停内容；松开时触发，移出目标即取消。对应条目：`A11Y-08`。
@@ -83,12 +83,12 @@
 - [Microsoft · PowerToys PowerRename](https://learn.microsoft.com/en-us/windows/powertoys/powerrename)、[VS Code · Basic Editing](https://code.visualstudio.com/docs/editing/codebasics)：批量重命名与替换前预览新旧差异。对应条目：`INPUT-11`、`DATA-16`。
 - [VS Code · User interface](https://code.visualstudio.com/docs/editing/getting-started/userinterface)：预览标签与常驻标签。对应条目：`INPUT-17`。
 - [Krita · Tablet Settings](https://docs.krita.org/en/reference_manual/preferences/tablet_settings.html)：压感输入与鼠标事件的区分。对应条目：`INPUT-12`。
-- [GNOME HIG · Text fields](https://developer.gnome.org/hig/patterns/controls/text-fields.html)、[KDE HIG · Getting input](https://develop.kde.org/hig/getting_input/)、[Apple HIG · Entering data](https://developer.apple.com/design/human-interface-guidelines/entering-data)：输入约束、就地纠错，以及精确数值的直接输入。对应条目：`INPUT-18`、`A11Y-08`、`SETTINGS-03`。
+- [GNOME HIG · Text fields](https://developer.gnome.org/hig/patterns/controls/text-fields.html)、[KDE HIG · Getting input](https://develop.kde.org/hig/getting_input/)、[Apple HIG · Entering data](https://developer.apple.com/design/human-interface-guidelines/entering-data)：输入约束、就地纠错，以及精确数值的直接输入；即时生效的设置在焦点离开输入框时提交。对应条目：`INPUT-18`、`A11Y-08`、`SETTINGS-03`。
 - [W3C · Understanding Accessible Authentication (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html)：认证流程接受粘贴和凭据管理器。对应条目：`INPUT-19`。
 - [GNOME · Evolution 拼写检查](https://teams.pages.gitlab.gnome.org/Websites/help.gnome.org/evolution/mail-composer-spellcheck.html)：按语言选择词典。对应条目：`INPUT-20`。
 - [Slack · Set your Enter key preference](https://slack.com/help/articles/115005523006-Set-your-Enter-key-preference)、[Manage your keyboard layout](https://slack.com/help/articles/115005429666-Manage-your-keyboard-layout)、[飞书 · 使用桌面端快捷键](https://www.feishu.cn/hc/zh-CN/articles/894529368028)：Enter 发送还是换行作为设置项，不在"重置所有快捷键"范围内；只在无法检测键盘布局时出现手动选择项。对应条目：`INPUT-22`、`INPUT-26`。
 - [Blender · Keymap preferences](https://docs.blender.org/manual/en/latest/editors/preferences/keymap.html)、[Input preferences](https://docs.blender.org/manual/en/latest/editors/preferences/input.html)：对标同类产品的快捷键方案预设、只导出差异；模拟小键盘与三键鼠标；手写笔接口在 Windows Ink 与 WinTab 之间切换。对应条目：`INPUT-04`、`INPUT-12`。
-- [Krita · General Settings](https://docs.krita.org/en/reference_manual/preferences/general_settings.html)：粘贴时选用哪种剪贴板表示，含"每次询问"与需要联网的选项；旧版本文件的字号 DPI 换算。对应条目：`INPUT-10`、`SETTINGS-08`、`DATA-02`、`INSTALL-05`。
+- [Krita · General Settings](https://docs.krita.org/en/reference_manual/preferences/general_settings.html)：粘贴时选用哪种剪贴板表示，含"每次询问"与需要联网的选项；旧版本文件的字号 DPI 换算。对应条目：`INPUT-10`、`SETTINGS-08`。
 - [JetBrains · Appearance](https://www.jetbrains.com/help/idea/settings-appearance.html)：只在按住 Alt 时才允许拖放，避免误移动文件、标签和面板。对应条目：`INPUT-21`。
 - [LibreOffice · Security Options and Warnings](https://help.libreoffice.org/latest/en-US/text/shared/optionen/securityoptionsdialog.html)：需按住 Ctrl 单击才跟随超链接。对应条目：`INPUT-07`。
 - [Microsoft · Text Services Framework](https://learn.microsoft.com/en-us/windows/win32/tsf/what-is-text-services-framework)、[Apple · Writing Tools](https://developer.apple.com/documentation/appkit/writing-tools)：语音、手写和系统写作工具通过平台文本接口进入文本区；自定义文本视图需要接入。对应条目：`INPUT-06`。
@@ -127,8 +127,8 @@
 - [Microsoft · Kernel object namespaces](https://learn.microsoft.com/en-us/windows/win32/termserv/kernel-object-namespaces)、[Apple · LSMultipleInstancesProhibited](https://developer.apple.com/documentation/bundleresources/information-property-list/lsmultipleinstancesprohibited)：单实例在多用户会话中的范围。对应条目：`WINDOW-05`、`MANAGED-02`。
 - [Microsoft · Navigation history and backwards navigation](https://learn.microsoft.com/en-us/windows/uwp/layout/navigation-history-and-backwards-navigation)、[JetBrains · Recent files and locations](https://www.jetbrains.com/help/idea/recent-files-and-changes.html)：按访问路径后退与前进。对应条目：`WINDOW-06`。
 - [Sublime Text · 更新日志](https://www.sublimetext.com/download)：外部启动请求在加载完成后执行；文件在磁盘上变化后不恢复旧的撤销历史；恢复未保存文件时保留编码。对应条目：`WINDOW-05`、`WINDOW-06`、`DATA-02`。
-- [mpv · 手册 · --drag-and-drop](https://mpv.io/manual/stable/#options-drag-and-drop)、[--focus-on](https://mpv.io/manual/stable/#options-focus-on)：外部打开的文件是替换当前还是追加到列表，窗口是否取得焦点。对应条目：`WINDOW-05`、`WINDOW-08`、`NETWORK-08`。
-- [Raycast · Settings](https://manual.raycast.com/settings)、[Alfred · Appearance](https://www.alfredapp.com/help/appearance/)、[Alfred · Snippets troubleshooting](https://www.alfredapp.com/help/troubleshooting/snippets/)：启动器出现在哪个显示器、是否移到当前 Space；一段时间后回到根搜索；默认不取焦点的面板；报告安全输入锁定，对丢字的目标放慢按键事件。对应条目：`WINDOW-13`、`WINDOW-10`、`SYSTEM-04`、`NETWORK-08`、`FAIR-03`。
+- [mpv · 手册 · --drag-and-drop](https://mpv.io/manual/stable/#options-drag-and-drop)、[--focus-on](https://mpv.io/manual/stable/#options-focus-on)：外部打开的文件是替换当前还是追加到列表，窗口是否取得焦点。对应条目：`WINDOW-05`、`WINDOW-08`。
+- [Raycast · Settings](https://manual.raycast.com/settings)、[Alfred · Appearance](https://www.alfredapp.com/help/appearance/)、[Alfred · Snippets troubleshooting](https://www.alfredapp.com/help/troubleshooting/snippets/)：启动器出现在哪个显示器、是否移到当前 Space；一段时间后回到根搜索；默认不取焦点的面板；报告安全输入锁定，对丢字的目标放慢按键事件。对应条目：`WINDOW-13`、`WINDOW-10`、`SYSTEM-04`。
 - [JetBrains · System settings](https://www.jetbrains.com/help/idea/system-settings.html)、[Telegram Desktop · 设置字符串](https://translations.telegram.org/en/tdesktop/settings/)：退出前确认；"按住才退出"与快捷键退出前的警告；"Send with Enter"与"Send with Ctrl+Enter"。对应条目：`INPUT-14`、`INPUT-22`。
 - [Audacity · The Audacity IPC server failed to initialize](https://support.audacityteam.org/au3/troubleshooting/error-codes/error-the-audacity-ipc-server-failed-to-initialize)、[Jan · Troubleshooting](https://docs.jan.ai/desktop/troubleshooting)：单实例通道或本机服务端口建立失败时有可见的错误，包括上次残留的进程。对应条目：`WINDOW-05`。
 - [Avalonia · Issue #14545](https://github.com/AvaloniaUI/Avalonia/issues/14545)：Alt + 空格无法打开系统窗口菜单。对应条目：`WINDOW-02`。
@@ -142,7 +142,7 @@
 ## APPEARANCE · 外观
 
 - [W3C APG · Window Splitter](https://www.w3.org/WAI/ARIA/apg/patterns/windowsplitter/)：分隔条的键盘操作与折叠后的恢复。对应条目：`APPEARANCE-05`。
-- [Microsoft · Win32 UX Guide · List Views](https://learn.microsoft.com/en-us/windows/win32/uxguide/ctrl-list-views)、[Semi Design · 表格](https://semi.design/design/zh-CN/show/table)：列选择、列宽调整、固定表头与固定列。对应条目：`APPEARANCE-05`、`INPUT-11`。
+- [Microsoft · Win32 UX Guide · List Views](https://learn.microsoft.com/en-us/windows/win32/uxguide/ctrl-list-views)、[Semi Design · 表格](https://semi.design/design/zh-CN/show/table)：列选择、列宽调整、固定表头与固定列；列表失去焦点后选中项仍然可见。对应条目：`APPEARANCE-05`、`INPUT-11`。
 - [VS Code · Modernizing the VS Code UI](https://code.visualstudio.com/blogs/2026/10/15/modern-ui)：改版后增加布局密度设置，并在过渡期保留经典界面。对应条目：`APPEARANCE-04`、`HELP-08`。
 - [Apple HIG · Split views](https://developer.apple.com/design/human-interface-guidelines/split-views)、[Sidebars](https://developer.apple.com/design/human-interface-guidelines/sidebars)、[WinUI · NavigationView](https://learn.microsoft.com/en-us/windows/apps/design/controls/navigationview)、[Microsoft · 显示或隐藏功能区](https://support.microsoft.com/en-us/office/show-or-hide-the-ribbon-in-office-d946b26e-0c8c-402d-a0f7-c6efa296b527)：为隐藏的窗格提供多种可见的找回方式；窗格开关按钮；隐藏的功能区的找回入口。对应条目：`APPEARANCE-05`。
 - [Microsoft · Acrylic material](https://learn.microsoft.com/en-us/windows/apps/design/style/acrylic)、[AppKit · accessibilityDisplayShouldReduceTransparency](https://developer.apple.com/documentation/appkit/nsworkspace/accessibilitydisplayshouldreducetransparency)：用户关闭透明效果后使用不透明背景。对应条目：`APPEARANCE-03`。
@@ -155,8 +155,8 @@
 - [Qt · QSettings](https://doc.qt.io/qt-6/qsettings.html)、[QStandardPaths](https://doc.qt.io/qt-6/qstandardpaths.html)：配置的原生存储位置。对应条目：`SETTINGS-04`。
 - [VS Code · Settings Sync](https://code.visualstudio.com/docs/configure/settings-sync)、[Profiles](https://code.visualstudio.com/docs/configure/profiles)：机器相关设置不随同步覆盖，快捷键按平台同步。对应条目：`SETTINGS-06`。
 - [GNOME HIG · Switches](https://developer.gnome.org/hig/patterns/controls/switches.html)：开关显示功能是否已实际生效。对应条目：`SETTINGS-03`。
-- [Microsoft · Win32 UX Guide · Confirmations](https://learn.microsoft.com/en-us/windows/win32/uxguide/mess-confirm)："不再显示"的适用范围；不为用户没做过的修改询问保存。对应条目：`SETTINGS-07`、`DATA-01`、`FILE-04`。
-- [Everything · Options](https://www.voidtools.com/support/everything/options/)：只显示已修改的设置并逐项重置；便携使用时按计算机和用户区分数据库文件名；搜索与运行历史的保留、清除和过期与停用记录分开；以管理员身份运行时，启动的程序同样提权。对应条目：`SETTINGS-02`、`DATA-09`、`PRIVACY-07`、`INSTALL-01`、`LOCALE-03`。
+- [Microsoft · Win32 UX Guide · Confirmations](https://learn.microsoft.com/en-us/windows/win32/uxguide/mess-confirm)："不再显示"的适用范围；不为用户没做过的修改询问保存；替换提示并列比较两份文件，可保留两者或对全部套用。对应条目：`SETTINGS-07`、`DATA-01`、`FILE-04`。
+- [Everything · Options](https://www.voidtools.com/support/everything/options/)：只显示已修改的设置并逐项重置；便携使用时按计算机和用户区分数据库文件名；搜索与运行历史的保留、清除和过期与停用记录分开；以管理员身份运行时，启动的程序同样提权。对应条目：`SETTINGS-02`、`DATA-09`、`PRIVACY-07`、`INSTALL-13`。
 - [mpv · 手册 · --reset-on-next-file](https://mpv.io/manual/stable/#options-reset-on-next-file)、[秀丸エディタ · ファイルタイプ別の設定](https://help.maruo.co.jp/hidemaru/html/280_Support.html)：播放中的调整沿用到下一个文件还是按项重置；按文件类型分别生效的一组设置。对应条目：`SETTINGS-05`。
 - [Blender · Defaults](https://docs.blender.org/manual/en/latest/getting_started/configuration/defaults.html)、[Inkscape · FAQ](https://inkscape.org/learn/faq/)：从上一版本导入偏好和扩展；用户自装的扩展、调色板和模板放在用户目录，升级后保留；打开旧文件时 DPI 变化提供转换选择。对应条目：`SETTINGS-08`。
 - [LibreOffice · Load/Save General options](https://help.libreoffice.org/latest/en-US/text/shared/optionen/01010200.html)：文档内保存的打印机设置和视图位置，由其他用户打开时默认不生效。对应条目：`SETTINGS-06`。
@@ -182,6 +182,7 @@
 - [Apple · How storage capacity is measured on Apple devices](https://support.apple.com/en-us/102119)：存储容量的十进制与二进制单位。对应条目：`LOCALE-03`。
 - [VS Code · dialogHandler.ts](https://github.com/microsoft/vscode/blob/c19a3f6b954a41a3e246109e37c139f11149aeab/src/vs/workbench/electron-browser/parts/dialogs/dialogHandler.ts)：复制关于对话框时把相对日期改为绝对日期。对应条目：`LOCALE-04`。
 - [LibreOffice · Precision as shown](https://help.libreoffice.org/latest/en-US/text/shared/optionen/01060500.html)：按显示精度改写存储值。对应条目：`LOCALE-07`。
+- [Everything · Options](https://www.voidtools.com/support/everything/options/)：文件大小可选 JEDEC、IEC 或公制单位；重命名时不选中扩展名。对应条目：`LOCALE-03`、`FILE-04`。
 
 ## DATA · 数据保护、保存与恢复
 
@@ -195,7 +196,7 @@
 - [Zotero · Data directory in cloud storage](https://www.zotero.org/support/kb/data_directory_in_cloud_storage_folder)：数据库放在同步盘中的损坏风险。对应条目：`DATA-09`。
 - [Zotero · Why can't Zotero find a linked file?](https://www.zotero.org/support/kb/missing_linked_file)、[Typora · Images](https://support.typora.io/Images/)：外部资源的重新定位，应用内移动资源时更新引用。对应条目：`DATA-11`。
 - [Slack · Send and read messages](https://slack.com/help/articles/201457107-Send-and-read-messages)、[Telegram · Drafts](https://telegram.org/blog/drafts)：草稿与定时消息的集中入口，会话列表中的草稿标记。对应条目：`DATA-14`、`TASK-17`。
-- [Zotero · General preferences](https://www.zotero.org/support/preferences/general)、[Joplin · Attachments](https://joplinapp.org/help/apps/attachments/)：导入时是否附加标签可选；不再被任何笔记引用的附件在笔记历史保留期过后清理。对应条目：`DATA-18`、`DATA-15`、`FILE-04`。
+- [Zotero · General preferences](https://www.zotero.org/support/preferences/general)、[Joplin · Attachments](https://joplinapp.org/help/apps/attachments/)：导入时是否附加标签可选；不再被任何笔记引用的附件在笔记历史保留期过后清理；回收站中的条目默认在 30 天后自动清除。对应条目：`DATA-18`、`DATA-15`、`FILE-04`。
 - [JetBrains · Invalidate caches](https://www.jetbrains.com/help/idea/invalidate-caches.html)、[Thunderbird · Rebuilding the Global Database](https://support.mozilla.org/en-US/kb/rebuilding-global-database)：从界面重建派生索引，不改动原始数据。对应条目：`DATA-15`、`HELP-07`。
 - [Bandizip · 如何通过安全备份来防止数据损坏](https://cn.bandisoft.com/bandizip/help/backup/)：删除源文件前先测试压缩文件。对应条目：`DATA-06`、`TASK-16`。
 - [CLaunch · その他](https://pyonky.github.io/CLaunch-Help/ja/optOther.htm)：便携到 U 盘使用的单用户模式，以相对路径登记项目。对应条目：`DATA-09`。
@@ -212,6 +213,8 @@
 - [腾讯云 IM · ConvSetDraft](https://comm.qq.com/im/doc/unity/zh/api/ConvApi/ConvSetDraft.html)：草稿只存在本机，不跨设备同步。对应条目：`DATA-14`。
 - [Affinity Photo · Preferences](https://affinity.help/photo2/en-US.lproj/pages/Workspace/preferences.html)：默认不在保存时覆盖导入的 PSD 文件。对应条目：`DATA-18`。
 - [OWASP · CSV Injection](https://owasp.org/www-community/attacks/CSV_Injection)：被电子表格当作公式执行的字段。对应条目：`DATA-18`。
+- [Notepad++ · Preferences › Backup](https://npp-user-manual.org/docs/preferences/#backup)：自定义备份目录中，不同目录的同名文件共用一份备份。对应条目：`DATA-05`。
+- [Krita · General Settings](https://docs.krita.org/en/reference_manual/preferences/general_settings.html)：放在临时目录中的自动保存文件可能被系统删除；用 Zip64 保存的文件旧版本打不开。对应条目：`DATA-02`、`INSTALL-05`。
 
 ## FILE · 文件与资源
 
@@ -234,7 +237,7 @@
 - [OBS · Hybrid MP4 / MOV](https://obsproject.com/kb/hybrid-mp4)：录制中断后主体内容与附属信息的可恢复范围。对应条目：`TASK-12`。
 - [VS Code · 1.102 更新说明](https://code.visualstudio.com/updates/v1_102)：窗口失焦且需要确认时在 Dock 显示徽标。对应条目：`TASK-06`、`SYSTEM-07`。
 - [Obsidian · Settings](https://obsidian.md/help/settings)、[Help and support](https://obsidian.md/help/resources)：启动慢于预期时提示，启动耗时分项可复制，从设置重建库缓存。对应条目：`TASK-01`、`DATA-15`。
-- [qBittorrent · Explanation of Options](https://github.com/qbittorrent/qBittorrent/wiki/Explanation-of-Options-in-qBittorrent)：按设定间隔保存续传数据；完成后运行外部程序；添加对话框是否带到前台；任务进行时阻止睡眠；全部连接绑定到指定网卡和 IP。对应条目：`TASK-04`、`TASK-16`、`SYSTEM-08`、`NETWORK-05`、`NETWORK-08`。
+- [qBittorrent · Explanation of Options](https://github.com/qbittorrent/qBittorrent/wiki/Explanation-of-Options-in-qBittorrent)：按设定间隔保存续传数据；完成后运行外部程序；添加对话框是否带到前台；任务进行时阻止睡眠；全部连接绑定到指定网卡和 IP。对应条目：`TASK-04`、`TASK-16`、`SYSTEM-08`、`NETWORK-05`。
 - [OBS · GPU Selection Guide](https://obsproject.com/kb/gpu-selection-guide)、[Blender · System preferences](https://docs.blender.org/manual/en/latest/editors/preferences/system.html)：多 GPU 时应用使用哪块 GPU；"Allow Online Access"总开关；注册与注销文件关联。对应条目：`TASK-08`、`PRIVACY-04`、`SYSTEM-05`。
 - [Affinity Photo 2 · Preferences](https://affinity.help/photo2/English.lproj/pages/Workspace/preferences.html)：内存占用上限与磁盘占用预警；手写笔输入方式；粘贴时优先矢量；渲染器选择；重置字体缓存。对应条目：`TASK-13`、`INPUT-12`、`INPUT-10`、`TASK-08`。
 - [Mozilla · Bug 42194](https://bugzilla.mozilla.org/show_bug.cgi?id=42194)：多次点击"发送"导致邮件发送两次。对应条目：`TASK-05`。
@@ -246,7 +249,7 @@
 - [Electron · Security](https://www.electronjs.org/docs/latest/tutorial/security)：安全传输与证书验证。对应条目：`NETWORK-08`、`TRUST-07`。
 - [Apple · App Review Guidelines](https://developer.apple.com/app-store/review/guidelines/)：2.5.5 要求在 IPv6-only 网络中正常工作。对应条目：`NETWORK-09`。
 - [JetBrains · HTTP Proxy](https://www.jetbrains.com/help/idea/settings-http-proxy.html)：测试经代理的连接、不走代理的地址，以及代理设置影响哪些连接。对应条目：`NETWORK-05`。
-- [OBS · Stream Connection Troubleshooting](https://obsproject.com/kb/stream-connection-troubleshooting)、[Syncthing · Configuration](https://docs.syncthing.net/users/config.html)：绑定出口网卡与 IP 协议族。对应条目：`NETWORK-05`、`SETTINGS-01`。
+- [OBS · Stream Connection Troubleshooting](https://obsproject.com/kb/stream-connection-troubleshooting)、[Syncthing · Configuration](https://docs.syncthing.net/users/config.html)：绑定出口网卡与 IP 协议族；`disableFsync`、`ignoreDelete` 等选项旁的风险说明。对应条目：`NETWORK-05`、`SETTINGS-01`。
 - [IETF · RFC 8252 OAuth 2.0 for Native Apps](https://datatracker.ietf.org/doc/html/rfc8252)、[Google · Blocking sign-in from embedded browser frameworks](https://developers.googleblog.com/2020/08/guidance-for-our-effort-to-block-less-secure-browser-and-apps.html)：通过外部浏览器而非内嵌视图登录。对应条目：`NETWORK-07`。
 - [WinSCP · Endurance preferences](https://winscp.net/eng/docs/ui_pref_resume)：重连间隔、时限与不限时重连。对应条目：`NETWORK-02`。
 - [Dropbox · Over storage limit](https://help.dropbox.com/storage-space/over-storage-limit)、[Microsoft · Storage quotas](https://support.microsoft.com/en-us/onedrive/microsoft-storage-quotas)、[Apple · iCloud Drive file status on Mac](https://support.apple.com/guide/mac-help/mchlc994344b/mac)、[Obsidian · Sync storage limits](https://obsidian.md/help/Obsidian%2BSync/Plans%2Band%2Bstorage%2Blimits)：达到存储配额或文件大小上限时的同步行为。对应条目：`NETWORK-04`。
@@ -256,15 +259,16 @@
 - [Zotero · Zotero and firewalls](https://www.zotero.org/support/kb/zotero_and_firewalls)：各项服务连接的域名。对应条目：`NETWORK-05`。
 - [Jan · Settings](https://docs.jan.ai/desktop/settings)：把关闭证书验证作为企业代理下的办法。对应条目：`NETWORK-08`。
 - [Zotero · Zotero data](https://www.zotero.org/support/zotero_data)：远端较新的变更可能覆盖本地恢复的数据。对应条目：`NETWORK-10`。
+- [mpv · Manual · --tls-ca-file](https://mpv.io/manual/stable/#options-tls-ca-file)、[Raycast · Settings](https://manual.raycast.com/settings)：添加证书颁发机构，而不是关闭证书验证。对应条目：`NETWORK-08`。
 
 ## SYSTEM · 系统集成
 
-- [XDG Desktop Portal](https://flatpak.github.io/xdg-desktop-portal/docs/)：[Background](https://flatpak.github.io/xdg-desktop-portal/docs/doc-org.freedesktop.portal.Background.html)、[Global Shortcuts](https://flatpak.github.io/xdg-desktop-portal/docs/doc-org.freedesktop.portal.GlobalShortcuts.html)，沙箱中的登录启动与全局快捷键。对应条目：`SYSTEM-01`、`SYSTEM-04`、`SYSTEM-11`、`WINDOW-08`、`WINDOW-10`。
+- [XDG Desktop Portal](https://flatpak.github.io/xdg-desktop-portal/docs/)：[Background](https://flatpak.github.io/xdg-desktop-portal/docs/doc-org.freedesktop.portal.Background.html)、[Global Shortcuts](https://flatpak.github.io/xdg-desktop-portal/docs/doc-org.freedesktop.portal.GlobalShortcuts.html)，沙箱中的登录启动与全局快捷键；Global Shortcuts 的 `Activated` 信号可携带激活令牌。对应条目：`SYSTEM-01`、`SYSTEM-04`、`SYSTEM-11`、`WINDOW-08`、`WINDOW-10`。
 - [Microsoft · Win32 UX Guide · Notifications](https://learn.microsoft.com/en-us/windows/win32/uxguide/mess-notif)、[GNOME HIG · Notifications](https://developer.gnome.org/hig/patterns/feedback/notifications.html)：通知的撤回、前台行为与重提节奏。对应条目：`SYSTEM-03`。
 - [Slack · Troubleshoot Slack notifications](https://slack.com/help/articles/360001559367-Troubleshoot-Slack-notifications)：已读会话仍显示徽标的失步情况。对应条目：`SYSTEM-14`。
 - [Microsoft · WM_QUERYENDSESSION](https://learn.microsoft.com/en-us/windows/win32/shutdown/wm-queryendsession)、[ShutdownBlockReasonCreate](https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-shutdownblockreasoncreate)、[RegisterApplicationRestart](https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-registerapplicationrestart)：关机前保存、说明阻止原因、系统更新后自动重启。对应条目：`SYSTEM-12`、`DATA-03`。
 - [Raycast · Games](https://manual.raycast.com/games)、[Troubleshooting](https://manual.raycast.com/troubleshooting)：前台为游戏时暂停热键；系统更新后热键失效、非美式布局下与 AltGr 冲突、片段在部分应用中不展开。对应条目：`SYSTEM-15`、`SYSTEM-04`、`INPUT-26`、`WINDOW-10`。
-- [PowerToys · PowerToys Run](https://learn.microsoft.com/en-us/windows/powertoys/run)、[Keyboard Manager](https://learn.microsoft.com/en-us/windows/powertoys/keyboard-manager)、[Awake](https://learn.microsoft.com/en-us/windows/powertoys/awake)、[mpv · 手册 · --stop-screensaver](https://mpv.io/manual/stable/#options-stop-screensaver)：全屏时忽略快捷键、选择显示器；被其他钩子干扰后重新启用；保持唤醒与保持屏幕点亮分开；不在播放时恢复屏保。对应条目：`SYSTEM-08`、`SYSTEM-15`、`SYSTEM-04`、`WINDOW-13`、`INPUT-26`、`INPUT-04`。
+- [PowerToys · PowerToys Run](https://learn.microsoft.com/en-us/windows/powertoys/run)、[Keyboard Manager](https://learn.microsoft.com/en-us/windows/powertoys/keyboard-manager)、[Awake](https://learn.microsoft.com/en-us/windows/powertoys/awake)、[mpv · 手册 · --stop-screensaver](https://mpv.io/manual/stable/#options-stop-screensaver)：全屏时忽略快捷键、选择显示器；被其他钩子干扰后重新启用；保持唤醒与保持屏幕点亮分开；不在播放时恢复屏保；Keyboard Manager 按物理键位重新映射按键。对应条目：`SYSTEM-08`、`SYSTEM-15`、`SYSTEM-04`、`WINDOW-13`、`INPUT-26`、`INPUT-04`。
 - [Listary · Hotkey](https://help.listary.com/options-hotkey)、[Integration](https://help.listary.com/options-integration)：在全屏游戏和指定应用中禁用热键；再按一次热键的行为。对应条目：`SYSTEM-15`、`WINDOW-13`。
 - [Clibor · 設定画面](https://chigusa-web.com/clibor/howto/settings/)、[CLaunch · 無効化](https://pyonky.github.io/CLaunch-Help/ja/optDisable.htm)、[CLaunchの機能を一時的に無効化する](https://pyonky.github.io/CLaunch-Help/ja/extSuspend.htm)：操作远程桌面时禁用热键；按应用和全屏禁用；托盘图标可辨认的暂停模式；双击间隔；粘贴按键与粘贴前等待；退出时删除历史。对应条目：`SYSTEM-15`、`SYSTEM-04`、`WINDOW-10`、`PRIVACY-07`。
 - [VS Code · User interface](https://code.visualstudio.com/docs/getstarted/userinterface)、[JetBrains · Notifications](https://www.jetbrains.com/help/idea/notifications.html)：可回看已消失通知的集中入口。对应条目：`SYSTEM-16`。
@@ -407,6 +411,7 @@
 - [Apple · App Review Guidelines](https://developer.apple.com/app-store/review/guidelines/)：5.1.1(v) 账号删除。对应条目：`PRIVACY-06`。
 - [VS Code · 1.96 更新说明](https://code.visualstudio.com/updates/v1_96)：用户卸载的预装扩展重启后不再重装。对应条目：`FAIR-02`。
 - [elementary · AppCenter publishing requirements](https://github.com/elementary/docs/blob/ec87629813c55ab72d5ccceb94e896c55c2a24a4/appcenter/publishing-requirements.md#L83)：应用在安装或更新后不自行打开网页。对应条目：`FAIR-03`、`HELP-08`。
+- [Raycast · Settings](https://manual.raycast.com/settings)：整体关闭 AI，并可查看和编辑 Memory 记住的内容。对应条目：`FAIR-03`。
 
 ## COMPONENT · 随附组件与辅助进程
 
