@@ -33,7 +33,7 @@ Enable a Chinese or Japanese IME, type pinyin or kana in an input field, and pre
 
 Checkpoints: Enter did not submit the content; the candidate window stays next to the insertion point; after confirmation, shortcuts and Esc worked and were not swallowed by IME handling; Esc during composition only cancelled the composition and did not close a dialog or panel.
 
-Related items: INPUT-06 IME composition; INPUT-01 Platform shortcuts and keyboard layouts; INPUT-02 Dialog conventions
+Related items: INPUT-06 IME composition; INPUT-01 Platform shortcuts and the menu bar; INPUT-02 Dialog conventions
 
 ### S02 · Enlarge text, snap to half screen, unplug the dock
 
@@ -69,11 +69,11 @@ Related items: TASK-11 Stale results do not override current intent; PRIVACY-05 
 
 ### S06 · Save to an unwritable directory or full disk; test a forced kill separately
 
-Using a sample document, make the target directory read-only or fill the disk, then save. Restore the condition and retry. In a separate round, edit past the autosave point, kill the process, and relaunch. Repeat the forced-termination test with an encrypted sample document; load it from the recovery screen, edit it, save it, close it, and reopen it with a fresh configuration.
+Using a sample document, make the target directory read-only or fill the disk, then save. Restore the condition and retry. In a separate round, edit past the autosave point, change a setting, then kill the process and relaunch. Repeat the forced-termination test with an encrypted sample document; load it from the recovery screen, edit it, save it, close it, and reopen it with a fresh configuration.
 
-Checkpoints: The original file was not truncated to 0 bytes; in-memory content is still there and can be saved elsewhere; after the kill, the most recent autosave is recovered and the recovery UI shows its time. Record the two tests separately; killing a process does not simulate power loss; the file saved after recovery still requires the original password to open; a password prompt during recovery alone does not show that the protection was kept.
+Checkpoints: The original file was not truncated to 0 bytes; in-memory content is still there and can be saved elsewhere; after the kill, the most recent autosave is recovered and the recovery UI shows its time; the setting changed before the kill is still in effect. Record the two tests separately; killing a process does not simulate power loss; the file saved after recovery still requires the original password to open; a password prompt during recovery alone does not show that the protection was kept.
 
-Related items: DATA-06 Safe writes; DATA-02 Autosave and crash recovery; DATA-01 Visible save state; HELP-03 Actionable, copyable error messages
+Related items: DATA-06 Safe writes; DATA-02 Autosave and crash recovery; SETTINGS-04 Reliable persistence, tolerant of manual edits; DATA-01 Visible save state and one editing copy per file; HELP-03 Actionable, copyable error messages
 
 ### S07 · External replace-saves and renames; opening a cloud placeholder and content kept offline while offline
 
@@ -81,7 +81,7 @@ Use another editor to save an open file several times in a row (most editors wri
 
 Checkpoints: Every external save is detected, not just the first; after the rename, the application tracks the file or offers to relocate it; the placeholder is not reported as corrupt, there is no blocking without feedback, and no mass download is triggered; content kept offline still opens after the cache cleanup and restart, and parts that could not be prepared were indicated before going offline.
 
-Related items: DATA-07 External changes and conflicts; FILE-05 Network drives, removable media, and cloud placeholders; FILE-04 Feedback for move, rename, and delete; NETWORK-11 Content kept offline
+Related items: DATA-07 External changes and conflicts; FILE-05 Network drives, removable media, and cloud placeholders; FILE-04 Move, rename, delete, and overwrite; NETWORK-11 Content kept offline
 
 ### S08 · Two clients edit the same content offline, then reconnect
 
@@ -129,7 +129,7 @@ While editing is in progress, export using the application's backup feature, cop
 
 Checkpoints: Restored data includes the latest changes and attachments, and databases in use were exported through a backup interface; the scope and losses were stated before export; users can tell the full project apart from the delivered output; after reconnecting, the restored content is not deleted again by the remote state, or the user can keep the restored copy and confirm what is replaced; an unsupported restore target states the reason (bound to an account, a changed key, a wrong password, or a damaged file).
 
-Related items: DATA-05 Version history and backup; DATA-08 Import, export, and data portability; DATA-07 External changes and conflicts; DATA-10 Protection for bulk deletion and migration; DATA-17 Recovery conditions and protection scope for encrypted data
+Related items: DATA-05 Version history and backup; DATA-08 Import, export, and data portability; DATA-07 External changes and conflicts; DATA-10 Protection for bulk deletion and migration; DATA-17 Recovery conditions and protection scope for encrypted data; NETWORK-10 Sync reflects what the server accepted
 
 ### S14 · Upgrade with the final release package; downgrade and open a copy of the data
 
@@ -141,11 +141,11 @@ Related items: INSTALL-05 Program rollback and data downgrade; SETTINGS-08 Migra
 
 ### S15 · Switch keyboard layouts; browse remotely loaded items with arrow keys
 
-Switch to a non-US keyboard layout (German, French, or Japanese) and test punctuation shortcuts and normal character input. Move between items in a list or tabs using only arrow keys, where each item's content loads remotely.
+Switch to a non-US keyboard layout (German, French, or Japanese) and test punctuation shortcuts and normal character input. Then switch to a non-Latin layout (Russian or Greek) and test Ctrl + C and Ctrl + S. Move between items in a list or tabs using only arrow keys, where each item's content loads remotely.
 
-Checkpoints: Shortcuts are displayed for the current layout and can be triggered; arrow key browsing did not trigger external actions or irreversible changes, and previews loading with the selection did not block further movement.
+Checkpoints: Shortcuts are displayed for the current layout and can be triggered; under the non-Latin layout, Ctrl + C and Ctrl + S still work; arrow key browsing did not trigger external actions or irreversible changes, and previews loading with the selection did not block further movement.
 
-Related items: INPUT-01 Platform shortcuts and keyboard layouts; INPUT-17 Separating browsing from activation; INPUT-04 Customizable shortcuts
+Related items: INPUT-01 Platform shortcuts and the menu bar; INPUT-26 Keyboard layouts and character input; INPUT-17 Separating browsing from activation; INPUT-04 Customizable shortcuts
 
 ### S16 · Change settings on another device and sync
 
@@ -165,11 +165,11 @@ Related items: HELP-07 Safe mode and self-recovery; HELP-05 Diagnostic logs and 
 
 ### S18 · Sign in, download, and update behind a proxy; cancel one authentication
 
-In a supported proxy environment, sign in, call the core API, load images, download a file, and check for updates, in that order. Cancel a browser sign-in partway through, then complete a full sign-in.
+In a supported proxy environment, sign in, call the core API, load images, download a file, and check for updates, in that order. Behind a proxy that performs TLS inspection, with its root certificate deployed to the system, sign in, update, and install a plugin. Cancel a browser sign-in partway through, then complete a full sign-in.
 
-Checkpoints: Every path goes through the proxy, and failures identify which service failed; after cancelling sign-in, the user returns to the original screen with input intact; after signing in, the user returns to the correct window and task.
+Checkpoints: Every path goes through the proxy, and failures identify which service failed; after cancelling sign-in, the user returns to the original screen with input intact; after signing in, the user returns to the correct window and task; with the root certificate deployed to the system, sign-in, updates, and plugin installation connect without turning off certificate verification.
 
-Related items: NETWORK-05 Proxies and corporate networks; NETWORK-07 Sign-in return path; NETWORK-01 Connection state
+Related items: NETWORK-05 Proxies and corporate networks; NETWORK-07 Sign-in return path; NETWORK-01 Connection state; NETWORK-08 Transport encryption and server identity
 
 ### S19 · Repeated successes and repeated failures
 
@@ -329,7 +329,7 @@ On an IPv6-only test network, sign in, make core requests, and download; use a t
 
 Checkpoints: No hidden IPv4 dependency; a failed verification does not turn into an insecure connection; errors are distinguishable; the clock jump causes no retry storm or absurd durations; times in open views and scheduled reminders follow the new zone, and date-only values stay the same.
 
-Related items: NETWORK-09 IPv6 networks; NETWORK-08 Transport encryption and server identity; NETWORK-01 Connection state; TASK-09 Sleep, wake, network, and device changes; LOCALE-04 Time zones
+Related items: NETWORK-09 IPv6 networks; NETWORK-08 Transport encryption and server identity; NETWORK-01 Connection state; TASK-09 Sleep, wake, network, and device changes; LOCALE-04 Time zones and time display
 
 ### S39 · Multilingual input and authentication forms
 
@@ -337,7 +337,7 @@ Type composed emoji, combining marks, and Arabic file names; enter numbers in a 
 
 Checkpoints: Editing does not split characters; the real identity of file names is clear; number parsing matches display; plural grammar is correct; authentication needs no manual transcription; the error points to the field and valid input is kept; every password and PIN field shows the Caps Lock notice, and it disappears as soon as Caps Lock is turned off.
 
-Related items: INPUT-07 Standard text editing behavior; LOCALE-03 Dates, numbers, units, and currency; LOCALE-06 Right-to-left scripts; INPUT-18 Input constraints and inline correction; INPUT-19 Assisted authentication
+Related items: INPUT-07 Standard text editing behavior; LOCALE-03 Dates, numbers, units, and currency; LOCALE-07 Numeric input, copying, and precision; LOCALE-06 Right-to-left scripts; INPUT-18 Input constraints and inline correction; INPUT-19 Assisted authentication
 
 ### S40 · Purchases, license materials, and policy access
 
@@ -361,7 +361,7 @@ Delete several objects in a batch, restore one with undo, and recover the rest f
 
 Checkpoints: Deleted objects can be recovered with their location and properties unchanged; the import can be undone, and manual edits made before the import remain; targets modified after the preview are skipped or previewed again, and the added file is not overwritten or deleted without confirmation; the replaced file can be recovered, or the UI said before replacing that it could not be, and the undo confirmation named the step being undone; undo affects only the object that has focus; the reset stated its scope before running, and settings in other categories were unaffected; the immediate action could be undone within the undo period, and the UI showed where to undo; edit commands act only on the text in the field, and objects selected in the list are unaffected; confirmations for irreversible actions name the object or state the count.
 
-Related items: INPUT-14 Undo over confirmation; DATA-04 Undo and redo targets; DATA-10 Protection for bulk deletion and migration; FILE-04 Feedback for move, rename, and delete; SETTINGS-07 Reset by category; INPUT-24 Edit commands act on the focused area; DATA-16 Previewing and simulating bulk changes
+Related items: INPUT-14 Undo over confirmation; DATA-04 Undo and redo targets; DATA-10 Protection for bulk deletion and migration; FILE-04 Move, rename, delete, and overwrite; SETTINGS-07 Reset by category; INPUT-24 Edit commands act on the focused area; DATA-16 Previewing and simulating bulk changes
 
 ### S43 · Migrating from a similar product
 
@@ -369,7 +369,7 @@ In the shortcut settings, choose the scheme preset that matches a comparable pro
 
 Checkpoints: The preset is available, and after applying it a key lookup returns the right action; the import offers a choice of how tags are merged, and the result states what was discarded; the send key can be switched and is not reverted by "reset all shortcuts"; the imported settings take effect, and obsolete ones are explained.
 
-Related items: INPUT-04 Customizable shortcuts; DATA-08 Import, export, and data portability; INPUT-22 Configurable send key in submit-style inputs; SETTINGS-08 Migration on upgrade; DATA-18 Merging and type detection on import
+Related items: INPUT-04 Customizable shortcuts; DATA-08 Import, export, and data portability; INPUT-22 Configurable send key in submit-style inputs; SETTINGS-08 Migration on upgrade; DATA-18 Import interpretation and foreign formats
 
 ### S44 · Find settings, commands, and collapsed panels after switching the UI language
 
@@ -413,11 +413,11 @@ Related items: HELP-01 First run and guidance; WINDOW-05 Routing on relaunch and
 
 ### S49 · Using text fields and windows the way another platform's users do
 
-With the final release package, work on the platform the team does not use day to day. Right-click in an input field, a search field, and the editing area. On macOS, press ⌃A, ⌃E, and ⌃K, type the abbreviation of a system text replacement, and press another application's global hotkey while a password field has focus. On Linux, select some text, middle-click to paste it into another application, then turn off middle-click paste on the desktop and try again. For windows, on Windows press Alt + Space and right-click the taskbar thumbnail; on macOS set title bar double-click to minimize and double-click the title bar; on Linux start the application in a GNOME Wayland session. While the application is in the background, click its icon again, then click one of its notifications. On Windows, tap an input field by touch. Set the system's cursor blink to off.
+With the final release package, work on the platform the team does not use day to day. Right-click in an input field, a search field, and the editing area. On macOS, press ⌃A, ⌃E, and ⌃K, type the abbreviation of a system text replacement, press and hold a letter key and pick a character from the accent menu, and press another application's global hotkey while a password field has focus. On Linux, select some text, middle-click to paste it into another application, then turn off middle-click paste on the desktop and try again. For windows, on Windows press Alt + Space and right-click the taskbar thumbnail; on macOS set title bar double-click to minimize and double-click the title bar; on Linux start the application in a GNOME Wayland session. While the application is in the background, click its icon again, then click one of its notifications. On Windows, tap an input field by touch. Set the system's cursor blink to off.
 
-Checkpoints: The context menu has the standard editing items and spelling suggestions, plus Look Up and Services on macOS; system text key bindings and text replacement work; while the password field had focus, the other application's hotkey was paused, and it worked again afterwards; middle-click pasted the text just selected without replacing the clipboard, and did nothing once turned off; the system window menu appeared and its commands worked; double-clicking the title bar minimized the window; under Wayland the window can be moved, resized, and closed; the window came to the front, or the taskbar or Dock signalled it; the touch keyboard appeared and the input position stayed visible; the text cursor stopped blinking.
+Checkpoints: The context menu has the standard editing items and spelling suggestions, plus Look Up and Services on macOS; system text key bindings and text replacement work; pressing and holding a letter key showed the accent menu, and the chosen character was inserted at the insertion point; while the password field had focus, the other application's hotkey was paused, and it worked again afterwards; middle-click pasted the text just selected without replacing the clipboard, and did nothing once turned off; the system window menu appeared and its commands worked; double-clicking the title bar minimized the window; under Wayland the window can be moved, resized, and closed; the window came to the front, or the taskbar or Dock signalled it; the touch keyboard appeared and the input position stayed visible; the text cursor stopped blinking.
 
-Related items: INPUT-25 Text areas follow platform text conventions; INPUT-19 Assisted authentication; INPUT-12 Touchpad, touchscreen, pen, and extra mouse buttons; WINDOW-02 Window state and system window management; WINDOW-08 No focus stealing; A11Y-07 Respecting reduced motion
+Related items: INPUT-25 Text areas follow platform text conventions; INPUT-26 Keyboard layouts and character input; INPUT-19 Assisted authentication; INPUT-12 Touchpad, touchscreen, pen, and extra mouse buttons; WINDOW-02 Window state and system window management; WINDOW-08 No focus stealing; A11Y-07 Respecting reduced motion
 
 ### S50 · Widgets, system search, and system actions: main window closed, signed out, uninstalled
 
